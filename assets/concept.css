@@ -77,3 +77,13 @@
 .dx-device-content small{color:#455641!important}
 .dx-section-label{color:#435740!important}
 .legal-hero .cap-eyebrow{color:#d3e64a!important}
+
+
+/* Second accessibility correction: proof panel status labels and the light
+   Capability note surface must not inherit the dark site's pale ink. */
+.product-proof .kicker{color:#425512!important}
+.product-lane.buyer .lane-type{color:#405438!important}
+.product-lane.buyer .lane-foot{color:#3b5534!important}
+.cap-note{color:#111711!important}
+.cap-note .kicker{color:#415716!important}
+.cap-note li span{color:#415715!important}
