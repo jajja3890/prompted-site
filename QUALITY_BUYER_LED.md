@@ -1,22 +1,21 @@
-# Buyer-Led Product Experience — verified scope and open gates
+# Capability dual-demo v2 — Test evidence and release gates
+Status: **Design review only; not approved for production** (21 Oct 2026).
 
-Status: **REVIEW ONLY / NOT APPROVED FOR PRODUCTION**.
+## Verified locally
+- Both FI/EN experiences produced from the same source.
+- R3 product-first appearance retained; dedicated top navigation Demo and truthful product-page CTA separation.
+- Buyer/participant entry; switching; illustrative buyer delivery and Evidence tabs; participant coaching friction branches; four-stage evidence explanation; optional buyer calculator.
+- Local browser `tools/dual_demo_qa.py` (development worktree): **230/230 responsive + functional checks** at 320–1920 px; static 18/18 generated page checks. No script exceptions, lateral overflow or demo network requests in that local execution.
+- Candidate source was transferred unchanged as patches to this independent GitHub branch; each original file length and reconstructed target length was checked before commit.
+- Main branch, app.prompted.fi, public domain and DNS untouched.
 
-## Passed locally
-- All 18 FI/EN routes generated with one main landmark, canonical/hreflang/OG, noindex preview guard.
-- A no-login, same-site guided interaction exists and reacts to visitor choices.
-- Both languages contain five steps and matching product link structure.
-- 130 Chromium checks passed using browser content-injection because direct HTTP and file navigation are disallowed in the runner. This validates rendered layout and script interactions but **not network delivery**.
-- No third-party requests, browser JS exceptions, or horizontal overflows at widths 320, 390, 768, 1024 and 1440px in tests.
-- Fictional sample Data and calculator explicitly distinguish illustrative data from genuine outcomes. No participant text or account access.
-- No JS analytics, fetch, cookies, local/session storage, nonessential tracking or external dependencies in this local experience.
+## Need verification before release
+- **Live authenticated Vercel Preview:** assess both paths on laptop and mobile including browser CSP, runtime JavaScript, link transitions and actual HTTP noindex headers.
+- WCAG 2.2 AA manual and automated: keyboard/assistive tech, focus, zoom, contrast, error messaging.
+- 5–8 actual business/HR buyers: can they distinguish buyer versus learner view, what buyer sees, and difference from Literacy / Transformation without help?
+- Truthful UI claims, image provenance, FI/EN copy, legal/privacy controller disclosure, cookie/terminal storage, email deliverability, old URL redirects.
+- No genuine tenant data or live AI model is exposed. A real LLM trial is NOT a launch requirement.
+- Do not report local browser checks as remote/live passes.
 
-## Remaining
-- Validate on a real **SSO-protected Vercel Preview** after pushing a separate branch / draft PR.
-- Conduct full keyboard, screen reader, contrast, zoom and WCAG evaluation, field performance and browser/device tests.
-- Review all public demo text for commercial/legal accuracy. The current website Privacy/Terms remain drafts; the hero artwork remains an unapproved illustration.
-- Check email deliverability, branding, three product stories and mobile cognitive clarity with real buyers.
-- This first public demo intentionally has a deterministic coaching walkthrough and no live AI; a live model requires separate abuse/budget/privacy architecture before any future rollout.
-
-## Rollout discipline
-Never merge to main or deploy to production, DNS, or app without explicit written owner go-live authorization.
+## No-go
+No merge to main, no promotion or DNS change, no removing noindex, no public launch absent an explicit separate decision.
