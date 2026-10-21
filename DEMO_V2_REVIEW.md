@@ -26,3 +26,7 @@ This version fixes navigation and user flow, not the open legal, image and relea
 Removed a duplicate Demo navigation link from all 18 FI/EN generated static pages. The shared build generator has the same fix, so regeneration will not bring the issue back. The prelaunch semantic gate now rejects duplicate mobile link destinations. This was source-verified but requires visual mobile verification before production sign-off.
 
 **Release note:** Browser QA is still pending after the dual-path conversion; no verified live HTTP/CSP, legal acceptance, or real-mobile sign-off. Keep Preview noindex and do not merge until these are resolved.
+
+## First browser CI failure and remedy
+
+The new GitHub Actions browser job detected a remaining duplicate in the EN explore mobile menu. The fix is now in the shared generator and in **all 18 generated pages**, including EN explore. Also harmonised English choice labels with the FI 'I want to try...' intent. Added mobile-nav click, Escape-key, responsive overflow and exact FI/EN buyer/participant copy tests to CI. Re-run required: original CI #1 correctly FAILED and did not execute Playwright after the semantic error.

@@ -14,6 +14,7 @@ ASSETS = ROOT/'assets'
 styles = '\n'.join((ASSETS/name).read_text(encoding='utf-8') for name in (
     'concept.css','pages.css','product-first.css','product-system.css','buyer-experience.css'))
 script = (ASSETS/'buyer-experience.js').read_text(encoding='utf-8')
+nav_script = (ASSETS/'concept.js').read_text(encoding='utf-8')
 checks=[]
 failures=[]
 
@@ -36,6 +37,7 @@ def document(page, lang):
     style.string=styles
     soup.head.append(style)
     page.set_content(str(soup),wait_until='load',timeout=25000)
+    page.add_script_tag(content=nav_script)
     page.add_script_tag(content=script)
 
 with sync_playwright() as p:
@@ -57,6 +59,24 @@ with sync_playwright() as p:
             check(page.locator('[data-enter]').count()==2,label+' two paths')
             check(page.locator('[data-stage]').is_hidden(),label+' initially no stage')
             check(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),label+' initial no horizontal overflow')
+
+            toggle=page.locator('.nav-toggle')
+            if width<=1040:
+                check(toggle.is_visible(),label+' mobile toggle available')
+                toggle.click()
+                check(toggle.get_attribute('aria-expanded')=='true',label+' mobile menu opens')
+                check(page.locator('.mobile-nav').get_attribute('aria-hidden')=='false',label+' mobile menu accessibility state opens')
+                demo_url=f'/{lang}/'+('tutustu' if lang=='fi' else 'explore')+'/'
+                check(page.locator('.mobile-nav a[href="'+demo_url+'"]').count()==1,label+' one mobile Demo link')
+                check(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),label+' mobile menu has no horizontal overflow')
+                page.keyboard.press('Escape')
+                check(toggle.get_attribute('aria-expanded')=='false',label+' Escape closes mobile menu')
+            else:
+                check(not toggle.is_visible(),label+' desktop menu has no mobile toggle')
+            check(page.locator('[data-enter="buyer"] strong').inner_text().strip()==
+                  ('Haluan kokeilla tilaajana.' if lang=='fi' else 'I want to try as a buyer.'),label+' exact buyer entry copy')
+            check(page.locator('[data-enter="learner"] strong').inner_text().strip()==
+                  ('Haluan kokeilla osallistujana.' if lang=='fi' else 'I want to try as a participant.'),label+' exact participant entry copy')
 
             page.locator('[data-enter="buyer"]').click()
             check(page.locator('[data-stage]').is_visible(),label+' buyer stage opens')
