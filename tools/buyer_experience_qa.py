@@ -39,7 +39,7 @@ def document(page, lang):
     page.add_script_tag(content=script)
 
 with sync_playwright() as p:
-    browser=p.chromium.launch(headless=True,executable_path='/usr/bin/chromium',args=['--no-sandbox','--disable-dev-shm-usage'])
+    browser=p.chromium.launch(headless=True,**({'executable_path':'/usr/bin/chromium'} if Path('/usr/bin/chromium').is_file() else {}),args=['--no-sandbox','--disable-dev-shm-usage'])
     for lang in ('fi','en'):
         for width in (320,390,768,1024,1440):
             label=f'{lang}/{width}'
