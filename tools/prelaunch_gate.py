@@ -32,6 +32,11 @@ for lang, routes in langs.items():
         must(not soup.find_all('iframe'),'no third-party embeds')
         must(not soup.find_all('form'),'no data collection forms')
         must(soup.select_one('nav[aria-label]') is not None,'named main navigation')
+        mobile=soup.select_one('nav.mobile-nav')
+        if mobile:
+            mobile_routes=[a.get('href','').split('#')[0] for a in mobile.select('a[href]')]
+            must(len(mobile_routes)==len(set(mobile_routes)),'no duplicate mobile navigation destinations')
+
         must(len(soup.select('h1#pf-heading, h1#ps-service-heading, main h1'))>=1,'semantic main title')
         for i,a in enumerate(soup.find_all('a')):
             accessible=(a.get_text(' ',strip=True) or a.get('aria-label') or (a.find('img') and a.find('img').get('alt')))

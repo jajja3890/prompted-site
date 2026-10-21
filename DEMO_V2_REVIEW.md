@@ -20,3 +20,9 @@ This version fixes navigation and user flow, not the open legal, image and relea
 - Updated structural gate and offline browser-test source to target the current **two-path** implementation rather than the retired five-step funnel. The previous browser result file is marked pending retest, not misrepresented as a fresh test.
 - Verified all 18 generated FI/EN HTML pages for headings, preview noindex, demo navigation, choice routes and local internal links via connected repository inspection. This is a static review, not live browser acceptance.
 - Do not promote, merge or remove preview protections without final release review; privacy/terms remain drafts.
+
+## Mobile navigation correction
+
+Removed a duplicate Demo navigation link from all 18 FI/EN generated static pages. The shared build generator has the same fix, so regeneration will not bring the issue back. The prelaunch semantic gate now rejects duplicate mobile link destinations. This was source-verified but requires visual mobile verification before production sign-off.
+
+**Release note:** Browser QA is still pending after the dual-path conversion; no verified live HTTP/CSP, legal acceptance, or real-mobile sign-off. Keep Preview noindex and do not merge until these are resolved.
