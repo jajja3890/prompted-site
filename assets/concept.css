@@ -57,3 +57,23 @@
 @media(max-width:1050px){.product-proof-head{grid-template-columns:1fr;gap:20px}.product-proof-grid{grid-template-columns:1fr}.product-lane{min-height:0}.buyer-figure{grid-template-columns:repeat(3,1fr);gap:16px}.buyer-figure>div{display:block}.buyer-figure .eye{margin-bottom:12px}}
 @media(max-width:760px){.product-proof{padding:68px 0 50px}.product-proof-head h2{font-size:clamp(40px,10vw,63px)}.product-proof-head>p{font-size:15px}.product-proof-caption{display:block;margin-top:38px;padding:15px 0;font-size:9px;line-height:1.8}.product-proof-caption span{display:block}.product-lane{padding:25px 19px;min-height:0}.lane-title h3{font-size:35px}.lane-process{gap:5px}.lane-process span:not(.connector){font-size:8px;padding:10px 5px}.lane-process .connector{min-width:6px}.evidence-ladder{grid-template-columns:1fr 1fr}.evidence-ladder div{min-height:98px}.buyer-figure{grid-template-columns:1fr;gap:0}.buyer-figure>div{display:grid}.proof-end{display:block}.proof-end a{display:inline-block;margin-top:12px}}
 @media(max-width:375px){.lane-process span:not(.connector){font-size:7px;letter-spacing:0}}
+
+
+/* Accessibility preflight: ensure small status labels and art captions remain
+   readable without changing Prompted's light/dark product composition.
+   Targeted overrides based on offline axe-core contrast checks, 2026-10-21. */
+.pf-hero .pf-eyebrow{color:#43503d!important}
+.pf-microproof{color:#455140!important}
+.pf-art-topline,.pf-art-topline span:last-child{color:#485543!important}
+.offer-tile .tile-id{color:#40531a!important}
+.ps-art-meta{color:#44543f!important}
+.ps-literacy-top .ps-kicker,.ps-bridge .ps-kicker{color:#425c18!important}
+.ps-literacy-row>span,.ps-literacy-row i{color:#425818!important}
+.ps-literacy-row small{color:#42523e!important}
+.ps-literacy-panel .ps-panel-top b{color:#31491a!important}
+.detail-why .kicker,.detail-context .kicker{color:#425915!important}
+.dx-disclosure{color:#425541!important}
+.dx-device-top{color:#415442!important}
+.dx-device-content small{color:#455641!important}
+.dx-section-label{color:#435740!important}
+.legal-hero .cap-eyebrow{color:#d3e64a!important}
