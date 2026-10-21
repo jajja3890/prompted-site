@@ -9,9 +9,9 @@ for lang in ('fi','en'):
 assert len(pages)==18, f'Expected 18 localized HTML files, got {len(pages)}'
 for f in pages:
  s=f.read_text(encoding='utf-8')
- assert len(re.findall(r'<main\\b',s))==1, str(f)
+ assert len(re.findall(r'<main\b',s))==1, str(f)
  assert 'noindex' in s, str(f)
- assert 'href="/'+f.parent.parent.name+'/"' in s, str(f)
+ assert 'href="/'+f.relative_to(R).parts[0]+'/"' in s, str(f)
  assert '>Demo<' in s, 'Missing Demo navigation: '+str(f)
 for lang,route in (('fi','tutustu'),('en','explore')):
  s=R.joinpath(lang,route,'index.html').read_text()
