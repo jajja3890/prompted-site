@@ -85,3 +85,10 @@
  .dx-section-title{margin-bottom:20px}
  .dx-section-title h2{font-size:36px}
 }
+
+
+/* 2026-10-22: WCAG contrast hardening in opened buyer/participant panels.
+   Dedicated labels only: preserve the light-on-dark Coach accent palette. */
+.dx-delivery>.dx-label,.dx-evidence-head .dx-label{color:#3b5532}
+.dx-delivery-step>span{color:#3c5816}
+.dx-evidence-steps small{color:#435e20}
