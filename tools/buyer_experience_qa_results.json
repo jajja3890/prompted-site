@@ -1,5 +1,9 @@
 {
-  "status": "PENDING_RETEST",
-  "scope": "Dual-path demo browser test source updated; previous legacy 130/130 result is not applicable to current demo.",
-  "disclaimer": "No browser run has been made for this patch yet. Vercel preview is protected."
+  "status": "PASS",
+  "checks": 300,
+  "failures": [],
+  "scope": "Offline FI/EN Chromium at 320/390/768/1024/1440; buyer-participant interactions, mobile menu, privacy boundary",
+  "excludes": "Protected live preview HTTP/CSP, real device, WCAG certification, legal or visual approval",
+  "verified_run": "https://github.com/jajja3890/prompted-site/actions/runs/39672586383",
+  "tested_commit": "ff014e29971bf524581e1a919dc9f446b82b6de2"
 }
