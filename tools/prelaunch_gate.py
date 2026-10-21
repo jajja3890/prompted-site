@@ -45,13 +45,22 @@ for lang, routes in langs.items():
         if route in ('yhteys','contact'):
             must(bool(soup.find('a',href='mailto:jarkko@prompted.fi')),'direct mailto contact')
         if route in ('tutustu','explore'):
-            must(bool(soup.select_one('[data-buyer-experience]')),'interactive experience root')
-            must(bool(soup.find('script',src='/assets/buyer-experience.js')),'local experience JS')
-            must(bool(soup.find('link',href='/assets/buyer-experience.css')),'local experience CSS')
-            must(len(soup.select('[data-step]'))==5,'five guided stages')
-            must(len(soup.select('[data-role]'))==3,'three role choices')
-            must(all(item in (ROOT/'assets'/'buyer-experience.js').read_text() for item in ('quality:{','report:{','decision:{')),'three dynamic work scenarios')
-            must(bool(soup.find('a',href=f'/{lang}/capability/')),'commercial navigation to Capability')
+            js=(ROOT/'assets'/'buyer-experience.js').read_text(encoding='utf-8')
+            must(bool(soup.select_one('[data-capability-demo]')),'Capability demo root')
+            must(bool(soup.find('script',src='/assets/buyer-experience.js')),'local demo JavaScript')
+            must(bool(soup.find('link',href='/assets/buyer-experience.css')),'local demo CSS')
+            choices=soup.select('[data-enter]')
+            must(len(choices)==2 and {x.get('data-enter') for x in choices}=={'buyer','learner'},'two distinct entry paths')
+            panes=soup.select('[data-pane]')
+            must(len(panes)==2 and {x.get('data-pane') for x in panes}=={'buyer','learner'},'two separate experiences')
+            must(len(soup.select('[data-report]'))==2,'delivery and Evidence report tabs')
+            must(bool(soup.select_one('[data-coach-title]')),'choice-dependent coaching content')
+            must(len(soup.select('input[name="dx-friction"]'))==3,'three participant coaching choices')
+            must(bool(soup.select_one('[data-calc-result]')),'optional impact calculator')
+            must(bool(soup.select_one('.dx-fiction')),'fictional data disclosure')
+            must(bool(soup.select_one('.dx-sample-banner')),'no-real-data disclosure')
+            must('data-capability-demo' in js and 'changeCoach' in js and 'changeReport' in js,'correct demo logic shipped')
+            must(bool(soup.find('a',href=f'/{lang}/capability/')),'navigation to Capability product page')
 
         LOG.append(name)
 conf=json.loads((ROOT/'vercel.json').read_text())
@@ -61,7 +70,7 @@ for key,word in [('X-Robots-Tag','noindex'),('Content-Security-Policy',"script-s
 if 'Disallow: /' not in (ROOT/'robots.txt').read_text():FAIL.append(('robots','missing private preview block'))
 for loc in ['concept.css','pages.css','product-first.css','product-system.css','concept.js','buyer-experience.js','buyer-experience.css','favicon.ico','share-prompted.jpg']:
  if not (ROOT/'assets'/loc).is_file():FAIL.append(('assets',loc))
-report={'result':'PASS' if not FAIL else 'FAIL','pages':len(LOG),'checks':'semantic landmarks, SEO/lang parity, links, preview noindex, legal drafts, host headers','failures':FAIL}
+report={'result':'PASS' if not FAIL else 'FAIL','pages':len(LOG),'checks':'semantic landmarks, FI/EN parity, 2-entry demo structure, preview safety, legal drafts, host headers','failures':FAIL}
 (ROOT/'tools'/'prelaunch_gate_results.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
 print(json.dumps(report,ensure_ascii=False))
 if FAIL:raise SystemExit(1)

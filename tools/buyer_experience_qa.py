@@ -1,103 +1,97 @@
-from pathlib import Path
-import json, sys, mimetypes, base64
-from urllib.parse import urlparse,unquote
-from playwright.sync_api import sync_playwright
-from bs4 import BeautifulSoup
-ROOT=Path(__file__).resolve().parents[1]
-base='https://prompted-local-review.invalid'
-checks=[];fail=[]
-styles='\n'.join((ROOT/'assets'/x).read_text() for x in ['concept.css','pages.css','product-first.css','product-system.css','buyer-experience.css'])
-script=(ROOT/'assets'/'buyer-experience.js').read_text()
-def load_document(page,lang,path):
- f=ROOT/lang/path/'index.html' if path else ROOT/lang/'index.html'
- s=BeautifulSoup(f.read_text(), 'html.parser')
- for img in s.select('img[src^="/assets/"]'):
-  imgpath=ROOT/img.get('src','').lstrip('/')
-  if imgpath.is_file():
-   mim=mimetypes.guess_type(str(imgpath))[0] or 'application/octet-stream'
-   img['src']='data:'+mim+';base64,'+base64.b64encode(imgpath.read_bytes()).decode('ascii')
- for tag in list(s.select('link[rel="stylesheet"],script[src]')):tag.decompose()
- st=s.new_tag('style');st.string=styles;s.head.append(st)
- page.set_content(str(s),wait_until='load',timeout=18000)
- if path in ('tutustu','explore'):page.add_script_tag(content=script)
+"""Capability two-perspective demo browser checks (FI/EN, no network or customer data).
 
-def check(c,d):
- checks.append((d,bool(c)))
- if not c:fail.append(d)
-def static_route(route):
- u=urlparse(route.request.url)
- candidate=(ROOT/unquote(u.path).lstrip('/'))
- if candidate.is_dir():candidate=candidate/'index.html'
- try:
-  if not candidate.resolve().is_relative_to(ROOT.resolve()):raise ValueError('bad path')
-  if candidate.is_file():route.fulfill(path=str(candidate),content_type=mimetypes.guess_type(str(candidate))[0] or 'application/octet-stream');return
- except Exception:pass
- route.fulfill(status=404,body='Not found')
+Run from repo root with Playwright, BeautifulSoup and Chromium installed.
+Renders the real generated HTML and bundled assets inside an offline browser.
+This test is NOT a live Vercel, legal, accessibility certification or production release check.
+"""
+from pathlib import Path
+import json, base64, mimetypes
+from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
+
+ROOT = Path(__file__).resolve().parents[1]
+ASSETS = ROOT/'assets'
+styles = '\n'.join((ASSETS/name).read_text(encoding='utf-8') for name in (
+    'concept.css','pages.css','product-first.css','product-system.css','buyer-experience.css'))
+script = (ASSETS/'buyer-experience.js').read_text(encoding='utf-8')
+checks=[]
+failures=[]
+
+def check(condition, label):
+    checks.append(label)
+    if not condition:
+        failures.append(label)
+
+def document(page, lang):
+    rel='tutustu' if lang=='fi' else 'explore'
+    soup=BeautifulSoup((ROOT/lang/rel/'index.html').read_text(encoding='utf-8'),'html.parser')
+    for tag in soup.select('link[rel="stylesheet"],script[src]'):
+        tag.decompose()
+    for img in soup.select('img[src^="/assets/"]'):
+        p=ROOT/img['src'].lstrip('/')
+        if p.is_file():
+            mime=mimetypes.guess_type(str(p))[0] or 'application/octet-stream'
+            img['src']='data:'+mime+';base64,'+base64.b64encode(p.read_bytes()).decode('ascii')
+    style=soup.new_tag('style')
+    style.string=styles
+    soup.head.append(style)
+    page.set_content(str(soup),wait_until='load',timeout=25000)
+    page.add_script_tag(content=script)
 
 with sync_playwright() as p:
- browser=p.chromium.launch(headless=True,executable_path='/usr/bin/chromium',args=['--no-sandbox','--disable-dev-shm-usage'])
- for lang,path in [('fi','tutustu'),('en','explore')]:
-  for width in (320,390,768,1024,1440):
-   page=browser.new_page(viewport={'width':width,'height':900},locale='fi-FI' if lang=='fi' else 'en-GB')
-   page.route('**/*',static_route)
-   errors=[];calls=[];page.on('pageerror',lambda e:errors.append(str(e)))
-   page.on('request',lambda req:calls.append(req.url) if not req.url.startswith(base) else None)
-   load_document(page,lang,path)
-   check(page.locator('html').count()==1,f'{lang} {width}: parsed HTML')
-   check(page.locator('[data-buyer-experience]').count()==1,f'{lang} {width}: experience root')
-   check(page.evaluate('document.documentElement.scrollWidth <= window.innerWidth+1'),f'{lang} {width}: no sideways overflow initial')
-   check(page.locator('main').count()==1,f'{lang} {width}: one main')
-   check(page.locator('h1').count()==1,f'{lang} {width}: one h1')
-   check(not errors,f'{lang} {width}: JS errors initial {errors}')
-   check(not calls,f'{lang} {width}: no third party requests {calls}')
-   if width in (390,1440):
-    out=ROOT/'previews_buyer_led';out.mkdir(exist_ok=True)
-    page.screenshot(path=str(out/f'experience-{lang}-{width}-intro.png'),full_page=width==390)
-    page.locator('.be-shell').screenshot(path=str(out/f'experience-{lang}-{width}-workspace.png'))
-    page.locator('[data-role="people"]').click()
-    check(page.locator('[data-scenario="quality"]').count()==1,f'{lang} {width}: role reveals scenarios')
-    page.locator('[data-scenario="quality"]').click()
-    page.locator('[data-next]').click()
-    check(page.locator('.be-coach-card').count()==1,f'{lang} {width}: coaching stage')
-    original=page.locator('.be-coach-move').inner_text()
-    page.locator('[data-friction="quality_uncertain"]').click()
-    changed=page.locator('.be-coach-move').inner_text()
-    check(changed!=original,f'{lang} {width}: coach decision adapts')
-    page.locator('[data-support="independent"]').click()
-    check(page.locator('.be-coach-card').count()==1,f'{lang} {width}: support change')
-    page.locator('[data-next]').click()
-    page.locator('[data-evidence="4"]').click()
-    check('04' in page.locator('.be-evidence-grid').inner_text(),f'{lang} {width}: evidence')
-    page.locator('[data-next]').click()
-    check('20' in page.locator('.be-report-metrics').inner_text(),f'{lang} {width}: buyer fictional report')
-    page.locator('[data-next]').click()
-    val1=page.locator('[data-impact-hours]').inner_text()
-    page.locator('[data-impact="minutes"]').fill('60')
-    val2=page.locator('[data-impact-hours]').inner_text()
-    check(val1!=val2,f'{lang} {width}: calculator reacts')
-    page.locator('[data-impact="people"]').fill('40')
-    val3=page.locator('[data-impact-hours]').inner_text()
-    check(val2!=val3,f'{lang} {width}: second calculator variable reacts')
-    page.screenshot(path=str(out/f'experience-{lang}-{width}-impact.png'),full_page=width==390)
-    with page.expect_download() as dl:
-     page.locator('[data-next]').click()
-    d=dl.value
-    check(d.suggested_filename.startswith('Prompted-example-summary'),f'{lang} {width}: downloadable buyer summary')
-    page.locator('[data-reset]').click()
-    check(page.locator('[data-role="people"]').get_attribute('aria-pressed')=='false',f'{lang} {width}: reset')
-    check(page.evaluate('document.documentElement.scrollWidth <= window.innerWidth+1'),f'{lang} {width}: no sideways overflow after interaction')
-    check(not errors,f'{lang} {width}: no runtime JS errors {errors}')
-    check(not calls,f'{lang} {width}: no requests beyond same site {calls}')
-   page.close()
- # marketing CTAs and language parity
- for lang in ('fi','en'):
-  pth='tutustu' if lang=='fi' else 'explore'
-  for path in ('','capability','literacy','transformation'):
-   page=browser.new_page();load_document(page,lang,path)
-   check(page.locator(f'a[href^="/{lang}/{pth}/"]').count()>0,f'{lang}/{path}: interactive CTA')
-   page.close()
- browser.close()
-report={'passed':len(checks)-len(fail),'total':len(checks),'failures':fail}
-(ROOT/'tools'/'buyer_experience_qa_results.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
-print(json.dumps(report,ensure_ascii=False))
-if fail:raise SystemExit(1)
+    browser=p.chromium.launch(headless=True,executable_path='/usr/bin/chromium',args=['--no-sandbox','--disable-dev-shm-usage'])
+    for lang in ('fi','en'):
+        for width in (320,390,768,1024,1440):
+            label=f'{lang}/{width}'
+            page=browser.new_page(viewport={'width':width,'height':900},locale='fi-FI' if lang=='fi' else 'en-GB')
+            errors=[]
+            requests=[]
+            page.on('pageerror',lambda exc:errors.append(str(exc)))
+            page.on('request',lambda request:requests.append(request.url))
+            page.route('**/*',lambda route:route.abort())
+            document(page,lang)
+            root=page.locator('[data-capability-demo]')
+            check(root.count()==1,label+' root')
+            check(page.locator('main').count()==1,label+' main')
+            check(page.locator('h1').count()==1,label+' title')
+            check(page.locator('[data-enter]').count()==2,label+' two paths')
+            check(page.locator('[data-stage]').is_hidden(),label+' initially no stage')
+            check(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),label+' initial no horizontal overflow')
+
+            page.locator('[data-enter="buyer"]').click()
+            check(page.locator('[data-stage]').is_visible(),label+' buyer stage opens')
+            check(page.locator('[data-pane="buyer"]').is_visible(),label+' buyer pane visible')
+            check(page.locator('[data-pane="learner"]').is_hidden(),label+' learner pane hidden')
+            check(page.locator('.dx-fiction').count()==1,label+' fictional buyer data clearly marked')
+            page.locator('[data-report="evidence"]').click()
+            check(page.locator('[data-report="evidence"]').get_attribute('aria-pressed')=='true',label+' report tab selected')
+            check('14' in page.locator('[data-report-body]').inner_text(),label+' sample evidence displayed')
+            page.locator('details.dx-optional summary').click()
+            page.locator('input[data-calc="people"]').fill('40')
+            check('920' in page.locator('[data-calc-result]').inner_text(),label+' impact assumptions update')
+            check(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),label+' buyer no horizontal overflow')
+
+            page.locator('.dx-view-switch [data-view="learner"]').click()
+            check(page.locator('[data-pane="learner"]').is_visible(),label+' learner pane visible')
+            check(page.locator('[data-pane="buyer"]').is_hidden(),label+' buyer pane hidden')
+            previous=page.locator('[data-coach-title]').inner_text()
+            page.locator('input[name="dx-friction"][value="quality"]').check()
+            check(previous!=page.locator('[data-coach-title]').inner_text(),label+' coaching responds to friction')
+            check(page.locator('.dx-evidence-steps').count()==1,label+' Evidence ladder')
+            check(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),label+' learner no horizontal overflow')
+            page.locator('.dx-view-switch [data-view="buyer"]').click()
+            check(page.locator('[data-pane="buyer"]').is_visible(),label+' reversible switching')
+            page.locator('[data-exit]').click()
+            check(page.locator('[data-choice]').is_visible() and page.locator('[data-stage]').is_hidden(),label+' return to entry')
+            check(not errors,label+' no JS errors: '+repr(errors))
+            check(not requests,label+' no network requests: '+repr(requests))
+            page.close()
+    browser.close()
+
+result={'status':'PASS' if not failures else 'FAIL','checks':len(checks),'failures':failures,
+        'scope':'offline FI/EN Chromium at 320/390/768/1024/1440, two-path interactions and privacy boundary',
+        'excludes':'live Vercel HTTP, protected preview, real device, WCAG certification'}
+(ROOT/'tools'/'buyer_experience_qa_results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps(result,ensure_ascii=False))
+if failures:
+    raise SystemExit(1)

@@ -1,5 +1,5 @@
 {
-  "passed": 130,
-  "total": 130,
-  "failures": []
+  "status": "PENDING_RETEST",
+  "scope": "Dual-path demo browser test source updated; previous legacy 130/130 result is not applicable to current demo.",
+  "disclaimer": "No browser run has been made for this patch yet. Vercel preview is protected."
 }

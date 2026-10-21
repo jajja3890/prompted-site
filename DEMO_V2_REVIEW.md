@@ -12,3 +12,11 @@ Founder feedback: prior five-step product experience confused even an informed t
 6. FI/EN nav and paths match, mobile is usable and no connection to app.prompted.fi customer data exists.
 
 This version fixes navigation and user flow, not the open legal, image and release gates.
+
+## Final copy and QA-source alignment — 21 Oct 2026
+
+- Buyer entry now uses the founder's explicit FI choice **“Haluan kokeilla tilaajana.”**
+- Removed the internal-facing “ENSISIJAINEN / RECOMMENDED” badge from the buyer card. Visual emphasis remains buyer-first without instructing buyers what to choose.
+- Updated structural gate and offline browser-test source to target the current **two-path** implementation rather than the retired five-step funnel. The previous browser result file is marked pending retest, not misrepresented as a fresh test.
+- Verified all 18 generated FI/EN HTML pages for headings, preview noindex, demo navigation, choice routes and local internal links via connected repository inspection. This is a static review, not live browser acceptance.
+- Do not promote, merge or remove preview protections without final release review; privacy/terms remain drafts.
