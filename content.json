@@ -137,29 +137,45 @@
         ]
       ],
       "terms_title": "Palveluehdot",
-      "terms_body": "Verkkosivustolla esitellään Promptedin B2B-palveluja. Tästä sivustosta ei synny tilausta tai sopimusta. Mahdollisen asiakastoimituksen palvelukuvaus, hinta, vastuut ja muut ehdot vahvistetaan kirjallisessa tarjouksessa ja sopimuksessa. Lisätietoja: jarkko@prompted.fi.",
+      "terms_body": "Tämä verkkosivu esittelee Prompted Oy:n yrityksille suunnattuja palveluja. Sivuston kuvaukset, havainnekuvat ja Capability-demo ovat yleistä markkinointia ja fiktiivisiä esimerkkejä, eivät yksittäiseen asiakkaaseen liittyviä tuloksia tai lupauksia. Sivustolla ei voi tehdä tilausta, solmia sopimusta tai maksaa palvelusta. Mahdollisen asiakastoimituksen sisältö, hinta, tietosuoja, vastuut ja muut ehdot sovitaan erikseen kirjallisessa tarjouksessa ja sopimuksessa. Sivuston aineiston oikeudet kuuluvat asianomaisille oikeudenhaltijoille. Ulkoisten verkkosivujen sisältöön sovelletaan niiden omia ehtoja. Kysymykset: jarkko@prompted.fi.",
       "privacy_title": "Tietosuoja verkkosivulla",
-      "privacy_intro": "Prompted Oy käsittelee yhteydenottoja ja verkkosivun tekniseen toimintaan liittyviä tietoja vain asianmukaisiin tarkoituksiin.",
+      "privacy_intro": "Tämä tietosuojaluonnos koskee Prompted Oy:n julkista markkinointiverkkosivustoa ja sen kautta syntyviä yhteydenottoja. Asiakas- ja valmennuspalvelujen tietosuojatiedot annetaan erikseen.",
       "privacy_sections": [
         [
           "Rekisterinpitäjä",
-          "Prompted Oy, Y-tunnus 3550114-7, Turku, Suomi. Yhteydenotot: jarkko@prompted.fi."
+          "Prompted Oy, Y-tunnus 3550114-7, Turku, Suomi. Tietosuojaa koskevat yhteydenotot: jarkko@prompted.fi."
         ],
         [
-          "Yhteydenotot",
-          "Kun otat yhteyttä sähköpostitse, käsittelemme viestisi tietoja vastataksemme ja hoitaaksemme mahdollista asiakassuhdetta. Säilytysaika määräytyy asian käsittelyn ja lakisääteisten tarpeiden mukaan."
+          "Mitä tietoja käsittelemme",
+          "Kun lähetät sähköpostia, voimme käsitellä nimeäsi, sähköpostiosoitettasi, organisaatiotasi ja viestisi sisältöä. Sivuston hosting-palvelussa voi syntyä teknisiä pyyntölokeja, kuten IP-osoite, pyynnön ajankohta ja selaimen teknisiä tietoja. Verkkosivulla ei ole yhteydenottolomaketta."
         ],
         [
-          "Tekniset tiedot",
-          "Sivusto toimitetaan Vercelin infrastruktuurista. Palveluntarjoaja voi käsitellä palvelun saatavuuden ja tietoturvan kannalta tarpeellisia teknisiä tietoja, kuten IP-osoitteita ja pyyntölokeja."
+          "Tarkoitukset ja oikeusperusteet — vahvistettava",
+          "Yhteydenottotietoja käytetään kyselyihin vastaamiseen, tarjouksesta keskusteluun ja mahdollisen asiakassuhteen valmisteluun. Alustavasti käsittely voi perustua oikeutettuun etuun (GDPR 6(1)(f)) tai tilanteen mukaan sopimusta edeltäviin toimenpiteisiin (6(1)(b)). Oikeusperusteet ja oikeutetun edun arviointi on vahvistettava ennen julkaisua. Teknisiä tietoja käsitellään palvelun toiminnan ja tietoturvan varmistamiseksi."
         ],
         [
-          "Evästeet ja mittaus",
-          "Tässä sivustoversiossa ei ole erillistä markkinointiseurantaa, analytiikkaskriptejä eikä yhteydenottolomaketta."
+          "Palveluntarjoajat ja vastaanottajat — vahvistettava",
+          "Sivuston teknisenä hosting-palveluna käytetään Verceliä. Sähköpostiyhteydenotot kulkevat käytetyn sähköpostipalveluntarjoajan kautta. Palveluntarjoajien rekisterinpitäjä- ja käsittelijäroolit, mahdolliset alikäsittelijät sekä sopimusjärjestelyt on vahvistettava ennen julkaisua."
         ],
         [
-          "Oikeutesi",
-          "Voit pyytää pääsyä henkilötietoihisi, niiden oikaisua tai poistamista soveltuvan lain mukaisesti. Ota yhteyttä rekisterinpitäjään. Voit myös tehdä valituksen tietosuojavaltuutetulle."
+          "Tietojen säilyttäminen — vahvistettava",
+          "Viestit säilytetään vain niin kauan kuin niitä tarvitaan yhteydenoton, mahdollisen asiakassuhteen tai lakisääteisen velvoitteen hoitamiseksi. Teknisten lokien säilytysaika määräytyy hosting-palvelun käytäntöjen mukaan. Tarkemmat säilytysajat tai määrittelyperusteet vahvistetaan ennen julkaisua."
+        ],
+        [
+          "Kansainväliset siirrot — vahvistettava",
+          "Mahdolliset Euroopan talousalueen ulkopuoliset tietojen siirrot, vastaanottajat ja tarvittavat suojatoimet tarkistetaan sähköposti- ja hosting-palvelujen sopimuksista ja tietosuojakuvauksista ennen julkaisua."
+        ],
+        [
+          "Evästeet ja mittaus — vahvistettava",
+          "Tähän verkkosivuston lähdekoodiversioon ei ole lisätty markkinointiseurantaa, analytiikkaskriptejä eikä profilointityökaluja. Varsinaisen julkisen hosting-ympäristön mahdolliset evästeet ja muut päätelaitteelle tallennettavat tiedot tarkistetaan ennen julkaisua."
+        ],
+        [
+          "Rekisteröidyn oikeudet",
+          "Sinulla voi soveltuvin osin olla oikeus saada pääsy tietoihisi, vaatia oikaisua, poistamista tai käsittelyn rajoittamista sekä vastustaa käsittelyä. Oikeus siirtää tiedot järjestelmästä toiseen määräytyy käsittelyperusteen mukaan. Lähetä pyyntö osoitteeseen jarkko@prompted.fi. Voit tehdä valituksen tietosuojavaltuutetulle."
+        ],
+        [
+          "Tietojen antaminen ja automaattinen päätöksenteko",
+          "Sähköpostiyhteydenotto on vapaaehtoinen; ilman yhteystietoa emme välttämättä voi vastata sinulle. Tämä markkinointisivusto ei tee henkilötietoihin perustuvia automaattisia päätöksiä tai profilointia. Capability-demo käyttää fiktiivisiä esimerkkitietoja eikä kerää valmennus- tai asiakastietoja."
         ]
       ]
     },
@@ -300,29 +316,45 @@
         ]
       ],
       "terms_title": "Service terms",
-      "terms_body": "This website introduces Prompted’s B2B services. No order or contract is made through the website. Any customer delivery scope, price, responsibilities and other terms are agreed in a written proposal and contract. Questions: jarkko@prompted.fi.",
+      "terms_body": "This website introduces Prompted Oy's services for organisations. Descriptions, concept illustrations and the Capability demo are general marketing materials and fictional examples, not individual customer results or guarantees. You cannot place orders, enter contracts or pay for services on this site. Delivery scope, fees, data protection, responsibilities and other terms are agreed separately in a written proposal and contract. Rights in site materials belong to the respective rights holders. External websites have their own terms. Questions: jarkko@prompted.fi.",
       "privacy_title": "Website privacy",
-      "privacy_intro": "Prompted Oy processes contact enquiries and technical website information for appropriate, limited purposes.",
+      "privacy_intro": "This draft notice concerns Prompted Oy’s public marketing website and the enquiries it generates. Separate privacy information applies to customer-facing and coaching services.",
       "privacy_sections": [
         [
           "Controller",
-          "Prompted Oy, business ID 3550114-7, Turku, Finland. Contact: jarkko@prompted.fi."
+          "Prompted Oy, business ID 3550114-7, Turku, Finland. Privacy enquiries: jarkko@prompted.fi."
         ],
         [
-          "Email enquiries",
-          "When you email us, we process your message to respond and manage any resulting business relationship. Retention depends on the handling of the enquiry and applicable legal duties."
+          "Data categories",
+          "If you email us, we may process your name, email address, organisation and message. Website hosting may generate technical request logs, including IP addresses, timestamps and browser technical information. This website has no contact form."
         ],
         [
-          "Technical data",
-          "The site is hosted on Vercel infrastructure. The service provider may process technical data needed for security and availability, such as IP addresses and request logs."
+          "Purposes and legal grounds — to verify",
+          "Enquiry information is used to answer questions, discuss proposals and prepare potential customer relationships. Depending on the circumstances, the proposed legal ground may be legitimate interests (GDPR Art. 6(1)(f)) or steps prior to a contract (Art. 6(1)(b)). Confirm these grounds and the legitimate-interest assessment before publication. Technical data is processed for website availability and security."
         ],
         [
-          "Cookies and analytics",
-          "This website version contains no separate marketing trackers, analytics scripts or contact form."
+          "Service providers and recipients — to verify",
+          "The website uses Vercel hosting. Enquiries are handled through the selected email service provider. Confirm each provider's role, any subprocessors and the relevant contractual arrangements before publication."
+        ],
+        [
+          "Retention — to verify",
+          "Messages are kept only as needed for the enquiry, a possible customer relationship or applicable legal duties. Technical log retention depends on the hosting provider. Confirm the specific retention periods or criteria before publication."
+        ],
+        [
+          "International transfers — to verify",
+          "Confirm whether hosting and email providers transfer information outside the European Economic Area and document relevant recipients and safeguards before publication."
+        ],
+        [
+          "Cookies and measurement — to verify",
+          "This website source version has no added marketing trackers, analytics scripts or profiling tools. Cookies and other device storage generated by the actual hosting environment must be checked before publication."
         ],
         [
           "Your rights",
-          "You may request access, correction or erasure of your personal data where the law applies. Contact the controller. You may also lodge a complaint with the Finnish Data Protection Ombudsman."
+          "Where applicable, you may request access, rectification, erasure or restriction, and object to processing. Data portability depends on the applicable legal ground. Contact jarkko@prompted.fi to exercise your rights. You may complain to the Finnish Data Protection Ombudsman."
+        ],
+        [
+          "Voluntary enquiries and automated decisions",
+          "Email enquiries are voluntary; without contact details we might not be able to respond. This marketing website does not make automated decisions about individuals or profile them. The Capability demo uses fictional sample data and collects no customer or coaching content."
         ]
       ]
     }
