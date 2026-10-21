@@ -62,6 +62,25 @@ with sync_playwright() as pw:
                 row={'page':label,'screenshot':str(screenshot.relative_to(ROOT)),'serious_or_critical':severe,'moderate_or_minor':[v for v in result if v not in severe],'js_errors':errors,'unexpected_requests':req,'horizontal_overflow':overflow}
                 results.append(row)
                 if severe or errors or req or overflow:failures.append(label)
+                # The initial Demo selector is not enough: capture and audit both
+                # complete buyer and participant experiences at 390/1440 px.
+                if route in ('tutustu','explore'):
+                    page.locator('[data-enter="buyer"]').click()
+                    for view in ('buyer','learner'):
+                        if view=='learner':
+                            page.locator('.dx-view-switch [data-view="learner"]').click()
+                        state_label=f'{label}-{view}'
+                        state_shot=TARGET/f'{state_label}.png'
+                        page.screenshot(path=str(state_shot),full_page=True)
+                        state_result=page.evaluate("""async () => {
+                          const r=await axe.run(document, {runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']},rules:{'region':{enabled:false}}});
+                          return r.violations.map(x=>({id:x.id,impact:x.impact,description:x.help,nodes:x.nodes.map(n=>n.target).slice(0,6)}));
+                        }""")
+                        state_severe=[v for v in state_result if v['impact'] in ('critical','serious')]
+                        state_overflow=page.evaluate('document.documentElement.scrollWidth > innerWidth + 1')
+                        state_row={'page':state_label,'screenshot':str(state_shot.relative_to(ROOT)),'serious_or_critical':state_severe,'moderate_or_minor':[v for v in state_result if v not in state_severe],'js_errors':errors,'unexpected_requests':req,'horizontal_overflow':state_overflow}
+                        results.append(state_row)
+                        if state_severe or errors or req or state_overflow:failures.append(state_label)
                 page.close()
     browser.close()
 report={'status':'FAIL' if failures else 'PASS','screenshots':len(results),'failed_pages':failures,'results':results,'scope':'Offline in-memory Chromium: responsive visuals, automated axe-core rules. NOT human visual approval, live hosting or comprehensive WCAG certification.'}
