@@ -87,3 +87,6 @@
 .cap-note{color:#111711!important}
 .cap-note .kicker{color:#415716!important}
 .cap-note li span{color:#415715!important}
+
+/* Ensure Capability delivery-boundary label meets 4.5:1 on #dfe7d9. */
+.additional-truth .kicker{color:#3e5313!important}
