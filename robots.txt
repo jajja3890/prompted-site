@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Prelaunch HTML includes noindex; crawlers must reach it. Preview access should also be protected by hosting authentication.
