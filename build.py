@@ -111,10 +111,10 @@ def translate_fragment(markup):
 
 def header(lang,page):
  fi=lang=='fi'; home=url(lang,'home')
- names=[('literacy','Literacy'),('cap','Capability'),('transform','Transformation'),('home', 'Miten toimimme' if fi else 'How it works'),('company','Yritys' if fi else 'Company'),('contact','Yhteys' if fi else 'Contact')]
+ names=[('literacy','Literacy'),('cap','Capability'),('transform','Transformation'),('experience','Demo'),('home', 'Miten toimimme' if fi else 'How it works'),('company','Yritys' if fi else 'Company'),('contact','Yhteys' if fi else 'Contact')]
  nav=''.join(f'<a href="{url(lang,k)+( "#menetelma" if k=="home" else "")}"'+(' class="active" aria-current="page"' if k==page else '')+f'>{name}</a>' for k,name in names)
  other='en' if fi else 'fi'
- return f'''<header class="topbar"><div class="shell"><a href="{home}" class="logo" aria-label="Prompted — {'etusivu' if fi else 'home'}"><img src="/assets/wordmark-dark.svg" alt="Prompted" width="148" height="25"></a><nav class="nav" aria-label="{'Päänavigaatio' if fi else 'Main navigation'}">{nav}</nav><div class="bar-right"><div class="language"><a href="{url(other,page)}" hreflang="{other}" aria-label="{'Read in English' if fi else 'Lue suomeksi'}">{other.upper()} ↗</a></div><a href="{url(lang,'experience')}#kokeilu" class="navcta">{'Kokeile maksutta' if fi else 'Try it free'} ↗</a><button class="nav-toggle" type="button" aria-label="{'Avaa valikko' if fi else 'Open menu'}" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" id="mobile-nav" aria-hidden="true" aria-label="{'Mobiilivalikko' if fi else 'Mobile menu'}">{nav}<a href="{url(other,page)}">{'In English' if fi else 'Suomeksi'} ↗</a><a href="{url(lang,'experience')}#kokeilu">{'Kokeile maksutta' if fi else 'Try it free'} ↗</a><a href="{url(lang,'contact')}">{'Keskustellaan' if fi else 'Let’s talk'} ↗</a></nav></header>'''
+ return f'''<header class="topbar"><div class="shell"><a href="{home}" class="logo" aria-label="Prompted — {'etusivu' if fi else 'home'}"><img src="/assets/wordmark-dark.svg" alt="Prompted" width="148" height="25"></a><nav class="nav" aria-label="{'Päänavigaatio' if fi else 'Main navigation'}">{nav}</nav><div class="bar-right"><div class="language"><a href="{url(other,page)}" hreflang="{other}" aria-label="{'Read in English' if fi else 'Lue suomeksi'}">{other.upper()} ↗</a></div><a href="{url(lang,'experience')}" class="navcta">Demo ↗</a><button class="nav-toggle" type="button" aria-label="{'Avaa valikko' if fi else 'Open menu'}" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" id="mobile-nav" aria-hidden="true" aria-label="{'Mobiilivalikko' if fi else 'Mobile menu'}">{nav}<a href="{url(other,page)}">{'In English' if fi else 'Suomeksi'} ↗</a><a href="{url(lang,'experience')}">Demo ↗</a><a href="{url(lang,'contact')}">{'Keskustellaan' if fi else 'Let’s talk'} ↗</a></nav></header>'''
 
 def footer(lang):
  fi=lang=='fi'
@@ -122,9 +122,9 @@ def footer(lang):
 
 
 def page_html(lang,page,main,desc=None):
- c=C[lang]; other='en' if lang=='fi' else 'fi'; title=(('Tutustu Promptediin | Kokeile digitaalista valmennusta' if lang=='fi' else 'Explore Prompted | Interactive product experience') if page=='experience' else SEO[lang][page]); description=desc or (SERVICES[lang][page]['meta'] if page in ['literacy','transform'] else c['site_desc']); current=url(lang,page)
+ c=C[lang]; other='en' if lang=='fi' else 'fi'; title=(('Capability-demo | Prompted' if lang=='fi' else 'Capability demo | Prompted') if page=='experience' else SEO[lang][page]); description=desc or (SERVICES[lang][page]['meta'] if page in ['literacy','transform'] else c['site_desc']); current=url(lang,page)
  # open graph logo and URL; withheld from indexing during design gate.
- if page=='experience': description=('Tutustu Promptedin digitaaliseen valmennukseen, Evidence-polkuun ja tilaajan Dataan. Kokeile maksutta, ilman kirjautumista.' if lang=='fi' else 'Explore Prompted digital coaching, Evidence and buyer Data through a guided, login-free experience.')
+ if page=='experience': description=('Tutustu Prompted Capabilityyn tilaajana tai osallistujana. Havainnollistava demo ilman kirjautumista.' if lang=='fi' else 'Explore Prompted Capability as an organisational buyer or participant. An illustrative demo without sign-in.')
  web_desc=esc(description)
  cards={ 'literacy': 'Literacy', 'cap': 'Capability', 'transform': 'Transformation' }
  ld={'@context':'https://schema.org','@graph':[
@@ -276,7 +276,7 @@ def service_main(lang,key):
  return f'''<section class="ps-service-hero ps-service-{key}" aria-labelledby="ps-service-heading"><div class="shell ps-service-grid">
   <div class="ps-service-copy"><div class="ps-eyebrow"><span aria-hidden="true"></span>{esc(d['eyebrow'])}</div>
     <div><p class="ps-hero-label">{subtitle}</p><h1 id="ps-service-heading">{esc(('Tekoälylukutaito alkaa oikeasta työstä.' if fi else 'AI literacy starts with real work.') if key=='literacy' else d['h1'])}</h1><p class="ps-service-intro">{esc(d['intro'])}</p>
-    <div class="ps-service-actions"><a class="pf-button-primary" href="{url(lang,'experience')}#kokeilu">{'Kokeile itse' if fi else 'Try it yourself'} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="{url(lang,'contact')}">{esc(d['cta'])} ↗</a><a class="pf-button-quiet" href="#toimitus">{'Näin etenemme' if fi else 'How it works'} <span aria-hidden="true">↓</span></a></div></div>
+    <div class="ps-service-actions"><a class="pf-button-primary" href="{url(lang,'contact')}">{'Kysy toteutuksesta' if fi else 'Ask about delivery'} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="#toimitus">{'Näin etenemme' if fi else 'How it works'} <span aria-hidden="true">↓</span></a></div></div>
     <div class="ps-service-keyline"><span>{'01 / LITERACY' if key=='literacy' else '03 / TRANSFORMATION'}</span><span>{'PROMPTED / PEOPLE × TECHNOLOGY × WORK'}</span></div></div>
   <div class="ps-service-visual"><div class="ps-art-meta"><span>{'TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE'}</span><span>CONCEPT STUDY</span></div>{side}
    <p class="ps-concept-disclaimer"><span aria-hidden="true"></span>{note}</p></div>
