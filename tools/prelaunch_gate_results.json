@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "pages": 18,
+  "checks": "semantic landmarks, SEO/lang parity, links, preview noindex, legal drafts, host headers",
+  "failures": []
+}
