@@ -47,6 +47,11 @@ for lang, routes in langs.items():
             must(bool(soup.find('a',href=f'/{lang}/'+('yhteys' if lang=='fi' else 'contact')+'/')),'commercial CTA to contact')
         if route in ('tietosuoja','privacy','ehdot','terms'):
             must(('LUONNOS' if lang=='fi' else 'DRAFT') in soup.get_text(' ',strip=True),'legal content clearly marked draft')
+            body=soup.get_text(' ',strip=True).lower()
+            must(not any(other in body for other in ('datadiscovery','design va oy','info@designva.fi')),'no historical third-party terms or company identity')
+            must('Prompted Oy' in soup.get_text(' ',strip=True),'Prompted company identity on legal pages')
+            if route in ('tietosuoja','privacy'):
+                must(len(soup.select('main .legal-section'))>=8,'privacy notice has explicit processing sections')
         if route in ('yhteys','contact'):
             must(bool(soup.find('a',href='mailto:jarkko@prompted.fi')),'direct mailto contact')
         if route in ('tutustu','explore'):
