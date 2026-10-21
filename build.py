@@ -111,10 +111,10 @@ def translate_fragment(markup):
 
 def header(lang,page):
  fi=lang=='fi'; home=url(lang,'home')
- names=[('literacy','Literacy'),('cap','Capability'),('transform','Transformation'),('home', 'Miten toimimme' if fi else 'How it works'),('company','Yritys' if fi else 'Company'),('contact','Yhteys' if fi else 'Contact')]
+ names=[('literacy','Literacy'),('cap','Capability'),('transform','Transformation'),('experience','Demo'),('company','Yritys' if fi else 'Company')]
  nav=''.join(f'<a href="{url(lang,k)+( "#menetelma" if k=="home" else "")}"'+(' class="active" aria-current="page"' if k==page else '')+f'>{name}</a>' for k,name in names)
  other='en' if fi else 'fi'
- return f'''<header class="topbar"><div class="shell"><a href="{home}" class="logo" aria-label="Prompted — {'etusivu' if fi else 'home'}"><img src="/assets/wordmark-dark.svg" alt="Prompted" width="148" height="25"></a><nav class="nav" aria-label="{'Päänavigaatio' if fi else 'Main navigation'}">{nav}</nav><div class="bar-right"><div class="language"><a href="{url(other,page)}" hreflang="{other}" aria-label="{'Read in English' if fi else 'Lue suomeksi'}">{other.upper()} ↗</a></div><a href="{url(lang,'experience')}#kokeilu" class="navcta">{'Kokeile maksutta' if fi else 'Try it free'} ↗</a><button class="nav-toggle" type="button" aria-label="{'Avaa valikko' if fi else 'Open menu'}" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" id="mobile-nav" aria-hidden="true" aria-label="{'Mobiilivalikko' if fi else 'Mobile menu'}">{nav}<a href="{url(other,page)}">{'In English' if fi else 'Suomeksi'} ↗</a><a href="{url(lang,'experience')}#kokeilu">{'Kokeile maksutta' if fi else 'Try it free'} ↗</a><a href="{url(lang,'contact')}">{'Keskustellaan' if fi else 'Let’s talk'} ↗</a></nav></header>'''
+ return f'''<header class="topbar"><div class="shell"><a href="{home}" class="logo" aria-label="Prompted — {'etusivu' if fi else 'home'}"><img src="/assets/wordmark-dark.svg" alt="Prompted" width="148" height="25"></a><nav class="nav" aria-label="{'Päänavigaatio' if fi else 'Main navigation'}">{nav}</nav><div class="bar-right"><div class="language"><a href="{url(other,page)}" hreflang="{other}" aria-label="{'Read in English' if fi else 'Lue suomeksi'}">{other.upper()} ↗</a></div><a href="{url(lang,'contact')}" class="navcta">{'Keskustellaan' if fi else 'Let’s talk'} ↗</a><button class="nav-toggle" type="button" aria-label="{'Avaa valikko' if fi else 'Open menu'}" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button></div></div><nav class="mobile-nav" id="mobile-nav" aria-hidden="true" aria-label="{'Mobiilivalikko' if fi else 'Mobile menu'}">{nav}<a href="{url(other,page)}">{'In English' if fi else 'Suomeksi'} ↗</a><a href="{url(lang,'experience')}">Demo ↗</a><a href="{url(lang,'contact')}">{'Keskustellaan' if fi else 'Let’s talk'} ↗</a></nav></header>'''
 
 def footer(lang):
  fi=lang=='fi'
@@ -122,9 +122,9 @@ def footer(lang):
 
 
 def page_html(lang,page,main,desc=None):
- c=C[lang]; other='en' if lang=='fi' else 'fi'; title=(('Tutustu Promptediin | Kokeile digitaalista valmennusta' if lang=='fi' else 'Explore Prompted | Interactive product experience') if page=='experience' else SEO[lang][page]); description=desc or (SERVICES[lang][page]['meta'] if page in ['literacy','transform'] else c['site_desc']); current=url(lang,page)
+ c=C[lang]; other='en' if lang=='fi' else 'fi'; title=(('Capability-demo | Tilaajalle ja osallistujalle | Prompted' if lang=='fi' else 'Capability demo | Buyer and participant | Prompted') if page=='experience' else SEO[lang][page]); description=desc or (SERVICES[lang][page]['meta'] if page in ['literacy','transform'] else c['site_desc']); current=url(lang,page)
  # open graph logo and URL; withheld from indexing during design gate.
- if page=='experience': description=('Tutustu Promptedin digitaaliseen valmennukseen, Evidence-polkuun ja tilaajan Dataan. Kokeile maksutta, ilman kirjautumista.' if lang=='fi' else 'Explore Prompted digital coaching, Evidence and buyer Data through a guided, login-free experience.')
+ if page=='experience': description=('Kokeile Prompted Capabilitya tilaajana tai osallistujana. Yksi palvelu, kaksi näkökulmaa, ilman kirjautumista.' if lang=='fi' else 'Explore Prompted Capability as a buyer or participant. One service, two perspectives, no sign-in.')
  web_desc=esc(description)
  cards={ 'literacy': 'Literacy', 'cap': 'Capability', 'transform': 'Transformation' }
  ld={'@context':'https://schema.org','@graph':[
@@ -147,9 +147,9 @@ def product_first_hero(lang, page):
  capability = url(lang,'cap')
  headline = ('Osaaminen näkyy,<br><em>kun työ muuttuu.</em>' if fi else 'Capability is visible<br><em>when work changes.</em>') if cap else ('Tekoäly osaksi<br><em>oikeaa työtä.</em>' if fi else 'Make AI part<br><em>of real work.</em>')
  lead = ('Prompted Capability yhdistää todelliset työtehtävät, digitaalisen valmennuksen ja muutoksesta syntyvän näytön. Rajattu pilotti antaa organisaatiolle perustan seuraavaan päätökseen.' if fi else 'Prompted Capability connects real work, digital coaching and reviewable evidence of change. A focused pilot gives organisations a basis for their next decision.') if cap else ('Kehitämme yritysten tekoälylukutaitoa ja uusia toimintatapoja oikeissa työtehtävissä. Digitaalinen valmennus tukee oppimista, ja näyttö auttaa arvioimaan muutosta.' if fi else 'We develop AI literacy and new ways of working through real tasks. Digital coaching supports learning, while evidence helps organisations assess change.')
- maincta = ('Kokeile Capabilityn toimintaa' if fi else 'Try the Capability experience') if cap else ('Kokeile Promptedia' if fi else 'Explore Prompted')
+ maincta = ('Avaa Capability-demo' if fi else 'Open the Capability demo') if cap else ('Kokeile Capabilitya' if fi else 'Explore Capability')
  secondcta = ('Keskustellaan pilotista' if fi else 'Discuss the pilot') if cap else ('Tutustu Capabilityyn' if fi else 'Explore Capability')
- first_href = url(lang,'experience')+'#kokeilu'
+ first_href = url(lang,'experience')
  second_href = contact if cap else capability
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
  return f'''<section class="pf-hero {'pf-capability' if cap else 'pf-home'}" id="alku" aria-labelledby="pf-heading">
@@ -276,7 +276,7 @@ def service_main(lang,key):
  return f'''<section class="ps-service-hero ps-service-{key}" aria-labelledby="ps-service-heading"><div class="shell ps-service-grid">
   <div class="ps-service-copy"><div class="ps-eyebrow"><span aria-hidden="true"></span>{esc(d['eyebrow'])}</div>
     <div><p class="ps-hero-label">{subtitle}</p><h1 id="ps-service-heading">{esc(('Tekoälylukutaito alkaa oikeasta työstä.' if fi else 'AI literacy starts with real work.') if key=='literacy' else d['h1'])}</h1><p class="ps-service-intro">{esc(d['intro'])}</p>
-    <div class="ps-service-actions"><a class="pf-button-primary" href="{url(lang,'experience')}#kokeilu">{'Kokeile itse' if fi else 'Try it yourself'} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="{url(lang,'contact')}">{esc(d['cta'])} ↗</a><a class="pf-button-quiet" href="#toimitus">{'Näin etenemme' if fi else 'How it works'} <span aria-hidden="true">↓</span></a></div></div>
+    <div class="ps-service-actions"><a class="pf-button-primary" href="{url(lang,'contact')}">{esc(d['cta'])} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="#toimitus">{'Näin etenemme' if fi else 'How it works'} <span aria-hidden="true">↓</span></a></div></div>
     <div class="ps-service-keyline"><span>{'01 / LITERACY' if key=='literacy' else '03 / TRANSFORMATION'}</span><span>{'PROMPTED / PEOPLE × TECHNOLOGY × WORK'}</span></div></div>
   <div class="ps-service-visual"><div class="ps-art-meta"><span>{'TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE'}</span><span>CONCEPT STUDY</span></div>{side}
    <p class="ps-concept-disclaimer"><span aria-hidden="true"></span>{note}</p></div>
