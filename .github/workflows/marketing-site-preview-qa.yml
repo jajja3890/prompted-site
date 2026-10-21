@@ -9,26 +9,39 @@ permissions:
 jobs:
   browser-and-structure:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Install tests and browser
         run: |
           python -m pip install --disable-pip-version-check beautifulsoup4 playwright
           python -m playwright install --with-deps chromium
+          npm install --no-save --package-lock=false --ignore-scripts axe-core
+      - name: Reproducible site build
+        run: |
+          python build.py
+          git diff --exit-code -- fi/ en/ index.html robots.txt vercel.json
       - name: Static prelaunch gate
         run: python tools/prelaunch_gate.py
       - name: FI/EN mobile and dual-path browser QA
         run: python tools/buyer_experience_qa.py
-      - name: Save QA reports
+      - name: Responsive screenshot and automated accessibility audit
+        run: python tools/visual_release_audit.py
+      - name: Save QA reports and design review screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: preview-qa-reports
+          name: preview-release-audit
           path: |
             tools/prelaunch_gate_results.json
             tools/buyer_experience_qa_results.json
-          retention-days: 3
+            tools/visual_release_results.json
+            tools/visual_review/*.png
+          if-no-files-found: warn
+          retention-days: 7
