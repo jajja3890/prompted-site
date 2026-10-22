@@ -26,7 +26,8 @@ ASSET_ALLOWLIST={'apple-touch-icon.png','buyer-experience.css','buyer-experience
                  'pages.css','product-first.css','product-system.css',
                  'share-prompted.jpg','wordmark-dark.svg'}
 LEGAL_OPEN=('vahvistettava','ennen julkaisua','to verify','before publication',
-            'tietosuojaluonnos','this draft notice')
+            'tietosuojaluonnos','this draft notice',
+            'suunniteltu säilytyskäytäntö','our proposed retention practice')
 MARKERS=('LUONNOS','DRAFT','PREVIEW · NOT PUBLISHED','KUVALUONNOS H01',
          'H01 ART STUDY')
 
