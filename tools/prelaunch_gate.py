@@ -63,6 +63,8 @@ for lang, routes in langs.items():
                     must(len(links)==len(sections),'privacy table of contents covers all sections')
                     must(all(x.get('href')=='#privacy-'+f'{i:02d}' for i,x in enumerate(links,1)),'privacy TOC links ordered')
                     must(all(s.get('id')=='privacy-'+f'{i:02d}' and s.h2 and s.h2.get('id')=='privacy-title-'+f'{i:02d}' for i,s in enumerate(sections,1)),'stable accessible privacy section anchors')
+                if lang=='fi':
+                    must(soup.select_one('main .legal-hero h1 wbr') is not None,'intended FI legal heading break on narrow devices')
         if route in ('yhteys','contact'):
             must(bool(soup.find('a',href='mailto:jarkko@prompted.fi')),'direct mailto contact')
         if route in ('tutustu','explore'):

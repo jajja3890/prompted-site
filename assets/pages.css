@@ -78,3 +78,8 @@
 .legal-toc a span{font-size:10px;color:#627d1e;font-weight:800;flex:0 0 20px}
 .legal-section{scroll-margin-top:28px}
 @media(max-width:760px){.legal-toc{padding:16px}.legal-toc ol{grid-template-columns:minmax(0,1fr)}.legal-toc summary{font-size:14px}}
+
+/* Keep the Finnish legal title legible: break only at its meaningful compound boundary. */
+.legal-hero h1{overflow-wrap:normal;word-break:normal}
+.legal-section a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;color:#2d4519}
+@media(max-width:760px){.legal-hero h1{font-size:clamp(40px,11vw,50px);letter-spacing:-.055em;line-height:1.08}}
