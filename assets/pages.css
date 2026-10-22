@@ -56,3 +56,9 @@
 /* Legal text can include long Finnish compounds, domains and email addresses. Keep narrow screens within the viewport. */
 .legal-hero p,.legal-section h2,.legal-section p{overflow-wrap:anywhere}
 .legal-section>*{min-width:0}
+
+/* Legal notices: keep long Finnish compounds, translated headings and draft labels inside narrow viewports. */
+.legal-hero h1,.legal-hero p,.legal-draft,.legal-section h2,.legal-section p{max-width:100%;overflow-wrap:anywhere}
+.legal-draft{max-width:100%;white-space:normal}
+.legal-section{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
+@media(max-width:760px){.legal-section{grid-template-columns:minmax(0,1fr)}}
