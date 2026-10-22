@@ -31,6 +31,8 @@ jobs:
         run: python tools/prelaunch_gate.py
       - name: Website link, route and metadata integrity
         run: python tools/site_route_integrity.py
+      - name: Public current-site HTTP audit (read-only)
+        run: python tools/live_origin_audit.py
       - name: Public release eligibility (fail closed, no artifact)
         run: python tools/public_release_gate.py --check
       - name: FI/EN mobile and dual-path browser QA
@@ -46,6 +48,7 @@ jobs:
             tools/prelaunch_gate_results.json
             tools/site_route_integrity_results.json
             tools/public_release_gate_results.json
+            tools/live_origin_audit_results.json
             tools/buyer_experience_qa_results.json
             tools/visual_release_results.json
             tools/visual_review/*.png
