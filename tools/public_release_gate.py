@@ -64,6 +64,10 @@ def check(approval_path):
                     problems.append(f'{lang}: unresolved legal placeholder: {token}')
             if len(c['privacy_sections'])<8:
                 problems.append(f'{lang}: incomplete marketing privacy notice')
+            if len(c.get('terms_sections',[]))<9:
+                problems.append(f'{lang}: incomplete marketing-only terms')
+            if any(any(token in (h+' '+body).lower() for token in LEGAL_OPEN) for h,body in c.get('terms_sections',[])):
+                problems.append(f'{lang}: unresolved terms placeholder')
             if 'datadiscovery' in c['terms_body'].lower() or 'design va' in c['terms_body'].lower():
                 problems.append(f'{lang}: historical third-party terms present')
     except (OSError,ValueError,KeyError,TypeError) as exc:

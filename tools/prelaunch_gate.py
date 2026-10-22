@@ -65,6 +65,17 @@ for lang, routes in langs.items():
                     must(all(s.get('id')=='privacy-'+f'{i:02d}' and s.h2 and s.h2.get('id')=='privacy-title-'+f'{i:02d}' for i,s in enumerate(sections,1)),'stable accessible privacy section anchors')
                 if lang=='fi':
                     must(soup.select_one('main .legal-hero h1 wbr') is not None,'intended FI legal heading break on narrow devices')
+            if route in ('ehdot','terms'):
+                sections=soup.select('main .legal-section')
+                toc=soup.select_one('main .legal-toc')
+                must(len(sections)==9,'complete nine-part marketing-only terms')
+                must(toc is not None,'terms navigation present')
+                if toc is not None:
+                    links=toc.select('a[href^="#terms-"]')
+                    must(len(links)==len(sections),'terms table of contents covers all sections')
+                    must(all(x.get('href')=='#terms-'+f'{i:02d}' for i,x in enumerate(links,1)),'terms TOC links ordered')
+                    must(all(s.get('id')=='terms-'+f'{i:02d}' and s.h2 and s.h2.get('id')=='terms-title-'+f'{i:02d}' for i,s in enumerate(sections,1)),'accessible terms section anchors')
+                must(bool(soup.find('a',href=f'/{lang}/'+('tietosuoja' if lang=='fi' else 'privacy')+'/')),'terms links to matching-language privacy notice')
         if route in ('yhteys','contact'):
             must(bool(soup.find('a',href='mailto:jarkko@prompted.fi')),'direct mailto contact')
         if route in ('tutustu','explore'):

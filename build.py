@@ -307,7 +307,15 @@ def utility_main(lang,page):
   toc=f'<section class="legal-toc-wrap"><div class="shell"><details class="legal-toc"><summary>{"Sisällys" if fi else "Contents"} <span class="legal-toc-count">{len(c["privacy_sections"])} {"osiota" if fi else "sections"}</span></summary><ol>{links}</ol></details></div></section>'
   return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'TIETOSUOJA' if fi else 'PRIVACY'}</div><h1>{title_markup}</h1><p>{esc(c['privacy_intro'])}</p><div class="legal-draft">{'LUONNOS / EI JURIDISESTI HYVÄKSYTTY JULKAISUSISÄLTÖ' if fi else 'DRAFT / NOT YET LEGALLY APPROVED FOR PUBLICATION'}</div></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
  if page=='terms':
-  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'EHDOT' if fi else 'TERMS'}</div><h1>{esc(c['terms_title'])}</h1><p>{esc(c['terms_body'])}</p><div class="legal-draft">{'LUONNOS / TARKISTETTAVA ENNEN JULKAISUA' if fi else 'DRAFT / TO BE REVIEWED BEFORE PUBLICATION'}</div></div></section>'''
+  def terms_para(s):
+   value=esc(s).replace('jarkko@prompted.fi','<a href="mailto:jarkko@prompted.fi">jarkko@prompted.fi</a>')
+   token='tietosuojaselosteessamme' if fi else 'privacy notice'
+   href='/fi/tietosuoja/' if fi else '/en/privacy/'
+   return value.replace(token,f'<a href="{href}">{token}</a>')
+  sections=''.join(f'<section class="legal-section" id="terms-{i:02d}" aria-labelledby="terms-title-{i:02d}"><h2 id="terms-title-{i:02d}">{esc(h)}</h2><p>{terms_para(b)}</p></section>' for i,(h,b) in enumerate(c['terms_sections'],1))
+  links=''.join(f'<li><a href="#terms-{i:02d}"><span aria-hidden="true">{i:02d}</span>{esc(h)}</a></li>' for i,(h,_) in enumerate(c['terms_sections'],1))
+  toc=f'<section class="legal-toc-wrap"><div class="shell"><details class="legal-toc"><summary>{"Sisällys" if fi else "Contents"} <span class="legal-toc-count">{len(c["terms_sections"])} {"osiota" if fi else "sections"}</span></summary><ol>{links}</ol></details></div></section>'
+  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'EHDOT' if fi else 'TERMS'}</div><h1>{esc(c['terms_title'])}</h1><p>{esc(c['terms_body'])}</p><div class="legal-draft">{'LUONNOS / TARKISTETTAVA ENNEN JULKAISUA' if fi else 'DRAFT / TO BE REVIEWED BEFORE PUBLICATION'}</div></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
  raise ValueError(page)
 
 for lang in ('fi','en'):

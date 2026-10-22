@@ -137,7 +137,7 @@
         ]
       ],
       "terms_title": "Palveluehdot",
-      "terms_body": "Tämä verkkosivu esittelee Prompted Oy:n yrityksille suunnattuja palveluja. Sivuston kuvaukset, havainnekuvat ja Capability-demo ovat yleistä markkinointia ja fiktiivisiä esimerkkejä, eivät yksittäiseen asiakkaaseen liittyviä tuloksia tai lupauksia. Sivustolla ei voi tehdä tilausta, solmia sopimusta tai maksaa palvelusta. Mahdollisen asiakastoimituksen sisältö, hinta, tietosuoja, vastuut ja muut ehdot sovitaan erikseen kirjallisessa tarjouksessa ja sopimuksessa. Sivuston aineiston oikeudet kuuluvat asianomaisille oikeudenhaltijoille. Ulkoisten verkkosivujen sisältöön sovelletaan niiden omia ehtoja. Kysymykset: jarkko@prompted.fi.",
+      "terms_body": "Tämä sivu kertoo Prompted Oy:n julkisen markkinointisivuston käytöstä. Sivustolla voi tutustua palveluihimme, mutta sillä ei tehdä tilauksia eikä solmita asiakassopimuksia. Varsinaista kirjautunutta asiakaspalvelua koskevat erilliset ehdot.",
       "privacy_title": "Tietosuojaseloste",
       "privacy_intro": "Tämä seloste koskee Prompted Oy:n julkista prompted.fi-verkkosivustoa ja sen kautta syntyviä yhteydenottoja. Kirjautuneeseen app.prompted.fi-asiakaspalveluun, oppimiseen ja organisaatioraportointiin sovelletaan erillisiä tietosuojatietoja.",
       "privacy_sections": [
@@ -196,6 +196,44 @@
         [
           "Selosteen päivitykset",
           "Päivitämme selostetta, jos verkkosivuston ominaisuudet, palveluntarjoajat tai henkilötietojen käsittely muuttuvat olennaisesti. Ajantasainen versio julkaistaan tällä sivulla. Valmisteltu 22.10.2026."
+        ]
+      ],
+      "terms_sections": [
+        [
+          "Ylläpitäjä ja soveltamisala",
+          "Tätä julkista markkinointisivustoa ylläpitää Prompted Oy (Y-tunnus 3550114-7), Turku, Suomi. Nämä verkkosivuehdot koskevat sivuston katselua ja sen julkisia esittelysisältöjä. Ne eivät ole kirjautuneen asiakassovelluksen, valmennuksen tai yritysasiakkaan tietojenkäsittelyn sopimusehdot."
+        ],
+        [
+          "Palvelukuvausten luonne",
+          "Literacy-, Capability- ja Transformation-palveluiden kuvaukset auttavat arvioimaan mahdollista yhteistyötä. Sivuston tekstit, kuvat, prosessikaaviot, mahdolliset hinnat ja aikataulut ovat yleisiä tai havainnollistavia, ellei niitä ole erikseen vahvistettu kirjallisessa tarjouksessa. Sivuston sisältö ei yksin muodosta sitovaa tarjousta."
+        ],
+        [
+          "Asiakastoimitukset ja sopimukset",
+          "Sivustolla ei voi tilata, ostaa eikä maksaa palveluita. Toimituksen laajuus, osallistujat, hinta, aikataulu, vastuut, tietosuoja ja mahdollinen henkilötietojen käsittelysopimus sovitaan erikseen. Hyväksytty kirjallinen asiakassopimus määrää toimituksesta, eikä tämä verkkosivun teksti muuta sitä."
+        ],
+        [
+          "Capability-esittely",
+          "Julkinen Capability-esittely näyttää tilaajan ja osallistujan näkökulmia havainnollistavassa muodossa. Näytetyt henkilöt, organisaatioiden ryhmäluvut, mittarit, tulokset ja laskelmat ovat kuvitteellisia tai oletuksiin perustuvia. Esittely ei ole kirjautunut asiakasympäristö, todellinen tekoälyvalmennustapahtuma eikä todiste yksittäisen asiakkaan saavutuksista."
+        ],
+        [
+          "Sivuston käyttö ja aineiston oikeudet",
+          "Sivustoa saa käyttää tavanomaiseen lailliseen tiedonhakuun ja palveluihin tutustumiseen. Sivuston toiminnan häiritseminen ja automatisoitu väärinkäyttö on kielletty. Teksteihin, kuviin, tunnuksiin ja muuhun aineistoon liittyvät oikeudet kuuluvat niiden oikeudenhaltijoille. Aineiston muu kaupallinen uudelleenkäyttö edellyttää tarvittavia oikeuksia tai lupia, ellei laki salli käyttöä."
+        ],
+        [
+          "Ulkoiset linkit",
+          "Sivustolla voi olla linkkejä ulkopuolisiin palveluihin, kuten kirjautuneeseen asiakassovellukseen ja muihin verkkosivuihin. Niiden toiminnasta, tietosuojasta ja sopimusehdoista vastaa kyseinen palveluntarjoaja omalta osaltaan. Ulkoinen linkki ei yksin tarkoita kaupallista kumppanuutta tai suositusta."
+        ],
+        [
+          "Sisällön ajantasaisuus ja saatavuus",
+          "Pyrimme pitämään sivuston tiedot ymmärrettävinä ja ajan tasalla. Sisältö ja tekniset ominaisuudet voivat muuttua, ja sivusto voi olla tilapäisesti poissa käytöstä. Mikään sivustolla esitetty yleinen esimerkki ei takaa tiettyä liiketoiminnallista tulosta. Nämä ehdot eivät rajoita pakottavaan lainsäädäntöön perustuvia oikeuksia."
+        ],
+        [
+          "Tietosuoja",
+          "Julkisen sivuston henkilötietojen käsittelyä kuvataan tietosuojaselosteessamme. Capabilityn kirjautuneen asiakaspalvelun henkilöstö- ja asiakastiedot käsitellään erillisten tietosuojatietojen ja mahdollisten sopimusten mukaisesti. Älä lähetä arkaluonteista aineistoa tavallisella sähköpostilla ilman sovittua turvallista kanavaa."
+        ],
+        [
+          "Muutokset ja yhteydenotot",
+          "Voimme päivittää tätä julkista verkkosivua koskevaa tekstiä sivuston tai toimintatapojen muuttuessa. Kysymykset ja yhteydenotot: jarkko@prompted.fi. Valmisteltu 22.10.2026. Tämä on julkaisematon luonnos, jonka lopullinen sisältö vahvistetaan ennen julkista käyttöönottoa."
         ]
       ]
     },
@@ -336,7 +374,7 @@
         ]
       ],
       "terms_title": "Service terms",
-      "terms_body": "This website introduces Prompted Oy's services for organisations. Descriptions, concept illustrations and the Capability demo are general marketing materials and fictional examples, not individual customer results or guarantees. You cannot place orders, enter contracts or pay for services on this site. Delivery scope, fees, data protection, responsibilities and other terms are agreed separately in a written proposal and contract. Rights in site materials belong to the respective rights holders. External websites have their own terms. Questions: jarkko@prompted.fi.",
+      "terms_body": "This page explains the use of Prompted Oy's public marketing website. You can explore our services here, but you cannot place an order or enter a customer agreement through this site. Separate terms apply to authenticated customer services.",
       "privacy_title": "Privacy notice",
       "privacy_intro": "This notice covers Prompted Oy's public prompted.fi marketing website and related enquiries. The authenticated app.prompted.fi customer service, learning activities and organisational reporting are covered by separate privacy information.",
       "privacy_sections": [
@@ -395,6 +433,44 @@
         [
           "Changes to this notice",
           "We update this notice if the website's features, providers or processing change materially. The current version will be published on this page. Prepared on 22 October 2026."
+        ]
+      ],
+      "terms_sections": [
+        [
+          "Operator and scope",
+          "This public marketing website is operated by Prompted Oy (Finnish business ID 3550114-7), Turku, Finland. These website terms cover browsing the site and its public demonstrations. They are not contractual terms for authenticated customer software, coaching delivery or processing employee data on behalf of organisations."
+        ],
+        [
+          "Nature of service descriptions",
+          "Descriptions of Literacy, Capability and Transformation help organisations explore potential cooperation. Text, images, process illustrations, any indicative prices and timelines are general or illustrative unless confirmed in a written proposal. Website content on its own does not constitute a binding offer."
+        ],
+        [
+          "Customer deliveries and agreements",
+          "Services cannot be ordered, purchased or paid for through this site. Delivery scope, participants, fees, schedule, responsibilities, privacy requirements and any data processing agreement are agreed separately. An accepted written customer agreement governs the delivery and is not amended by these website terms."
+        ],
+        [
+          "Capability demonstration",
+          "The public Capability demonstration illustrates buyer and participant perspectives. People, group figures, metrics, outcomes and calculations shown are fictional or assumption-based. It is not the authenticated customer environment, a live AI coaching session or evidence of results achieved by any particular customer."
+        ],
+        [
+          "Using the site and material rights",
+          "You may use the website for lawful, ordinary information gathering and exploration of our services. Interference with site operation and automated misuse are prohibited. Rights in the text, images, marks and other material belong to their respective rights holders. Other commercial reuse requires the necessary rights or permission unless permitted by law."
+        ],
+        [
+          "External links",
+          "The website may link to external services, including the authenticated customer application and third-party sites. Each provider is responsible for its own service, privacy practices and applicable terms. An external link does not by itself imply a commercial partnership or endorsement."
+        ],
+        [
+          "Accuracy and availability",
+          "We aim to keep the website clear and current. Content and technical features may change, and the site may be temporarily unavailable. No general example on the website guarantees a specific business outcome. Nothing in these terms limits rights under mandatory applicable law."
+        ],
+        [
+          "Privacy",
+          "Personal data processing on the public site is described in our privacy notice. Customer and employee information in authenticated Capability services is subject to separate privacy information and applicable agreements. Do not send sensitive materials by ordinary email without first agreeing on a secure channel."
+        ],
+        [
+          "Changes and contact",
+          "We may update this public website text when the site or our practices change. Questions and enquiries: jarkko@prompted.fi. Prepared on 22 October 2026. This is an unpublished draft; its final content will be approved before public release."
         ]
       ]
     }
