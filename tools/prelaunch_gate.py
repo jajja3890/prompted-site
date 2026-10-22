@@ -54,7 +54,15 @@ for lang, routes in langs.items():
             must(not any(other in body for other in ('datadiscovery','design va oy','info@designva.fi')),'no historical third-party terms or company identity')
             must('Prompted Oy' in soup.get_text(' ',strip=True),'Prompted company identity on legal pages')
             if route in ('tietosuoja','privacy'):
-                must(len(soup.select('main .legal-section'))>=8,'privacy notice has explicit processing sections')
+                sections=soup.select('main .legal-section')
+                toc=soup.select_one('main .legal-toc')
+                must(len(sections)==14,'complete 14-part original privacy notice')
+                must(toc is not None,'privacy notice section navigation')
+                if toc is not None:
+                    links=toc.select('a[href^="#privacy-"]')
+                    must(len(links)==len(sections),'privacy table of contents covers all sections')
+                    must(all(x.get('href')=='#privacy-'+f'{i:02d}' for i,x in enumerate(links,1)),'privacy TOC links ordered')
+                    must(all(s.get('id')=='privacy-'+f'{i:02d}' and s.h2 and s.h2.get('id')=='privacy-title-'+f'{i:02d}' for i,s in enumerate(sections,1)),'stable accessible privacy section anchors')
         if route in ('yhteys','contact'):
             must(bool(soup.find('a',href='mailto:jarkko@prompted.fi')),'direct mailto contact')
         if route in ('tutustu','explore'):
