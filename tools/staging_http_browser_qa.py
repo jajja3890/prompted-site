@@ -77,7 +77,11 @@ try:
                     must(len(page.evaluate('document.styleSheets'))>=4,label,'linked CSS was not loaded')
                     must(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),label,'mobile overflow')
                     for asset in page.locator('img[src^="/assets/"]').all():
-                        must(asset.evaluate('(img)=>img.complete && img.naturalWidth>0'),label,'image did not load')
+                        # Lazy-loaded below-fold art should be checked only after a
+                        # user-like scroll; testing pre-scroll completion is invalid.
+                        asset.scroll_into_view_if_needed(timeout=10000)
+                        decoded=asset.evaluate('(img)=>img.decode().then(()=>true).catch(()=>false)')
+                        must(decoded,label,'image did not load even after entering viewport')
                     if route in ('tutustu','explore'):
                         must(page.locator('[data-enter="buyer"]').count()==1,label,'buyer entry missing')
                         page.locator('[data-enter="buyer"]').click()
