@@ -50,6 +50,10 @@ If security, legal identity, site availability, responsive rendering or broken e
 
 **GO for further protected review and internal QA; NO GO for public domain cutover.**
 
+## Read-only apex, www, app routing snapshot
+
+A dated, scope-limited observation of all three Vercel-visible hosts and their safe rollback boundaries is now recorded in [`DNS_ROLLBACK_SNAPSHOT_2026-10-22.md`](DNS_ROLLBACK_SNAPSHOT_2026-10-22.md). **Both `prompted.fi` and `www.prompted.fi`** report current A value `185.158.133.1`; `app.prompted.fi` has independent Vercel routing and must not change. This is not yet the authoritative Domainhotelli TTL/zone export required for a real cutover.
+
 ## Verified current ownership and rollback reference — 22 October 2026
 
 Read-only Vercel account inspection (team `team_AQMYKoxdjGdzICtKXiWElLTU`):
