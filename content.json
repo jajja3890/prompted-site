@@ -163,7 +163,7 @@
         ],
         [
           "Vastaanottajat ja käsittelijät",
-          "Yhteydenottoja käsittelevät vain niitä tarvitsevat Prompted Oy:n henkilöt. Sivuston hosting-palvelu on Vercel, ja sähköpostit käsitellään yrityksen käyttämän sähköpostipalveluntarjoajan järjestelmässä. Palveluntarjoajat ja soveltuvat alikäsittelijät voivat käsitellä tietoja palveluiden toimittamiseksi sopimustensa mukaisesti. Tietoja voidaan luovuttaa viranomaiselle, jos laki sitä edellyttää. Emme myy sivustokävijöiden tai yhteydenottajien henkilötietoja."
+          "Yhteydenottoja käsittelevät vain niitä tarvitsevat Prompted Oy:n henkilöt. Sivuston hosting-palvelu on Vercel, ja Promptedin tähän sivustoon liittyviä sähköpostiyhteydenottoja käsitellään Google Workspace (Gmail) -palvelussa. Palveluntarjoajat ja soveltuvat alikäsittelijät voivat käsitellä tietoja palveluiden toimittamiseksi sopimustensa mukaisesti. Tietoja voidaan luovuttaa viranomaiselle, jos laki sitä edellyttää. Emme myy sivustokävijöiden tai yhteydenottajien henkilötietoja."
         ],
         [
           "Tietojen siirrot ETA-alueen ulkopuolelle",
@@ -400,7 +400,7 @@
         ],
         [
           "Recipients and processors",
-          "Within Prompted Oy, only people who need enquiry information to perform their duties have access. The website is hosted by Vercel and corporate email is processed through the company's email provider. Providers and relevant subprocessors may process information to deliver their services under their agreements. Information may be disclosed to authorities when required by law. We do not sell personal data about website visitors or people contacting us."
+          "Within Prompted Oy, only people who need enquiry information to perform their duties have access. The website is hosted by Vercel and email enquiries addressed to Prompted Oy are processed using Google Workspace (Gmail). Providers and relevant subprocessors may process information to deliver their services under their agreements. Information may be disclosed to authorities when required by law. We do not sell personal data about website visitors or people contacting us."
         ],
         [
           "Transfers outside the EEA",

@@ -5,7 +5,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 ## Factual release conditions
 - [x] **Independent public-record corroboration** of the company name, business ID 3550114-7, and registered municipality Turku. Secondary listings cite YTJ/PRH; this does not independently verify the mailbox. Sources and verification date below.
 - [ ] Verify that `jarkko@prompted.fi` is active, can receive subject-rights requests, and is monitored by the responsible Prompted Oy person.
-- [ ] Name the actual corporate email provider, processors, roles, locations, contracts and international transfer basis.
+- [x] **Previously confirmed corporate email system:** Prompted Oy's `jarkko@prompted.fi` mailbox was connected to **Google Workspace (Gmail)** in the owner's account setup, reconfirmed 1 September 2026. This identifies the previously configured provider but not current live MX or Workspace admin contract status.
+- [ ] Recheck live mailbox and MX routing; verify Google Workspace Cloud Data Processing Addendum (CDPA) acceptance, subprocessor list, processing locations, applicable EEA transfer safeguards, and deletion policies in the current tenant.
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
 - [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
 - [ ] Adopt the proposed 12-month non-customer enquiry deletion policy and implement an actual mailbox/contact-data deletion or review procedure.
@@ -20,6 +21,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 **Prompted Oy:** two Finnish public company information services report legal name *Prompted Oy*, business ID *3550114-7*, municipality *Turku* and cite the Finnish business register data. These listings are corroboration, not a fresh authoritative extract from the Finnish Trade Register; the controller must still confirm company data and operating contact:
 - https://www.asiakastieto.fi/yritykset/fi/prompted-oy/35501147/rekisteritiedot
 - https://www.taloustutka.fi/company/3550114-7
+
+**Google Workspace contractual background:** Google's [Workspace privacy compliance guide](https://knowledge.workspace.google.com/admin/compliance/privacy-compliance-and-records-for-google-workspace-and-cloud-identity) (updated August 10, 2026) documents the Cloud Data Processing Addendum, which may already be incorporated in a customer agreement or may require review/acceptance by an administrator. Its [GDPR commitments](https://cloud.google.com/privacy/gdpr) describe Workspace SCC frameworks. Neither public page proves acceptance or configuration in Prompted Oy's own tenant.
 
 **Vercel DPA:** https://vercel.com/legal/dpa is marked updated **17 March 2026**, effective **31 March 2026**. It explicitly applies to Enterprise and Pro plans in its opening scope, lists US processing in international provisions, and supplies transfer clauses including EU SCCs. The published document alone does **not** prove which processor contracts, log retention, email backend or transfers actually apply to the connected site's final production configuration.
 

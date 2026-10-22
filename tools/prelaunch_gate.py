@@ -57,6 +57,7 @@ for lang, routes in langs.items():
                 sections=soup.select('main .legal-section')
                 toc=soup.select_one('main .legal-toc')
                 must(len(sections)==14,'complete 14-part original privacy notice')
+                must('Google Workspace (Gmail)' in soup.get_text(' ',strip=True),'configured email processor identified on FI/EN privacy notice')
                 must(toc is not None,'privacy notice section navigation')
                 if toc is not None:
                     links=toc.select('a[href^="#privacy-"]')
