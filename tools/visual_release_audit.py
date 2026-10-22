@@ -51,6 +51,21 @@ with sync_playwright() as pw:
                     page.add_script_tag(content=DEMO)
                 page.add_script_tag(path=str(AXE))
                 page.evaluate('document.fonts.ready')
+                # Full-page screenshots do not necessarily trigger native loading="lazy".
+                # Warm below-the-fold imagery with real scrolling and decode, then
+                # return to the top before capturing the complete visual composition.
+                lazy_images=page.locator('main img[loading="lazy"]')
+                lazy_count=lazy_images.count()
+                failed_lazy=[]
+                for img_index in range(lazy_count):
+                    art=lazy_images.nth(img_index)
+                    art.scroll_into_view_if_needed(timeout=10000)
+                    loaded=art.evaluate('img => img.decode().then(() => img.naturalWidth > 0 && img.naturalHeight > 0).catch(() => false)')
+                    if not loaded:
+                        failed_lazy.append(img_index)
+                page.evaluate('window.scrollTo(0,0)')
+                if failed_lazy:
+                    failures.append(label+': lazy artwork not decoded '+repr(failed_lazy))
                 screenshot=TARGET/f'{label}.png'
                 page.screenshot(path=str(screenshot),full_page=True)
                 result=page.evaluate("""async () => {
@@ -59,7 +74,7 @@ with sync_playwright() as pw:
                 }""")
                 severe=[v for v in result if v['impact'] in ('critical','serious')]
                 overflow=page.evaluate('document.documentElement.scrollWidth > innerWidth + 1')
-                row={'page':label,'screenshot':str(screenshot.relative_to(ROOT)),'serious_or_critical':severe,'moderate_or_minor':[v for v in result if v not in severe],'js_errors':errors,'unexpected_requests':req,'horizontal_overflow':overflow}
+                row={'page':label,'screenshot':str(screenshot.relative_to(ROOT)),'serious_or_critical':severe,'moderate_or_minor':[v for v in result if v not in severe],'js_errors':errors,'unexpected_requests':req,'horizontal_overflow':overflow,'lazy_images_decoded':lazy_count-len(failed_lazy),'lazy_image_failures':failed_lazy}
                 results.append(row)
                 if severe or errors or req or overflow:failures.append(label)
                 # The initial Demo selector is not enough: capture and audit both
@@ -83,7 +98,7 @@ with sync_playwright() as pw:
                         if state_severe or errors or req or state_overflow:failures.append(state_label)
                 page.close()
     browser.close()
-report={'status':'FAIL' if failures else 'PASS','screenshots':len(results),'failed_pages':failures,'results':results,'scope':'Offline in-memory Chromium: responsive visuals, automated axe-core rules. NOT human visual approval, live hosting or comprehensive WCAG certification.'}
+report={'status':'FAIL' if failures else 'PASS','screenshots':len(results),'failed_pages':failures,'results':results,'scope':'Offline in-memory Chromium with scrolled/decoded lazy artwork before screenshot: responsive visuals, automated axe-core rules. NOT human visual approval, live hosting or comprehensive WCAG certification.'}
 (ROOT/'tools'/'visual_release_results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'status':report['status'],'screenshots':len(results),'failed_pages':failures,'violations':[{ 'page':x['page'],'serious':x['serious_or_critical']} for x in results if x['serious_or_critical']],'notes':'Screenshots saved to CI artifact for human visual review.'},ensure_ascii=False))
 if failures:raise SystemExit(1)
