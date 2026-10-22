@@ -89,6 +89,26 @@ for fi,en in PAIRS:
                 FAIL.append(f'{path}: wrong hreflang {key}')
             else:
                 COUNTS['seo_links']+=1
+        # Marketing and canonical SEO must point to real shipped assets.
+        ogimage=soup.find('meta',attrs={'property':'og:image'})
+        image_url=ogimage.get('content','') if ogimage else ''
+        image_parts=urlsplit(image_url)
+        if image_parts.hostname!='prompted.fi' or not image_parts.path.startswith('/assets/') or not resolve_asset(image_parts.path).is_file():
+            FAIL.append(f'{path}: Open Graph image not available in generated package')
+        else:
+            COUNTS['seo_links']+=1
+        switch=soup.select_one('.bar-right .language a[href]')
+        other='en' if lang=='fi' else 'fi'
+        other_route=en if lang=='fi' else fi
+        if switch is None or switch.get('href')!=local_path(other,other_route):
+            FAIL.append(f'{path}: desktop language switch is not reciprocal')
+        else:
+            COUNTS['seo_links']+=1
+        mobile=soup.select_one('nav.mobile-nav')
+        if mobile is None or mobile.find('a',href=local_path(other,other_route)) is None:
+            FAIL.append(f'{path}: mobile language switch is missing')
+        else:
+            COUNTS['seo_links']+=1
         og=soup.find('meta',attrs={'property':'og:url'})
         if og is None or og.get('content')!=expected[lang]:
             FAIL.append(f'{path}: Open Graph URL mismatch')

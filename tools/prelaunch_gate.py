@@ -45,6 +45,9 @@ for lang, routes in langs.items():
             must('alt' in img.attrs,f'image missing alt #{i}')
         if route in ('literacy','capability','transformation'):
             must(bool(soup.find('a',href=f'/{lang}/'+('yhteys' if lang=='fi' else 'contact')+'/')),'commercial CTA to contact')
+        if route=='':
+            below_fold=soup.select_one('figure.art-figure img[src="/assets/hero-daylight.webp"]')
+            must(below_fold is not None and below_fold.get('loading')=='lazy' and below_fold.get('decoding')=='async','non-critical H01 art defers loading and decoding')
         if route in ('tietosuoja','privacy','ehdot','terms'):
             must(('LUONNOS' if lang=='fi' else 'DRAFT') in soup.get_text(' ',strip=True),'legal content clearly marked draft')
             body=soup.get_text(' ',strip=True).lower()
