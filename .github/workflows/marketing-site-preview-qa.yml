@@ -31,6 +31,8 @@ jobs:
         run: python tools/prelaunch_gate.py
       - name: Website link, route and metadata integrity
         run: python tools/site_route_integrity.py
+      - name: Served HTTP and CSP browser QA
+        run: python tools/staging_http_browser_qa.py
       - name: Public current-site HTTP audit (read-only)
         run: python tools/live_origin_audit.py
       - name: Public existing-site rendered legal audit (read-only)
@@ -49,6 +51,7 @@ jobs:
           path: |
             tools/prelaunch_gate_results.json
             tools/site_route_integrity_results.json
+            tools/staging_http_browser_qa_results.json
             tools/public_release_gate_results.json
             tools/live_origin_audit_results.json
             tools/live_rendered_legal_results.json
