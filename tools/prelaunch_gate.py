@@ -3,7 +3,7 @@ No network, credentials, production dependency or synthetic user data.
 """
 from pathlib import Path
 from bs4 import BeautifulSoup
-import json, re
+import json, re, hashlib
 ROOT=Path(__file__).resolve().parents[1]
 LOG=[];FAIL=[]
 langs={'fi':['','literacy','capability','transformation','yritys','yhteys','tietosuoja','ehdot','tutustu'],
@@ -104,6 +104,24 @@ for key,word in [('X-Robots-Tag','noindex'),('Content-Security-Policy',"script-s
 if 'Disallow: /' not in (ROOT/'robots.txt').read_text():FAIL.append(('robots','missing private preview block'))
 for loc in ['concept.css','pages.css','product-first.css','product-system.css','concept.js','buyer-experience.js','buyer-experience.css','favicon.ico','share-prompted.jpg']:
  if not (ROOT/'assets'/loc).is_file():FAIL.append(('assets',loc))
+# Prompted.fi must use the exact, pre-existing official Prompted brand masters.
+# Verified against the company app repo jajja3890/prompted, public/brand,
+# on 2026-10-22. Git blob hashes detect even a single altered byte.
+OFFICIAL_WORDMARK_SHA={
+    'wordmark-dark.svg':'5b6055300e9a75186ae050f9dba916b96c6dccf3',
+    'wordmark-light.svg':'06bf329de183163aab577cd6baf9e5453b51a2db',
+}
+for filename,expected in OFFICIAL_WORDMARK_SHA.items():
+    p=ROOT/'assets'/filename
+    if not p.is_file():
+        FAIL.append(('brand',f'missing official logo master: {filename}'))
+        continue
+    data=p.read_bytes()
+    blob=b'blob '+str(len(data)).encode('ascii')+b'\0'+data
+    actual=hashlib.sha1(blob).hexdigest()
+    if actual!=expected:
+        FAIL.append(('brand',f'official Prompted brand master mismatch: {filename}'))
+
 report={'result':'PASS' if not FAIL else 'FAIL','pages':len(LOG),'checks':'semantic landmarks, FI/EN parity, 2-entry demo structure, preview safety, legal drafts, host headers','failures':FAIL}
 (ROOT/'tools'/'prelaunch_gate_results.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
 print(json.dumps(report,ensure_ascii=False))
