@@ -52,3 +52,7 @@
 .terms-grid p{font-size:15px;color:#4c5b45;line-height:1.65}
 @media(max-width:980px){.detail-hero-grid{grid-template-columns:1fr;gap:25px}.detail-aside p{max-width:720px}.detail-stages{grid-template-columns:1fr}.detail-stage{min-height:130px}.detail-stage h3{margin:26px 0 0}.context-grid{gap:40px}}
 @media(max-width:760px){.detail-hero{padding:65px 0 75px}.detail-hero h1{font-size:clamp(43px,10.2vw,65px)}.detail-why-grid,.context-grid,.terms-grid,.legal-section{grid-template-columns:1fr;gap:12px}.detail-why h2,.detail-process h2,.detail-context h2{font-size:clamp(33px,9vw,51px)}.detail-process h2{margin:20px 0 38px}.detail-stage{padding:24px}.detail-stage h3{margin:20px 0}.context-limit{margin-top:20px}.legal-hero h1{font-size:50px}.legal-section{gap:8px}}
+
+/* Legal text can include long Finnish compounds, domains and email addresses. Keep narrow screens within the viewport. */
+.legal-hero p,.legal-section h2,.legal-section p{overflow-wrap:anywhere}
+.legal-section>*{min-width:0}
