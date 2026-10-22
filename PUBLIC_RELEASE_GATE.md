@@ -21,3 +21,7 @@ This **does not publish**. The existing Vercel preview and `prompted.fi` domain 
 6. Approve **exact revision** and stage the production bundle without assigning apex domain. Never touch `app.prompted.fi`.
 
 **Current decision:** NO GO. The released customer application is excluded from this site release.
+
+## Packaging regression QA
+
+A dedicated CI step now runs `python tools/public_release_packaging_qa.py`. It verifies that the **actual public-release guard remains BLOCKED** on the unapproved project, including explicit FI/EN enforcement against calling an unimplemented twelve-month mailbox policy completed. It also calls the isolated bundling function in a throwaway temporary directory to validate that a **future approved** package would have 18 pages, local image/style assets, 18 sitemap URLs, correct public robots and preserved security headers, with preview draft markers removed. The temporary output is deleted automatically; this never publishes, uploads, authorises, merges or changes DNS. An approved manifest is still mandatory for the real CLI `--prepare` route.

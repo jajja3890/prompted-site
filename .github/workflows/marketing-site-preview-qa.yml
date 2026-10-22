@@ -35,6 +35,8 @@ jobs:
         run: python tools/staging_http_browser_qa.py
       - name: Public release eligibility (fail closed, no artifact)
         run: python tools/public_release_gate.py --check
+      - name: Isolated release packager safety test (never deploy)
+        run: python tools/public_release_packaging_qa.py
       - name: FI/EN mobile and dual-path browser QA
         run: python tools/buyer_experience_qa.py
       - name: Responsive screenshot and automated accessibility audit
