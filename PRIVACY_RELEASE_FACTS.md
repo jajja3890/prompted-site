@@ -10,7 +10,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
 - [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
 - [ ] Adopt the proposed 12-month non-customer enquiry deletion policy and implement an actual mailbox/contact-data deletion or review procedure.
-- [ ] Complete legitimate-interest balancing for inbound B2B enquiries and website security.
+- [x] A scope-limited draft balancing worksheet has been prepared for inbound enquiries and Vercel technical security data: `LEGITIMATE_INTEREST_BALANCING.md`. This is a documented assessment draft, **not** a final legitimate-interest conclusion.
+- [ ] Complete the assessment using actual retention/security/processor facts and obtain accountable Prompted Oy approval before adopting legal basis and publishing notice.
 - [ ] Verify public deployment's cookie/storage behaviour before asserting that no consent mechanism is needed.
 - [ ] Confirm site operator's access-control and security claims and identify the privacy rights request owner.
 - [ ] Approve exact FI/EN text and source commit, and keep the authenticated customer-app privacy terms separate.
