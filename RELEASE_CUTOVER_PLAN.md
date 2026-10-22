@@ -49,3 +49,18 @@ If security, legal identity, site availability, responsive rendering or broken e
 ## Current decision
 
 **GO for further protected review and internal QA; NO GO for public domain cutover.**
+
+## Verified current ownership and rollback reference — 22 October 2026
+
+Read-only Vercel account inspection (team `team_AQMYKoxdjGdzICtKXiWElLTU`):
+
+- `prompted.fi` is already a **verified external domain** in the connected Vercel team; DNS nameservers are `ns1.domainhotelli.fi`, `ns2.domainhotelli.fi`. Zone is external (`zone:false`), not managed here by Vercel DNS.
+- Vercel domain configuration currently reports apex A address **`185.158.133.1`** (documented rollback reference; VERIFY the authoritative registrar/zone before use). Vercel recommends `76.76.21.21` or its applicable recommended CNAME; this is an **observation, not an instruction to change DNS now**.
+- The only `prompted.fi` project-domain association returned by Vercel is **`app.prompted.fi`**, tied to a **different** Vercel project `prompted` (`prj_MfK5ICUXV5eD0k6VuUiy3BMgCLkU`). This is the customer application; no changes permitted in this marketing-site release.
+- New marketing project `prompted-site` still has no associated `prompted.fi` project domain.
+- Before DNS cutover, separately record current **www record**, TTL, exact apex A/AAAA/CNAME at Domainhotelli, existing site deployment and response snapshot. Vercel configuration alone is not a guaranteed authoritative DNS backup.
+- Vercel protected-preview authenticated fetch currently returns **403 forbidden** at deployment alias access even though deployment is READY. Do not remove SSO. Reauthorize that Vercel connection/project/team and recheck real HTTP, cookies and CSP before launch.
+
+### 22 October live-site discovery note
+
+Public search returned the last-indexed `https://prompted.fi/en/terms` content under **DataDiscovery / Design VA Oy**. A live HTML fetch could not confirm or refute this due to the current external browser's rendering limitations. Treat as a concrete **check-required risk**, not as a verified current page defect. The next site has a CI check to prevent these third-party names on its four legal pages.

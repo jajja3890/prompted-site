@@ -29,6 +29,8 @@ jobs:
           git diff --exit-code -- fi/ en/ index.html robots.txt vercel.json
       - name: Static prelaunch gate
         run: python tools/prelaunch_gate.py
+      - name: Website link, route and metadata integrity
+        run: python tools/site_route_integrity.py
       - name: FI/EN mobile and dual-path browser QA
         run: python tools/buyer_experience_qa.py
       - name: Responsive screenshot and automated accessibility audit
@@ -40,6 +42,7 @@ jobs:
           name: preview-release-audit
           path: |
             tools/prelaunch_gate_results.json
+            tools/site_route_integrity_results.json
             tools/buyer_experience_qa_results.json
             tools/visual_release_results.json
             tools/visual_review/*.png
