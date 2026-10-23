@@ -9,7 +9,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - [ ] Recheck live mailbox and MX routing; verify Google Workspace Cloud Data Processing Addendum (CDPA) acceptance, subprocessor list, processing locations, applicable EEA transfer safeguards, and deletion policies in the current tenant.
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
 - [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
-- [ ] Adopt the proposed 12-month non-customer enquiry deletion policy and implement an actual mailbox/contact-data deletion or review procedure.
+- [x] FI/EN notice draft now describes **retention criteria rather than an unimplemented 12-month deletion deadline**. This is a copy correction, not evidence of operational deletion.
+- [ ] Adopt and operationalise a mailbox/contact-data review and deletion process; record the accountable owner, exceptions, frequency and actual evidence. See `MARKETING_ENQUIRY_RETENTION_SOP.md`.
 - [x] A scope-limited draft balancing worksheet has been prepared for inbound enquiries and Vercel technical security data: `LEGITIMATE_INTEREST_BALANCING.md`. This is a documented assessment draft, **not** a final legitimate-interest conclusion.
 - [ ] Complete the assessment using actual retention/security/processor facts and obtain accountable Prompted Oy approval before adopting legal basis and publishing notice.
 - [ ] Verify public deployment's cookie/storage behaviour before asserting that no consent mechanism is needed.
@@ -27,7 +28,7 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 
 **Vercel DPA:** https://vercel.com/legal/dpa is marked updated **17 March 2026**, effective **31 March 2026**. It explicitly applies to Enterprise and Pro plans in its opening scope, lists US processing in international provisions, and supplies transfer clauses including EU SCCs. The published document alone does **not** prove which processor contracts, log retention, email backend or transfers actually apply to the connected site's final production configuration.
 
-**Release behavior:** `tools/public_release_gate.py` now treats the existing terms `suunniteltu säilytyskäytäntö` and `our proposed retention practice` as unresolved, release-blocking placeholders. A responsible party must implement and verify the retention procedure, then update both notices to state **actual practice** rather than a future intention. No approval record by itself can evade this text-level check.
+**Release behavior:** Both notices were redrafted to describe *retention criteria* without promising an unimplemented 12-month deletion deadline. Release requires explicit `privacy_legal` owner/legal sign-off and a verified operational handling procedure; the seven fail-closed approval gates remain unchanged. The release code retains a check for unimplemented fixed-deadline placeholders if they return.
 
 ## Primary references
 - GDPR Articles 6, 12–15, 17–22 and Chapter V: https://eur-lex.europa.eu/eli/reg/2016/679/oj

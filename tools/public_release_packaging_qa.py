@@ -18,15 +18,17 @@ def must(condition, reason):
     if not condition:
         raise AssertionError(reason)
 
-# Confirm all public approvals remain pending and the proposed retention
-# policy cannot accidentally be deemed implemented through JSON sign-off.
+# Legally actionable approvals stay pending; replacing an unimplemented
+# fixed retention promise with explicit retention criteria never grants approval.
 blockers = check(ROOT / 'PUBLIC_RELEASE_APPROVALS.example.json')
 must(bool(blockers), 'Release gate unexpectedly eligible')
-must(any('owner_release' in b for b in blockers), 'Owner permission gate absent')
+for gate in ('owner_release', 'privacy_legal', 'image_rights', 'preview_http', 'domain_rollback'):
+    must(any(gate in b for b in blockers), f'Critical release gate missing: {gate}')
+content = json.loads((ROOT/'content.json').read_text(encoding='utf-8'))
 for lang, token in (('fi', 'suunniteltu säilytyskäytäntö'),
                     ('en', 'our proposed retention practice')):
-    must(any(lang in b and token in b for b in blockers),
-         f'{lang}: unimplemented retention promise must still block public release')
+    text = ' '.join(item[1] for item in content['C'][lang]['privacy_sections']).lower()
+    must(token not in text, f'{lang}: invented retention deadline still present')
 
 checks = 0
 with TemporaryDirectory(prefix='prompted-isolated-packaging-test-') as tmp:

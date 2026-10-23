@@ -171,7 +171,7 @@
         ],
         [
           "Tietojen säilytys",
-          "Säilytämme yhteydenottotietoja asian käsittelyn ja mahdollisen yhteistyön selvittämisen vaatiman ajan. Jos asiakkuutta ei synny, suunniteltu säilytyskäytäntö on poistaa tai anonymisoida yhteydenotto viimeistään 12 kuukauden kuluttua viimeisestä olennaisesta yhteydenotosta, ellei pidempi säilytys ole välttämätöntä esimerkiksi oikeusvaateen vuoksi. Asiakkuuden ja lakisääteisten velvoitteiden asiakirjoilla on erilliset säilytysperusteet. Teknisten lokien säilytys perustuu käytössä oleviin hosting-asetuksiin ja tietoturvan edellyttämiin tarpeellisiin aikoihin."
+          "Säilytysaika määräytyy yhteydenoton käsittelyyn ja mahdollisen yhteistyön arviointiin tarvittavan ajan mukaan. Viestejä voidaan säilyttää pidempään, jos se on tarpeen esimerkiksi sopimuksen valmisteluun, lakisääteisen velvoitteen täyttämiseen tai oikeusvaateen laatimiseen, esittämiseen tai puolustamiseen. Asiakassuhteeseen johtavia tietoja koskevat erilliset säilytysperusteet. Sivuston teknisten lokien säilytysaika riippuu käytössä olevasta hosting-palvelusta, sen asetuksista ja palveluntarjoajan käytännöistä. Voit tiedustella säilytyksestä ja pyytää tietojesi poistamista tietosuojayhteydenotolla."
         ],
         [
           "Evästeet ja analytiikka",
@@ -408,7 +408,7 @@
         ],
         [
           "Retention",
-          "We retain enquiry information for the time needed to handle the matter and explore potential cooperation. If no customer relationship results, our proposed retention practice is to delete or anonymise the enquiry within 12 months of the last substantive contact, unless longer retention is necessary, for example to establish, exercise or defend legal claims. Separate legal obligations and retention criteria apply to customer records. Technical log retention follows the hosting settings in use and necessary security requirements."
+          "Enquiry information is retained according to the time needed to handle the enquiry and assess potential cooperation. Correspondence may be kept longer where needed to prepare a contract, meet a legal obligation or establish, exercise or defend legal claims. Separate retention criteria apply if an enquiry develops into a customer relationship. Technical website log retention depends on the hosting service, its actual settings and the provider's practices. You can ask about retention or request erasure using the privacy contact."
         ],
         [
           "Cookies and analytics",
