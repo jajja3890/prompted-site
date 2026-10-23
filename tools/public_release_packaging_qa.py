@@ -29,12 +29,12 @@ with TemporaryDirectory(prefix='prompted-signoff-negative-test-') as tmp:
         'explicit_public_release':True,'approved_commit_sha':'0'*40,
     }
     manifest=Path(tmp)/'synthetic-approval.json'
-    manifest.write_text(json.dumps(candidate,indent=2)+'\\n',encoding='utf-8')
+    manifest.write_text(json.dumps(candidate,indent=2)+'\n',encoding='utf-8')
     bad=check(manifest)
     must(any('approved_commit_sha differs from current source HEAD' in b for b in bad),
          'Owner approval must be rejected when it targets a different commit')
     candidate['owner_release']['approved_commit_sha']=''
-    manifest.write_text(json.dumps(candidate,indent=2)+'\\n',encoding='utf-8')
+    manifest.write_text(json.dumps(candidate,indent=2)+'\n',encoding='utf-8')
     bad=check(manifest)
     must(any('approved_commit_sha must be an exact' in b for b in bad),
          'Owner approval must include a full approved commit SHA')
