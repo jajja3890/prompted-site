@@ -18,6 +18,27 @@ def must(condition, reason):
     if not condition:
         raise AssertionError(reason)
 
+# Ensure owner release evidence is tied to the exact Git commit, not a
+# floating project-level approval. A synthetic approval file remains temporary
+# and is not a real authorisation or public-release manifest.
+with TemporaryDirectory(prefix='prompted-signoff-negative-test-') as tmp:
+    candidate=json.loads((ROOT/'PUBLIC_RELEASE_APPROVALS.example.json').read_text(encoding='utf-8'))
+    candidate['owner_release']={
+        'status':'approved','approver':'Test reviewer only',
+        'approved_on':'2026-10-23','evidence':'Synthetic negative test, not a real signoff',
+        'explicit_public_release':True,'approved_commit_sha':'0'*40,
+    }
+    manifest=Path(tmp)/'synthetic-approval.json'
+    manifest.write_text(json.dumps(candidate,indent=2)+'\\n',encoding='utf-8')
+    bad=check(manifest)
+    must(any('approved_commit_sha differs from current source HEAD' in b for b in bad),
+         'Owner approval must be rejected when it targets a different commit')
+    candidate['owner_release']['approved_commit_sha']=''
+    manifest.write_text(json.dumps(candidate,indent=2)+'\\n',encoding='utf-8')
+    bad=check(manifest)
+    must(any('approved_commit_sha must be an exact' in b for b in bad),
+         'Owner approval must include a full approved commit SHA')
+
 # Legally actionable approvals stay pending; replacing an unimplemented
 # fixed retention promise with explicit retention criteria never grants approval.
 blockers = check(ROOT / 'PUBLIC_RELEASE_APPROVALS.example.json')

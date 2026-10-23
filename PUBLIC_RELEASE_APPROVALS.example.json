@@ -40,6 +40,7 @@
     "approver": "",
     "approved_on": "",
     "evidence": "",
-    "explicit_public_release": false
+    "explicit_public_release": false,
+    "approved_commit_sha": ""
   }
 }

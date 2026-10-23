@@ -53,8 +53,22 @@ def check(approval_path):
         for field in ('approver','approved_on','evidence'):
             if not isinstance(approval.get(field),str) or not approval[field].strip():
                 problems.append(f'{gate}: {field} missing')
-        if gate=='owner_release' and approval.get('explicit_public_release') is not True:
-            problems.append('owner_release: explicit_public_release must be true')
+        if gate=='owner_release':
+            if approval.get('explicit_public_release') is not True:
+                problems.append('owner_release: explicit_public_release must be true')
+            approved_sha=approval.get('approved_commit_sha','')
+            if not isinstance(approved_sha,str) or not re.fullmatch(r'[0-9a-f]{40}',approved_sha):
+                problems.append('owner_release: approved_commit_sha must be an exact 40-character Git SHA')
+            else:
+                try:
+                    current_sha=subprocess.run(
+                        ['git','rev-parse','HEAD'],cwd=ROOT,
+                        text=True,capture_output=True,check=True
+                    ).stdout.strip()
+                    if approved_sha!=current_sha:
+                        problems.append('owner_release: approved_commit_sha differs from current source HEAD')
+                except (OSError,subprocess.CalledProcessError):
+                    problems.append('owner_release: source Git commit not available to verify approval')
     try:
         content=json.loads((ROOT/'content.json').read_text(encoding='utf-8'))
         for lang in ('fi','en'):

@@ -20,5 +20,6 @@
 - **Customer app Vercel project:** `prompted`, `prj_MfK5ICUXV5eD0k6VuUiy3BMgCLkU`, `app.prompted.fi`. **Never touch** its settings, secrets, customer auth, database or DNS.
 - **Live marketing domain:** existing external hosting at current apex/www `185.158.133.1`, authoritative TTL 3600 s (23 Oct snapshot).
 - **Morning GO requires:** seven evidenced approvals; truthful FI/EN notices; licensed/authorised artwork and logo; preview HTTP/device acceptance; full DNS rollback evidence; staged production bundle QA; explicit owner go-live instruction.
+- The `owner_release` approval must now record `approved_commit_sha` equal to the **exact HEAD of the proposed release**. Any post-approval code change requires renewed sign-off; a dated project-wide blanket approval cannot bypass this check.
 
 There is no hidden background or auto-deploy guarantee. If these approvals are not available, **do not publish**; the protected preview remains usable for review.
