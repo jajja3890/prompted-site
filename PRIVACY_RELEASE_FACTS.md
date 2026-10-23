@@ -6,7 +6,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - [x] **Independent public-record corroboration** of the company name, business ID 3550114-7, and registered municipality Turku. Secondary listings cite YTJ/PRH; this does not independently verify the mailbox. Sources and verification date below.
 - [ ] Verify that `jarkko@prompted.fi` is active, can receive subject-rights requests, and is monitored by the responsible Prompted Oy person.
 - [x] **Previously confirmed corporate email system:** Prompted Oy's `jarkko@prompted.fi` mailbox was connected to **Google Workspace (Gmail)** in the owner's account setup, reconfirmed 1 September 2026. This identifies the previously configured provider but not current live MX or Workspace admin contract status.
-- [ ] Recheck live mailbox and MX routing; verify Google Workspace Cloud Data Processing Addendum (CDPA) acceptance, subprocessor list, processing locations, applicable EEA transfer safeguards, and deletion policies in the current tenant.
+- [x] **Authoritative mail routing verified 23 October 2026:** both Domainhotelli authoritative nameservers answered `prompted.fi MX` with the five established Google Workspace mail exchangers, TTL 3600 seconds; no DNS changes were made. See `DNS_AUTHORITY_OBSERVED_2026-10-23.md`.
+- [ ] Verify that the actual mailbox receives and is monitored for privacy requests; confirm Google Workspace tenant CDPA acceptance, subprocessors, transfer safeguards, processing locations, retention settings and data deletion implementation.
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
 - [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
 - [x] FI/EN notice draft now describes **retention criteria rather than an unimplemented 12-month deletion deadline**. This is a copy correction, not evidence of operational deletion.
@@ -37,3 +38,9 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - Vercel privacy notice: https://vercel.com/legal/privacy-notice
 
 Until all facts and approvals are established, the site remains a protected noindex preview with visible legal DRAFT labels. No DNS or application changes are authorised.
+
+## 23 October 2026, 00:46:15 UTC — read-only authoritative check passed
+
+The GitHub Actions [overnight CI 39880019125](https://github.com/jajja3890/prompted-site/actions/runs/39880019125) completed with **SUCCESS**, including a live read-only DNS query against Domainhotelli's delegated authoritative nameservers. Result `AUTHORITATIVE_OBSERVED`, **4/4 required DNS queries confirmed**, zero query errors. Evidence report lives in the CI artifact `preview-release-audit/dns_cutover_snapshot_results.json`, and a durable human-readable record is in `DNS_AUTHORITY_OBSERVED_2026-10-23.md`.
+
+This now verifies current apex/www A answers and TTL, plus Google MX routing and the protected app CNAME. It does **not** establish mailbox delivery, Google contractual acceptance, permission to modify the registrar zone, or all raw TXT/DKIM records, and does not lift release gates.

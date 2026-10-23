@@ -33,3 +33,9 @@ Latest new-site review SHA `5906064c20c93639b484949c3ca0c1c1d2dbb4c2` has Vercel
 Each GitHub Preview CI now runs `tools/dns_cutover_snapshot.py` as a **read-only, best-effort** query directly against `ns1.domainhotelli.fi` and `ns2.domainhotelli.fi` for the apex, www, app and DMARC hosts. It captures A/AAAA/CNAME/MX/NS/CAA/SOA (including answer TTL) and **redacts raw TXT values** from public CI artifacts. Failures produce a `PARTIAL_NOT_AUTHORITY_FOR_CUTOVER` report instead of blocking unrelated static QA. The status is only `AUTHORITATIVE_OBSERVED` when essential named answers are authoritative.
 
 Snapshot output: `tools/dns_cutover_snapshot_results.json`, saved inside the `preview-release-audit` CI artifact. A positive observation does **not** replace exporting all DNS records/TTLs from Domainhotelli's owner account before changes. No DNS is modified. Protect `app.prompted.fi` and all email records.
+
+## 23 October 2026 authoritative DNS observation
+
+The [CI run 39880019125](https://github.com/jajja3890/prompted-site/actions/runs/39880019125) directly queried the delegated Domainhotelli nameservers and obtained authoritative answers for all four key DNS queries, including the apex and www A records, existing `app.prompted.fi` CNAME and the Google Workspace MX records, all with TTL 3600 seconds. Permanent audit summary: [`DNS_AUTHORITY_OBSERVED_2026-10-23.md`](DNS_AUTHORITY_OBSERVED_2026-10-23.md).
+
+**Still do not modify DNS** until authorised, full prior-zone record snapshot obtained from Domainhotelli and a protected actual Vercel preview accepted.
