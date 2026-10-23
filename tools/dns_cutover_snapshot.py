@@ -97,7 +97,7 @@ def main():
        'security':'TXT values redacted; no authenticated service access or DNS writes',
        'limitation':'This public record observation is not a complete Domainhotelli zone export; obtain original TTL and all records from the owner-managed DNS panel before cutover. No change to app.prompted.fi, MX, SPF, DKIM or DMARC is permitted.'
     }
-    OUTPUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+    OUTPUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'dns_snapshot':report['status'],'required':report['required_queries_verified'],'of':len(required),
                       'query_issues':len(errors),'report':str(OUTPUT.relative_to(ROOT))},ensure_ascii=False))
 
