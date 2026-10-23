@@ -1,0 +1,654 @@
+{
+  "C": {
+    "fi": {
+      "navigation": [
+        [
+          "Ratkaisut",
+          "#ratkaisut"
+        ],
+        [
+          "Miten toimimme",
+          "#menetelma"
+        ],
+        [
+          "Yritys",
+          "yritys/"
+        ]
+      ],
+      "contact": "Keskustellaan",
+      "language": "FI",
+      "langother": "EN",
+      "site_desc": "Prompted auttaa organisaatioita kehittämään tekoälyavusteisia työtapoja oikeassa työssä ja arvioimaan muutosta.",
+      "eyebrow": "HUMAN CAPABILITY / REAL WORK",
+      "lead_top": "Teknologia on täällä.",
+      "lead_bottom": "Muutos syntyy ihmisissä.",
+      "tagline": "Prompted auttaa yrityksiä kehittämään tekoälylukutaitoa, rakentamaan uusia työtapoja ja johtamaan muutosta. Yhdistämme käytännön valmennuksen, digitaalisen tuen ja muutoksen arvioinnin.",
+      "cta_primary": "Tutustu Capability-pilottiin",
+      "cta_secondary": "Keskustellaan tilanteestanne",
+      "scroll": "Tutustu ajatteluumme",
+      "fig": "Ihminen. Työ. Muutos.",
+      "problem_kicker": "01 / LÄHTÖKOHTA",
+      "problem_title": "Pääsy tekoälyyn ei ole sama asia kuin kyky käyttää sitä hyvin.",
+      "problem_body": "Ohjelmistot, koulutukset ja kokeilut ovat vasta alku. Todellinen arvo syntyy, kun uusi työtapa toistuu, siirtyy uusiin tilanteisiin ja säilyy myös ilman jatkuvaa ohjausta.",
+      "problem_note": "Yritykset kasvavat, kun ihmiset kasvavat.",
+      "solutions_kicker": "02 / TARJOOMA",
+      "solutions_title": "Yksi päämäärä. Kolme tapaa aloittaa.",
+      "solutions_intro": "Rakennamme kyvykkyyttä askel kerrallaan. Ratkaisu valitaan organisaation tilanteen mukaan, ei koulutuspäivien määrän perusteella.",
+      "products": [
+        [
+          "01",
+          "LITERACY",
+          "Yhteinen perusta",
+          "Tekoälylukutaito oman työn ja organisaation vastuiden näkökulmasta. EU AI Act -valmiutta tukevat, dokumentoitavat toimet.",
+          "Kysy toteutuksesta"
+        ],
+        [
+          "02",
+          "CAPABILITY",
+          "Uusi tapa tehdä työtä",
+          "Rajattu organisaatiopilotti, jossa ihmiset kehittävät työtapojaan omissa tehtävissään digitaalisen valmennuspalvelun ja ihmisen tuella.",
+          "Tutustu pilottiin"
+        ],
+        [
+          "03",
+          "TRANSFORMATION",
+          "Muutos osaksi organisaatiota",
+          "Johdon, ihmisten ja kehittämisen yhdistäminen niin, ettei edistyminen jää yksittäisten innostuneiden varaan. Toteutus suunnitellaan tarpeen mukaan.",
+          "Keskustellaan tarpeesta"
+        ]
+      ],
+      "method_kicker": "03 / MENETELMÄ",
+      "method_title": "Muutos rakennetaan oikeassa työssä.",
+      "method_intro": "Sama logiikka ohjaa kaikkea tekemistämme: lähtötilanne, toistuva tekeminen, havaittava muutos.",
+      "steps": [
+        [
+          "Tunnista",
+          "Mistä työstä lähdemme ja mikä siinä pitäisi muuttua?"
+        ],
+        [
+          "Harjoittele työssä",
+          "Ihminen kokeilee, toistaa ja soveltaa uutta tapaa omissa tehtävissään."
+        ],
+        [
+          "Todennä",
+          "Tarkastelemme näyttöä muutoksesta, sen rajoista ja seuraavista askeleista."
+        ]
+      ],
+      "quote": "Tavoitteena ei ole, että ihminen tarvitsee tekoälyvalmentajaa ikuisesti. Tavoitteena on, että hän pärjää lopulta paremmin itse.",
+      "evidence_kicker": "04 / EVIDENCE",
+      "evidence_title": "Muutosta ei pidä vain luvata. Sitä pitää pystyä arvioimaan.",
+      "evidence_body": "Prompted Data tuo tilaajalle hallinnoidun yhteenvetotason näkymän kehittymisestä. Yksittäisen osallistujan työ ja yksityiset valmennuskeskustelut eivät kuulu työnantajan raporttiin.",
+      "evidence_note": "Ei keksittyjä ROI-lukuja. Ei yksilötason seurantaa. Näyttö ennen väitettä.",
+      "close_kicker": "SEURAAVA ASKEL",
+      "close_title": "Aloitetaan yhdestä oikeasta ongelmasta.",
+      "close_body": "Kerro, missä tekoälyn hyödyntäminen ei vielä näy työn arjessa. Katsomme yhdessä, mistä kannattaa aloittaa.",
+      "footer_links": "Sivut",
+      "legal": "Tietosuoja",
+      "company": "Yritys",
+      "capability": "Capability",
+      "contact_title": "Yhteys",
+      "footnote": "Companies grow when people grow.",
+      "cap_eyebrow": "PROMPTED / CAPABILITY",
+      "cap_title": "Osaaminen muuttuu arvoksi vasta, kun työ muuttuu.",
+      "cap_lead": "Prompted Capability on organisaatiolle rajattu, maksullinen pilotti, jossa rakennetaan uusia tekoälyavusteisia työtapoja oikeassa työssä ja arvioidaan muutosta.",
+      "cap_scope_title": "Pilotti, joka on tarpeeksi rajattu aloitettavaksi.",
+      "cap_scope_body": "Alustava organisaation arviointijakso on noin 90 päivää ja tyypillinen osallistujamäärä noin 20. Tarkka sisältö, aikataulu ja hinta sovitaan tarjouksessa. 90 päivää ei ole osallistujan pakollinen valmistumisaika.",
+      "cap_stages": [
+        [
+          "01 / LÄHTÖTASO",
+          "Tunnistamme, miten työ nyt sujuu ja mihin muutosta tarvitaan."
+        ],
+        [
+          "02 / TYÖSSÄ OPPIMINEN",
+          "Osallistujat harjoittelevat omissa tehtävissään digitaalisen valmennuspalvelun tukemina."
+        ],
+        [
+          "03 / ARVIOINTI",
+          "Kokoamme perustellun kuvan toistosta, siirrettävyydestä ja itsenäistymisestä."
+        ]
+      ],
+      "cap_difference_title": "Teknologia ja ihminen tekevät eri työtä.",
+      "cap_difference_body": "Digitaalinen valmennuspalvelu tukee osallistujaa arjen tehtävissä. Promptedin vastuuhenkilö tukee organisaatiota ja pitää huolen siitä, että kokeilu liittyy liiketoiminnan tavoitteisiin.",
+      "cap_privacy_title": "Havainto ei ole työntekijän valvontaa.",
+      "cap_privacy_body": "Tavoitteena on rajattu, organisaatiotason yhteenveto yksittäisten osallistujien raakatekstien ja yksityisten keskustelujen sijaan. Näytön jakamisen säännöt ja tietosuojarajat vahvistetaan ennen asiakastoimitusta.",
+      "cap_disclaimer": "Pilotti ei takaa tiettyä taloudellista tuottoa, yksilösertifikaattia tai välitöntä muutosta koko organisaatiossa.",
+      "cap_cta": "Keskustellaan sopivuudesta",
+      "company_eyebrow": "PROMPTED / YRITYS",
+      "company_title": "Companies grow when people grow.",
+      "company_lead": "Prompted Oy on turkulainen yritys, joka auttaa organisaatioita muuttamaan tekoälyn mahdollisuudet ihmisten todelliseksi työkyvykkyydeksi.",
+      "company_body": "Meidän lähtökohtamme on inhimillinen: ihmiset tarvitsevat aikaa, kontekstia, kannustusta ja käytännön näyttöä. Teknologia tuo mahdollisuudet. Ihmiset muuttavat työn.",
+      "contact_eyebrow": "PROMPTED / YHTEYS",
+      "contact_page_title": "Mistä teillä pitäisi aloittaa?",
+      "contact_page_body": "Ensimmäiseen keskusteluun ei tarvita valmista projektisuunnitelmaa. Riittää, että tiedätte, mikä nykyisessä työssä ei vielä muutu.",
+      "email_label": "Kirjoita suoraan",
+      "email_subject": "Keskustelu Promptedin kanssa",
+      "contact_steps": [
+        [
+          "01",
+          "Kuvaile tilanne"
+        ],
+        [
+          "02",
+          "Valitaan sopiva lähtöpiste"
+        ],
+        [
+          "03",
+          "Sovitaan seuraava askel"
+        ]
+      ],
+      "terms_title": "Palveluehdot",
+      "terms_body": "Tämä sivu kertoo Prompted Oy:n julkisen markkinointisivuston käytöstä. Sivustolla voi tutustua palveluihimme, mutta sillä ei tehdä tilauksia eikä solmita asiakassopimuksia. Varsinaista kirjautunutta asiakaspalvelua koskevat erilliset ehdot.",
+      "privacy_title": "Tietosuojaseloste",
+      "privacy_intro": "Tämä seloste koskee Prompted Oy:n julkista prompted.fi-verkkosivustoa ja sen kautta syntyviä yhteydenottoja. Kirjautuneeseen app.prompted.fi-asiakaspalveluun, oppimiseen ja organisaatioraportointiin sovelletaan erillisiä tietosuojatietoja.",
+      "privacy_sections": [
+        [
+          "Rekisterinpitäjä",
+          "Prompted Oy, Y-tunnus 3550114-7, Turku, Suomi. Tietosuojakysymykset ja rekisteröidyn pyynnöt: jarkko@prompted.fi. Prompted Oy on tämän markkinointisivuston ja sille osoitettujen liiketoimintayhteydenottojen rekisterinpitäjä."
+        ],
+        [
+          "Mitä henkilötietoja käsittelemme",
+          "Sähköpostitse yhteyttä ottavasta henkilöstä voimme käsitellä nimeä, sähköpostiosoitetta, organisaatiota, työtehtävää, viestin sisältöä ja myöhempää yhteydenpitoa. Sivuston toimittamisesta voi syntyä IP-osoitteita, aikaleimoja, pyydettyjä osoitteita, selain- ja laitetietoja sekä tietoturva- ja virhelokeja. Sivustolla ei ole yhteydenottolomaketta tai henkilökohtaista käyttäjätiliä. Julkinen Capability-esittely käyttää kuvitteellisia tietoja."
+        ],
+        [
+          "Tarkoitukset ja oikeusperusteet",
+          "Käsittelemme yhteydenottoja kysymyksiin vastaamiseksi, mahdollisen yhteistyön selvittämiseksi ja pyydettyjen ehdotusten valmistelemiseksi. Organisaatioiden edustajien osalta käsittely perustuu yleensä oikeutettuun etuumme harjoittaa asianmukaista B2B-yhteydenpitoa (GDPR 6 artiklan 1 kohdan f alakohta). Jos henkilö itse pyytää omaan sopimukseensa liittyviä ennakkotoimia, peruste voi soveltuvin osin olla 6 artiklan 1 kohdan b alakohta. Teknisiä pyyntötietoja käsitellään palvelun toimivuuden, tietoturvan ja väärinkäytösten estämisen vuoksi oikeutetun edun perusteella (6 artiklan 1 kohdan f alakohta)."
+        ],
+        [
+          "Oikeutettu etu",
+          "Oikeutettuna etunamme on vastata oma-aloitteisiin yhteydenottoihin, hoitaa asianmukaisia yrityssuhteita ja suojata palvelua. Käsittelemme vain näihin tarkoituksiin tarpeellisia tietoja. Etumme punnitaan suhteessa rekisteröidyn oikeuksiin ja kohtuullisiin odotuksiin. Voit vastustaa oikeutettuun etuun perustuvaa käsittelyä omaan erityiseen tilanteeseesi liittyvällä perusteella."
+        ],
+        [
+          "Tietojen lähteet ja antamisen vapaaehtoisuus",
+          "Saamme yhteydenottotiedot sinulta ja mahdollisesta myöhemmästä viestinvaihdosta. Tekniset pyyntötiedot syntyvät palvelua käytettäessä, myös hosting-palvelun infrastruktuurissa. Yhteydenotto on vapaaehtoinen. Ilman toimivaa vastausosoitetta emme välttämättä voi vastata pyyntöösi."
+        ],
+        [
+          "Vastaanottajat ja käsittelijät",
+          "Yhteydenottoja käsittelevät vain niitä tarvitsevat Prompted Oy:n henkilöt. Sivuston hosting-palvelu on Vercel, ja Promptedin tähän sivustoon liittyviä sähköpostiyhteydenottoja käsitellään Google Workspace (Gmail) -palvelussa. Palveluntarjoajat ja soveltuvat alikäsittelijät voivat käsitellä tietoja palveluiden toimittamiseksi sopimustensa mukaisesti. Tietoja voidaan luovuttaa viranomaiselle, jos laki sitä edellyttää. Emme myy sivustokävijöiden tai yhteydenottajien henkilötietoja."
+        ],
+        [
+          "Tietojen siirrot ETA-alueen ulkopuolelle",
+          "Vercel ilmoittaa, että sen palveluun liittyvää henkilötietojen käsittelyä voi tapahtua myös Yhdysvalloissa. Myös sähköpostipalvelun toimitusketju voi sisältää kansainvälistä käsittelyä. Mahdolliset Euroopan talousalueen ulkopuoliset siirrot edellyttävät soveltuvaa riittävyyspäätöstä tai GDPR:n V luvun mukaisia suojatoimia, kuten EU:n vakiosopimuslausekkeita silloin, kun niitä tarvitaan. Käytännössä sovellettavista siirtojärjestelyistä saa lisätietoa tietosuojayhteydenotolla."
+        ],
+        [
+          "Tietojen säilytys",
+          "Säilytysaika määräytyy yhteydenoton käsittelyyn ja mahdollisen yhteistyön arviointiin tarvittavan ajan mukaan. Viestejä voidaan säilyttää pidempään, jos se on tarpeen esimerkiksi sopimuksen valmisteluun, lakisääteisen velvoitteen täyttämiseen tai oikeusvaateen laatimiseen, esittämiseen tai puolustamiseen. Asiakassuhteeseen johtavia tietoja koskevat erilliset säilytysperusteet. Sivuston teknisten lokien säilytysaika riippuu käytössä olevasta hosting-palvelusta, sen asetuksista ja palveluntarjoajan käytännöistä. Voit tiedustella säilytyksestä ja pyytää tietojesi poistamista tietosuojayhteydenotolla."
+        ],
+        [
+          "Evästeet ja analytiikka",
+          "Tämän markkinointisivuston sovelluskoodiin ei ole lisätty markkinointianalytiikkaa, mainospikseleitä tai käyttäjäprofilointia. Capability-esittely toimii selaimessa ilman kirjautumista eikä lähetä esittelyvalintoja Promptedille. Hosting-palvelu voi käsitellä teknisiä pyyntötietoja palvelun toimittamiseksi ja suojaamiseksi. Jos otamme myöhemmin käyttöön muita kuin välttämättömiä evästeitä tai vastaavia päätelaitetekniikoita, annamme niistä tiedot ja pyydämme tarvittavan suostumuksen ennen käyttöä."
+        ],
+        [
+          "Tietojen suojaaminen",
+          "Rajaamme tietojen käyttöoikeudet niille, jotka tarvitsevat tietoja tehtäviensä hoitamiseen, ja hyödynnämme suojattuja yhteyksiä sekä palveluntarjoajien teknisiä ja organisatorisia turvatoimia. Mikään sähköposti- tai verkkopalvelu ei ole täysin riskitön. Älä lähetä tavallisella sähköpostilla arkaluonteisia henkilötietoja tai luottamuksellista asiakasaineistoa ilman erikseen sovittua turvallista kanavaa."
+        ],
+        [
+          "Rekisteröidyn oikeudet",
+          "Sinulla voi soveltuvin osin olla oikeus päästä tietoihisi, saada ne oikaistuiksi tai poistetuiksi, rajoittaa käsittelyä, vastustaa oikeutettuun etuun perustuvaa käsittelyä ja siirtää tiedot järjestelmästä toiseen silloin, kun oikeuden edellytykset täyttyvät. Mahdollisen suostumuksen voi peruuttaa milloin tahansa ilman vaikutusta aiempaan lainmukaiseen käsittelyyn. Pyynnöt: jarkko@prompted.fi. Vastaamme lähtökohtaisesti kuukauden kuluessa ja kerromme lain sallimasta mahdollisesta lisäajasta. Voimme varmistaa pyytäjän henkilöllisyyden."
+        ],
+        [
+          "Valitusoikeus",
+          "Voit tehdä valituksen toimivaltaiselle valvontaviranomaiselle esimerkiksi asuin- tai työpaikkasi jäsenvaltiossa. Suomessa viranomainen on tietosuojavaltuutetun toimisto, tietosuoja.fi. Voit myös ensin ottaa yhteyttä meihin asian selvittämiseksi."
+        ],
+        [
+          "Automaattinen päätöksenteko ja palveluiden rajaus",
+          "Julkisella sivustolla ei tehdä henkilötietoihin perustuvia yksinomaan automaattisia päätöksiä, joilla olisi oikeusvaikutuksia tai vastaavia merkittäviä vaikutuksia, eikä vierailijoita profiloida. Capability-esittely on havainnollistava eikä käsittele oikean asiakasorganisaation henkilöstötietoja. Varsinaisen valmennus- ja asiakaspalvelun tietosuojasta kerrotaan erikseen."
+        ],
+        [
+          "Selosteen päivitykset",
+          "Päivitämme selostetta, jos verkkosivuston ominaisuudet, palveluntarjoajat tai henkilötietojen käsittely muuttuvat olennaisesti. Ajantasainen versio julkaistaan tällä sivulla. Valmisteltu 22.10.2026."
+        ]
+      ],
+      "terms_sections": [
+        [
+          "Ylläpitäjä ja soveltamisala",
+          "Tätä julkista markkinointisivustoa ylläpitää Prompted Oy (Y-tunnus 3550114-7), Turku, Suomi. Nämä verkkosivuehdot koskevat sivuston katselua ja sen julkisia esittelysisältöjä. Ne eivät ole kirjautuneen asiakassovelluksen, valmennuksen tai yritysasiakkaan tietojenkäsittelyn sopimusehdot."
+        ],
+        [
+          "Palvelukuvausten luonne",
+          "Literacy-, Capability- ja Transformation-palveluiden kuvaukset auttavat arvioimaan mahdollista yhteistyötä. Sivuston tekstit, kuvat, prosessikaaviot, mahdolliset hinnat ja aikataulut ovat yleisiä tai havainnollistavia, ellei niitä ole erikseen vahvistettu kirjallisessa tarjouksessa. Sivuston sisältö ei yksin muodosta sitovaa tarjousta."
+        ],
+        [
+          "Asiakastoimitukset ja sopimukset",
+          "Sivustolla ei voi tilata, ostaa eikä maksaa palveluita. Toimituksen laajuus, osallistujat, hinta, aikataulu, vastuut, tietosuoja ja mahdollinen henkilötietojen käsittelysopimus sovitaan erikseen. Hyväksytty kirjallinen asiakassopimus määrää toimituksesta, eikä tämä verkkosivun teksti muuta sitä."
+        ],
+        [
+          "Capability-esittely",
+          "Julkinen Capability-esittely näyttää tilaajan ja osallistujan näkökulmia havainnollistavassa muodossa. Näytetyt henkilöt, organisaatioiden ryhmäluvut, mittarit, tulokset ja laskelmat ovat kuvitteellisia tai oletuksiin perustuvia. Esittely ei ole kirjautunut asiakasympäristö, todellinen tekoälyvalmennustapahtuma eikä todiste yksittäisen asiakkaan saavutuksista."
+        ],
+        [
+          "Sivuston käyttö ja aineiston oikeudet",
+          "Sivustoa saa käyttää tavanomaiseen lailliseen tiedonhakuun ja palveluihin tutustumiseen. Sivuston toiminnan häiritseminen ja automatisoitu väärinkäyttö on kielletty. Teksteihin, kuviin, tunnuksiin ja muuhun aineistoon liittyvät oikeudet kuuluvat niiden oikeudenhaltijoille. Aineiston muu kaupallinen uudelleenkäyttö edellyttää tarvittavia oikeuksia tai lupia, ellei laki salli käyttöä."
+        ],
+        [
+          "Ulkoiset linkit",
+          "Sivustolla voi olla linkkejä ulkopuolisiin palveluihin, kuten kirjautuneeseen asiakassovellukseen ja muihin verkkosivuihin. Niiden toiminnasta, tietosuojasta ja sopimusehdoista vastaa kyseinen palveluntarjoaja omalta osaltaan. Ulkoinen linkki ei yksin tarkoita kaupallista kumppanuutta tai suositusta."
+        ],
+        [
+          "Sisällön ajantasaisuus ja saatavuus",
+          "Pyrimme pitämään sivuston tiedot ymmärrettävinä ja ajan tasalla. Sisältö ja tekniset ominaisuudet voivat muuttua, ja sivusto voi olla tilapäisesti poissa käytöstä. Mikään sivustolla esitetty yleinen esimerkki ei takaa tiettyä liiketoiminnallista tulosta. Nämä ehdot eivät rajoita pakottavaan lainsäädäntöön perustuvia oikeuksia."
+        ],
+        [
+          "Tietosuoja",
+          "Julkisen sivuston henkilötietojen käsittelyä kuvataan tietosuojaselosteessamme. Capabilityn kirjautuneen asiakaspalvelun henkilöstö- ja asiakastiedot käsitellään erillisten tietosuojatietojen ja mahdollisten sopimusten mukaisesti. Älä lähetä arkaluonteista aineistoa tavallisella sähköpostilla ilman sovittua turvallista kanavaa."
+        ],
+        [
+          "Muutokset ja yhteydenotot",
+          "Voimme päivittää tätä julkista verkkosivua koskevaa tekstiä sivuston tai toimintatapojen muuttuessa. Kysymykset ja yhteydenotot: jarkko@prompted.fi. Valmisteltu 22.10.2026."
+        ]
+      ]
+    },
+    "en": {
+      "navigation": [
+        [
+          "Solutions",
+          "#solutions"
+        ],
+        [
+          "How it works",
+          "#method"
+        ],
+        [
+          "Company",
+          "company/"
+        ]
+      ],
+      "contact": "Let’s talk",
+      "language": "EN",
+      "langother": "FI",
+      "site_desc": "Prompted helps organisations build AI-assisted ways of working in real work and understand what changes.",
+      "eyebrow": "HUMAN CAPABILITY / REAL WORK",
+      "lead_top": "Technology is here.",
+      "lead_bottom": "Change is human.",
+      "tagline": "Prompted helps organisations build AI literacy, develop new ways of working and lead change. We combine practical coaching, digital support and evidence of progress.",
+      "cta_primary": "Explore Capability",
+      "cta_secondary": "Discuss your challenge",
+      "scroll": "Explore the approach",
+      "fig": "People. Work. Change.",
+      "problem_kicker": "01 / THE CHALLENGE",
+      "problem_title": "Access to AI is not the same as the ability to use it well.",
+      "problem_body": "Software, training and experiments are only the beginning. Real value emerges when a new practice is repeated, transferred to other tasks and sustained with less support.",
+      "problem_note": "Companies grow when people grow.",
+      "solutions_kicker": "02 / WHAT WE OFFER",
+      "solutions_title": "One ambition. Three ways to begin.",
+      "solutions_intro": "We build capability one step at a time. The right starting point depends on the organisation, not the number of training days.",
+      "products": [
+        [
+          "01",
+          "LITERACY",
+          "A shared foundation",
+          "AI literacy in the context of real work and organisational responsibility. Documentable measures that support EU AI Act readiness.",
+          "Ask about delivery"
+        ],
+        [
+          "02",
+          "CAPABILITY",
+          "A new way of working",
+          "A defined organisational pilot in which people develop practices in their real work, supported by a digital coaching service and a human partner.",
+          "Explore the pilot"
+        ],
+        [
+          "03",
+          "TRANSFORMATION",
+          "Change that takes hold",
+          "Connecting leadership, people and development so progress does not rely on a handful of enthusiasts. Delivery is tailored to the context.",
+          "Discuss your needs"
+        ]
+      ],
+      "method_kicker": "03 / OUR APPROACH",
+      "method_title": "Change is built in real work.",
+      "method_intro": "A clear sequence underpins everything we do: baseline, repeated practice, observable change.",
+      "steps": [
+        [
+          "Understand",
+          "Which part of work needs to change, and why?"
+        ],
+        [
+          "Practise at work",
+          "People try, repeat and apply new practices in their actual tasks."
+        ],
+        [
+          "Evaluate",
+          "We examine evidence of change, its limits and the next steps."
+        ]
+      ],
+      "quote": "The goal is not for someone to need a digital coach forever. The goal is for them to become more capable on their own.",
+      "evidence_kicker": "04 / EVIDENCE",
+      "evidence_title": "Change should not just be promised. It should be assessed.",
+      "evidence_body": "Prompted Data offers organisations a governed, aggregate view of progress. Individual work content and private coaching conversations do not appear in the employer’s report.",
+      "evidence_note": "No invented ROI. No individual surveillance. Evidence before claims.",
+      "close_kicker": "THE NEXT STEP",
+      "close_title": "Start with one real problem.",
+      "close_body": "Tell us where AI adoption is not yet changing day-to-day work. Together we can identify a useful first step.",
+      "footer_links": "Explore",
+      "legal": "Privacy",
+      "company": "Company",
+      "capability": "Capability",
+      "contact_title": "Contact",
+      "footnote": "Companies grow when people grow.",
+      "cap_eyebrow": "PROMPTED / CAPABILITY",
+      "cap_title": "Capability creates value when work changes.",
+      "cap_lead": "Prompted Capability is a defined, paid organisational pilot to establish AI-assisted practices in real work and evaluate what changes.",
+      "cap_scope_title": "A pilot that is focused enough to start.",
+      "cap_scope_body": "The tentative organisational evaluation window is around 90 days, with a typical cohort of around 20 participants. Precise scope, timing and price are agreed in the proposal. Ninety days is not a mandatory completion deadline for each learner.",
+      "cap_stages": [
+        [
+          "01 / BASELINE",
+          "Identify current practices and where change is needed."
+        ],
+        [
+          "02 / PRACTICE",
+          "Participants build new ways of working in their own tasks, with digital coaching support."
+        ],
+        [
+          "03 / EVALUATION",
+          "Build an evidence-based understanding of repetition, transfer and independence."
+        ]
+      ],
+      "cap_difference_title": "Technology and people have different roles.",
+      "cap_difference_body": "The digital coaching service supports participants in everyday tasks. A named Prompted contact supports the organisation and ensures the pilot remains tied to its priorities.",
+      "cap_privacy_title": "Evidence is not employee surveillance.",
+      "cap_privacy_body": "The intended model is privacy-bounded organisational evidence, not access to individual raw text or private coaching conversations. Reporting safeguards and data-sharing rules are agreed before each delivery.",
+      "cap_disclaimer": "The pilot does not guarantee financial returns, individual credentials or immediate organisation-wide change.",
+      "cap_cta": "Discuss pilot fit",
+      "company_eyebrow": "PROMPTED / COMPANY",
+      "company_title": "Companies grow when people grow.",
+      "company_lead": "Prompted Oy is based in Turku, Finland. We help organisations turn the possibilities of AI into real capability in the way people work.",
+      "company_body": "Our starting point is human: people need context, encouragement, practice and evidence. Technology creates opportunities. People change the work.",
+      "contact_eyebrow": "PROMPTED / CONTACT",
+      "contact_page_title": "Where should your organisation begin?",
+      "contact_page_body": "You do not need a finished project brief to have a first conversation. Just tell us what is not changing in the way work gets done.",
+      "email_label": "Email us directly",
+      "email_subject": "A conversation with Prompted",
+      "contact_steps": [
+        [
+          "01",
+          "Describe the challenge"
+        ],
+        [
+          "02",
+          "Choose a useful starting point"
+        ],
+        [
+          "03",
+          "Agree on next steps"
+        ]
+      ],
+      "terms_title": "Service terms",
+      "terms_body": "This page explains the use of Prompted Oy's public marketing website. You can explore our services here, but you cannot place an order or enter a customer agreement through this site. Separate terms apply to authenticated customer services.",
+      "privacy_title": "Privacy notice",
+      "privacy_intro": "This notice covers Prompted Oy's public prompted.fi marketing website and related enquiries. The authenticated app.prompted.fi customer service, learning activities and organisational reporting are covered by separate privacy information.",
+      "privacy_sections": [
+        [
+          "Controller",
+          "Prompted Oy, Finnish business ID 3550114-7, Turku, Finland. Privacy questions and data subject requests: jarkko@prompted.fi. Prompted Oy is the controller for this marketing website and business enquiries addressed to it."
+        ],
+        [
+          "Personal data we process",
+          "If you contact us by email, we may process your name, email address, organisation, professional role, message and subsequent correspondence. Delivering the website may involve IP addresses, timestamps, requested URLs, browser and device information, and technical security and error logs. There is no contact form or personal user account on this site. The public Capability demonstration uses fictional information."
+        ],
+        [
+          "Purposes and legal bases",
+          "We process enquiries to answer questions, explore potential cooperation and prepare proposals you request. For representatives of organisations, this is generally based on our legitimate interests in appropriate B2B communications (GDPR Article 6(1)(f)). If an individual requests steps relating to their own prospective contract, Article 6(1)(b) may apply where appropriate. We process necessary request data to deliver and secure the website and prevent misuse on the basis of legitimate interests (Article 6(1)(f))."
+        ],
+        [
+          "Legitimate interests",
+          "Our interests are replying to enquiries initiated by you, managing appropriate business relationships and keeping the service secure. We limit processing to information necessary for these purposes. Our interests must be balanced against data subjects' rights and reasonable expectations. You may object to processing based on legitimate interests on grounds relating to your particular situation."
+        ],
+        [
+          "Sources and voluntary provision",
+          "We receive enquiry information from you and from subsequent correspondence. Technical request information is generated when the service is used, including within the hosting infrastructure. Contacting us is optional. Without a functioning reply address we may be unable to answer your request."
+        ],
+        [
+          "Recipients and processors",
+          "Within Prompted Oy, only people who need enquiry information to perform their duties have access. The website is hosted by Vercel and email enquiries addressed to Prompted Oy are processed using Google Workspace (Gmail). Providers and relevant subprocessors may process information to deliver their services under their agreements. Information may be disclosed to authorities when required by law. We do not sell personal data about website visitors or people contacting us."
+        ],
+        [
+          "Transfers outside the EEA",
+          "Vercel states that personal data related to its services may also be processed in the United States. Our email provider's supply chain may also involve international processing. Transfers outside the European Economic Area require an applicable adequacy decision or safeguards under Chapter V of the GDPR, such as EU standard contractual clauses where necessary. Further information about the arrangements applicable to a transfer can be requested through our privacy contact."
+        ],
+        [
+          "Retention",
+          "Enquiry information is retained according to the time needed to handle the enquiry and assess potential cooperation. Correspondence may be kept longer where needed to prepare a contract, meet a legal obligation or establish, exercise or defend legal claims. Separate retention criteria apply if an enquiry develops into a customer relationship. Technical website log retention depends on the hosting service, its actual settings and the provider's practices. You can ask about retention or request erasure using the privacy contact."
+        ],
+        [
+          "Cookies and analytics",
+          "The application code for this marketing site includes no marketing analytics, advertising pixels or visitor profiling. The illustrative Capability experience runs in the browser without signing in and does not transmit demonstration choices to Prompted. Hosting infrastructure may process technical requests to deliver and protect the service. If we later introduce non-essential cookies or similar device technologies, we will describe them and obtain any necessary consent before use."
+        ],
+        [
+          "Information security",
+          "We restrict access to personal data to those who need it for their work and use protected connections as well as our providers' technical and organisational security measures. No email or online service is entirely risk-free. Please do not send sensitive personal information or confidential customer material by ordinary email without first agreeing on a secure channel."
+        ],
+        [
+          "Your rights",
+          "Where applicable, you may request access, rectification, erasure or restriction, object to processing based on legitimate interests, and obtain data portability where its conditions are met. Any consent may be withdrawn at any time without affecting earlier lawful processing. Contact jarkko@prompted.fi. We generally respond within one month and explain any extension permitted by law. We may verify your identity."
+        ],
+        [
+          "Right to complain",
+          "You may complain to a competent supervisory authority, including in the EU Member State of your residence or workplace. In Finland this is the Office of the Data Protection Ombudsman, tietosuoja.fi. You may also contact us first to investigate your concern."
+        ],
+        [
+          "Automated decisions and separate services",
+          "This public website does not make solely automated decisions based on personal data that have legal or similarly significant effects, and does not profile visitors. The Capability demonstration is illustrative and does not process actual customer organisations' employee data. The authenticated coaching and customer service is subject to separate privacy information."
+        ],
+        [
+          "Changes to this notice",
+          "We update this notice if the website's features, providers or processing change materially. The current version will be published on this page. Prepared on 22 October 2026."
+        ]
+      ],
+      "terms_sections": [
+        [
+          "Operator and scope",
+          "This public marketing website is operated by Prompted Oy (Finnish business ID 3550114-7), Turku, Finland. These website terms cover browsing the site and its public demonstrations. They are not contractual terms for authenticated customer software, coaching delivery or processing employee data on behalf of organisations."
+        ],
+        [
+          "Nature of service descriptions",
+          "Descriptions of Literacy, Capability and Transformation help organisations explore potential cooperation. Text, images, process illustrations, any indicative prices and timelines are general or illustrative unless confirmed in a written proposal. Website content on its own does not constitute a binding offer."
+        ],
+        [
+          "Customer deliveries and agreements",
+          "Services cannot be ordered, purchased or paid for through this site. Delivery scope, participants, fees, schedule, responsibilities, privacy requirements and any data processing agreement are agreed separately. An accepted written customer agreement governs the delivery and is not amended by these website terms."
+        ],
+        [
+          "Capability demonstration",
+          "The public Capability demonstration illustrates buyer and participant perspectives. People, group figures, metrics, outcomes and calculations shown are fictional or assumption-based. It is not the authenticated customer environment, a live AI coaching session or evidence of results achieved by any particular customer."
+        ],
+        [
+          "Using the site and material rights",
+          "You may use the website for lawful, ordinary information gathering and exploration of our services. Interference with site operation and automated misuse are prohibited. Rights in the text, images, marks and other material belong to their respective rights holders. Other commercial reuse requires the necessary rights or permission unless permitted by law."
+        ],
+        [
+          "External links",
+          "The website may link to external services, including the authenticated customer application and third-party sites. Each provider is responsible for its own service, privacy practices and applicable terms. An external link does not by itself imply a commercial partnership or endorsement."
+        ],
+        [
+          "Accuracy and availability",
+          "We aim to keep the website clear and current. Content and technical features may change, and the site may be temporarily unavailable. No general example on the website guarantees a specific business outcome. Nothing in these terms limits rights under mandatory applicable law."
+        ],
+        [
+          "Privacy",
+          "Personal data processing on the public site is described in our privacy notice. Customer and employee information in authenticated Capability services is subject to separate privacy information and applicable agreements. Do not send sensitive materials by ordinary email without first agreeing on a secure channel."
+        ],
+        [
+          "Changes and contact",
+          "We may update this public website text when the site or our practices change. Questions and enquiries: jarkko@prompted.fi. Prepared on 22 October 2026."
+        ]
+      ]
+    }
+  },
+  "SERVICES": {
+    "fi": {
+      "literacy": {
+        "eyebrow": "PROMPTED / LITERACY · TEKOÄLYLUKUTAITO",
+        "h1": "Tekoälylukutaito organisaatioille, jotka haluavat edetä vastuullisesti.",
+        "intro": "Prompted Literacy auttaa yrityksiä luomaan yhteisen, työhön liittyvän perustan tekoälyn käyttöön ja dokumentoimaan osaamisen kehittämiseksi tehtyjä toimia.",
+        "meta": "Tekoälylukutaidon kehittäminen yrityksille: työhön liittyvät käyttötavat, vastuut ja dokumentoitava eteneminen. EU AI Act -lukutaitovalmiuden tueksi.",
+        "why_title": "Pelkkä yleiskurssi ei kerro, mitä ihmiset osaavat tehdä omassa työssään.",
+        "why": "Lähtötilanteet vaihtelevat. Eri roolit, työkalut, riskit ja työn todelliset tehtävät vaikuttavat siihen, mitä organisaatiossa on syytä oppia ja dokumentoida.",
+        "steps": [
+          [
+            "01 / TILANNE",
+            "Tunnistamme käytössä olevat tekoälytyökalut, roolit ja tärkeimmät oppimistarpeet."
+          ],
+          [
+            "02 / YHTEINEN PERUSTA",
+            "Harjoittelemme vastuullista käyttöä oman työn esimerkeissä, huomioiden arvioinnin ja harkinnan."
+          ],
+          [
+            "03 / DOKUMENTOINTI",
+            "Kokoamme sovitut toimet ja jatkokehittämisen tarpeet organisaation omaa käyttöä varten."
+          ]
+        ],
+        "bound_title": "Lukutaito ei ole sertifikaattilupaus.",
+        "bound": "EU:n tekoälysääntelyn lukutaitovelvoitteeseen ei liity yhtä yleistä virallista kurssia tai Promptedin myöntämää viranomaissertifikaattia. Organisaation pitää arvioida tarpeelliset toimet oman toimintansa ja riskien näkökulmasta. Toteutuksen laajuus sovitaan ennen aloitusta.",
+        "who_title": "Kenelle tämä sopii?",
+        "who": "HR- ja henkilöstöjohdolle, esihenkilöille sekä liiketoimintavastuullisille, jotka tarvitsevat selkeän aloituksen henkilöstön tekoälylukutaidon kehittämiseen.",
+        "faq": [
+          [
+            "Korvaako Prompted Literacy lainmukaisuuden arvioinnin?",
+            "Ei. Tuemme henkilöstön tekoälylukutaidon kehittämistä ja toimien dokumentointia, mutta emme anna oikeudellista vaatimustenmukaisuustakuuta."
+          ],
+          [
+            "Onko tämä sama kuin Capability?",
+            "Ei. Literacy luo yhteistä lähtötasoa ja vastuullisen käytön perustaa. Capability vie kehittämisen pidemmälle oikeisiin työtehtäviin ja muutoksen arviointiin."
+          ]
+        ],
+        "cta": "Keskustellaan tekoälylukutaidon tarpeesta"
+      },
+      "transform": {
+        "eyebrow": "PROMPTED / TRANSFORMATION · ORGANISAATIOMUUTOS",
+        "h1": "Tekoälymuutos, joka näkyy organisaation tavassa tehdä työtä.",
+        "intro": "Prompted Transformation yhdistää johdon tavoitteet, työntekijöiden uudenlaisen tekemisen ja muutoksen arvioinnin. Kokonaisuus suunnitellaan organisaation tilanteen mukaan.",
+        "meta": "Organisaation tekoälymuutos: yhdistämme liiketoiminnan tavoitteet, henkilöstön kyvykkyyden kehittämisen ja todellisten työtapojen muutoksen arvioinnin.",
+        "why_title": "Työkaluista hyötyihin tarvitaan muutos työn arjessa.",
+        "why": "Käyttöönotto ei riitä, jos toimivat käytännöt eivät toistu, siirry tiimien välillä ja säily ilman jatkuvaa ulkoista tukea. Muutosta pitää johtaa työstä käsin.",
+        "steps": [
+          [
+            "01 / TAVOITE",
+            "Määritämme yhdessä, mitä liiketoiminnassa ja arjen työssä halutaan muuttaa."
+          ],
+          [
+            "02 / KYVYKKYYS",
+            "Yhdistämme sopivat oppimis- ja valmennustoimet todellisiin tehtäviin."
+          ],
+          [
+            "03 / NÄYTTÖ",
+            "Tarkastelemme toistoa, siirrettävyyttä ja itsenäistymistä sekä päätämme seuraavista toimista."
+          ]
+        ],
+        "bound_title": "Ei valmista muutospakettia jokaiselle yritykselle.",
+        "bound": "Transformation on tarvelähtöinen yhteistyömalli, ei etukäteen vakioitu ohjelma tai luvattu liiketoimintahyöty. Lopullinen laajuus, vastuut, mittarit ja ehdot määritellään asiakaskohtaisesti.",
+        "who_title": "Kenelle tämä sopii?",
+        "who": "Liiketoimintajohdolle, muutosvastuullisille sekä People- ja L&D-johdolle, kun tavoitteena on yksittäistä koulutusta laajempi toimintatapojen uudistuminen.",
+        "faq": [
+          [
+            "Miten tämä eroaa yksittäisestä koulutuksesta?",
+            "Työ alkaa liiketoiminnan muutostarpeesta. Harjoittelu, tuki ja arviointi liittyvät työn todellisiin tehtäviin, eivät vain koulutukseen osallistumiseen."
+          ],
+          [
+            "Onko Transformationilla kiinteä kesto tai hinta?",
+            "Ei tässä vaiheessa. Tarve, rajaus ja toteutusmalli määritellään yhdessä ja vahvistetaan tarjouksessa."
+          ]
+        ],
+        "cta": "Keskustellaan organisaation muutoksesta"
+      }
+    },
+    "en": {
+      "literacy": {
+        "eyebrow": "PROMPTED / LITERACY · AI LITERACY",
+        "h1": "AI literacy for organisations that want to move forward responsibly.",
+        "intro": "Prompted Literacy helps companies establish a shared, work-relevant foundation for using AI and document their capability-building measures.",
+        "meta": "AI literacy for organisations: practical workplace use, responsible judgement and documented learning measures supporting EU AI Act readiness.",
+        "why_title": "A generic course does not show how people use AI in their own work.",
+        "why": "Different roles, tools, risks and everyday tasks call for different learning priorities. A credible programme starts from that context, not a one-size-fits-all certificate.",
+        "steps": [
+          [
+            "01 / CONTEXT",
+            "Identify the AI tools, roles and learning needs relevant to the organisation."
+          ],
+          [
+            "02 / FOUNDATION",
+            "Practise responsible use through real workplace examples, including human judgement and evaluation."
+          ],
+          [
+            "03 / DOCUMENTATION",
+            "Document agreed measures and the areas that need further development."
+          ]
+        ],
+        "bound_title": "AI literacy is not a compliance certificate.",
+        "bound": "The EU AI Act literacy obligation does not prescribe one universal official training programme or an authority-issued Prompted certificate. Organisations must assess suitable measures for their own context and risks. Scope is agreed before delivery.",
+        "who_title": "Who is this for?",
+        "who": "HR, People and L&D leaders, managers and business owners who need a practical starting point for strengthening workforce AI literacy.",
+        "faq": [
+          [
+            "Does Prompted Literacy guarantee legal compliance?",
+            "No. We support AI literacy measures and documentation, but do not provide a legal-compliance guarantee."
+          ],
+          [
+            "How does Literacy differ from Capability?",
+            "Literacy provides a common foundation for responsible AI use. Capability goes further by developing real work practices and evaluating the changes."
+          ]
+        ],
+        "cta": "Discuss your AI literacy needs"
+      },
+      "transform": {
+        "eyebrow": "PROMPTED / TRANSFORMATION · ORGANISATIONAL CHANGE",
+        "h1": "AI transformation that changes how your organisation works.",
+        "intro": "Prompted Transformation connects leadership goals, practical capability development and evaluation of changing work. The engagement is designed around the organisation’s context.",
+        "meta": "Organisational AI transformation: connect business priorities, people development and evidence of lasting changes in real work.",
+        "why_title": "New tools only create value when work changes.",
+        "why": "Adoption alone is insufficient if good practices are not repeated, transferred between teams and sustained without constant external support. Change needs to be led from real work.",
+        "steps": [
+          [
+            "01 / PURPOSE",
+            "Agree what needs to change in business outcomes and day-to-day work."
+          ],
+          [
+            "02 / CAPABILITY",
+            "Connect learning and coaching to meaningful real-world tasks."
+          ],
+          [
+            "03 / EVIDENCE",
+            "Examine repeatability, transfer and independence, then decide on the next steps."
+          ]
+        ],
+        "bound_title": "Not a one-size-fits-all transformation package.",
+        "bound": "Transformation is a tailored collaboration model, not a standardised programme or guaranteed business result. Scope, ownership, measures and terms are agreed with each customer.",
+        "who_title": "Who is this for?",
+        "who": "Business, transformation, People and L&D leaders seeking broader changes in ways of working than a stand-alone training programme can deliver.",
+        "faq": [
+          [
+            "How is this different from training?",
+            "The starting point is a business need. Development, support and evaluation take place in the context of actual workplace tasks."
+          ],
+          [
+            "Does Transformation have a fixed timeline or price?",
+            "Not at present. Scope and delivery are planned together and confirmed in a written proposal."
+          ]
+        ],
+        "cta": "Discuss organisational transformation"
+      }
+    }
+  },
+  "SEO_TITLES": {
+    "fi": {
+      "home": "Tekoälykyvykkyyden kehittäminen yrityksille | Prompted",
+      "literacy": "Tekoälylukutaito yrityksille | Prompted Literacy",
+      "cap": "Tekoälykyvykkyyden kehittäminen | Prompted Capability",
+      "transform": "Tekoälymuutos organisaatioille | Prompted Transformation",
+      "company": "Prompted Oy | Tekoälykyvykkyys ja työssä oppiminen",
+      "contact": "Ota yhteyttä | Prompted Oy",
+      "privacy": "Tietosuoja | Prompted Oy",
+      "terms": "Palveluehdot | Prompted Oy"
+    },
+    "en": {
+      "home": "AI capability development for organisations | Prompted",
+      "literacy": "AI literacy for organisations | Prompted Literacy",
+      "cap": "Develop AI capability at work | Prompted Capability",
+      "transform": "Organisational AI transformation | Prompted",
+      "company": "About Prompted Oy | AI capability at work",
+      "contact": "Contact Prompted Oy",
+      "privacy": "Privacy | Prompted Oy",
+      "terms": "Service terms | Prompted Oy"
+    }
+  }
+}

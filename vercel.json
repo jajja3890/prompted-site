@@ -1,0 +1,73 @@
+{
+  "version": 2,
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/fi/",
+      "permanent": false
+    },
+    {
+      "source": "/capability",
+      "destination": "/fi/capability/",
+      "permanent": true
+    },
+    {
+      "source": "/literacy",
+      "destination": "/fi/literacy/",
+      "permanent": true
+    },
+    {
+      "source": "/transformation",
+      "destination": "/fi/transformation/",
+      "permanent": true
+    },
+    {
+      "source": "/transformerism",
+      "destination": "/fi/transformation/",
+      "permanent": true
+    },
+    {
+      "source": "/fi/transformerism",
+      "destination": "/fi/transformation/",
+      "permanent": true
+    },
+    {
+      "source": "/en/transformerism",
+      "destination": "/en/transformation/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests"
+        }
+      ]
+    }
+  ]
+}

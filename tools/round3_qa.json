@@ -1,0 +1,521 @@
+{
+  "status": "PASS",
+  "routeCount": 16,
+  "browserWidths": 56,
+  "checks": 72,
+  "failures": [],
+  "sizes": [
+    {
+      "file": "fi/index.html",
+      "links_checked": 27
+    },
+    {
+      "file": "fi/literacy/index.html",
+      "links_checked": 24
+    },
+    {
+      "file": "fi/capability/index.html",
+      "links_checked": 24
+    },
+    {
+      "file": "fi/transformation/index.html",
+      "links_checked": 24
+    },
+    {
+      "file": "fi/yritys/index.html",
+      "links_checked": 22
+    },
+    {
+      "file": "fi/yhteys/index.html",
+      "links_checked": 22
+    },
+    {
+      "file": "fi/tietosuoja/index.html",
+      "links_checked": 20
+    },
+    {
+      "file": "fi/ehdot/index.html",
+      "links_checked": 20
+    },
+    {
+      "file": "en/index.html",
+      "links_checked": 27
+    },
+    {
+      "file": "en/literacy/index.html",
+      "links_checked": 24
+    },
+    {
+      "file": "en/capability/index.html",
+      "links_checked": 24
+    },
+    {
+      "file": "en/transformation/index.html",
+      "links_checked": 24
+    },
+    {
+      "file": "en/company/index.html",
+      "links_checked": 22
+    },
+    {
+      "file": "en/contact/index.html",
+      "links_checked": 22
+    },
+    {
+      "file": "en/privacy/index.html",
+      "links_checked": 20
+    },
+    {
+      "file": "en/terms/index.html",
+      "links_checked": 20
+    },
+    {
+      "lang": "fi",
+      "route": "home",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1090
+    },
+    {
+      "lang": "fi",
+      "route": "home",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1065
+    },
+    {
+      "lang": "fi",
+      "route": "home",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1094
+    },
+    {
+      "lang": "fi",
+      "route": "home",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1292
+    },
+    {
+      "lang": "fi",
+      "route": "home",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1334
+    },
+    {
+      "lang": "fi",
+      "route": "home",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 736
+    },
+    {
+      "lang": "fi",
+      "route": "home",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 754
+    },
+    {
+      "lang": "fi",
+      "route": "literacy",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1345
+    },
+    {
+      "lang": "fi",
+      "route": "literacy",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1309
+    },
+    {
+      "lang": "fi",
+      "route": "literacy",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1310
+    },
+    {
+      "lang": "fi",
+      "route": "literacy",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1202
+    },
+    {
+      "lang": "fi",
+      "route": "literacy",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1154
+    },
+    {
+      "lang": "fi",
+      "route": "literacy",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 711
+    },
+    {
+      "lang": "fi",
+      "route": "literacy",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 755
+    },
+    {
+      "lang": "fi",
+      "route": "capability",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1184
+    },
+    {
+      "lang": "fi",
+      "route": "capability",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1137
+    },
+    {
+      "lang": "fi",
+      "route": "capability",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1115
+    },
+    {
+      "lang": "fi",
+      "route": "capability",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1304
+    },
+    {
+      "lang": "fi",
+      "route": "capability",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1304
+    },
+    {
+      "lang": "fi",
+      "route": "capability",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 736
+    },
+    {
+      "lang": "fi",
+      "route": "capability",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 754
+    },
+    {
+      "lang": "fi",
+      "route": "transformation",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1424
+    },
+    {
+      "lang": "fi",
+      "route": "transformation",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1404
+    },
+    {
+      "lang": "fi",
+      "route": "transformation",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1384
+    },
+    {
+      "lang": "fi",
+      "route": "transformation",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1234
+    },
+    {
+      "lang": "fi",
+      "route": "transformation",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1235
+    },
+    {
+      "lang": "fi",
+      "route": "transformation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 735
+    },
+    {
+      "lang": "fi",
+      "route": "transformation",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 904
+    },
+    {
+      "lang": "en",
+      "route": "home",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1090
+    },
+    {
+      "lang": "en",
+      "route": "home",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1065
+    },
+    {
+      "lang": "en",
+      "route": "home",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1094
+    },
+    {
+      "lang": "en",
+      "route": "home",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1292
+    },
+    {
+      "lang": "en",
+      "route": "home",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1334
+    },
+    {
+      "lang": "en",
+      "route": "home",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 736
+    },
+    {
+      "lang": "en",
+      "route": "home",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 754
+    },
+    {
+      "lang": "en",
+      "route": "literacy",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1259
+    },
+    {
+      "lang": "en",
+      "route": "literacy",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1259
+    },
+    {
+      "lang": "en",
+      "route": "literacy",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1257
+    },
+    {
+      "lang": "en",
+      "route": "literacy",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1152
+    },
+    {
+      "lang": "en",
+      "route": "literacy",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1154
+    },
+    {
+      "lang": "en",
+      "route": "literacy",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 711
+    },
+    {
+      "lang": "en",
+      "route": "literacy",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 711
+    },
+    {
+      "lang": "en",
+      "route": "capability",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1184
+    },
+    {
+      "lang": "en",
+      "route": "capability",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1159
+    },
+    {
+      "lang": "en",
+      "route": "capability",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1184
+    },
+    {
+      "lang": "en",
+      "route": "capability",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1304
+    },
+    {
+      "lang": "en",
+      "route": "capability",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1304
+    },
+    {
+      "lang": "en",
+      "route": "capability",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 743
+    },
+    {
+      "lang": "en",
+      "route": "capability",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 754
+    },
+    {
+      "lang": "en",
+      "route": "transformation",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "heroHeight": 1542
+    },
+    {
+      "lang": "en",
+      "route": "transformation",
+      "width": 360,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 1392
+    },
+    {
+      "lang": "en",
+      "route": "transformation",
+      "width": 390,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "heroHeight": 1331
+    },
+    {
+      "lang": "en",
+      "route": "transformation",
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 1234
+    },
+    {
+      "lang": "en",
+      "route": "transformation",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "heroHeight": 1235
+    },
+    {
+      "lang": "en",
+      "route": "transformation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "heroHeight": 804
+    },
+    {
+      "lang": "en",
+      "route": "transformation",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "heroHeight": 829
+    }
+  ]
+}
