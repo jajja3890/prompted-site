@@ -20,7 +20,7 @@ jobs:
           node-version: '22'
       - name: Install tests and browser
         run: |
-          python -m pip install --disable-pip-version-check beautifulsoup4 playwright
+          python -m pip install --disable-pip-version-check beautifulsoup4 playwright dnspython
           python -m playwright install --with-deps chromium
           npm install --no-save --package-lock=false --ignore-scripts axe-core
       - name: Reproducible site build
@@ -33,6 +33,9 @@ jobs:
         run: python tools/site_route_integrity.py
       - name: Served HTTP and CSP browser QA
         run: python tools/staging_http_browser_qa.py
+      - name: Read-only authoritative DNS cutover snapshot (best effort)
+        run: python tools/dns_cutover_snapshot.py
+        continue-on-error: true
       - name: Public release eligibility (fail closed, no artifact)
         run: python tools/public_release_gate.py --check
       - name: Isolated release packager safety test (never deploy)
@@ -51,6 +54,7 @@ jobs:
             tools/site_route_integrity_results.json
             tools/staging_http_browser_qa_results.json
             tools/public_release_gate_results.json
+            tools/dns_cutover_snapshot_results.json
             tools/buyer_experience_qa_results.json
             tools/visual_release_results.json
             tools/visual_review/*.png

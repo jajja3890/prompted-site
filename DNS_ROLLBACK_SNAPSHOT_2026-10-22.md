@@ -28,3 +28,8 @@ Authoritative nameservers reported by Vercel: **`ns1.domainhotelli.fi` and `ns2.
 Latest new-site review SHA `5906064c20c93639b484949c3ca0c1c1d2dbb4c2` has Vercel READY protected deployment and GitHub CI success. The Vercel connector can inspect metadata but cannot obtain a protected response or shareable preview: `get_access_to_vercel_url` returned 404 (deployment-scope lookup) and `web_fetch_vercel_url` returned 403 (protection access), with the tool recommending reauthorization for the project/team. This is a connector-scope blocker, **not** evidence that the website is down. Do not turn off SSO or weaken security.
 
 **No DNS was changed; this file is for cutover preparation only.**
+## Automated authoritative DNS evidence (overnight launch preflight)
+
+Each GitHub Preview CI now runs `tools/dns_cutover_snapshot.py` as a **read-only, best-effort** query directly against `ns1.domainhotelli.fi` and `ns2.domainhotelli.fi` for the apex, www, app and DMARC hosts. It captures A/AAAA/CNAME/MX/NS/CAA/SOA (including answer TTL) and **redacts raw TXT values** from public CI artifacts. Failures produce a `PARTIAL_NOT_AUTHORITY_FOR_CUTOVER` report instead of blocking unrelated static QA. The status is only `AUTHORITATIVE_OBSERVED` when essential named answers are authoritative.
+
+Snapshot output: `tools/dns_cutover_snapshot_results.json`, saved inside the `preview-release-audit` CI artifact. A positive observation does **not** replace exporting all DNS records/TTLs from Domainhotelli's owner account before changes. No DNS is modified. Protect `app.prompted.fi` and all email records.
