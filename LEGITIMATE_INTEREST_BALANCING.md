@@ -41,8 +41,8 @@ Outbound unsolicited prospecting, email marketing lists, cross-site advertising,
 
 - [ ] Accountable owner confirms both actual processing operations, data categories and legitimate-interest purpose.
 - [x] Google Workspace Gmail tenant mailbox and its inbound/outbound use verified; CDPA accepted 26 October 2026 (owner screenshot). **Still review account access/retention and applicable subprocessors/transfers.**
-- [x] Verify Vercel `prompted-site` has no project integrations/env vars and no outgoing team/project Drains; review published DPA and plan-specific runtime-log reference. **Still check actual plan, DPA account applicability, platform logs, relevant subprocessors and public-domain cookie/consent behaviour.**
-- [ ] Implement and evidence the email/contact retention or periodic deletion/review process; align FI/EN privacy notice with **actual** practice.
+- [x] Verify Vercel `prompted-site` has no project integrations/env vars and no outgoing team/project Drains; review published DPA and plan-specific runtime-log reference. **Vercel Pro was confirmed active since 12 October 2026, and the published Pro DPA was reviewed. Observability Plus, precise platform log categories/subprocessors and public-domain cookie/consent behaviour still require context-specific review.**
+- [x] **Monthly manual review policy for closed marketing enquiries adopted by founder on 26 October 2026**, with both FI/EN privacy drafts aligned. First real post-launch review, any case-specific action and continuity evidence remain outstanding; no automated deletion or universal deadline has been implemented.
 - [x] Data-rights handling owner identified as the sole founder, with a written rights-request SOP and Gmail triage label established 26 October 2026. **Operational monitoring, absence continuity and first practical case drill remain unevidenced.**
 - [ ] Review both balances, amend as needed, date and sign by accountable Prompted Oy approver. Retain revision evidence in company legal/data room.
 

@@ -171,7 +171,7 @@
         ],
         [
           "Tietojen säilytys",
-          "Säilytysaika määräytyy yhteydenoton käsittelyyn ja mahdollisen yhteistyön arviointiin tarvittavan ajan mukaan. Viestejä voidaan säilyttää pidempään, jos se on tarpeen esimerkiksi sopimuksen valmisteluun, lakisääteisen velvoitteen täyttämiseen tai oikeusvaateen laatimiseen, esittämiseen tai puolustamiseen. Asiakassuhteeseen johtavia tietoja koskevat erilliset säilytysperusteet. Sivuston teknisten lokien säilytysaika riippuu käytössä olevasta hosting-palvelusta, sen asetuksista ja palveluntarjoajan käytännöistä. Voit tiedustella säilytyksestä ja pyytää tietojesi poistamista tietosuojayhteydenotolla."
+          "Säilytysaika määräytyy yhteydenoton käsittelyyn ja mahdollisen yhteistyön arviointiin tarvittavan ajan mukaan. Käymme kuukausittain läpi tämän sivuston kautta syntyneet päättyneet markkinointiyhteydenotot ja arvioimme, onko niiden tietojen säilyttäminen edelleen tarpeen. Tämä on käsin tehtävä arviointi eikä automaattinen määräaikainen poisto. Viestejä voidaan säilyttää pidempään, jos se on tarpeen esimerkiksi sopimuksen valmisteluun, lakisääteisen velvoitteen täyttämiseen tai oikeusvaateen laatimiseen, esittämiseen tai puolustamiseen. Asiakassuhteeseen johtavia tietoja koskevat erilliset säilytysperusteet. Sivuston teknisten lokien säilytysaika riippuu käytössä olevasta hosting-palvelusta, sen asetuksista ja palveluntarjoajan käytännöistä. Voit tiedustella säilytyksestä ja pyytää tietojesi poistamista tietosuojayhteydenotolla."
         ],
         [
           "Evästeet ja analytiikka",
@@ -408,7 +408,7 @@
         ],
         [
           "Retention",
-          "Enquiry information is retained according to the time needed to handle the enquiry and assess potential cooperation. Correspondence may be kept longer where needed to prepare a contract, meet a legal obligation or establish, exercise or defend legal claims. Separate retention criteria apply if an enquiry develops into a customer relationship. Technical website log retention depends on the hosting service, its actual settings and the provider's practices. You can ask about retention or request erasure using the privacy contact."
+          "Enquiry information is retained according to the time needed to handle the enquiry and assess potential cooperation. We review closed marketing enquiries arising from this website once per calendar month to assess whether continued retention is necessary. This is a manual review, not automatic deletion after a fixed period. Correspondence may be kept longer where needed to prepare a contract, meet a legal obligation or establish, exercise or defend legal claims. Separate retention criteria apply if an enquiry develops into a customer relationship. Technical website log retention depends on the hosting service, its actual settings and the provider's practices. You can ask about retention or request erasure using the privacy contact."
         ],
         [
           "Cookies and analytics",
