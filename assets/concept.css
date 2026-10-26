@@ -90,3 +90,26 @@
 
 /* Ensure Capability delivery-boundary label meets 4.5:1 on #dfe7d9. */
 .additional-truth .kicker{color:#3e5313!important}
+
+
+/* Marketing section-label hierarchy (26 Oct 2026).
+ * Across FI/EN desktop pages, sectional eyebrows used to render at 10–11px
+ * beside ~50–70px headlines. Make the editorial labels readable without
+ * enlarging product UI mockups, captions, metadata, or mobile microcopy.
+ * Shared from concept.css so homepage, services and buyer experience agree.
+ */
+@media (min-width: 900px) {
+  :root { --section-label-desktop-size: clamp(13px, 0.82vw, 15px); }
+  .kicker,
+  .cap-eyebrow,
+  .ps-service-copy > .ps-eyebrow,
+  .ps-bridge .ps-kicker,
+  .pf-hero .pf-eyebrow,
+  .dx-hero .dx-eyebrow,
+  .dx-section-title .dx-eyebrow {
+    font-size: var(--section-label-desktop-size);
+    font-weight: 800;
+    letter-spacing: .10em;
+    line-height: 1.5;
+  }
+}
