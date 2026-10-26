@@ -13,7 +13,7 @@
 | Protected preview | **Vercel SSO enabled** | User-authenticated preview traffic may involve SSO cookies; prior Vercel read-only preview fetch is not an ordinary browser session. |
 | Project code | **Static FI/EN marketing website** | Review of the source/build and local HTTP Chromium QA previously found no marketing tracking scripts, personal-data forms, external fonts, application API calls, or localStorage writes. The public Capability walkthrough uses fictional data. |
 
-The connected Vercel `get_team` response only exposes team identity and **does not expose the subscribed plan or account-level DPA execution status**. A read-only day-scoped billing report for 24 October proves the team has Vercel usage/subscription ledger entries but does not independently identify its current plan or Observability Plus subscription. **Do not mark the plan/add-on as independently confirmed on this evidence.**
+**Vercel Pro is confirmed by the owner:** Pro was activated on 12 October 2026 and reconfirmed as active on 26 October 2026. This is an owner-confirmed subscription fact; the connected `get_team` API did not expose plan metadata. Observability Plus status and account-specific DPA execution remain unverified.
 
 ## Verified from current Vercel published documentation (not project-specific proof)
 
@@ -37,7 +37,7 @@ The connected Vercel `get_team` response only exposes team identity and **does n
 - [x] Read-only team and project drain lookup confirms none
 - [x] Protected preview previous HTTP/CSP and local-browser no-tracking evidence
 - [x] Published DPA scope, subprocessors reference and runtime-log product limits checked
-- [ ] **Verify current Vercel team plan/Observability Plus in Billing, not inferred from usage**; confirm DPA applicability to the Prompted team's agreement
+- [x] Vercel Pro plan confirmed by owner (activated 12 October 2026 and reconfirmed 26 October). The published DPA covers qualifying Pro customers. **Still outstanding:** Observability Plus status and any account-specific DPA/processing conditions.
 - [ ] **Review account-specific logs, processing locations/subprocessors and any relevant settings**; do not conflate runtime event retention with CDN, firewall, service-generated or backup records
 - [ ] Owner/company reviews the exact FI/EN privacy notice and legitimate-interest balancing statement against confirmed actual practices
 - [ ] Verify ordinary, unauthenticated public-domain cookies/headers and scripts on the intended public deployment before enabling indexing
