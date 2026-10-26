@@ -35,7 +35,7 @@ Read-only verification used the actual newly authorised Gmail account. The accou
 
 The company owner provided a screenshot from **Google Workspace Admin Console → Account settings → Legal and compliance → Security and Privacy Additional Terms**. At the time of the screenshot, **Cloud Data Processing Addendum (CDPA): Not accepted**. The adjacent optional certification of European data protection law also says **Not accepted**; Google documents that this specific certification step applies where the customer's billing address is outside EMEA. The HIPAA business-associate amendment also says **Not accepted**; there is no established HIPAA need for this marketing website. These visible statuses do not prove whether the CDPA is separately incorporated by reference in the existing Workspace agreement.
 
-**Next action (pending):** an authorised Workspace super administrator should use *Review and Accept* for CDPA if not already incorporated, review the terms and confirm acceptance, then record **Accepted** status/date in the company's private compliance evidence. Do not record acceptance before it is observed. See Google's help: https://knowledge.workspace.google.com/admin/compliance/privacy-compliance-and-records-for-google-workspace-and-cloud-identity
+**Historical action — completed 26 October 2026:** the authorised Workspace administrator subsequently accepted the CDPA; the screenshot confirmation in the next section supersedes this earlier pending state. See Google's help: https://knowledge.workspace.google.com/admin/compliance/privacy-compliance-and-records-for-google-workspace-and-cloud-identity
 
 ## 26 October 2026 — subsequent Google Workspace CDPA acceptance (owner screenshot)
 
@@ -44,6 +44,12 @@ A later screenshot from the same tenant's **Security and Privacy Additional Term
 ## 26 October 2026 — direct Vercel hosting inspection
 
 A read-only inspection confirmed that `prompted-site` contains no listed environment variables or project connector connections, and **neither project-filtered nor team-wide Vercel Drains were configured**. Current published Vercel DPA (Pro/Enterprise) and runtime-log retention documentation were checked separately. The connector does not show the subscribed billing plan or Observability Plus entitlement, so no exact account-specific processing/retention period is claimed. Evidence, official links and remaining tasks: `VERCEL_PRIVACY_VERIFICATION_2026-10-26.md`.
+
+## FI/EN privacy notice source consistency check, 26 October 2026
+
+The current `content.json` contains **14 aligned privacy-notice sections in both Finnish and English**. Both languages identify Prompted Oy as controller and `jarkko@prompted.fi` as contact; they disclose Vercel and Google Workspace, categories and purposes, possible transfers outside the EEA, retention **criteria** (not a fabricated 12-month or platform-log deadline), cookies/analytics, security, data subject rights, Finnish authority, and a boundary for the authenticated application. Both versions contain no fixed number of days or months for Vercel log deletion. The owner's privacy-role and Google's CDPA are internal evidence, and need not create an extraneous personal attribution or legal certificate in the public notice.
+
+**Draft review outcome:** wording remains suitable for final legal/controller review without changing the public-site source text. Contract/account plan applicability, active marketing-retention practice, any final host tracking/cookie behaviour, and the company's approval of the exact version still remain open. In particular, no new Google/Vercel claim should be asserted merely from a vendor standard document.
 
 ## Exact supplier references and implications
 
