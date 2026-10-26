@@ -37,6 +37,12 @@ IMAGE_APPROVAL_ASSETS={
     'assets/apple-touch-icon.png',
 }
 
+PRIVACY_APPROVAL_ASSETS={
+    'content.json', 'fi/tietosuoja/index.html', 'en/privacy/index.html',
+    'LEGITIMATE_INTEREST_BALANCING.md', 'MARKETING_ENQUIRY_RETENTION_SOP.md',
+}
+PRIVACY_PRELAUNCH_SAFEGUARDS=('rights_request_absence_continuity', 'provider_transfer_operations')
+
 def pages():
     return [ROOT/lang/route/'index.html' for lang,rr in ROUTES.items() for route in rr]
 
@@ -59,6 +65,27 @@ def check(approval_path):
         for field in ('approver','approved_on','evidence'):
             if not isinstance(approval.get(field),str) or not approval[field].strip():
                 problems.append(f'{gate}: {field} missing')
+        if gate=='privacy_legal':
+            blobs=approval.get('approved_privacy_blobs')
+            if not isinstance(blobs,dict) or set(blobs)!=PRIVACY_APPROVAL_ASSETS:
+                problems.append('privacy_legal: approved privacy file list is missing or changed')
+            else:
+                for relpath,expected in blobs.items():
+                    if not isinstance(expected,str) or not re.fullmatch(r'[0-9a-f]{40}',expected):
+                        problems.append(f'privacy_legal: invalid approved SHA: {relpath}')
+                        continue
+                    try:
+                        content=(ROOT/relpath).read_bytes()
+                        actual=hashlib.sha1(b'blob '+str(len(content)).encode()+b'\0'+content).hexdigest()
+                        if actual!=expected:
+                            problems.append(f'privacy_legal: approved privacy file changed: {relpath}')
+                    except OSError:
+                        problems.append(f'privacy_legal: approved privacy file absent: {relpath}')
+            safeguards=approval.get('prelaunch_safeguards')
+            for key in PRIVACY_PRELAUNCH_SAFEGUARDS:
+                item=safeguards.get(key) if isinstance(safeguards,dict) else None
+                if not isinstance(item,dict) or item.get('status')!='verified' or not isinstance(item.get('evidence'),str) or not item['evidence'].strip():
+                    problems.append(f'privacy_legal: prelaunch safeguard not verified: {key}')
         if gate=='image_rights':
             blobs=approval.get('approved_asset_blobs')
             if not isinstance(blobs,dict) or set(blobs)!=IMAGE_APPROVAL_ASSETS:
