@@ -42,10 +42,11 @@ with TemporaryDirectory(prefix='prompted-signoff-negative-test-') as tmp:
 # The actual manifest now has image rights owner-attested and bound to exact
 # binary versions. Other gates are still unapproved and the release stays blocked.
 actual=check(ROOT / 'PUBLIC_RELEASE_APPROVALS.json')
+must(json.loads((ROOT/'PUBLIC_RELEASE_APPROVALS.json').read_text())['privacy_legal']['status']=='approved', 'Expected scoped owner privacy signoff')
 must(not any(reason.startswith('image_rights:') for reason in actual),
      'Owner-approved image assets unexpectedly failed exact-blob validation')
-must(any(reason.startswith('privacy_legal:') for reason in actual),
-     'Privacy/legal release was unexpectedly approved')
+must(any('privacy_legal: prelaunch safeguard not verified:' in reason for reason in actual),
+     'Approved privacy content must remain blocked until operational safeguards are verified')
 with TemporaryDirectory(prefix='prompted-image-rights-negative-test-') as tmp:
     tampered=json.loads((ROOT/'PUBLIC_RELEASE_APPROVALS.json').read_text(encoding='utf-8'))
     tampered['image_rights']['approved_asset_blobs']['assets/hero-daylight.webp']='0'*40
