@@ -1,0 +1,38 @@
+# Prompted Oy: marketing-website privacy closure, 26 October 2026
+
+**Status: NOT legally signed off.** Scope is **only** the new static FI/EN `prompted.fi` marketing website and emails arising from it. This record is deliberately separate from `app.prompted.fi`, Tekoälymörkö and customer-/employee-data processing. It contains no private emails, account credentials, invoices or tenant screenshots.
+
+## What has actually been established
+
+| Check | Status | Evidence |
+| --- | --- | --- |
+| Site publisher and controller identity | **Checked against external company listings, awaiting owner's final confirmation** | Prompted Oy, 3550114-7, Turku; see `PRIVACY_RELEASE_FACTS.md`. |
+| Website implementation | **Verified on protected preview** | All 18 FI/EN routes responded HTTP 200; no first-party form, email sign-up, tracking SDK, marketing pixel, external font or external JS found in reviewed static pages; a deterministic fake-data Capability demo. |
+| Browser storage and server responses | **Preview evidence only, not public production sign-off** | Local Chromium checked cookies/storage and third-party requests; sampled Vercel protected-preview HTTP responses contained no `Set-Cookie`. Preview SSO may differ. |
+| Vercel project configuration | **Read-only connector check, 26 October** | Project `prompted-site`: **0 listed environment variables**, **0 listed project connector connections**. These facts do *not* rule out team-level/infrastructure logging, security cookies or unconnected integrations, nor describe future `prompted.fi` production. |
+| DNS mail routing | **Checked on authoritative DNS, 23 October** | Google Workspace MX records resolve; this does not prove the mailbox actually receives messages or is monitored. |
+| Hosting-provider standard DPA | **Public terms verified, account applicability outstanding** | Vercel DPA updated 17 March 2026, effective 31 March 2026, published for Pro/Enterprise processing within its stated scope. This is not proof that Prompted Oy's account is on a qualifying plan or that every processing relationship is covered. |
+| Data subject notice | **Complete bilingual draft only** | `content.json` generates `/fi/tietosuoja/` and `/en/privacy/`; actual mailbox retention and third-country processing need controller review before dropping DRAFT. |
+
+## Smallest remaining operational closure checklist
+
+1. **Mailbox delivery and request owner.** Verify a fresh external-to-`jarkko@prompted.fi` message is received and can be replied to; identify the person who monitors data-subject requests, including absence coverage. Save only date / success result in the private legal data room; never publish the message or confidential metadata. **Pending: owner confirmation.**
+2. **Google Workspace CDPA and email handling.** The tenant *super administrator* checks **Admin console → Account → Account settings → Legal and compliance**. If CDPA is not already incorporated into the agreement, review and accept it using Google's own instructions. Record applicability/acceptance, relevant transfers/subprocessors, actual email retention arrangements and account admin. **Pending: tenant-admin confirmation.**
+3. **Adopt a workable marketing-enquiry review procedure.** Name an accountable person, tag/segregate enquiries, decide when an enquiry closes or becomes a customer/contract/legal record, and record a regular review cadence and one sample review. Deletion applies only where no lawful further purpose exists. **Suggested operational cadence: monthly; not adopted or promised as automatic.** Record the procedure outside the public repo; see `MARKETING_ENQUIRY_RETENTION_SOP.md`. **Pending: owner operational adoption.**
+4. **Verify the actual Vercel account relationship and logs.** Confirm the team plan, DPA applicability, subprocessors, possible international transfers, and whether runtime/security/access logs or log drains are active for `prompted-site`; record real retention or retention criteria. Distinguish Vercel's **processor role for customer data** from its potential **controller role for service-generated/contact data** under DPA section 4. Runtime log retention varies by plan and add-ons, so do not invent a universal deadline. **Pending: account-specific evidence.**
+5. **Privacy notice and legal-basis sign-off.** Review FI/EN notice against those four actual operations, verify GDPR Article 6 bases and `LEGITIMATE_INTEREST_BALANCING.md`, confirm applicable processors/transfers/security wording, and approve the exact source revision and reviewer/date. Keep terms explicitly marketing-site-only and distinguish the authenticated application. **Pending: authorised controller/legal review.**
+6. **Post-cutover privacy smoke test.** Before publicly indexing the new production host, inspect `https://prompted.fi` without authenticated preview bypass for response headers, cookies, network calls, analytics and device storage; re-evaluate consent before adding non-essential technologies. Keep `privacy_legal` blocked if the deployed host differs from the reviewed implementation. **Pending: future public-domain release phase.**
+
+## Exact supplier references and implications
+
+- [Vercel DPA](https://vercel.com/legal/dpa), updated 17 March 2026, effective 31 March 2026, sections 1, 4, 7 and 13: scope, roles, subprocessors and transfers. Standard text **does not validate the connected team's commercial agreement**.
+- [Vercel Runtime Logs](https://vercel.com/docs/logs/runtime): plan-dependent log visibility/retention; compare with the actual team plan and any observability add-on, and investigate drains separately.
+- [Google Workspace: Privacy compliance and records](https://knowledge.workspace.google.com/admin/compliance/privacy-compliance-and-records-for-google-workspace-and-cloud-identity), updated 10 August 2026: CDPA may already be included; if not, super admin can accept under Legal and compliance.
+- [Traficom: Evästeet](https://www.kyberturvallisuuskeskus.fi/fi/viestintaverkkojen-ja-palveluiden-saantely/evasteet): non-essential cookies/equivalent access requires consent; banner should reflect **actual use**, not be deployed for appearance.
+- [GDPR, Articles 5–6 and 12–15](https://eur-lex.europa.eu/eli/reg/2016/679/oj): information duties and legal bases; review final language against actual operations.
+
+## Release-decision boundary
+
+- `image_rights` is owner-attested approved in `PUBLIC_RELEASE_APPROVALS.json`, scoped to five exact Git blobs. Image approval is **not** legal acceptance of the full website.
+- `privacy_legal` remains `pending` until all directly relevant account, operational, text and post-cutover checks are evidenced.
+- `owner_release` remains `pending` and **explicit_public_release=false**. Do not merge the design-review PR, deploy a public release, alter DNS, remove the preview noindex flag or touch `app.prompted.fi` as a result of this document.
