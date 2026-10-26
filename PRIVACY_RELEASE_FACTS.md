@@ -12,7 +12,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - [x] **Google Workspace CDPA accepted 26 October 2026:** owner-provided Google Workspace Admin Console screenshot shows **“Accepted by jarkko@prompted.fi on Oct 26, 2026”** for Cloud Data Processing Addendum. Earlier “Not accepted” status was superseded. Keep the private screenshot in the company's compliance evidence; do not publish it in the GitHub repository.
 - [ ] **Still open:** monitoring of privacy requests, email-data retention and deletion implementation, remaining account settings, and applicable subprocessors/transfer details. CDPA acceptance does not close these operational matters.
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
-- [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
+- [x] **26 October Vercel project/Drains inspection:** site has zero listed environment variables, zero Vercel project connectors and **zero configured drains across the connected team**, including this project. Vercel DPA clauses and standard runtime-log retention limits verified from supplier docs. See `VERCEL_PRIVACY_VERIFICATION_2026-10-26.md`.
+- [ ] **Still pending:** actual team plan/Observability Plus confirmation and DPA agreement applicability, infrastructure-level logging/subprocessors/transfer arrangements, and production visitor cookie/storage verification.
 - [x] FI/EN notice draft now describes **retention criteria rather than an unimplemented 12-month deletion deadline**. This is a copy correction, not evidence of operational deletion.
 - [ ] **Accountable operator and documented procedure now exist** in `MARKETING_ENQUIRY_RETENTION_SOP.md`, but the proposed monthly retention review has not been adopted or evidenced, and the first sample review is still outstanding. Do not claim an automatic deletion process.
 - [x] A scope-limited draft balancing worksheet has been prepared for inbound enquiries and Vercel technical security data: `LEGITIMATE_INTEREST_BALANCING.md`. This is a documented assessment draft, **not** a final legitimate-interest conclusion.
@@ -42,6 +43,10 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 
 Until all facts and approvals are established, the site remains a protected noindex preview with visible legal DRAFT labels. No DNS or application changes are authorised.
 
+
+## 26 October 2026 — Vercel contract and technical settings check
+
+Read-only Vercel access confirmed `prompted-site` has no listed project environment variables, connector connections or team/project Drains configured. Current Vercel public DPA covers Pro/Enterprise processing under relevant agreements, and its documented runtime log retention periods vary from 1 hour (Hobby) to 30 days (add-on), with Pro normally 1 day. The Vercel team plan/add-on and all platform-side processing categories were **not** proven by these connector responses; do not claim the published product limit is this account's entire retention policy. Refer to `VERCEL_PRIVACY_VERIFICATION_2026-10-26.md` for precise supplier sources and still-open checks.
 
 ## 26 October 2026 — Workspace tenant-specific CDPA approval
 
