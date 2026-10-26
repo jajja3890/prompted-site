@@ -22,6 +22,14 @@ The file history introduces the raster assets in `5ac7c18d2e02261042f259d4d8b2c4
 
 The first containing commit has been verified as [`5ac7c18`](https://github.com/jajja3890/prompted-site/commit/5ac7c18d2e02261042f259d4d8b2c4ddaeb6cb1a), with the GitHub user `jajja3890` recorded as its author and committer. The commit includes both `hero-daylight.webp` and `share-prompted.jpg`. **GitHub commit authorship establishes file introduction only, not that this user created the artwork or holds its commercial rights.** A search of earlier Prompted visual design discussions documents the H01/H05 collection and subsequent selection but does not supply an original generation record, a stock licence, a creator assignment or third-party permission. Neither image is cleared yet.
 
+**Exact approval objects in the current development branch (Git blob SHA):**
+- H01 `assets/hero-daylight.webp`: `e2be6f8fb27aa9c155e0112c5396e110f6a3f366`
+- Open Graph `assets/share-prompted.jpg`: `9229344275dca9dc169ecd87efaf12eba27d451a`
+- Canonical header wordmark `assets/wordmark-dark.svg`: `5b6055300e9a75186ae050f9dba916b96c6dccf3`
+- Brand derivatives `assets/favicon.ico`: `388bf7862adcd1d2c803d7de39bad813cf221baa`; `assets/apple-touch-icon.png`: `c9f538626ae88d916b8f2079f7dc340938b702c7`
+
+These hashes identify bytes for a later specific owner attestation; **hashes are not licenses**.
+
 **One shared source decision, two output files:** the social share image depicts the same architectural subject as H01, with Prompted branding overlaid. If both originate from the same rights-cleared master, retain evidence for the master **and** record that the crop/overlay was authorised or created for Prompted. If their source differs, record each source independently. Include the asset names and current content hashes in the private company legal/data room; do not put invoices, personal identity records or license credentials in this public repo.
 
 **If the H01 master was created using ChatGPT/ImageGen:** the [OpenAI EEA Terms of Use](https://openai.com/en-GB/policies/eu-terms-of-use/) (updated 16 January 2026) state that, as between the user and OpenAI and to the extent permitted by applicable law, the user owns the output; user-provided input and third-party rights remain the user's responsibility. This is a useful *conditional* rights basis, **not evidence that H01 actually came from ChatGPT** or that the input was independently cleared. Preserve the original generation/export reference and record Prompted Oy's permission to commercially use that specific output.
