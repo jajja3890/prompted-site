@@ -18,6 +18,21 @@ The connected repository provides file history and file usage. A Git commit is n
 
 The file history introduces the raster assets in `5ac7c18d2e02261042f259d4d8b2c4ddaeb6cb1a` on 21 Oct 2026. That establishes repository origin, **not copyright ownership or downstream commercial-use authorization**.
 
+## 26 October 2026 provenance investigation and shortest clearance path
+
+The first containing commit has been verified as [`5ac7c18`](https://github.com/jajja3890/prompted-site/commit/5ac7c18d2e02261042f259d4d8b2c4ddaeb6cb1a), with the GitHub user `jajja3890` recorded as its author and committer. The commit includes both `hero-daylight.webp` and `share-prompted.jpg`. **GitHub commit authorship establishes file introduction only, not that this user created the artwork or holds its commercial rights.** A search of earlier Prompted visual design discussions documents the H01/H05 collection and subsequent selection but does not supply an original generation record, a stock licence, a creator assignment or third-party permission. Neither image is cleared yet.
+
+**One shared source decision, two output files:** the social share image depicts the same architectural subject as H01, with Prompted branding overlaid. If both originate from the same rights-cleared master, retain evidence for the master **and** record that the crop/overlay was authorised or created for Prompted. If their source differs, record each source independently. Include the asset names and current content hashes in the private company legal/data room; do not put invoices, personal identity records or license credentials in this public repo.
+
+**Fastest defensible options (choose on evidence, not convenience):**
+1. *Company-origin artwork*: owner identifies how H01 was created, confirms use rights for a commercial website and social distribution, and confirms the share-graphic adaptation. Save the original generation/export record or an attributable dated statement, with terms if relevant.
+2. *Licensed third-party artwork*: preserve the exact provider/licence, acquisition/creator attribution, commercial distribution and editing permissions, and whether credit is required.
+3. *No reliable rights record*: **do not approve this image**; replace H01 and the share graphic with new original or rights-cleared assets, and re-check FI/EN layout, crop and Open Graph preview before owner approval.
+
+The original official Prompted wordmark SVG is byte-matched to the Prompted application master; **the company owner still has to confirm the rights to use that logo and derived favicons in Prompted Oy's marketing.**
+
+This is a sign-off pathway, not approval. The `image_rights` gate and `owner_release` gate remain `pending`, and the project must not be publicly deployed on the strength of this note.
+
 ## Minimum sign-off
 
 - [ ] H01 source and commercial-use rights documented; select final crop on desktop and phone
