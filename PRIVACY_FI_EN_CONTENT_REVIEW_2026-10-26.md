@@ -21,7 +21,7 @@ Edits on the candidate revision:
 
 ## Final controller-signoff conditions
 
-1. Assess and approve the Article 6(1)(f) legitimate-interest balancing for voluntary B2B enquiries and technically necessary service/security data against actual purposes, safeguards and transfer facts; the worksheet `LEGITIMATE_INTEREST_BALANCING.md` is currently **unsigned**.
+1. The updated `LEGITIMATE_INTEREST_BALANCING.md` (26 October 2026) now evaluates each of the two narrow purposes with the complete three-step Article 6(1)(f) test, safeguards and residual risks. Both results are provisionally favourable. **The Prompted Oy owner has not yet adopted or signed this assessment.**
 2. Confirm the company identity, monitored privacy contact and realistic mailbox continuity/absence process. Owner accepted monthly retention review on 26 October, but no first site-specific post-launch review exists.
 3. Check context-specific applicable Google/Vercel subprocessor/transfer arrangements and any Observability Plus add-on before making further log-retention claims; there is no separate marketing analytics SDK in the reviewed build.
 4. Obtain **accountable Prompted Oy approval for exact reviewed source revision** before moving `privacy_legal` from pending to approved. Distinguish any qualified external legal opinion from internal business-owner approval.
