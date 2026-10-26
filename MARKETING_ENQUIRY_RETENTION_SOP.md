@@ -1,26 +1,55 @@
-# Marketing enquiry handling: operational sign-off sheet
+# Prompted Oy — marketing enquiries and data-subject rights SOP
 
-**Prepared 23 October 2026; reviewed 26 October 2026. DRAFT — procedure not confirmed active.** Applies only to emails and other contact details received through the *public marketing website* enquiries. Does not cover customer application, HR data, sales CRM or legal/financial record retention.
+**Prepared 23 October 2026. Owner assigned and Gmail triage label created 26 October 2026. Operating review cadence and first retention review have NOT yet been evidenced.**
 
-## Scope and control points
+This practical, scope-limited procedure concerns the public `prompted.fi` marketing site and business email enquiries. It does **not** automatically cover the authenticated `app.prompted.fi` service, customer programme data, HR, legal or accounting records. Do not apply these website retention rules to customer or statutory records.
 
-- Controller: Prompted Oy, business ID 3550114-7. `jarkko@prompted.fi` is connected to Gmail; authoritative Google MX routing was verified on 23 October and live mailbox access with inbound and outgoing messages was verified read-only on 26 October 2026. **Google Workspace CDPA was accepted by jarkko@prompted.fi on 26 October 2026 and verified by owner-provided Admin Console screenshot. GDPR-request monitoring, retention operation and an explicit send/reply test remain unverified.**
-- Accountable person: **to be assigned** by company owner. Record adopted date in company legal data room.
-- New enquiries: label or otherwise distinguish marketing enquiries from customer, contracts, accounting, legal, HR and user support correspondence.
-- Decision on case closure: record whether the enquiry needs follow-up, has become a customer/contract record, relates to a legal claim, or is concluded with no further purpose. Do not erase legal/accounting evidence by applying a general website rule.
-- Review: owner chooses and records an actual recurring review cadence in the mailbox/operations system. Do not state a specific automatic deletion deadline unless that automation is in fact active and evidenced.
-- At review: delete/anonymise enquiries with no continuing purpose, or document a legitimate ongoing retention need. Record only aggregate counts and review date in the operations evidence, not message text.
-- Rights requests: `jarkko@prompted.fi` is proposed contact; verify delivery, monitor incoming requests, confirm the requester appropriately, meet GDPR response deadlines and document decisions. Route customer-account privacy requests to separate customer data procedures.
-- Hosting technical logs: use Vercel's actual account/project settings and supplier retention documentation. Email and hosting retention are not one system.
+## Responsibility and contact (confirmed)
 
-For a dated, evidence-limited checklist covering provider agreements, mailbox delivery, site behaviour and the FI/EN legal review, see `PRIVACY_FINAL_SIGNOFF_2026-10-26.md`. A monthly review cadence is suggested there, **not** claimed as an adopted or automatic deletion rule.
+- **Controller:** Prompted Oy, Finnish business ID 3550114-7.
+- **Accountable operator / privacy-request handler:** **Jarkko Sjöman**, founder, confirmed personally on **26 October 2026** as the sole responsible person for requests sent to `jarkko@prompted.fi`. This identifies an **operational contact**, not a formally designated GDPR Article 37 data protection officer (DPO).
+- **Mailbox:** Google Workspace Gmail, `jarkko@prompted.fi`, with inbound and outbound traffic verified read-only on 26 October 2026.
+- **Contract:** Google Workspace Cloud Data Processing Addendum **Accepted by jarkko@prompted.fi on 26 October 2026**, as shown on owner-provided Google Workspace Admin Console screenshot.
+- **Triage label:** `Prompted/Tietosuojapyynnöt` created in that mailbox on **26 October 2026**. **No pre-existing messages have been reclassified**. Gmail labels are organisational aids, not an erasure guarantee, audit trail or automatic escalation.
 
-## Evidence required to flip privacy_legal to approved
+## A. Receiving and responding to a data-subject rights request
 
-1. Current mailbox operates and the responsible person confirms access and notices.
-2. Google Workspace CDPA accepted by tenant administrator on 26 October 2026; assess any relevant remaining tenant-level subprocessor/transfer and retention practices.
-3. Named operations owner has adopted a workable review/deletion procedure, recorded how to perform it and completed at least one evidenced sample review, without copying actual personal data into GitHub.
-4. Vercel project-specific logs, cookies and data handling are confirmed (read-only browser/server check).
-5. FI/EN privacy notices are reviewed against the observed handling; company owner or qualified reviewer signs the exact version.
+1. **Recognise the request regardless of wording or channel.** Access, correction, deletion, restriction, objection and portability requests do not need to say “GDPR”. Treat requests in ordinary mail, website contact correspondence, and any other Prompted business channel as potentially valid. Forward the matter internally to the same account owner without spreading personal data.
+2. **Triage promptly.** When seen in Gmail, apply `Prompted/Tietosuojapyynnöt`; record the original receipt date and the statutory response deadline privately (do not store requester details in the public GitHub repository). Note the requested action and identify which actual system(s) hold the data. **Creating the label does not automatically classify incoming mail**.
+3. **Acknowledgement and identity.** Acknowledge using the existing reply channel. Seek only the minimum extra identification needed when there are reasonable doubts. Never ask for passport copies by default or disclose third-party data in a reply. Distinguish marketing contacts from authenticated app records and route the latter to their separate controller/processor arrangement.
+4. **Deadline.** Act without undue delay, normally **within one calendar month of receipt**. In complex or numerous cases, up to **two further months** may be available; explain the reasons and notify the requester within the original month. Do not assume the deadline begins only when a label is applied.
+5. **Assess and act.** Search relevant marketing correspondence; check identity and any exceptions, legal claims, contracts or retention duties before correction/deletion/restriction. Do not delete all evidence from other systems automatically. Honour objections where legally required. Keep a dated, minimal internal record of the outcome and whether a response was sent.
+6. **Close.** Reply through an appropriate, reasonably secure channel, and state what was done or why an exception or refusal applies and how to complain to the supervisory authority. Mark the case closed in the private log. For an absence or mailbox outage, the founder must arrange access/continuity; **no backup person has been appointed yet**.
 
-Until these are done, **do not mark any release approval as completed**, do not claim deletion automation exists, and do not expose private mailbox/tenant information in this public repository.
+Reference: [European Data Protection Board guidance for SMEs](https://www.edpb.europa.eu/sme/be-compliant/respect-individuals-rights_en) and [European Commission guidance](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en).
+
+## B. Marketing enquiry lifecycle and retention
+
+1. **Keep categories separate.** Incoming marketing questions and sales enquiries are distinct from rights requests, live client engagements, commercial contracts, accounting records and legal disputes. Classify purpose before retention action; the same correspondence may transition into a different record category.
+2. **On receipt:** reply or follow up when appropriate; collect only necessary contact information. Avoid sensitive personal information or other confidential client material in ordinary unencrypted emails.
+3. **Case closure criteria:** once the question has been answered, the proposal has been declined or no further legitimate follow-up is expected, treat the marketing enquiry as closed unless a lawful additional purpose has been identified and recorded. Ongoing customers, invoices or litigation-related evidence are **outside** this generic marketing rule.
+4. **Review cycle — proposal, not yet adopted:** the founder can review *closed marketing enquiries once per calendar month*, deciding individually whether to delete, anonymise, archive under another documented purpose or retain while an identified valid business purpose continues. A **monthly review is not an automatic deletion deadline or evidence that cleanup is running**.
+5. **Minimum evidence:** in a private operational log note only review date, reviewer, aggregate count reviewed, broad actions and next review date. **Never publish message content, personal identifiers or contract evidence to this public GitHub repository.** Deletion in Gmail and other systems must be verified through the actual provider workflow; don't promise automatic removal from all backups.
+6. **First sample review required:** before marking this SOP fully operational, complete one real small-scope review of marketing enquiries and record the non-personal completion evidence privately. **Not performed by creating the label or this document.**
+
+## C. Simple self-check for a one-person company
+
+- **Routine:** ensure the mailbox is accessible and inspect new messages and the privacy label frequently enough to meet rights deadlines; no background monitoring or guaranteed daily automation has been configured.
+- **If away:** preserve access, configure an absence response if appropriate, and make arrangements to handle any time-sensitive rights requests within statutory deadlines. No stand-in has been appointed; do not represent one publicly.
+- **Before website launch:** reconcile the actual retention and security practice with the FI/EN marketing-site privacy notices, verify Vercel's real project/account-specific terms and technical log handling, and obtain the accountable company/legal sign-off tied to the final Git revision.
+- **After launch:** review again whenever new tracking, integrations, email automation or new data collections are introduced.
+
+## Evidence and explicit current status, 26 October 2026
+
+| Item | Status |
+| --- | --- |
+| Responsible person for privacy requests | **Confirmed: Jarkko Sjöman, 26 Oct** |
+| Working inbound/outbound mailbox | **Verified through connected Gmail** |
+| Google Workspace CDPA | **Accepted; owner-provided Admin Console screenshot** |
+| Gmail privacy-case label | **Created: `Prompted/Tietosuojapyynnöt`** |
+| Actual regular monitoring/absence coverage | **Not independently evidenced; no backup person assigned** |
+| Marketing retention review cadence | **Monthly suggested, not formally adopted** |
+| First sample review and disposal evidence | **Not performed** |
+| Final FI/EN privacy/legal release sign-off | **Pending** |
+
+This procedure is an **implementable operational framework**, not a legal opinion or final adoption of automatic retention/deletion rules. No `privacy_legal` or `owner_release` gate is approved by this update.
