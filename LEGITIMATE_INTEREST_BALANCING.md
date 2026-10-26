@@ -1,6 +1,6 @@
 # Prompted Oy — legitimate interests assessment, marketing website only
 
-**Assessment prepared:** 22 October 2026 · **Evidence and balancing updated:** 26 October 2026 · **Assessment author:** ChatGPT supporting Prompted Oy · **Business owner and responsible reviewer:** Jarkko Sjöman · **Formal controller adoption:** PENDING (not silently assumed).
+**Assessment prepared:** 22 October 2026 · **Evidence and balancing updated:** 26 October 2026 · **Assessment author:** ChatGPT supporting Prompted Oy · **Business owner and responsible reviewer:** Jarkko Sjöman · **Formal controller adoption:** APPROVED BY OWNER ON 26 OCTOBER 2026, subject to stated operating safeguards and reassessment on material changes; external legal opinion not claimed.
 
 **Scope:** the future *public* static FI/EN `prompted.fi` website, ordinary **inbound** business enquiries about its services, and technically necessary service/security processing for this host. The authenticated customer application at `app.prompted.fi`, customer coaching/evidence, HR records, external lead databases, cold prospecting, campaign emails, and the unrelated Tekoälymörkö site are expressly OUT OF SCOPE.
 
@@ -61,17 +61,17 @@ For EACH purpose the controller must document three cumulative conditions, based
 | Vercel team/project external drains and connectors | **Zero in connected API**, 26 Oct |
 | Vercel Pro and standard DPA scope | Pro owner-confirmed; publicly stated standard Pro DPA applicability reviewed |
 | Individual log categories, transfer details and Observability Plus | Not fully observed; no universal time-based promise made |
-| Company adoption of **this** balancing assessment | **PENDING — explicit approval not yet given** |
-| Entire FI/EN notice owner approval | **PENDING** |
+| Company adoption of **this** balancing assessment | **APPROVED 26 Oct 2026 by Prompted Oy owner** for precisely the two limited purposes, conditional on the described safeguards; no approval of unrelated marketing or customer processing |
+| Entire FI/EN notice owner approval | **APPROVED 26 Oct 2026 by Prompted Oy owner**, as separately scoped in `PRIVACY_OWNER_SIGNOFF_2026-10-26.md`, conditional on actual operational safeguards |
 | Public release authorisation | **PENDING**; separate seven-gate release control remains fail-closed |
 
-## E. Ready-for-decision outcome (NOT an inferred signature)
+## E. Owner's controller decision — 26 October 2026
 
-**Proposed decision for Prompted Oy:** For the **two tightly defined processing purposes A and B only**, Article 6(1)(f) is a supportable lawful basis *if* the documented activity and safeguards match actual operations and no material new processing is added. Adoption requires the owner to confirm the described real purposes, safeguards and residual risks, and accept responsibility for handling rights requests and maintaining the adopted monthly review policy. Until this explicit decision, treat the outcome as **provisionally favourable / awaiting adoption**, not a binding sign-off.
+**Decision adopted by Prompted Oy owner on 26 October 2026:** Article 6(1)(f) balancing is approved for **only A: replies to voluntary incoming B2B enquiries** and **B: proportionate website delivery/security** within the assessed implementation. The owner accepts the documented reasonable residual risks and the responsibility to maintain the described safeguards, monitor data-subject requests also during absences, and reassess material changes. This is a scoped internal controller decision, **conditional on actually implementing and preserving the safeguards**; it is not a broad GDPR compliance certificate or external legal opinion.
 
-**Sign-off:** Approver: **not yet signed** · Decision date: **pending** · Scope: Prompted marketing website only · External legal opinion: **not obtained** · Approval evidence: **pending**.
+**Sign-off:** Approver: **Jarkko Sjöman, founder for Prompted Oy** · Decision date: **26 October 2026** · Evidence: **explicit affirmative reply in the working ChatGPT conversation to the request to approve both Article 6(1)(f) assessments and 26 Oct FI/EN notices, conditioned on effective safeguards and handling rights requests while away** · Scope: Prompted marketing website only · External legal opinion: **not obtained**.
 
-Do **not** change `privacy_legal` in `PUBLIC_RELEASE_APPROVALS.json` to approved on the strength of this draft alone. Likewise do not change `owner_release`, publish, merge or touch DNS or `app.prompted.fi`.
+The owner's explicit decision now authorises recording a **scoped, conditional `privacy_legal` owner approval**. Prelaunch safeguard verification remains a **separate must-pass release condition**, and no unverified measure may be represented as in place. Keep `owner_release`, commercial copy, device visuals, release-domain controls and the remaining gates independently pending. Do not publish, merge or touch DNS or `app.prompted.fi` under this privacy approval.
 
 ## Sources
 
