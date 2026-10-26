@@ -76,6 +76,28 @@ try:
                     must(page.locator('h1').count()==1,label,'rendered heading missing')
                     must(len(page.evaluate('document.styleSheets'))>=4,label,'linked CSS was not loaded')
                     must(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),label,'mobile overflow')
+                    # A static screenshot cannot prove that the mobile navigation is usable.
+                    # Exercise actual click, accessible state, keyboard dismissal and focus.
+                    menu=page.locator('.nav-toggle')
+                    mobile=page.locator('#mobile-nav')
+                    must(menu.is_visible(),label,'mobile menu toggle not visible')
+                    menu.click()
+                    must(menu.get_attribute('aria-expanded')=='true',label,'mobile toggle did not open')
+                    must(mobile.get_attribute('aria-hidden')=='false' and mobile.is_visible(),
+                         label,'mobile menu content not visible after opening')
+                    page.keyboard.press('Escape')
+                    must(menu.get_attribute('aria-expanded')=='false' and mobile.get_attribute('aria-hidden')=='true',
+                         label,'Escape did not dismiss mobile navigation')
+                    must(menu.evaluate('(el)=>document.activeElement===el'),
+                         label,'focus was not returned to the menu toggle')
+                    if route=='literacy':
+                        # FAQ is a native details/summary widget, not an inert visual mockup.
+                        detail=page.locator('.detail-faq details').first
+                        must(detail.count()==1,label,'Literacy FAQ missing')
+                        detail.locator('summary').click()
+                        must(detail.get_attribute('open') is not None,label,'FAQ did not expand')
+                        detail.locator('summary').click()
+                        must(detail.get_attribute('open') is None,label,'FAQ did not collapse')
                     for asset in page.locator('img[src^="/assets/"]').all():
                         # Lazy-loaded below-fold art should be checked only after a
                         # user-like scroll; testing pre-scroll completion is invalid.
