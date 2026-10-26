@@ -27,6 +27,12 @@
 
 Read-only verification used the actual newly authorised Gmail account. The account profile is `jarkko@prompted.fi`; both inbound and sent traffic were present in October 2026. No Gmail administrative capabilities, Workspace CDPA acceptance, mailbox account-retention configuration or monitoring assignment were exposed by these mailbox operations. The Gmail search was **not** a compliance audit of every historical email or data-subject request. Do not store personal email bodies, sender identities, message IDs or subjects in this public project or equate an inbox message with a validated GDPR rights request.
 
+## 26 October 2026 — Workspace Admin Console CDPA status (owner-provided visual evidence)
+
+The company owner provided a screenshot from **Google Workspace Admin Console → Account settings → Legal and compliance → Security and Privacy Additional Terms**. At the time of the screenshot, **Cloud Data Processing Addendum (CDPA): Not accepted**. The adjacent optional certification of European data protection law also says **Not accepted**; Google documents that this specific certification step applies where the customer's billing address is outside EMEA. The HIPAA business-associate amendment also says **Not accepted**; there is no established HIPAA need for this marketing website. These visible statuses do not prove whether the CDPA is separately incorporated by reference in the existing Workspace agreement.
+
+**Next action (pending):** an authorised Workspace super administrator should use *Review and Accept* for CDPA if not already incorporated, review the terms and confirm acceptance, then record **Accepted** status/date in the company's private compliance evidence. Do not record acceptance before it is observed. See Google's help: https://knowledge.workspace.google.com/admin/compliance/privacy-compliance-and-records-for-google-workspace-and-cloud-identity
+
 ## Exact supplier references and implications
 
 - [Vercel DPA](https://vercel.com/legal/dpa), updated 17 March 2026, effective 31 March 2026, sections 1, 4, 7 and 13: scope, roles, subprocessors and transfers. Standard text **does not validate the connected team's commercial agreement**.
