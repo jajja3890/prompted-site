@@ -39,6 +39,15 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 
 Until all facts and approvals are established, the site remains a protected noindex preview with visible legal DRAFT labels. No DNS or application changes are authorised.
 
+
+## 26 October 2026 — directly observed protected-preview website behaviour (not legal sign-off)
+
+Read-only Vercel connector requests against the isolated `prompted-site` protected preview returned **HTTP 200 on all 18 FI/EN pages**. Sampled HTML response headers on FI home, FI Capability demo, FI privacy and static assets include a restrictive self-only Content Security Policy, `X-Robots-Tag: noindex, nofollow`, `X-Content-Type-Options: nosniff`, HTTPS HSTS, and no `Set-Cookie` header on those sampled application responses. This inspection was performed using the Vercel connector's temporary protected-deployment access, **not** a public production host/browser session.
+
+The reviewed page source loads JavaScript and styles only from this site's own `/assets/` paths. Local Chromium HTTP QA for all 18 routes found no cookies, no localStorage writes and no unexpected third-party network requests under the simulated preview CSP (CI run [40305814827](https://github.com/jajja3890/prompted-site/actions/runs/40305814827)). The public Capability demo remains deterministic sample content, without an external AI API or analytics SDK.
+
+**Boundaries:** These are observations of the current preview code and selected server responses. They do not certify what Vercel's login/SSO, edge infrastructure, production domain, integrated analytics or any future additions will set in an end user's browser. The actual Google Workspace tenant contract, Vercel account-level processor agreement, hosting log retention, mailbox handling and final production cookie/storage inventory still require verification. No marketing-site `privacy_legal` approval is implied or recorded.
+
 ## 23 October 2026, 00:46:15 UTC — read-only authoritative check passed
 
 The GitHub Actions [overnight CI 39880019125](https://github.com/jajja3890/prompted-site/actions/runs/39880019125) completed with **SUCCESS**, including a live read-only DNS query against Domainhotelli's delegated authoritative nameservers. Result `AUTHORITATIVE_OBSERVED`, **4/4 required DNS queries confirmed**, zero query errors. Evidence report lives in the CI artifact `preview-release-audit/dns_cutover_snapshot_results.json`, and a durable human-readable record is in `DNS_AUTHORITY_OBSERVED_2026-10-23.md`.
