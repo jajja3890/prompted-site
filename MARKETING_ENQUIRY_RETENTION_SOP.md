@@ -1,10 +1,10 @@
 # Marketing enquiry handling: operational sign-off sheet
 
-**Prepared 23 October 2026. DRAFT — procedure not confirmed active.** Applies only to emails and other contact details received through the *public marketing website* enquiries. Does not cover customer application, HR data, sales CRM or legal/financial record retention.
+**Prepared 23 October 2026; reviewed 26 October 2026. DRAFT — procedure not confirmed active.** Applies only to emails and other contact details received through the *public marketing website* enquiries. Does not cover customer application, HR data, sales CRM or legal/financial record retention.
 
 ## Scope and control points
 
-- Controller: Prompted Oy, business ID 3550114-7. Business mailbox previously recorded as Google Workspace / Gmail, `jarkko@prompted.fi`; current tenant and MX still need verification.
+- Controller: Prompted Oy, business ID 3550114-7. Business mailbox previously recorded as Google Workspace / Gmail, `jarkko@prompted.fi`. Authoritative Google Workspace MX routing was verified on 23 October 2026; active delivery, monitoring, and the actual tenant contract still need confirmation.
 - Accountable person: **to be assigned** by company owner. Record adopted date in company legal data room.
 - New enquiries: label or otherwise distinguish marketing enquiries from customer, contracts, accounting, legal, HR and user support correspondence.
 - Decision on case closure: record whether the enquiry needs follow-up, has become a customer/contract record, relates to a legal claim, or is concluded with no further purpose. Do not erase legal/accounting evidence by applying a general website rule.
@@ -12,6 +12,8 @@
 - At review: delete/anonymise enquiries with no continuing purpose, or document a legitimate ongoing retention need. Record only aggregate counts and review date in the operations evidence, not message text.
 - Rights requests: `jarkko@prompted.fi` is proposed contact; verify delivery, monitor incoming requests, confirm the requester appropriately, meet GDPR response deadlines and document decisions. Route customer-account privacy requests to separate customer data procedures.
 - Hosting technical logs: use Vercel's actual account/project settings and supplier retention documentation. Email and hosting retention are not one system.
+
+For a dated, evidence-limited checklist covering provider agreements, mailbox delivery, site behaviour and the FI/EN legal review, see `PRIVACY_FINAL_SIGNOFF_2026-10-26.md`. A monthly review cadence is suggested there, **not** claimed as an adopted or automatic deletion rule.
 
 ## Evidence required to flip privacy_legal to approved
 
