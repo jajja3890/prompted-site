@@ -167,7 +167,7 @@
         ],
         [
           "Tietojen siirrot ETA-alueen ulkopuolelle",
-          "Vercel ilmoittaa, että sen palveluun liittyvää henkilötietojen käsittelyä voi tapahtua myös Yhdysvalloissa. Myös sähköpostipalvelun toimitusketju voi sisältää kansainvälistä käsittelyä. Mahdolliset Euroopan talousalueen ulkopuoliset siirrot edellyttävät soveltuvaa riittävyyspäätöstä tai GDPR:n V luvun mukaisia suojatoimia, kuten EU:n vakiosopimuslausekkeita silloin, kun niitä tarvitaan. Käytännössä sovellettavista siirtojärjestelyistä saa lisätietoa tietosuojayhteydenotolla."
+          "Vercel ilmoittaa, että sen palveluun liittyvää henkilötietojen käsittelyä voi tapahtua myös Yhdysvalloissa. Myös sähköpostipalvelun toimitusketju voi sisältää kansainvälistä käsittelyä. Euroopan talousalueen ulkopuolisiin siirtoihin sovelletaan tilanteen mukaan Euroopan komission riittävyyspäätöstä tai GDPR:n V luvun mukaisia suojatoimia. Vercelin julkaistu tietojenkäsittelyliite sisältää EU:n vakiosopimuslausekkeisiin perustuvat siirtojärjestelyt soveltuvissa tilanteissa (https://vercel.com/legal/dpa). Myös Google Workspace -palvelun mahdollisiin kansainvälisiin siirtoihin sovelletaan sen tietojenkäsittely- ja siirtoehtoja. Voit pyytää lisätietoja sovellettavista suojatoimista ja niiden saatavuudesta osoitteesta jarkko@prompted.fi."
         ],
         [
           "Tietojen säilytys",
@@ -183,7 +183,7 @@
         ],
         [
           "Rekisteröidyn oikeudet",
-          "Sinulla voi soveltuvin osin olla oikeus päästä tietoihisi, saada ne oikaistuiksi tai poistetuiksi, rajoittaa käsittelyä, vastustaa oikeutettuun etuun perustuvaa käsittelyä ja siirtää tiedot järjestelmästä toiseen silloin, kun oikeuden edellytykset täyttyvät. Mahdollisen suostumuksen voi peruuttaa milloin tahansa ilman vaikutusta aiempaan lainmukaiseen käsittelyyn. Pyynnöt: jarkko@prompted.fi. Vastaamme lähtökohtaisesti kuukauden kuluessa ja kerromme lain sallimasta mahdollisesta lisäajasta. Voimme varmistaa pyytäjän henkilöllisyyden."
+          "Sinulla voi soveltuvin osin olla oikeus päästä tietoihisi, saada ne oikaistuiksi tai poistetuiksi, rajoittaa käsittelyä, vastustaa oikeutettuun etuun perustuvaa käsittelyä ja siirtää tiedot järjestelmästä toiseen silloin, kun oikeuden edellytykset täyttyvät. Mahdollisen suostumuksen voi peruuttaa milloin tahansa ilman vaikutusta aiempaan lainmukaiseen käsittelyyn. Pyynnöt: jarkko@prompted.fi. Vastaamme ilman aiheetonta viivytystä ja viimeistään kuukauden kuluessa pyynnön vastaanottamisesta. Jos pyyntö on monimutkainen tai pyyntöjä on paljon, voimme pidentää määräaikaa enintään kahdella kuukaudella. Ilmoitamme pidennyksestä ja sen syistä ensimmäisen kuukauden aikana. Voimme pyytää henkilöllisyyden vahvistamista, jos siihen on perusteltu syy."
         ],
         [
           "Valitusoikeus",
@@ -195,7 +195,7 @@
         ],
         [
           "Selosteen päivitykset",
-          "Päivitämme selostetta, jos verkkosivuston ominaisuudet, palveluntarjoajat tai henkilötietojen käsittely muuttuvat olennaisesti. Ajantasainen versio julkaistaan tällä sivulla. Valmisteltu 22.10.2026."
+          "Päivitämme selostetta, jos verkkosivuston ominaisuudet, palveluntarjoajat tai henkilötietojen käsittely muuttuvat olennaisesti. Ajantasainen versio julkaistaan tällä sivulla. Päivitetty 26.10.2026."
         ]
       ],
       "terms_sections": [
@@ -404,7 +404,7 @@
         ],
         [
           "Transfers outside the EEA",
-          "Vercel states that personal data related to its services may also be processed in the United States. Our email provider's supply chain may also involve international processing. Transfers outside the European Economic Area require an applicable adequacy decision or safeguards under Chapter V of the GDPR, such as EU standard contractual clauses where necessary. Further information about the arrangements applicable to a transfer can be requested through our privacy contact."
+          "Vercel states that personal data related to its services may also be processed in the United States. Our email provider's supply chain may also involve international processing. Transfers outside the European Economic Area rely, as applicable, on an adequacy decision or safeguards under Chapter V of the GDPR. The published Vercel data processing addendum includes EU standard contractual clause arrangements where applicable (https://vercel.com/legal/dpa). Any international processing by Google Workspace is subject to its applicable data processing and transfer terms. You can request further information about the relevant safeguards and how to obtain them at jarkko@prompted.fi."
         ],
         [
           "Retention",
@@ -420,7 +420,7 @@
         ],
         [
           "Your rights",
-          "Where applicable, you may request access, rectification, erasure or restriction, object to processing based on legitimate interests, and obtain data portability where its conditions are met. Any consent may be withdrawn at any time without affecting earlier lawful processing. Contact jarkko@prompted.fi. We generally respond within one month and explain any extension permitted by law. We may verify your identity."
+          "Where applicable, you may request access, rectification, erasure or restriction, object to processing based on legitimate interests, and obtain data portability where its conditions are met. Any consent may be withdrawn at any time without affecting earlier lawful processing. Contact jarkko@prompted.fi. We respond without undue delay and no later than one month after receiving a request. Where a request is complex or numerous requests have been received, we may extend the deadline by up to two further months. We will explain the extension and its reasons within the first month. We may request additional identity verification where there are reasonable doubts."
         ],
         [
           "Right to complain",
@@ -432,7 +432,7 @@
         ],
         [
           "Changes to this notice",
-          "We update this notice if the website's features, providers or processing change materially. The current version will be published on this page. Prepared on 22 October 2026."
+          "We update this notice if the website's features, providers or processing change materially. The current version will be published on this page. Updated on 26 October 2026."
         ]
       ],
       "terms_sections": [
