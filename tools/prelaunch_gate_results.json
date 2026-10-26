@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "pages": 18,
+  "checks": "Semantic landmarks, FI/EN language/SEO parity, two-path Capability demo, unique mobile routes, preview noindex, legal draft markers, host header configuration",
+  "failures": [],
+  "verified_run": "https://github.com/jajja3890/prompted-site/actions/runs/39672586383",
+  "tested_commit": "ff014e29971bf524581e1a919dc9f446b82b6de2"
+}

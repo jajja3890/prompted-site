@@ -1,0 +1,104 @@
+{
+  "privacy_legal": {
+    "status": "approved",
+    "approver": "Jarkko Sjöman, Prompted Oy founder",
+    "approved_on": "2026-10-26",
+    "evidence": "Owner explicitly accepted both limited Article 6(1)(f) assessments and 26 October FI/EN privacy notices for Prompted Oy, conditional on effective safeguards, monitoring requests while absent and review after material changes. Separate decision from monthly retention policy. See PRIVACY_OWNER_SIGNOFF_2026-10-26.md. This does not grant the public launch or claim an external lawyer's opinion.",
+    "approved_privacy_blobs": {
+      "content.json": "b6e4e37f4b58de1f4b9a7239571087d506105eab",
+      "fi/tietosuoja/index.html": "73f278c7291312ea14ff385fa07e42f3648ba065",
+      "en/privacy/index.html": "3d14c9392f7315ddc4610d0034f920dd704bdf94",
+      "LEGITIMATE_INTEREST_BALANCING.md": "c2962cae70e817c80b08aa3a89c6cc892158f091",
+      "MARKETING_ENQUIRY_RETENTION_SOP.md": "69ae4b74ed42be8e7fb3c31ad7fabdb6a823813b"
+    },
+    "prelaunch_safeguards": {
+      "rights_request_absence_continuity": {
+        "status": "pending",
+        "evidence": "Owner committed to coverage during absence; actual mechanism/access continuity not yet verified."
+      },
+      "provider_transfer_operations": {
+        "status": "verified",
+        "evidence": "Marketing-only prelaunch processor/transfer review completed 26 October 2026 in MARKETING_PROVIDER_TRANSFER_PREFLIGHT_2026-10-26.md: owner-confirmed Vercel Pro DPA/SCC framework, accepted Google Workspace CDPA and related transfer framework, no Vercel project connectors/vars or team/project Drains, 18/18 static preview HTTP with no application Set-Cookie. Verification only for present static marketing site, with explicit limitations on Vercel platform logs, optional Observability Plus and recheck on material changes. Final public-host smoke test is separate after authorised staged release."
+      }
+    }
+  },
+  "image_rights": {
+    "status": "approved",
+    "approver": "Jarkko Sjöman, Prompted Oy founder and owner",
+    "approved_on": "2026-10-26",
+    "evidence": "Prompted Oy owner confirmed in the 2026-10-26 ChatGPT working conversation that the website artwork was created together in the ChatGPT workflow, not obtained from an external source, and expressly requested proceeding with the image approval manifest. Approval covers these exact artwork and current company brand master/derived icon files for use on Prompted Oy marketing pages and social preview, under OpenAI Europe Terms of Use output ownership (subject to user input/third-party rights). See IMAGE_RIGHTS_REGISTER.md, specifically owner attestation and blob table; historic source commit 5ac7c18d2e02261042f259d4d8b2c4ddaeb6cb1a. This is owner attestated provenance and website use permission, not independent proof of all original prompts or third-party IP clearance.",
+    "approved_asset_blobs": {
+      "assets/hero-daylight.webp": "e2be6f8fb27aa9c155e0112c5396e110f6a3f366",
+      "assets/share-prompted.jpg": "9229344275dca9dc169ecd87efaf12eba27d451a",
+      "assets/wordmark-dark.svg": "5b6055300e9a75186ae050f9dba916b96c6dccf3",
+      "assets/favicon.ico": "388bf7862adcd1d2c803d7de39bad813cf221baa",
+      "assets/apple-touch-icon.png": "c9f538626ae88d916b8f2079f7dc340938b702c7"
+    },
+    "exclusions": [
+      "assets/hero-material.webp",
+      "assets/wordmark-light.svg"
+    ]
+  },
+  "commercial_copy": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "preview_http": {
+    "status": "approved",
+    "approver": "ChatGPT technical QA, working on Prompted Oy owner's instruction",
+    "approved_on": "2026-10-26",
+    "evidence": "Technical-only approval of a protected marketing preview: Vercel READY deployment dpl_2ipc67jpCrMzfKFAUvytesj9SKw6 with source SHA d8cb0fd71435f1db86a06fb1cfb9a6491c17f686, GitHub Actions CI 40328792331 successful; independently fetched 18/18 FI/EN routes HTTP 200 with noindex and CSP, no application Set-Cookie observed, project SSO remains enabled. Exact compiled HTML, CSS/JS, robots and Vercel header-config Git blobs pinned here; approved only for those identical files. This is NOT real-device visual, commercial/legal or public-domain release approval.",
+    "approved_preview_blobs": {
+      "assets/buyer-experience.css": "8f8c8094fbe07f779682ac8d5512bc0a84a66155",
+      "assets/buyer-experience.js": "d06089524d0b0b095c361924de59ed132e384492",
+      "assets/concept.css": "158618dc967a14412246278ef414d319a45ba95b",
+      "assets/concept.js": "1d9f2dae30c5e8c8b7cc5f782b28d1d9527e4499",
+      "assets/pages.css": "69bde9253a2790e1441079cd4a47a5647303c5b9",
+      "assets/product-first.css": "7a2ef3586522d011674b2ca24815607b73c2c2c8",
+      "assets/product-system.css": "ed226e0c86b86e7d6958395dd35729ac3191ba4a",
+      "en/capability/index.html": "ab230fa177c39c971716468f94ba351acf23ac4f",
+      "en/company/index.html": "5aa091c61613d3db43e865af6d5945394fe73d6d",
+      "en/contact/index.html": "076a95d47bb74aa8ac734ab5c9a0bbc832d63354",
+      "en/explore/index.html": "74276e36c9f0a35ba8f655affdb5a10cf65022bc",
+      "en/index.html": "1d90a4a5ee75162aeb2da64dd82d967ca09a6f51",
+      "en/literacy/index.html": "8a63b4d445b4d5d02bd2278430cf224824fd22bd",
+      "en/privacy/index.html": "3d14c9392f7315ddc4610d0034f920dd704bdf94",
+      "en/terms/index.html": "98aeae8ba5c1614493be55d5407d01fd6b61390a",
+      "en/transformation/index.html": "ad0b3effce8fe08206f0656c9f70c3d308fc5872",
+      "fi/capability/index.html": "039fc3a4082c20bfe275c5029c2b79c653b35ef9",
+      "fi/ehdot/index.html": "51c4f4e7dcbb5435ec7ff463fe59cd4fce1468df",
+      "fi/index.html": "2b4346f67a9567929eee8ec693be2bb26583ae15",
+      "fi/literacy/index.html": "9835bd61108a92b6e5756d997534780e7d6d5662",
+      "fi/tietosuoja/index.html": "73f278c7291312ea14ff385fa07e42f3648ba065",
+      "fi/transformation/index.html": "3caabf8f88db0f21c65b333e8a16ccda53754891",
+      "fi/tutustu/index.html": "7f335dbafa859bef146e9eebacf37089b57dd1f5",
+      "fi/yhteys/index.html": "2524935e6d7847f389713ef092db22d38cfd1815",
+      "fi/yritys/index.html": "94507cb5985a76d77f4bed0d89c227451eb996aa",
+      "index.html": "3b8bd6c22dc5fde4882da98c13cab2df1e46c667",
+      "robots.txt": "1f53798bb4fe33c86020be7f10c44f29486fd190",
+      "vercel.json": "600a6da999d640437ccffe3238b2777950603287"
+    }
+  },
+  "visual_device": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "domain_rollback": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "owner_release": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": "",
+    "explicit_public_release": false,
+    "approved_commit_sha": ""
+  }
+}

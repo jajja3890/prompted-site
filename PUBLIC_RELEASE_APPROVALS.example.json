@@ -1,0 +1,46 @@
+{
+  "privacy_legal": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "image_rights": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "commercial_copy": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "preview_http": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "visual_device": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "domain_rollback": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "owner_release": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": "",
+    "explicit_public_release": false,
+    "approved_commit_sha": ""
+  }
+}
