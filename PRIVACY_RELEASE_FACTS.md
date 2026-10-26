@@ -4,10 +4,11 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 
 ## Factual release conditions
 - [x] **Independent public-record corroboration** of the company name, business ID 3550114-7, and registered municipality Turku. Secondary listings cite YTJ/PRH; this does not independently verify the mailbox. Sources and verification date below.
-- [ ] Verify that `jarkko@prompted.fi` is active, can receive subject-rights requests, and is monitored by the responsible Prompted Oy person.
+- [x] **Live connected Gmail account observed 26 October 2026:** current profile identifies `jarkko@prompted.fi`; recent inbound and outgoing business mail exists. This establishes active mailbox access and actual inbound/outbound use, not yet a specific GDPR-request reply test.
+- [ ] **Still to verify:** privacy-request owner, continuous/absence coverage, a documented rights-request procedure, and any fresh send/reply test desired by the controller.
 - [x] **Previously confirmed corporate email system:** Prompted Oy's `jarkko@prompted.fi` mailbox was connected to **Google Workspace (Gmail)** in the owner's account setup, reconfirmed 1 September 2026. This identifies the previously configured provider but not current live MX or Workspace admin contract status.
 - [x] **Authoritative mail routing verified 23 October 2026:** both Domainhotelli authoritative nameservers answered `prompted.fi MX` with the five established Google Workspace mail exchangers, TTL 3600 seconds; no DNS changes were made. See `DNS_AUTHORITY_OBSERVED_2026-10-23.md`.
-- [ ] Verify that the actual mailbox receives and is monitored for privacy requests; confirm Google Workspace tenant CDPA acceptance, subprocessors, transfer safeguards, processing locations, retention settings and data deletion implementation.
+- [ ] Current Gmail mailbox confirmed active, **but monitoring for privacy requests and actual Google Workspace tenant CDPA acceptance, subprocessors, transfer safeguards, processing locations, retention settings and deletion implementation remain to be verified**. Gmail connector access to messages does not provide Workspace Admin Console contract/account settings.
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
 - [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
 - [x] FI/EN notice draft now describes **retention criteria rather than an unimplemented 12-month deletion deadline**. This is a copy correction, not evidence of operational deletion.
@@ -39,6 +40,10 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 
 Until all facts and approvals are established, the site remains a protected noindex preview with visible legal DRAFT labels. No DNS or application changes are authorised.
 
+
+## 26 October 2026 — read-only Gmail mailbox verification
+
+The newly connected Gmail account reported profile email `jarkko@prompted.fi`. Existing inbound messages to that address (including a message dated 26 October) and outgoing messages sent from the account (including 25 October) were observed. This verifies a functioning configured mailbox and recent inbound/outbound correspondence, **not** a deliberately sent external bounce/reply test, constant owner monitoring, an accepted Google Workspace CDPA or a deletion workflow. Private sender names, email subjects, bodies and message IDs were not copied into this public repository. The operational evidence and remaining steps are in `PRIVACY_FINAL_SIGNOFF_2026-10-26.md`.
 
 ## 26 October 2026 — directly observed protected-preview website behaviour (not legal sign-off)
 
