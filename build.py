@@ -147,11 +147,11 @@ def product_first_hero(lang, page):
  contact = url(lang,'contact')
  capability = url(lang,'cap')
  headline = ('Osaaminen näkyy,<br><em>kun työ muuttuu.</em>' if fi else 'Capability is visible<br><em>when work changes.</em>') if cap else ('Tekoäly osaksi<br><em>oikeaa työtä.</em>' if fi else 'Make AI part<br><em>of real work.</em>')
- lead = ('Prompted Capability yhdistää todelliset työtehtävät, digitaalisen valmennuksen ja muutoksesta syntyvän näytön. Rajattu pilotti antaa organisaatiolle perustan seuraavaan päätökseen.' if fi else 'Prompted Capability connects real work, digital coaching and reviewable evidence of change. A focused pilot gives organisations a basis for their next decision.') if cap else ('Kehitämme yritysten tekoälylukutaitoa ja uusia toimintatapoja oikeissa työtehtävissä. Digitaalinen valmennus tukee oppimista, ja näyttö auttaa arvioimaan muutosta.' if fi else 'We develop AI literacy and new ways of working through real tasks. Digital coaching supports learning, while evidence helps organisations assess change.')
- maincta = ('Avaa Capability-demo' if fi else 'Open the Capability demo') if cap else ('Katso Capability-demo' if fi else 'See the Capability demo')
- secondcta = ('Keskustellaan pilotista' if fi else 'Discuss the pilot') if cap else ('Tutustu pilottiin' if fi else 'Explore the pilot')
- first_href = url(lang,'experience')
- second_href = contact if cap else capability
+ lead = ('Noin 90 päivän organisaatiopilotti auttaa ihmisiä kehittämään tekoälyavusteisia työtapoja omissa tehtävissään. Digitaalinen valmennus ja ihmisen tuki vievät harjoittelun arkeen. Tilaaja saa perustellun näkymän siihen, mitä työssä todella muuttuu.' if fi else 'An approximately 90-day organisational pilot helps people build AI-assisted practices in their own work. Digital coaching and human support turn learning into everyday action, with evidence the sponsor can review.') if cap else ('Kehitämme yritysten tekoälylukutaitoa ja uusia toimintatapoja oikeissa työtehtävissä. Digitaalinen valmennus tukee oppimista, ja näyttö auttaa arvioimaan muutosta.' if fi else 'We develop AI literacy and new ways of working through real tasks. Digital coaching supports learning, while evidence helps organisations assess change.')
+ maincta = ('Keskustellaan pilotista' if fi else 'Discuss a pilot') if cap else ('Katso Capability-demo' if fi else 'See the Capability demo')
+ secondcta = ('Tutustu palveluun' if fi else 'Explore the experience') if cap else ('Tutustu pilottiin' if fi else 'Explore the pilot')
+ first_href = contact if cap else url(lang,'experience')
+ second_href = url(lang,'experience') if cap else capability
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
  return f'''<section class="pf-hero {'pf-capability' if cap else 'pf-home'}" id="alku" aria-labelledby="pf-heading">
   <div class="shell pf-hero-shell">
@@ -163,10 +163,10 @@ def product_first_hero(lang, page):
         <p class="pf-intro">{lead}</p>
         <div class="pf-actions"><a class="pf-button-primary" href="{first_href}">{maincta} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="{second_href}">{secondcta} <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="pf-microproof" aria-label="{helper('Kolme Prompted-palvelua','Three Prompted services')}"><span>01 <b>Literacy</b></span><span>02 <b>Capability</b></span><span>03 <b>Transformation</b></span></div>
+      <div class="pf-microproof" aria-label="{helper('Pilottimallin lähtökohdat','Pilot starting assumptions') if cap else helper('Kolme Prompted-palvelua','Three Prompted services')}">{('<span><b>'+helper('Noin 90 päivää · Noin 20 osallistujaa · Oikeat työtehtävät','Around 90 days · Around 20 people · Real work')+'</b></span>') if cap else '<span>01 <b>Literacy</b></span><span>02 <b>Capability</b></span><span>03 <b>Transformation</b></span>'}</div>
     </div>
     <div class="pf-artwork">
-      <div class="pf-art-topline"><span>{helper('PROMPTED / TUOTTEEN TOIMINTAPERIAATE','PROMPTED / PRODUCT EXPERIENCE')}</span><span>2026 / CONCEPT STUDY</span></div>
+      <div class="pf-art-topline"><span>{helper('OSALLISTUJAN JA TILAAJAN KOKEMUS','LEARNER AND SPONSOR EXPERIENCE') if cap else helper('PROMPTED / TUOTTEEN TOIMINTAPERIAATE','PROMPTED / PRODUCT EXPERIENCE')}</span><span>{'CAPABILITY' if cap else '2026 / CONCEPT STUDY'}</span></div>
       <figure class="pf-composition" aria-label="{helper('Havainnekuva Promptedin digitaalisesta valmennuspalvelusta ja rajatusta Data-raportoinnista','Illustration of Prompted digital coaching and restricted Data reporting')}">
         <div class="pf-halo" aria-hidden="true"></div>
         <div class="pf-browser" aria-hidden="true">
@@ -177,7 +177,7 @@ def product_first_hero(lang, page):
               <div class="pf-app-breadcrumb">CAPABILITY <span>/</span> {helper('OMA TYÖTILA','MY WORKSPACE')}</div>
               <div class="pf-app-heading"><div><small>{helper('TÄMÄN PÄIVÄN TYÖ','TODAY’S WORK')}</small><h3>{helper('Työ muuttuu tekemällä.','Change happens through doing.')}</h3></div><div class="pf-app-avatar" aria-hidden="true">P</div></div>
               <div class="pf-task-box"><div class="pf-task-head"><span>{helper('TYÖTEHTÄVÄ','WORK TASK')}</span><i>01 / 03</i></div><h4>{helper('Valitse yksi tehtävä, jonka haluat tehdä paremmin.','Choose one task you want to improve.')}</h4><div class="pf-task-rule"></div><p>{helper('Tunnista onnistumisen kriteeri. Kokeile uutta toimintatapaa aidossa työssä.','Define success. Try a new approach in real work.')}</p></div>
-              <div class="pf-coach-row"><span class="pf-coach-avatar" aria-hidden="true">✳</span><div><strong>{helper('Digitaalinen valmennus','Digital coaching')}</strong><span>{helper('Seuraava pieni kokeilu, oikeassa työssä.','The next small experiment, in real work.')}</span></div><span class="pf-coach-arrow" aria-hidden="true">↗</span></div>
+              <div class="pf-coach-row"><span class="pf-coach-avatar" aria-hidden="true">✳</span><div><strong>{helper('Digitaalinen valmennus','Digital coaching')}</strong><span>{helper('Seuraava pieni kokeilu, oikeassa työssä.','The next small experiment, in real work.')}</span></div>{'' if cap else '<span class="pf-coach-arrow" aria-hidden="true">↗</span>'}</div>
               <div class="pf-app-bottom"><span>{helper('TYÖ → KOKEILU → NÄYTTÖ','WORK → EXPERIMENT → EVIDENCE')}</span><span>{helper('OMA EDISTYMINEN','PERSONAL PROGRESS')}</span></div>
             </div>
           </div>
@@ -185,12 +185,16 @@ def product_first_hero(lang, page):
         <div class="pf-data-overlay" aria-hidden="true"><div class="pf-data-eyebrow"><span class="pf-data-dot"></span>PROMPTED DATA <small>{helper('TILAAJAN NÄKYMÄ','BUYER VIEW')}</small></div><div class="pf-data-title">{helper('Julkaistu ryhmätason näyttö','Published group-level evidence')}</div><div class="pf-data-table"><div><span>{helper('Ryhmäraportti','Group report')}</span><b>{helper('Erillinen julkaisu','Separate release')}</b></div><div><span>{helper('Tiedon rajaus','Data boundary')}</span><b>{helper('Käyttöoikeuksin','Access controlled')}</b></div><div><span>{helper('Arvioinnin perusta','Evidence basis')}</span><b>{helper('Toisto · Siirto · Itsenäisyys','Repeat · Transfer · Independence')}</b></div></div><div class="pf-data-foot">{helper('EI YKSITYISIÄ TYÖTEKSTEJÄ','NO PRIVATE WORK TEXTS')}</div></div>
         <div class="pf-phone" aria-hidden="true"><div class="pf-phone-top"><span class="pf-phone-notch"></span></div><div class="pf-phone-content"><small>PROMPTED<span>.</span></small><div class="pf-phone-label">{helper('OMA NÄYTTÖ','MY EVIDENCE')}</div><h4>{helper('Osaaminen näkyy työssä.','Evidence from real work.')}</h4><div class="pf-phone-track"><span><i></i>{helper('Ensimmäinen näyttö','First signal')}</span><span><i></i>{helper('Toisto','Repeat')}</span><span><i></i>{helper('Siirrettävyys','Transfer')}</span><span><i></i>{helper('Itsenäisyys','Independence')}</span></div><div class="pf-phone-note">{helper('Digitaalinen palvelu / mobiilinäkymän periaate','Digital service / responsive view concept')}</div></div></div>
       </figure>
-      <div class="pf-art-disclaimer"><span class="pf-disclaimer-square" aria-hidden="true"></span><span>{helper('Tuotteen todelliseen rakenteeseen perustuva havainnekuva. Ei ruutukaappaus tai asiakasdataa.','Product illustration based on the real service architecture. Not a screenshot or client data.')}</span></div>
+      <div class="pf-art-disclaimer"><span class="pf-disclaimer-square" aria-hidden="true"></span><span>{(helper('Havainnekuva palvelun rakenteesta, ei suora ruutukaappaus.','Illustration of the service structure, not a direct screenshot.') if cap else helper('Tuotteen todelliseen rakenteeseen perustuva havainnekuva. Ei ruutukaappaus tai asiakasdataa.','Product illustration based on the real service architecture. Not a screenshot or client data.'))}</span></div>
     </div>
   </div>
 </section>'''
 
 def site_main(lang,page):
+ # Capability is now one editorial story; legacy duplicated template sections are not rendered.
+ if page=='cap':
+  content=json.loads((OUT/'capability-story.json').read_text(encoding='utf-8'))
+  return product_first_hero(lang,page) + content[lang]
  fi=lang=='fi'; src='index' if page=='home' else 'capability'
  soup=BeautifulSoup((OUT/'templates'/f'{src}.html').read_text(),'html.parser')
  main=soup.select_one('main')
