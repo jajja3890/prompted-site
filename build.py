@@ -30,7 +30,7 @@ trans = {
 'EI PELKKÄÄ OSALLISTUMISEN MITTAAMISTA':'NOT JUST ATTENDANCE METRICS',
 'Yksi päämäärä.':'One ambition.',
 'Kolme tapaa aloittaa.':'Three ways to begin.',
-'Yhteinen perusta vastuulliseen tekoälyn käyttöön.':'A shared foundation for responsible AI use.',
+'Koko henkilöstön noin tunnin aloituskurssi tekoälyn turvalliseen käyttöön. Suomenkielinen pilotti valmisteilla.':'An approximately one-hour AI literacy starter course for all employees. Finnish pilot in preparation.',
 'Uudet työtavat ja niiden muutoksen todentaminen.':'New ways of working, with evidence of change.',
 'Kyvykkyyden muutos osaksi organisaation arkea.':'Embedding capability in how the organisation works.',
 'OMAA TEKNOLOGIAA, OIKEAA TYÖTÄ':'OUR TECHNOLOGY, REAL WORK',
