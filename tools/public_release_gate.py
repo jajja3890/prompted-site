@@ -42,6 +42,14 @@ PRIVACY_APPROVAL_ASSETS={
     'LEGITIMATE_INTEREST_BALANCING.md', 'MARKETING_ENQUIRY_RETENTION_SOP.md',
 }
 PRIVACY_PRELAUNCH_SAFEGUARDS=('rights_request_absence_continuity', 'provider_transfer_operations')
+PREVIEW_HTTP_ASSETS={
+    'index.html','robots.txt','vercel.json',
+    'assets/buyer-experience.css','assets/buyer-experience.js',
+    'assets/concept.css','assets/concept.js','assets/pages.css',
+    'assets/product-first.css','assets/product-system.css',
+} | {f'{lang}/{route}/index.html' if route else f'{lang}/index.html'
+     for lang,rr in ROUTES.items() for route in rr}
+
 
 def pages():
     return [ROOT/lang/route/'index.html' for lang,rr in ROUTES.items() for route in rr]
@@ -86,6 +94,22 @@ def check(approval_path):
                 item=safeguards.get(key) if isinstance(safeguards,dict) else None
                 if not isinstance(item,dict) or item.get('status')!='verified' or not isinstance(item.get('evidence'),str) or not item['evidence'].strip():
                     problems.append(f'privacy_legal: prelaunch safeguard not verified: {key}')
+        if gate=='preview_http':
+            blobs=approval.get('approved_preview_blobs')
+            if not isinstance(blobs,dict) or set(blobs)!=PREVIEW_HTTP_ASSETS:
+                problems.append('preview_http: reviewed file set differs from approved preview snapshot')
+            else:
+                for relpath,expected in blobs.items():
+                    if not isinstance(expected,str) or not re.fullmatch(r'[0-9a-f]{40}',expected):
+                        problems.append(f'preview_http: invalid Git blob for {relpath}')
+                        continue
+                    try:
+                        content=(ROOT/relpath).read_bytes()
+                        actual=hashlib.sha1(b'blob '+str(len(content)).encode()+b'\0'+content).hexdigest()
+                        if actual!=expected:
+                            problems.append(f'preview_http: reviewed preview file changed: {relpath}')
+                    except OSError:
+                        problems.append(f'preview_http: reviewed preview file missing: {relpath}')
         if gate=='image_rights':
             blobs=approval.get('approved_asset_blobs')
             if not isinstance(blobs,dict) or set(blobs)!=IMAGE_APPROVAL_ASSETS:
