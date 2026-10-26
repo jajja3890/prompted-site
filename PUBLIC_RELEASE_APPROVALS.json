@@ -1,9 +1,26 @@
 {
   "privacy_legal": {
-    "status": "pending",
-    "approver": "",
-    "approved_on": "",
-    "evidence": ""
+    "status": "approved",
+    "approver": "Jarkko Sjöman, Prompted Oy founder",
+    "approved_on": "2026-10-26",
+    "evidence": "Owner explicitly accepted both limited Article 6(1)(f) assessments and 26 October FI/EN privacy notices for Prompted Oy, conditional on effective safeguards, monitoring requests while absent and review after material changes. Separate decision from monthly retention policy. See PRIVACY_OWNER_SIGNOFF_2026-10-26.md. This does not grant the public launch or claim an external lawyer's opinion.",
+    "approved_privacy_blobs": {
+      "content.json": "b6e4e37f4b58de1f4b9a7239571087d506105eab",
+      "fi/tietosuoja/index.html": "73f278c7291312ea14ff385fa07e42f3648ba065",
+      "en/privacy/index.html": "3d14c9392f7315ddc4610d0034f920dd704bdf94",
+      "LEGITIMATE_INTEREST_BALANCING.md": "c2962cae70e817c80b08aa3a89c6cc892158f091",
+      "MARKETING_ENQUIRY_RETENTION_SOP.md": "69ae4b74ed42be8e7fb3c31ad7fabdb6a823813b"
+    },
+    "prelaunch_safeguards": {
+      "rights_request_absence_continuity": {
+        "status": "pending",
+        "evidence": "Owner committed to coverage during absence; actual mechanism/access continuity not yet verified."
+      },
+      "provider_transfer_operations": {
+        "status": "pending",
+        "evidence": "Workspace CDPA accepted and Vercel Pro DPA reviewed, but project-specific final provider/transfer processing review is still pending."
+      }
+    }
   },
   "image_rights": {
     "status": "approved",
