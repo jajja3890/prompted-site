@@ -1,6 +1,6 @@
 # Prompted Oy — marketing enquiries and data-subject rights SOP
 
-**Prepared 23 October 2026. Owner named and Gmail rights-request triage label created 26 October 2026. Read-only pre-launch mailbox triage completed; first operating retention cycle remains unadopted and unperformed.**
+**Prepared 23 October 2026. Accountable owner named, Gmail triage created and monthly closed-enquiry retention review expressly ADOPTED by the owner on 26 October 2026. Read-only pre-launch mailbox triage completed; first scheduled operating review has not yet occurred.**
 
 This practical, scope-limited procedure concerns the public `prompted.fi` marketing site and business email enquiries. It does **not** automatically cover the authenticated `app.prompted.fi` service, customer programme data, HR, legal or accounting records. Do not apply these website retention rules to customer or statutory records.
 
@@ -28,16 +28,20 @@ Reference: [European Data Protection Board guidance for SMEs](https://www.edpb.e
 1. **Keep categories separate.** Incoming marketing questions and sales enquiries are distinct from rights requests, live client engagements, commercial contracts, accounting records and legal disputes. Classify purpose before retention action; the same correspondence may transition into a different record category.
 2. **On receipt:** reply or follow up when appropriate; collect only necessary contact information. If the message genuinely concerns the new marketing website, apply `Prompted/Markkinointiyhteydenotot`; **do not tag all old Prompted-related messages or unrelated personal/contract mail in bulk**. Avoid sensitive personal information or other confidential client material in ordinary unencrypted emails.
 3. **Case closure criteria:** once the question has been answered, the proposal has been declined or no further legitimate follow-up is expected, treat the marketing enquiry as closed unless a lawful additional purpose has been identified and recorded. Ongoing customers, invoices or litigation-related evidence are **outside** this generic marketing rule.
-4. **Review cycle — proposal, not yet adopted:** the founder can review *closed marketing enquiries once per calendar month*, deciding individually whether to delete, anonymise, archive under another documented purpose or retain while an identified valid business purpose continues. A **monthly review is not an automatic deletion deadline or evidence that cleanup is running**.
+4. **Adopted operating rule, effective 26 October 2026:** the founder checks **closed enquiries that actually relate to the new public marketing website once per calendar month**, and decides individually to delete, anonymise, retain under a documented continuing legitimate purpose, or classify as a separate contractual/other statutory record. Review can be recorded as *zero relevant cases* if none exist. Monthly review is **not** a fixed deletion deadline, not automatic deletion, and not evidence a first month-end review has already happened. This cadence was explicitly approved by the company owner in the 26 October ChatGPT conversation.
 5. **Minimum evidence:** in a private operational log note only review date, reviewer, aggregate count reviewed, broad actions and next review date. **Never publish message content, personal identifiers or contract evidence to this public GitHub repository.** Deletion in Gmail and other systems must be verified through the actual provider workflow; don't promise automatic removal from all backups.
 6. **First relevant operating review:** a metadata-only inspection of existing mixed-purpose mailbox messages was completed on 26 October 2026 (see `MARKETING_MAILBOX_PRELAUNCH_TRIAGE_2026-10-26.md`). The **new marketing website is not public yet**, and old mixed-purpose mail must not be treated as new website enquiries. No genuine site-origin case was deleted or anonymised. The first **live monthly review and any deletion decision** occurs after relevant site-specific messages exist; this event is a **post-launch operating check**, not an impossible pre-launch condition.
 
 ## C. Simple self-check for a one-person company
 
-- **Routine:** ensure the mailbox is accessible and inspect new messages and the privacy label frequently enough to meet rights deadlines; no background monitoring or guaranteed daily automation has been configured.
+- **Routine:** inspect new correspondence and the privacy label frequently enough to meet rights deadlines. Separately, review closed `Prompted/Markkinointiyhteydenotot` cases once per calendar month from adoption; if no relevant website cases exist, log a zero-case review. No scheduled automation, automatic deletion or guaranteed daily monitoring has been configured.
 - **If away:** preserve access, configure an absence response if appropriate, and make arrangements to handle any time-sensitive rights requests within statutory deadlines. No stand-in has been appointed; do not represent one publicly.
 - **Before website launch:** reconcile the actual retention and security practice with the FI/EN marketing-site privacy notices, verify Vercel's real project/account-specific terms and technical log handling, and obtain the accountable company/legal sign-off tied to the final Git revision.
 - **After launch:** review again whenever new tracking, integrations, email automation or new data collections are introduced.
+
+## First monthly review evidence template (private operational record)
+
+Record in a private company operations location: `review_month | review_date | reviewed_by | relevant_closed_cases_count | deleted_or_anonymised_count | retained_with_purpose_count | reclassified_out_of_scope_count | next_review_month`. This **is a template only**; do not create fictional completion dates or publish identifying correspondence into GitHub. The first manual review is due during the first complete calendar month after the marketing website launches, with zero-case reviews possible.
 
 ## Evidence and explicit current status, 26 October 2026
 
@@ -49,9 +53,9 @@ Reference: [European Data Protection Board guidance for SMEs](https://www.edpb.e
 | Gmail privacy-case label | **Created: `Prompted/Tietosuojapyynnöt`** |
 | Gmail new-website marketing-enquiry label | **Created: `Prompted/Markkinointiyhteydenotot`** |
 | Actual regular monitoring/absence coverage | **Not independently evidenced; no backup person assigned** |
-| Marketing retention review cadence | **Monthly suggested, not formally adopted** |
+| Marketing retention review cadence | **Adopted 26 Oct 2026: once per calendar month, manual, owner responsible** |
 | Read-only pre-launch inbox triage | **Completed 26 Oct; no individual messages altered** |
 | First real post-launch marketing-case review/disposal evidence | **Not yet possible; site has not launched** |
 | Final FI/EN privacy/legal release sign-off | **Pending** |
 
-This procedure is an **implementable operational framework**, not a legal opinion or final adoption of automatic retention/deletion rules. No `privacy_legal` or `owner_release` gate is approved by this update.
+This procedure is the **owner-adopted manual review policy for new website-related marketing enquiries**, not a legal opinion or a declaration that automatic retention/deletion rules exist. No `privacy_legal` or `owner_release` gate is approved by this update.
