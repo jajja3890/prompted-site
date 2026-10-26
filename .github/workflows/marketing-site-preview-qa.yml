@@ -36,6 +36,9 @@ jobs:
       - name: Read-only authoritative DNS cutover snapshot (best effort)
         run: python tools/dns_cutover_snapshot.py
         continue-on-error: true
+      - name: Read-only live marketing domain and legacy legal URLs (best effort)
+        run: python tools/live_origin_audit.py
+        continue-on-error: true
       - name: Public release eligibility (fail closed, no artifact)
         run: python tools/public_release_gate.py --check
       - name: Isolated release packager safety test (never deploy)
@@ -55,6 +58,7 @@ jobs:
             tools/staging_http_browser_qa_results.json
             tools/public_release_gate_results.json
             tools/dns_cutover_snapshot_results.json
+            tools/live_origin_audit_results.json
             tools/buyer_experience_qa_results.json
             tools/visual_release_results.json
             tools/visual_review/*.png
