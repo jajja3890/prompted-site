@@ -8,7 +8,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - [ ] **Still to verify:** privacy-request owner, continuous/absence coverage, a documented rights-request procedure, and any fresh send/reply test desired by the controller.
 - [x] **Previously confirmed corporate email system:** Prompted Oy's `jarkko@prompted.fi` mailbox was connected to **Google Workspace (Gmail)** in the owner's account setup, reconfirmed 1 September 2026. This identifies the previously configured provider but not current live MX or Workspace admin contract status.
 - [x] **Authoritative mail routing verified 23 October 2026:** both Domainhotelli authoritative nameservers answered `prompted.fi MX` with the five established Google Workspace mail exchangers, TTL 3600 seconds; no DNS changes were made. See `DNS_AUTHORITY_OBSERVED_2026-10-23.md`.
-- [ ] Current Gmail mailbox confirmed active, **but monitoring for privacy requests and actual Google Workspace tenant CDPA acceptance, subprocessors, transfer safeguards, processing locations, retention settings and deletion implementation remain to be verified**. Gmail connector access to messages does not provide Workspace Admin Console contract/account settings.
+- [x] **Google Workspace CDPA accepted 26 October 2026:** owner-provided Google Workspace Admin Console screenshot shows **“Accepted by jarkko@prompted.fi on Oct 26, 2026”** for Cloud Data Processing Addendum. Earlier “Not accepted” status was superseded. Keep the private screenshot in the company's compliance evidence; do not publish it in the GitHub repository.
+- [ ] **Still open:** monitoring of privacy requests, email-data retention and deletion implementation, remaining account settings, and applicable subprocessors/transfer details. CDPA acceptance does not close these operational matters.
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
 - [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
 - [x] FI/EN notice draft now describes **retention criteria rather than an unimplemented 12-month deletion deadline**. This is a copy correction, not evidence of operational deletion.
@@ -40,6 +41,10 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 
 Until all facts and approvals are established, the site remains a protected noindex preview with visible legal DRAFT labels. No DNS or application changes are authorised.
 
+
+## 26 October 2026 — Workspace tenant-specific CDPA approval
+
+An owner-provided screenshot from **Google Workspace Admin Console → Account settings → Legal and compliance** confirms **Cloud Data Processing Addendum accepted by jarkko@prompted.fi on 26 October 2026**. This is a directly observed acceptance status of the actual Prompted Workspace tenant, as distinct from general Google public documentation. It is sufficient to close the **CDPA acceptance** subtask, not the overall `privacy_legal` release gate. Account operations, legal wording and full production privacy behaviour remain under review.
 
 ## 26 October 2026 — read-only Gmail mailbox verification
 
