@@ -39,6 +39,22 @@ with TemporaryDirectory(prefix='prompted-signoff-negative-test-') as tmp:
     must(any('approved_commit_sha must be an exact' in b for b in bad),
          'Owner approval must include a full approved commit SHA')
 
+# The actual manifest now has image rights owner-attested and bound to exact
+# binary versions. Other gates are still unapproved and the release stays blocked.
+actual=check(ROOT / 'PUBLIC_RELEASE_APPROVALS.json')
+must(not any(reason.startswith('image_rights:') for reason in actual),
+     'Owner-approved image assets unexpectedly failed exact-blob validation')
+must(any(reason.startswith('privacy_legal:') for reason in actual),
+     'Privacy/legal release was unexpectedly approved')
+with TemporaryDirectory(prefix='prompted-image-rights-negative-test-') as tmp:
+    tampered=json.loads((ROOT/'PUBLIC_RELEASE_APPROVALS.json').read_text(encoding='utf-8'))
+    tampered['image_rights']['approved_asset_blobs']['assets/hero-daylight.webp']='0'*40
+    wrong=Path(tmp)/'wrong-image-blob.json'
+    wrong.write_text(json.dumps(tampered)+'\n',encoding='utf-8')
+    failures=check(wrong)
+    must(any('asset changed since approval: assets/hero-daylight.webp' in p for p in failures),
+         'Modified approved imagery must invalidate the image rights gate')
+
 # Legally actionable approvals stay pending; replacing an unimplemented
 # fixed retention promise with explicit retention criteria never grants approval.
 blockers = check(ROOT / 'PUBLIC_RELEASE_APPROVALS.example.json')
