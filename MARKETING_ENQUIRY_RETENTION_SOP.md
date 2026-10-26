@@ -4,7 +4,7 @@
 
 ## Scope and control points
 
-- Controller: Prompted Oy, business ID 3550114-7. `jarkko@prompted.fi` is connected to Gmail; authoritative Google MX routing was verified on 23 October and live mailbox access with inbound and outgoing messages was verified read-only on 26 October 2026. **GDPR-request monitoring, the actual Workspace CDPA, retention operation and an explicit send/reply test remain unverified.**
+- Controller: Prompted Oy, business ID 3550114-7. `jarkko@prompted.fi` is connected to Gmail; authoritative Google MX routing was verified on 23 October and live mailbox access with inbound and outgoing messages was verified read-only on 26 October 2026. **Google Workspace CDPA was accepted by jarkko@prompted.fi on 26 October 2026 and verified by owner-provided Admin Console screenshot. GDPR-request monitoring, retention operation and an explicit send/reply test remain unverified.**
 - Accountable person: **to be assigned** by company owner. Record adopted date in company legal data room.
 - New enquiries: label or otherwise distinguish marketing enquiries from customer, contracts, accounting, legal, HR and user support correspondence.
 - Decision on case closure: record whether the enquiry needs follow-up, has become a customer/contract record, relates to a legal claim, or is concluded with no further purpose. Do not erase legal/accounting evidence by applying a general website rule.
@@ -18,7 +18,7 @@ For a dated, evidence-limited checklist covering provider agreements, mailbox de
 ## Evidence required to flip privacy_legal to approved
 
 1. Current mailbox operates and the responsible person confirms access and notices.
-2. Google Workspace applicable data processing agreement/subprocessors/transfers reviewed for the actual tenant.
+2. Google Workspace CDPA accepted by tenant administrator on 26 October 2026; assess any relevant remaining tenant-level subprocessor/transfer and retention practices.
 3. Named operations owner has adopted a workable review/deletion procedure, recorded how to perform it and completed at least one evidenced sample review, without copying actual personal data into GitHub.
 4. Vercel project-specific logs, cookies and data handling are confirmed (read-only browser/server check).
 5. FI/EN privacy notices are reviewed against the observed handling; company owner or qualified reviewer signs the exact version.
