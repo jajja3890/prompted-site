@@ -18,8 +18,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - [x] FI/EN notice draft now describes **retention criteria rather than an unimplemented 12-month deletion deadline**. This is a copy correction, not evidence of operational deletion.
 - [x] **Owner, written handling procedure and bounded prelaunch metadata review** recorded on 26 October 2026 in `MARKETING_ENQUIRY_RETENTION_SOP.md` and `MARKETING_MAILBOX_PRELAUNCH_TRIAGE_2026-10-26.md`. No existing messages were reclassified or deleted.
 - [x] **Owner adopted a manual monthly review of closed website-related marketing enquiries on 26 October 2026.** The FI/EN privacy drafts now reflect that policy. First actual post-launch review remains pending; do not claim automatic deletion or extend this new-site-only practice to unrelated legacy correspondence.
-- [x] The 26 October revision of `LEGITIMATE_INTEREST_BALANCING.md` now documents the three Article 6(1)(f) conditions separately for incoming business enquiries and ordinary website delivery/security, with provisional, narrowly scoped outcomes and residual risks. Controller adoption has NOT occurred.
-- [ ] The company owner must now make an explicit informed decision on the revised balancing assessment and exact FI/EN privacy notice before approving the privacy release gate. Adoption of monthly retention review alone is not this decision.
+- [x] The 26 October revision of `LEGITIMATE_INTEREST_BALANCING.md` now documents the three Article 6(1)(f) conditions separately for incoming business enquiries and ordinary website delivery/security, with provisional, narrowly scoped outcomes and residual risks. Owner approval was explicitly given in a separate decision on 26 October 2026, conditional on safeguards.
+- [x] The company owner explicitly adopted the two limited assessments and exact FI/EN privacy notices on 26 October 2026. The approval is separate from the monthly retention procedure and carries outstanding prelaunch safeguard conditions.
 - [ ] Verify public deployment's cookie/storage behaviour before asserting that no consent mechanism is needed.
 - [x] **Privacy rights contact owner identified:** Jarkko Sjöman. Further validation of access controls and operational request-response handling remains open.
 - [ ] Approve exact FI/EN text and source commit, and keep the authenticated customer-app privacy terms separate.
@@ -35,7 +35,7 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 
 **Vercel DPA:** https://vercel.com/legal/dpa is marked updated **17 March 2026**, effective **31 March 2026**. It explicitly applies to Enterprise and Pro plans in its opening scope, lists US processing in international provisions, and supplies transfer clauses including EU SCCs. The published document alone does **not** prove which processor contracts, log retention, email backend or transfers actually apply to the connected site's final production configuration.
 
-**Release behavior:** Both notices were redrafted to describe *retention criteria* without promising an unimplemented 12-month deletion deadline. Release requires explicit `privacy_legal` owner/legal sign-off and a verified operational handling procedure; the seven fail-closed approval gates remain unchanged. The release code retains a check for unimplemented fixed-deadline placeholders if they return.
+**Release behavior:** Both notices were redrafted to describe *retention criteria* without promising an unimplemented 12-month deletion deadline. Scoped `privacy_legal` owner sign-off is now recorded; release still requires evidence that the conditional operational safeguards actually work; the seven fail-closed approval gates remain unchanged. The release code retains a check for unimplemented fixed-deadline placeholders if they return.
 
 ## Primary references
 - GDPR Articles 6, 12–15, 17–22 and Chapter V: https://eur-lex.europa.eu/eli/reg/2016/679/oj
