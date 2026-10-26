@@ -47,6 +47,19 @@ must(not any(reason.startswith('image_rights:') for reason in actual),
      'Owner-approved image assets unexpectedly failed exact-blob validation')
 must(any('privacy_legal: prelaunch safeguard not verified:' in reason for reason in actual),
      'Approved privacy content must remain blocked until operational safeguards are verified')
+# Preview HTTP approval is technical and pinned to the exact page and config
+# blobs. A changed generated page must invalidate this approval.
+with TemporaryDirectory(prefix='prompted-preview-http-negative-test-') as tmp:
+    tampered=json.loads((ROOT/'PUBLIC_RELEASE_APPROVALS.json').read_text(encoding='utf-8'))
+    must(tampered['preview_http']['status']=='approved',
+         'Missing reviewed protected-preview technical approval')
+    tampered['preview_http']['approved_preview_blobs']['fi/index.html']='0'*40
+    wrong=Path(tmp)/'wrong-preview-blob.json'
+    wrong.write_text(json.dumps(tampered)+'\n',encoding='utf-8')
+    failures=check(wrong)
+    must(any('preview_http: reviewed preview file changed: fi/index.html' in p for p in failures),
+         'Any changed reviewed preview page must invalidate the HTTP approval')
+
 with TemporaryDirectory(prefix='prompted-image-rights-negative-test-') as tmp:
     tampered=json.loads((ROOT/'PUBLIC_RELEASE_APPROVALS.json').read_text(encoding='utf-8'))
     tampered['image_rights']['approved_asset_blobs']['assets/hero-daylight.webp']='0'*40
