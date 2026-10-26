@@ -269,6 +269,10 @@ def service_visual(lang,key):
 
 
 def service_main(lang,key):
+ # Transformation: a dedicated editorial sales story, not the legacy staged concept/demo layout.
+ if key=='transform':
+  data=json.loads((OUT/'transformation-story.json').read_text(encoding='utf-8'))
+  return data[lang]['main']
  d=SERVICES[lang][key]; fi=lang=='fi'
  stages=''.join(f'<div class="detail-stage"><small>{esc(s[0])}</small><h3>{esc(s[1])}</h3></div>' for s in d['steps'])
  faq=''.join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q,a in d['faq'])
