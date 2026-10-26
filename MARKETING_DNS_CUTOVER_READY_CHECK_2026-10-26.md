@@ -1,6 +1,6 @@
 # Prompted.fi — updated marketing-only DNS and rollback decision sheet
 
-**Observed 26 October 2026 by read-only Vercel account access. NO DNS or project assignment changes. NOT AUTHORISED FOR CUTOVER.**
+**Observed 26 October 2026 by read-only Vercel account access and later confirmed against owner-supplied cPanel Zone Editor screenshots (21 visible records). NO DNS or project assignment changes. NOT AUTHORISED FOR CUTOVER.**
 
 ## Current confirmed account mappings
 
@@ -26,7 +26,8 @@ New site: Vercel project `prompted-site`, ID `prj_O7rI2YYJd1HTR7emNksmIalWiqe9`;
 
 ## What remains outstanding
 
-- **Domainhotelli complete zone/export, original host credential/rollback readiness, and human responsible approval** still missing from this chat's connected access. Previous authoritative partial 23 Oct snapshot is helpful but **not a complete rollback backup**.
+- **26 October 2026 new owner-supplied evidence:** two cPanel Zone Editor screenshots show the entire one-page list of **21/21 visible DNS records** for `prompted.fi` (configured NS `ns1.domainhotelli.fi` and `ns2.domainhotelli.fi`). Visible apex and `www` A records both show `185.158.133.1`, TTL 3600; `app.prompted.fi` shows CNAME `cname.vercel-dns-0.com`, TTL 3600. The list also visibly includes all five Workspace MX records, apex SPF and additional Google/ACME/Lovable TXT, plus Resend send/auth/notify DKIM and CNAME and auth DMARC records. The owner confirmed that the compiled **private, screenshot-based DNS PDF backup is saved on their Mac**. Neither screenshots nor provider verification strings nor email private data are to be committed to this public repository. This **closes the capture-of-visible-zone step** but is **not** a provider-generated zone export, verified restoration of original hosting, or proof that unlisted cPanel configuration/redirects/backups can be restored.
+- **Still required before `domain_rollback` can pass:** establish who can restore the old site hosting and its document root/redirect/SSL behavior; confirm an actionable, tested-or-owner-accepted rollback route and current authenticated domain access. `app.prompted.fi` and mail/verification/Resend records must not be changed. Obtain final accountable approval for moving *only* apex and `www` after these safeguards.
 - Full `domain_rollback` approval stays **pending**.
 - Owner public release of exact source SHA stays **pending**.
 - Production changes, DNS edits, email records and the customer app have **not** been made.
