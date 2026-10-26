@@ -1,6 +1,6 @@
 # Public site release-pack builder — fail closed
 
-This **does not publish**. The existing Vercel preview and `prompted.fi` domain are unchanged. The public bundle generator lives in `tools/public_release_gate.py`. The tracked `PUBLIC_RELEASE_APPROVALS.example.json` remains an all-pending template. The active tracked `PUBLIC_RELEASE_APPROVALS.json` now records **image_rights: approved** and **privacy_legal: approved with prelaunch operating conditions**, both for exact hashed files. The privacy release check remains **BLOCKED** until rights-request absence continuity and provider/transfer operating safeguards are verified. Five other gates, including `owner_release`, remain pending.
+This **does not publish**. The existing Vercel preview and `prompted.fi` domain are unchanged. The public bundle generator lives in `tools/public_release_gate.py`. The tracked `PUBLIC_RELEASE_APPROVALS.example.json` remains an all-pending template. The active tracked `PUBLIC_RELEASE_APPROVALS.json` now records **three of seven gates approved**: `image_rights` (five pinned brand/art blobs), `privacy_legal` (five pinned legal/source blobs, with prelaunch safeguards), and `preview_http` (28 pinned static/browser/config blobs after an authenticated 18/18 FI/EN HTTP inspection). The **provider-transfer preflight** is scoped and verified, but rights-request absence continuity remains **pending** until a real scheduled check and access/recovery arrangement have been evidenced. Four other gates, including `owner_release`, remain pending.
 
 ## How the gate works
 
@@ -17,11 +17,11 @@ This **does not publish**. The existing Vercel preview and `prompted.fi` domain 
 1. Recheck the current `prompted.fi` public site's *rendered* legal routes during cutover; the 26 October read-only HTTP source audit served a generic SPA shell and did not establish which legal text a visitor sees after JavaScript execution.
 2. Confirm hosting and email retention/transfer facts, then finalize FI/EN legal content and review it.
 3. Image-rights owner attestation is recorded for H01, OG image, logo and brand derivatives, with immutable blob IDs in `PUBLIC_RELEASE_APPROVALS.json`; preserve final social/device visual review as a separate gate.
-4. Vercel connection and protected preview HTTP/CSP checks now work; remaining checks include the real physical devices and final public-site browser and security inspection.
-5. Save DNS apex/www/TTL rollback snapshot at Domainhotelli and explicit permission for public site cutover.
+4. Vercel protected-preview HTTP/CSP checks were verified across 18/18 FI/EN pages; the approved 28-file snapshot is pinned and rechecked in the release gate. **Physical-device review** and the final public-origin browser/consent test remain separate.
+5. Owner-controlled Domainhotelli full DNS-zone export is still needed before `domain_rollback` approval; partial authoritative snapshots and the current safe read-only routing/rollback sheet are documented in `MARKETING_DNS_CUTOVER_READY_CHECK_2026-10-26.md`. Do not edit app/MX/TXT/nameservers.
 6. Approve **exact revision** and stage the production bundle without assigning apex domain. Never touch `app.prompted.fi`.
 
-**Current decision (26 October 2026): NO GO.** Image rights and scope-limited privacy legal content approved by owner, with operational safeguards still unverified. Five other sign-offs remain pending. The released customer application is excluded from this site release.
+**Current decision (26 October 2026): NO GO for public launch.** Image rights, scoped privacy content and verified protected-preview HTTP have passed their respective gates. One privacy prelaunch safeguard (absence continuity) remains unverified and four other gates remain pending: `commercial_copy`, `visual_device`, `domain_rollback`, `owner_release`. The customer application and existing apex site remain untouched.
 
 ## Packaging regression QA
 
