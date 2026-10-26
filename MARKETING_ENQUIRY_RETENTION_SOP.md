@@ -10,7 +10,7 @@ This practical, scope-limited procedure concerns the public `prompted.fi` market
 - **Accountable operator / privacy-request handler:** **Jarkko Sjöman**, founder, confirmed personally on **26 October 2026** as the sole responsible person for requests sent to `jarkko@prompted.fi`. This identifies an **operational contact**, not a formally designated GDPR Article 37 data protection officer (DPO).
 - **Mailbox:** Google Workspace Gmail, `jarkko@prompted.fi`, with inbound and outbound traffic verified read-only on 26 October 2026.
 - **Contract:** Google Workspace Cloud Data Processing Addendum **Accepted by jarkko@prompted.fi on 26 October 2026**, as shown on owner-provided Google Workspace Admin Console screenshot.
-- **Triage label:** `Prompted/Tietosuojapyynnöt` created in that mailbox on **26 October 2026**. **No pre-existing messages have been reclassified**. Gmail labels are organisational aids, not an erasure guarantee, audit trail or automatic escalation.
+- **Gmail triage labels:** `Prompted/Tietosuojapyynnöt` for data-rights requests and `Prompted/Markkinointiyhteydenotot` for new website-specific marketing enquiries were created on **26 October 2026**. **No pre-existing messages have been reclassified**. Labels are manual aids, not an automatic intake classifier, data-retention guarantee, audit trail or automatic escalation.
 
 ## A. Receiving and responding to a data-subject rights request
 
@@ -26,7 +26,7 @@ Reference: [European Data Protection Board guidance for SMEs](https://www.edpb.e
 ## B. Marketing enquiry lifecycle and retention
 
 1. **Keep categories separate.** Incoming marketing questions and sales enquiries are distinct from rights requests, live client engagements, commercial contracts, accounting records and legal disputes. Classify purpose before retention action; the same correspondence may transition into a different record category.
-2. **On receipt:** reply or follow up when appropriate; collect only necessary contact information. Avoid sensitive personal information or other confidential client material in ordinary unencrypted emails.
+2. **On receipt:** reply or follow up when appropriate; collect only necessary contact information. If the message genuinely concerns the new marketing website, apply `Prompted/Markkinointiyhteydenotot`; **do not tag all old Prompted-related messages or unrelated personal/contract mail in bulk**. Avoid sensitive personal information or other confidential client material in ordinary unencrypted emails.
 3. **Case closure criteria:** once the question has been answered, the proposal has been declined or no further legitimate follow-up is expected, treat the marketing enquiry as closed unless a lawful additional purpose has been identified and recorded. Ongoing customers, invoices or litigation-related evidence are **outside** this generic marketing rule.
 4. **Review cycle — proposal, not yet adopted:** the founder can review *closed marketing enquiries once per calendar month*, deciding individually whether to delete, anonymise, archive under another documented purpose or retain while an identified valid business purpose continues. A **monthly review is not an automatic deletion deadline or evidence that cleanup is running**.
 5. **Minimum evidence:** in a private operational log note only review date, reviewer, aggregate count reviewed, broad actions and next review date. **Never publish message content, personal identifiers or contract evidence to this public GitHub repository.** Deletion in Gmail and other systems must be verified through the actual provider workflow; don't promise automatic removal from all backups.
@@ -47,6 +47,7 @@ Reference: [European Data Protection Board guidance for SMEs](https://www.edpb.e
 | Working inbound/outbound mailbox | **Verified through connected Gmail** |
 | Google Workspace CDPA | **Accepted; owner-provided Admin Console screenshot** |
 | Gmail privacy-case label | **Created: `Prompted/Tietosuojapyynnöt`** |
+| Gmail new-website marketing-enquiry label | **Created: `Prompted/Markkinointiyhteydenotot`** |
 | Actual regular monitoring/absence coverage | **Not independently evidenced; no backup person assigned** |
 | Marketing retention review cadence | **Monthly suggested, not formally adopted** |
 | Read-only pre-launch inbox triage | **Completed 26 Oct; no individual messages altered** |
