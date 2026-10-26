@@ -6,6 +6,7 @@ evidence-bearing release approvals and removal of all open legal placeholders.
 The source preview (noindex/SSO/draft labels) remains unchanged.
 """
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -30,6 +31,11 @@ LEGAL_OPEN=('vahvistettava','ennen julkaisua','to verify','before publication',
             'suunniteltu säilytyskäytäntö','our proposed retention practice')
 MARKERS=('LUONNOS','DRAFT','PREVIEW · NOT PUBLISHED','KUVALUONNOS H01',
          'H01 ART STUDY')
+IMAGE_APPROVAL_ASSETS={
+    'assets/hero-daylight.webp', 'assets/share-prompted.jpg',
+    'assets/wordmark-dark.svg', 'assets/favicon.ico',
+    'assets/apple-touch-icon.png',
+}
 
 def pages():
     return [ROOT/lang/route/'index.html' for lang,rr in ROUTES.items() for route in rr]
@@ -53,6 +59,22 @@ def check(approval_path):
         for field in ('approver','approved_on','evidence'):
             if not isinstance(approval.get(field),str) or not approval[field].strip():
                 problems.append(f'{gate}: {field} missing')
+        if gate=='image_rights':
+            blobs=approval.get('approved_asset_blobs')
+            if not isinstance(blobs,dict) or set(blobs)!=IMAGE_APPROVAL_ASSETS:
+                problems.append('image_rights: expected exact five approved image/brand asset blobs')
+            else:
+                for relpath,expected in blobs.items():
+                    if not isinstance(expected,str) or not re.fullmatch(r'[0-9a-f]{40}',expected):
+                        problems.append(f'image_rights: invalid Git blob SHA for {relpath}')
+                        continue
+                    try:
+                        content=(ROOT/relpath).read_bytes()
+                        actual=hashlib.sha1(b'blob '+str(len(content)).encode()+b'\0'+content).hexdigest()
+                        if actual!=expected:
+                            problems.append(f'image_rights: asset changed since approval: {relpath}')
+                    except OSError:
+                        problems.append(f'image_rights: approved asset missing: {relpath}')
         if gate=='owner_release':
             if approval.get('explicit_public_release') is not True:
                 problems.append('owner_release: explicit_public_release must be true')
@@ -163,7 +185,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--check',action='store_true',help='Evaluate only, expected BLOCKED preapproval')
     parser.add_argument('--prepare',action='store_true',help='Assemble private output, never deploy')
-    parser.add_argument('--approval-file',type=Path,default=ROOT/'PUBLIC_RELEASE_APPROVALS.example.json')
+    parser.add_argument('--approval-file',type=Path,default=ROOT/'PUBLIC_RELEASE_APPROVALS.json')
     parser.add_argument('--commit-sha',default='')
     parser.add_argument('--out',type=Path,default=ROOT/'public_release_out')
     args=parser.parse_args()
