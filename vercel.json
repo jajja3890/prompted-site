@@ -37,6 +37,36 @@
       "source": "/en/transformerism",
       "destination": "/en/transformation/",
       "permanent": true
+    },
+    {
+      "source": "/capability/",
+      "destination": "/fi/capability/",
+      "permanent": true
+    },
+    {
+      "source": "/literacy/",
+      "destination": "/fi/literacy/",
+      "permanent": true
+    },
+    {
+      "source": "/transformation/",
+      "destination": "/fi/transformation/",
+      "permanent": true
+    },
+    {
+      "source": "/transformerism/",
+      "destination": "/fi/transformation/",
+      "permanent": true
+    },
+    {
+      "source": "/fi/transformerism/",
+      "destination": "/fi/transformation/",
+      "permanent": true
+    },
+    {
+      "source": "/en/transformerism/",
+      "destination": "/en/transformation/",
+      "permanent": true
     }
   ],
   "headers": [
