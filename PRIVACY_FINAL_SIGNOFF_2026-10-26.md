@@ -1,6 +1,6 @@
 # Prompted Oy: marketing-website privacy closure, 26 October 2026
 
-**Status: NOT legally signed off.** Scope is **only** the new static FI/EN `prompted.fi` marketing website and emails arising from it. This record is deliberately separate from `app.prompted.fi`, Tekoälymörkö and customer-/employee-data processing. It contains no private emails, account credentials, invoices or tenant screenshots.
+**Status: Owner approved the two scoped legal assessments and FI/EN notices on 26 October 2026; operating safeguards and public-release gates remain pending.** Scope is **only** the new static FI/EN `prompted.fi` marketing website and emails arising from it. This record is deliberately separate from `app.prompted.fi`, Tekoälymörkö and customer-/employee-data processing. It contains no private emails, account credentials, invoices or tenant screenshots.
 
 ## What has actually been established
 
