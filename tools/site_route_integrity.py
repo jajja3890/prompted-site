@@ -16,7 +16,7 @@ PAIRS=[
  ('yhteys','contact'),('tietosuoja','privacy'),('ehdot','terms'),
  ('tutustu','explore')
 ]
-COUNTS={'pages':0,'local_references':0,'anchor_targets':0,'seo_links':0}
+COUNTS={'pages':0,'local_references':0,'anchor_targets':0,'seo_links':0,'legacy_redirects':0}
 FAIL=[]
 DOCS={}
 def local_path(lang,route):
@@ -114,6 +114,23 @@ for fi,en in PAIRS:
             FAIL.append(f'{path}: Open Graph URL mismatch')
         else:
             COUNTS['seo_links']+=1
+# Preserve legacy inbound links both before and after Vercel's trailing-slash normalization.
+legacy_redirects={
+    '/capability':'/fi/capability/',
+    '/literacy':'/fi/literacy/',
+    '/transformation':'/fi/transformation/',
+    '/transformerism':'/fi/transformation/',
+    '/fi/transformerism':'/fi/transformation/',
+    '/en/transformerism':'/en/transformation/',
+}
+redirects=json.loads((ROOT/'vercel.json').read_text(encoding='utf-8')).get('redirects',[])
+for source,destination in legacy_redirects.items():
+    for candidate in (source,source+'/'):
+        matching=[r for r in redirects if r.get('source')==candidate]
+        COUNTS['legacy_redirects']+=1
+        if len(matching)!=1 or matching[0].get('destination')!=destination or matching[0].get('permanent') is not True:
+            FAIL.append(f'Legacy URL redirect missing or invalid: {candidate} -> {destination}')
+
 # Every internal local reference resolves; no server or remote route availability implied.
 result={'status':'PASS' if not FAIL else 'FAIL','counts':COUNTS,'failures':FAIL,
         'scope':'18 FI/EN static pages, internal links, anchors, static assets, reciprocal canonical/hreflang/OG URLs; offline only'}
