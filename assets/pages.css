@@ -166,3 +166,108 @@
 .pf-capability .pf-phone{display:none}
 .pf-capability .pf-microproof{letter-spacing:0}
 .pf-capability .pf-microproof b{font-size:12px;font-weight:740}
+
+
+/* Transformation commercial page · 26 October 2026
+ * A leadership / organisational narrative; no fake software UI or metrics.
+ */
+.ts-hero,.ts-challenge,.ts-framework,.ts-process,.ts-audience,.ts-gateway,.ts-terms,.ts-monster,.ts-closing{position:relative;overflow:hidden}
+.ts-hero .shell,.ts-challenge .shell,.ts-framework .shell,.ts-process .shell,.ts-audience .shell,.ts-gateway .shell,.ts-terms .shell,.ts-monster .shell,.ts-closing .shell{max-width:1500px}
+.ts-kicker{display:inline-flex;align-items:center;gap:11px;font-size:clamp(12px,.82vw,15px);font-weight:820;letter-spacing:.1em;text-transform:uppercase;line-height:1.55;color:#415b17}
+.ts-kicker:before{content:"";display:inline-block;width:9px;height:9px;background:#bed02c;flex:0 0 9px}
+.ts-hero h1,.ts-challenge h2,.ts-framework h2,.ts-process h2,.ts-audience h2,.ts-gateway h2,.ts-terms h2,.ts-monster h2,.ts-closing h2{margin:0;font-weight:680;line-height:1.07;letter-spacing:-.066em;text-wrap:balance}
+.ts-challenge h2,.ts-framework h2,.ts-process h2,.ts-audience h2,.ts-gateway h2,.ts-closing h2{font-size:clamp(36px,4.5vw,74px)}
+.ts-challenge p,.ts-framework p,.ts-process p,.ts-audience p,.ts-gateway p,.ts-terms p,.ts-monster p,.ts-closing p{line-height:1.67}
+.ts-hero{background:#eaf0e5;color:#101610;border-bottom:1px solid #cbd5c6}
+.ts-hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);gap:clamp(32px,5vw,88px);align-items:center;padding-block:clamp(76px,9vw,145px)}
+.ts-hero h1{font-size:clamp(62px,6.2vw,105px);max-width:840px;margin:46px 0 32px}
+.ts-hero-lead{font-size:clamp(18px,1.43vw,22px);line-height:1.62;color:#475545;max-width:700px;margin:0}
+.ts-actions{display:flex;align-items:center;gap:30px;flex-wrap:wrap;margin-top:39px}
+.ts-primary,.ts-finalcta{display:inline-flex;align-items:center;justify-content:center;min-height:55px;padding:17px 23px;background:#0c150e;color:#f6f8f2;font-size:15px;font-weight:770;text-align:center}
+.ts-primary:hover{background:#30431a}
+.ts-secondary{padding:11px 0;border-bottom:1px solid #536149;color:#183018;font-size:15px;font-weight:700}
+.ts-secondary:hover{border-color:#141f11}
+.ts-visual{background:#111a13;color:#f2f6ea;padding:clamp(28px,3.2vw,49px);min-width:0;border:1px solid #253926}
+.ts-visual-overline{color:#c3d839;font-size:clamp(11px,.8vw,13px);letter-spacing:.12em;font-weight:800}
+.ts-visual h2{font-size:clamp(32px,3.1vw,53px);line-height:1.11;letter-spacing:-.056em;font-weight:680;margin:26px 0 37px}
+.ts-visual-list{border-top:1px solid #495844}
+.ts-visual-item{display:grid;grid-template-columns:34px minmax(0,1fr);gap:13px;padding:19px 0;border-bottom:1px solid #42513e}
+.ts-visual-item>span{font-size:13px;font-weight:800;color:#c7d935}
+.ts-visual-item strong{display:block;font-size:clamp(18px,1.3vw,23px);font-weight:680}
+.ts-visual-item p{font-size:clamp(13px,.95vw,16px);color:#b9c7b5;line-height:1.5;margin:6px 0 0}
+.ts-challenge{background:#f7f8f4;color:#111711;padding:clamp(82px,9vw,145px) 0}
+.ts-text-grid{display:grid;grid-template-columns:minmax(175px,.4fr) minmax(0,1fr);gap:clamp(35px,6vw,110px)}
+.ts-text-grid .ts-kicker{align-self:start;margin-top:13px}
+.ts-challenge h2{max-width:1020px}
+.ts-challenge p,.ts-gateway p{font-size:clamp(17px,1.4vw,21px);color:#4e5a4d;max-width:850px;margin:31px 0 0}
+.ts-challenge .ts-strong{font-weight:730;color:#253d24;margin-top:23px}
+.ts-framework{background:#111a13;color:#f4f7ec;padding:clamp(85px,9vw,140px) 0}
+.ts-framework .ts-kicker,.ts-closing .ts-kicker{color:#cadd83}
+.ts-framework h2{margin:29px 0 56px;max-width:1060px}
+.ts-pillar-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#4c5b49;border:1px solid #4c5b49}
+.ts-pillar{background:#1c291d;padding:clamp(27px,3vw,45px);min-height:310px}
+.ts-pillar>span{font-size:13px;font-weight:800;color:#cfde4a;letter-spacing:.08em;text-transform:uppercase}
+.ts-pillar h3{font-size:clamp(29px,2.3vw,39px);line-height:1.14;letter-spacing:-.048em;margin:42px 0 17px;font-weight:670}
+.ts-pillar p{font-size:clamp(16px,1.1vw,18px);color:#c1cdbd;max-width:600px;margin:0}
+.ts-process{background:#e6ede1;color:#111811;padding:clamp(80px,9vw,140px) 0}
+.ts-process-head{display:grid;grid-template-columns:1.2fr .65fr;gap:clamp(35px,7vw,105px);align-items:end;margin:28px 0 52px}
+.ts-process-head h2{max-width:860px}
+.ts-process-head p{font-size:clamp(17px,1.25vw,20px);color:#4d5c4b;margin:0}
+.ts-steps{border-top:1px solid #a7b9a2}
+.ts-step{display:grid;grid-template-columns:70px minmax(250px,.8fr) minmax(0,1fr);gap:clamp(23px,4vw,70px);padding:30px 0;border-bottom:1px solid #a7b9a2;align-items:start}
+.ts-step>span{font-size:15px;color:#415d1c;font-weight:820;padding-top:6px}
+.ts-step h3{font-size:clamp(26px,2vw,35px);font-weight:680;line-height:1.2;letter-spacing:-.05em;margin:0}
+.ts-step p{font-size:clamp(16px,1.1vw,19px);color:#4d5b4a;margin:0}
+.ts-audience{background:#f8faf5;color:#131a13;padding:clamp(82px,9vw,135px) 0}
+.ts-audience h2{max-width:1030px;margin:29px 0 30px}
+.ts-audience-intro{font-size:clamp(18px,1.38vw,22px);max-width:840px;color:#4d5c4e;margin:0 0 57px}
+.ts-audience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ts-audience-grid article{border-top:1px solid #9caf97;padding-top:25px}
+.ts-audience-grid h3{font-size:clamp(28px,2.3vw,39px);line-height:1.15;letter-spacing:-.047em;margin:19px 0 20px}
+.ts-audience-grid p{font-size:clamp(16px,1.1vw,19px);color:#526050;max-width:560px}
+.ts-gateway{background:#e1e9d9;color:#141d13;padding:clamp(76px,8vw,125px) 0}
+.ts-gateway h2{max-width:850px}
+.ts-textlink{display:inline-flex;align-items:center;gap:18px;border-bottom:2px solid #879c26;padding:10px 0;font-size:16px;font-weight:780;color:#213b1e;margin-top:28px}
+.ts-textlink:hover{border-color:#263c19}
+.ts-terms{background:#f2f5ee;color:#142014;padding:clamp(61px,7vw,98px) 0}
+.ts-terms-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,6vw,110px)}
+.ts-terms h2{font-size:clamp(31px,3vw,49px);line-height:1.15;margin-top:29px}
+.ts-terms p{font-size:clamp(16px,1.1vw,18px);color:#4f6050;margin:0}
+.ts-monster{background:#f9faf6;color:#182119;border-top:1px solid #d8dfd3;padding:58px 0}
+.ts-monster-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,100px)}
+.ts-monster h2{font-size:clamp(27px,2.8vw,43px);line-height:1.17;margin-top:21px}
+.ts-monster p{font-size:clamp(15px,1.05vw,18px);color:#50604e;margin:0}
+.ts-monster .ts-textlink{font-size:15px}
+.ts-closing{background:#0b140d;color:#f4f8f0;padding:clamp(92px,10vw,155px) 0}
+.ts-closing h2{max-width:1110px;margin:28px 0}
+.ts-closing p{font-size:clamp(18px,1.35vw,22px);max-width:750px;color:#beccbb;margin:0 0 38px}
+.ts-finalcta{background:#c3d432;color:#101a0e;min-width:260px;gap:35px}
+.ts-finalcta:hover{background:#dbeb50}
+@media(max-width:1120px){
+ .ts-hero-grid,.ts-text-grid,.ts-process-head,.ts-terms-grid,.ts-monster-grid{grid-template-columns:1fr}
+ .ts-hero-grid{gap:50px}
+ .ts-visual{max-width:800px}
+ .ts-text-grid{gap:22px}
+ .ts-step{grid-template-columns:40px minmax(0,.9fr) minmax(0,1fr);gap:26px}
+}
+@media(max-width:760px){
+ .ts-hero-grid{padding-block:64px;gap:34px}
+ .ts-hero h1{font-size:clamp(48px,11vw,73px);margin:32px 0 26px}
+ .ts-hero-lead{font-size:17px}
+ .ts-actions{display:flex;flex-direction:column;align-items:stretch;gap:15px}
+ .ts-primary{width:100%}
+ .ts-secondary{width:max-content}
+ .ts-visual{padding:24px}
+ .ts-visual h2{font-size:35px}
+ .ts-challenge,.ts-framework,.ts-process,.ts-audience,.ts-gateway,.ts-terms,.ts-closing{padding:66px 0}
+ .ts-challenge h2,.ts-framework h2,.ts-process h2,.ts-audience h2,.ts-gateway h2,.ts-closing h2{font-size:clamp(35px,9vw,51px)}
+ .ts-pillar-grid,.ts-audience-grid{grid-template-columns:1fr}
+ .ts-pillar{min-height:0}
+ .ts-pillar h3{margin:25px 0 15px}
+ .ts-process-head{margin-bottom:35px}
+ .ts-step{grid-template-columns:35px minmax(0,1fr);gap:10px 20px}
+ .ts-step p{grid-column:2}
+ .ts-terms h2{margin-top:20px}
+ .ts-monster{padding:47px 0}
+ .ts-finalcta{width:100%;min-width:0}
+}
