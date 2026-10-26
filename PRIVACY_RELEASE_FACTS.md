@@ -5,7 +5,8 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 ## Factual release conditions
 - [x] **Independent public-record corroboration** of the company name, business ID 3550114-7, and registered municipality Turku. Secondary listings cite YTJ/PRH; this does not independently verify the mailbox. Sources and verification date below.
 - [x] **Live connected Gmail account observed 26 October 2026:** current profile identifies `jarkko@prompted.fi`; recent inbound and outgoing business mail exists. This establishes active mailbox access and actual inbound/outbound use, not yet a specific GDPR-request reply test.
-- [ ] **Still to verify:** privacy-request owner, continuous/absence coverage, a documented rights-request procedure, and any fresh send/reply test desired by the controller.
+- [x] **Privacy-request owner assigned 26 October 2026:** founder Jarkko Sjöman explicitly confirmed responsibility for requests to `jarkko@prompted.fi`. A dedicated Gmail label `Prompted/Tietosuojapyynnöt` and a practical handling SOP were created without altering old messages.
+- [ ] **Still open:** evidence of routine inbox monitoring, continuity during absence, one rights-request handling rehearsal and first implemented marketing-data retention review. The created label does not automatically catch requests.
 - [x] **Previously confirmed corporate email system:** Prompted Oy's `jarkko@prompted.fi` mailbox was connected to **Google Workspace (Gmail)** in the owner's account setup, reconfirmed 1 September 2026. This identifies the previously configured provider but not current live MX or Workspace admin contract status.
 - [x] **Authoritative mail routing verified 23 October 2026:** both Domainhotelli authoritative nameservers answered `prompted.fi MX` with the five established Google Workspace mail exchangers, TTL 3600 seconds; no DNS changes were made. See `DNS_AUTHORITY_OBSERVED_2026-10-23.md`.
 - [x] **Google Workspace CDPA accepted 26 October 2026:** owner-provided Google Workspace Admin Console screenshot shows **“Accepted by jarkko@prompted.fi on Oct 26, 2026”** for Cloud Data Processing Addendum. Earlier “Not accepted” status was superseded. Keep the private screenshot in the company's compliance evidence; do not publish it in the GitHub repository.
@@ -13,11 +14,11 @@ Prepared 22 October 2026. Original FI/EN privacy notices for the new static mark
 - [x] **Published Vercel DPA text checked:** as of 22 October 2026, effective 31 March 2026; states scope includes Pro and Enterprise plans, identifies US processing and cross-border mechanisms including standard contractual clauses. This verifies the public contractual text, **not** that the specific Prompted Oy account's DPA and provider/subprocessor arrangements were accepted.
 - [ ] Verify the actual Vercel plan/account DPA applicability, subprocessors, service locations, log retention/settings, and all production-injected cookies or scripts.
 - [x] FI/EN notice draft now describes **retention criteria rather than an unimplemented 12-month deletion deadline**. This is a copy correction, not evidence of operational deletion.
-- [ ] Adopt and operationalise a mailbox/contact-data review and deletion process; record the accountable owner, exceptions, frequency and actual evidence. See `MARKETING_ENQUIRY_RETENTION_SOP.md`.
+- [ ] **Accountable operator and documented procedure now exist** in `MARKETING_ENQUIRY_RETENTION_SOP.md`, but the proposed monthly retention review has not been adopted or evidenced, and the first sample review is still outstanding. Do not claim an automatic deletion process.
 - [x] A scope-limited draft balancing worksheet has been prepared for inbound enquiries and Vercel technical security data: `LEGITIMATE_INTEREST_BALANCING.md`. This is a documented assessment draft, **not** a final legitimate-interest conclusion.
 - [ ] Complete the assessment using actual retention/security/processor facts and obtain accountable Prompted Oy approval before adopting legal basis and publishing notice.
 - [ ] Verify public deployment's cookie/storage behaviour before asserting that no consent mechanism is needed.
-- [ ] Confirm site operator's access-control and security claims and identify the privacy rights request owner.
+- [x] **Privacy rights contact owner identified:** Jarkko Sjöman. Further validation of access controls and operational request-response handling remains open.
 - [ ] Approve exact FI/EN text and source commit, and keep the authenticated customer-app privacy terms separate.
 
 
