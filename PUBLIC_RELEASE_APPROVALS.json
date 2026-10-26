@@ -1,0 +1,57 @@
+{
+  "privacy_legal": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "image_rights": {
+    "status": "approved",
+    "approver": "Jarkko Sjöman, Prompted Oy founder and owner",
+    "approved_on": "2026-10-26",
+    "evidence": "Prompted Oy owner confirmed in the 2026-10-26 ChatGPT working conversation that the website artwork was created together in the ChatGPT workflow, not obtained from an external source, and expressly requested proceeding with the image approval manifest. Approval covers these exact artwork and current company brand master/derived icon files for use on Prompted Oy marketing pages and social preview, under OpenAI Europe Terms of Use output ownership (subject to user input/third-party rights). See IMAGE_RIGHTS_REGISTER.md, specifically owner attestation and blob table; historic source commit 5ac7c18d2e02261042f259d4d8b2c4ddaeb6cb1a. This is owner attestated provenance and website use permission, not independent proof of all original prompts or third-party IP clearance.",
+    "approved_asset_blobs": {
+      "assets/hero-daylight.webp": "e2be6f8fb27aa9c155e0112c5396e110f6a3f366",
+      "assets/share-prompted.jpg": "9229344275dca9dc169ecd87efaf12eba27d451a",
+      "assets/wordmark-dark.svg": "5b6055300e9a75186ae050f9dba916b96c6dccf3",
+      "assets/favicon.ico": "388bf7862adcd1d2c803d7de39bad813cf221baa",
+      "assets/apple-touch-icon.png": "c9f538626ae88d916b8f2079f7dc340938b702c7"
+    },
+    "exclusions": [
+      "assets/hero-material.webp",
+      "assets/wordmark-light.svg"
+    ]
+  },
+  "commercial_copy": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "preview_http": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "visual_device": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "domain_rollback": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": ""
+  },
+  "owner_release": {
+    "status": "pending",
+    "approver": "",
+    "approved_on": "",
+    "evidence": "",
+    "explicit_public_release": false,
+    "approved_commit_sha": ""
+  }
+}
