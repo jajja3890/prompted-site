@@ -271,8 +271,8 @@ def service_main(lang,key):
  subtitle= ('NOIN TUNNIN ALOITUSKURSSI' if fi else 'AN APPROXIMATELY ONE-HOUR STARTER COURSE') if key=='literacy' else ('MUUTOS JOHTAA TYÖHÖN' if fi else 'CHANGE STARTS WITH WORK')
  side = service_visual(lang,key)
  note = ('Kurssin rakenteen havainnekuva. Ei julkaistun oppimisympäristön ruutukaappaus.' if fi else 'Illustration of the course outline. Not a screenshot of a published learner product.') if key=='literacy' else ('Havainnekuva toimituksen toimintaperiaatteesta. Ei todellinen ohjelmistonäkymä tai asiakastulos.' if fi else 'Conceptual delivery illustration. Not a real software screen or customer result.')
- next_head = ('Kun perusteet ovat hallussa, mitä seuraavaksi?' if fi else 'Once the foundation is in place, how do ways of working improve?') if key=='literacy' else ('Tarvitsetteko ensin rajatun, mitattavan kokeilun?' if fi else 'Would a focused, reviewable pilot be the right starting point?')
- next_body = ('Capability vie kehittämisen yksittäisistä oppimistoimista työhön, toistoon ja itsenäiseen soveltamiseen.' if fi else 'Capability takes development beyond learning activities and into real work, repeatability and independent application.') if key=='literacy' else ('Capability tarjoaa rajatumman lähtökohdan ennen laajemman organisaatiomuutoksen suunnittelua.' if fi else 'Capability provides a focused starting point before planning a wider organisational change.')
+ next_head = ('Kun perusteet ovat hallussa, mitä seuraavaksi?' if fi else 'What comes after the basics?') if key=='literacy' else ('Tarvitsetteko ensin rajatun, mitattavan kokeilun?' if fi else 'Would a focused, reviewable pilot be the right starting point?')
+ next_body = ('Capability on erillinen, pidempi ohjelma: se auttaa muuttamaan oikeita työtapoja ja todentamaan muutosta. Literacy ei sisällä Capability-valmennusta.' if fi else 'Capability is a separate, longer programme for changing real work practices and evaluating those changes. Literacy does not include Capability coaching.') if key=='literacy' else ('Capability tarjoaa rajatumman lähtökohdan ennen laajemman organisaatiomuutoksen suunnittelua.' if fi else 'Capability provides a focused starting point before planning a wider organisational change.')
  next_cta = 'Tutustu Capabilityyn' if fi else 'Explore Capability'
  bridge=f'''<section class="ps-bridge"><div class="shell ps-bridge-grid"><span class="ps-kicker">{('SEURAAVA ASKEL' if fi else 'NEXT STEP')}</span><div><h2>{next_head}</h2><p>{next_body}</p><a href="{url(lang,'cap')}">{next_cta} <span aria-hidden="true">↗</span></a></div></div></section>'''
  return f'''<section class="ps-service-hero ps-service-{key}" aria-labelledby="ps-service-heading"><div class="shell ps-service-grid">
@@ -286,10 +286,12 @@ def service_main(lang,key):
  <section class="detail-why"><div class="shell detail-why-grid"><span class="kicker">{'MIKSI TÄMÄ' if fi else 'WHY IT MATTERS'}</span><div><h2>{esc(d['why_title'])}</h2><p>{esc(d['why'])}</p></div></div></section>
  <section class="detail-process" id="toimitus"><div class="shell"><div class="kicker"><span class="dash"></span>{('NÄIN KURSSI ETENEE' if fi else 'HOW THE COURSE WORKS') if key=='literacy' else ('MITEN ETENEMME' if fi else 'HOW WE WORK')}</div><h2>{('Lyhyet sisällöt. Omat valinnat. Selkeä loppuarviointi.' if fi else 'Short lessons. Your choices. A clear final assessment.') if key=='literacy' else ('Selkeä lähtö. Todellinen työ. Tunnistettava seuraava askel.' if fi else 'A clear starting point. Real work. A meaningful next step.')}</h2><div class="detail-stages">{stages}</div></div></section>
  <section class="detail-context"><div class="shell context-grid"><div><div class="kicker"><span class="dash"></span>{'KENELLE' if fi else 'FOR WHOM'}</div><h2>{esc(d['who_title'])}</h2><p>{esc(d['who'])}</p></div><div class="context-limit"><div class="kicker">{'RAJAUKSET' if fi else 'BOUNDARIES'}</div><h3>{esc(d['bound_title'])}</h3><p>{esc(d['bound'])}</p></div></div></section>
- {bridge}<section class="detail-faq"><div class="shell"><h2>{'Usein kysyttyä' if fi else 'Frequently asked questions'}</h2>{faq}</div></section>{close_section(lang,d['cta'])}'''
+ {bridge}<section class="detail-faq"><div class="shell"><h2>{'Usein kysyttyä' if fi else 'Frequently asked questions'}</h2>{faq}</div></section>{close_section(lang,d['cta'],key)}'''
 
-def close_section(lang,cta=None):
- fi=lang=='fi'; return f'<section class="closing"><div class="shell"><h2>{"Aloitetaan yhdestä oikeasta haasteesta." if fi else "Let’s start with one real challenge."}</h2><a href="{url(lang,"contact")}">{esc(cta or ("Ota yhteyttä" if fi else "Get in touch"))} <span>↗</span></a></div></section>'
+def close_section(lang,cta=None,key=None):
+ fi=lang=='fi'
+ heading=('Aloitetaan perusteista.' if fi else 'Start with the basics.') if key=='literacy' else ('Aloitetaan yhdestä oikeasta haasteesta.' if fi else 'Let’s start with one real challenge.')
+ return f'<section class="closing"><div class="shell"><h2>{heading}</h2><a href="{url(lang,"contact")}">{esc(cta or ("Ota yhteyttä" if fi else "Get in touch"))} <span>↗</span></a></div></section>'
 
 def utility_main(lang,page):
  fi=lang=='fi';c=C[lang]
