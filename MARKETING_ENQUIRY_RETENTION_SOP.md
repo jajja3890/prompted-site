@@ -4,7 +4,7 @@
 
 ## Scope and control points
 
-- Controller: Prompted Oy, business ID 3550114-7. Business mailbox previously recorded as Google Workspace / Gmail, `jarkko@prompted.fi`. Authoritative Google Workspace MX routing was verified on 23 October 2026; active delivery, monitoring, and the actual tenant contract still need confirmation.
+- Controller: Prompted Oy, business ID 3550114-7. `jarkko@prompted.fi` is connected to Gmail; authoritative Google MX routing was verified on 23 October and live mailbox access with inbound and outgoing messages was verified read-only on 26 October 2026. **GDPR-request monitoring, the actual Workspace CDPA, retention operation and an explicit send/reply test remain unverified.**
 - Accountable person: **to be assigned** by company owner. Record adopted date in company legal data room.
 - New enquiries: label or otherwise distinguish marketing enquiries from customer, contracts, accounting, legal, HR and user support correspondence.
 - Decision on case closure: record whether the enquiry needs follow-up, has become a customer/contract record, relates to a legal claim, or is concluded with no further purpose. Do not erase legal/accounting evidence by applying a general website rule.
