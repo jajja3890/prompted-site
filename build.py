@@ -236,17 +236,18 @@ def service_visual(lang,key):
  t=lambda f,e: f if fi else e
  if key=='literacy':
   rows=[
-   (t('Työn konteksti','Work context'),t('Roolit · Työkalut · Tilanteet','Roles · Tools · Situations')),
-   (t('Harkinta','Human judgement'),t('Tarkistaminen · Riskit · Vastuu','Review · Risk · Responsibility')),
-   (t('Yhteinen perusta','Shared foundation'),t('Harjoittelu oikeassa työssä','Practice in real work')),
-   (t('Dokumentointi','Documentation'),t('Sovitut toimet · Jatkotarpeet','Agreed measures · Next priorities')),
+   (t('Ymmärrä, mitä käytät','Understand the tool'),t('Mahdollisuudet · Rajoitukset','Strengths · Limits')),
+   (t('Tunnista riskit','Recognise risks'),t('Tietosuoja · Turvalliset syötteet','Privacy · Safe inputs')),
+   (t('Tee vastuullinen päätös','Make responsible decisions'),t('Ihmisen vastuu · Milloin pysähtyä','Human oversight · When to pause')),
+   (t('Käytä ja arvioi','Use and check'),t('Selkeä tehtävä · Tarkista tulos','Clear task · Verify output')),
+   (t('Osoita, mitä ymmärsit','Check your understanding'),t('Loppuarviointi · Palaute','Final assessment · Feedback')),
   ]
   entries=''.join(f'<div class="ps-literacy-row"><span aria-hidden="true">0{i+1}</span><div><strong>{esc(title)}</strong><small>{esc(detail)}</small></div><i aria-hidden="true">↗</i></div>' for i,(title,detail) in enumerate(rows))
-  return f'''<div class="ps-product-panel ps-literacy-panel" aria-label="{t('Havainnekuva lukutaidon kehittämisen osa-alueista','Illustration of the AI literacy delivery areas')}">
-   <div class="ps-panel-top"><span>PROMPTED <b>LITERACY</b></span><span>{t('TOIMITUSMALLI','DELIVERY MODEL')}</span></div>
-   <div class="ps-literacy-top"><span class="ps-kicker">{t('TYÖLÄHTÖINEN TEKOÄLYLUKUTAITO','WORK-RELEVANT AI LITERACY')}</span><strong>{t('Yhteinen perusta.','A shared foundation.')}<br>{t('Oikea konteksti.','Real-world context.')}</strong><p>{t('Eri rooleihin sopiva oppiminen ja dokumentoitavat toimet.','Context-sensitive learning and documented actions.')}</p></div>
+  return f'''<div class="ps-product-panel ps-literacy-panel" aria-label="{t('Havainnekuva Literacy-aloituskurssin viidestä osasta','Illustration of the five parts of the Literacy starter course')}">
+   <div class="ps-panel-top"><span>PROMPTED <b>LITERACY</b></span><span>{t('KURSSIN RAKENNE','COURSE OUTLINE')}</span></div>
+   <div class="ps-literacy-top"><span class="ps-kicker">{t('KOKO HENKILÖSTÖN ALOITUSKURSSI','A STARTER COURSE FOR EVERY EMPLOYEE')}</span><strong>{t('Perusteet jokaiselle.','The basics for everyone.')}<br>{t('Turvallinen alku.','A safer start.')}</strong><p>{t('Noin 55 minuutin tavoitekesto. Neljä oppimisosiota ja loppuarviointi. Suomenkielinen kurssi viimeistelyssä.','Target duration around 55 minutes. Four learning modules and a final assessment. Finnish edition in preparation.')}</p></div>
    <div class="ps-literacy-rows">{entries}</div>
-   <div class="ps-panel-bottom"><span>{t('EI SERTIFIKAATTI- TAI LAINMUKAISUUSTAKUUTA','NO CERTIFICATE OR COMPLIANCE GUARANTEE')}</span><span aria-hidden="true">✳</span></div>
+   <div class="ps-panel-bottom"><span>{t('EI VIRALLINEN EU-SERTIFIKAATTI','NOT AN OFFICIAL EU CERTIFICATE')}</span><span aria-hidden="true">✳</span></div>
   </div>'''
  rows=[
   (t('Johto','Leadership'),t('Yhteinen tavoite','Shared objective')),
@@ -267,23 +268,23 @@ def service_main(lang,key):
  d=SERVICES[lang][key]; fi=lang=='fi'
  stages=''.join(f'<div class="detail-stage"><small>{esc(s[0])}</small><h3>{esc(s[1])}</h3></div>' for s in d['steps'])
  faq=''.join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q,a in d['faq'])
- subtitle= ('YHTEINEN PERUSTA' if fi else 'A SHARED FOUNDATION') if key=='literacy' else ('MUUTOS JOHTAA TYÖHÖN' if fi else 'CHANGE STARTS WITH WORK')
+ subtitle= ('NOIN TUNNIN ALOITUSKURSSI' if fi else 'AN APPROXIMATELY ONE-HOUR STARTER COURSE') if key=='literacy' else ('MUUTOS JOHTAA TYÖHÖN' if fi else 'CHANGE STARTS WITH WORK')
  side = service_visual(lang,key)
- note = 'Havainnekuva toimituksen toimintaperiaatteesta. Ei todellinen ohjelmistonäkymä tai asiakastulos.' if fi else 'Conceptual delivery illustration. Not a real software screen or customer result.'
+ note = ('Kurssin rakenteen havainnekuva. Ei julkaistun oppimisympäristön ruutukaappaus.' if fi else 'Illustration of the course outline. Not a screenshot of a published learner product.') if key=='literacy' else ('Havainnekuva toimituksen toimintaperiaatteesta. Ei todellinen ohjelmistonäkymä tai asiakastulos.' if fi else 'Conceptual delivery illustration. Not a real software screen or customer result.')
  next_head = ('Kun yhteinen perusta on rakennettu, miten työtavat kehittyvät?' if fi else 'Once the foundation is in place, how do ways of working improve?') if key=='literacy' else ('Tarvitsetteko ensin rajatun, mitattavan kokeilun?' if fi else 'Would a focused, reviewable pilot be the right starting point?')
  next_body = ('Capability vie kehittämisen yksittäisistä oppimistoimista työhön, toistoon ja itsenäiseen soveltamiseen.' if fi else 'Capability takes development beyond learning activities and into real work, repeatability and independent application.') if key=='literacy' else ('Capability tarjoaa rajatumman lähtökohdan ennen laajemman organisaatiomuutoksen suunnittelua.' if fi else 'Capability provides a focused starting point before planning a wider organisational change.')
  next_cta = 'Tutustu Capabilityyn' if fi else 'Explore Capability'
  bridge=f'''<section class="ps-bridge"><div class="shell ps-bridge-grid"><span class="ps-kicker">{('SEURAAVA ASKEL' if fi else 'NEXT STEP')}</span><div><h2>{next_head}</h2><p>{next_body}</p><a href="{url(lang,'cap')}">{next_cta} <span aria-hidden="true">↗</span></a></div></div></section>'''
  return f'''<section class="ps-service-hero ps-service-{key}" aria-labelledby="ps-service-heading"><div class="shell ps-service-grid">
   <div class="ps-service-copy"><div class="ps-eyebrow"><span aria-hidden="true"></span>{esc(d['eyebrow'])}</div>
-    <div><p class="ps-hero-label">{subtitle}</p><h1 id="ps-service-heading">{esc(('Tekoälylukutaito alkaa oikeasta työstä.' if fi else 'AI literacy starts with real work.') if key=='literacy' else d['h1'])}</h1><p class="ps-service-intro">{esc(d['intro'])}</p>
+    <div><p class="ps-hero-label">{subtitle}</p><h1 id="ps-service-heading">{esc(d['h1'])}</h1><p class="ps-service-intro">{esc(d['intro'])}</p>
     <div class="ps-service-actions"><a class="pf-button-primary" href="{url(lang,'contact')}">{esc(d['cta'])} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="#toimitus">{'Näin etenemme' if fi else 'How it works'} <span aria-hidden="true">↓</span></a></div></div>
     <div class="ps-service-keyline"><span>{'01 / LITERACY' if key=='literacy' else '03 / TRANSFORMATION'}</span><span>{'PROMPTED / PEOPLE × TECHNOLOGY × WORK'}</span></div></div>
-  <div class="ps-service-visual"><div class="ps-art-meta"><span>{'TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE'}</span><span>CONCEPT STUDY</span></div>{side}
+  <div class="ps-service-visual"><div class="ps-art-meta"><span>{('KURSSIN ETENEMINEN' if fi else 'LEARNING JOURNEY') if key=='literacy' else ('TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE')}</span><span>CONCEPT STUDY</span></div>{side}
    <p class="ps-concept-disclaimer"><span aria-hidden="true"></span>{note}</p></div>
  </div></section>
  <section class="detail-why"><div class="shell detail-why-grid"><span class="kicker">{'MIKSI TÄMÄ' if fi else 'WHY IT MATTERS'}</span><div><h2>{esc(d['why_title'])}</h2><p>{esc(d['why'])}</p></div></div></section>
- <section class="detail-process" id="toimitus"><div class="shell"><div class="kicker"><span class="dash"></span>{'MITEN ETENEMME' if fi else 'HOW WE WORK'}</div><h2>{'Selkeä lähtö. Todellinen työ. Tunnistettava seuraava askel.' if fi else 'A clear starting point. Real work. A meaningful next step.'}</h2><div class="detail-stages">{stages}</div></div></section>
+ <section class="detail-process" id="toimitus"><div class="shell"><div class="kicker"><span class="dash"></span>{('NÄIN KURSSI ETENEE' if fi else 'HOW THE COURSE WORKS') if key=='literacy' else ('MITEN ETENEMME' if fi else 'HOW WE WORK')}</div><h2>{('Lyhyet sisällöt. Omat valinnat. Selkeä loppuarviointi.' if fi else 'Short lessons. Your choices. A clear final assessment.') if key=='literacy' else ('Selkeä lähtö. Todellinen työ. Tunnistettava seuraava askel.' if fi else 'A clear starting point. Real work. A meaningful next step.')}</h2><div class="detail-stages">{stages}</div></div></section>
  <section class="detail-context"><div class="shell context-grid"><div><div class="kicker"><span class="dash"></span>{'KENELLE' if fi else 'FOR WHOM'}</div><h2>{esc(d['who_title'])}</h2><p>{esc(d['who'])}</p></div><div class="context-limit"><div class="kicker">{'RAJAUKSET' if fi else 'BOUNDARIES'}</div><h3>{esc(d['bound_title'])}</h3><p>{esc(d['bound'])}</p></div></div></section>
  {bridge}<section class="detail-faq"><div class="shell"><h2>{'Usein kysyttyä' if fi else 'Frequently asked questions'}</h2>{faq}</div></section>{close_section(lang,d['cta'])}'''
 
