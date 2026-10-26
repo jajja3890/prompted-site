@@ -1,6 +1,6 @@
 # Public site release-pack builder — fail closed
 
-This **does not publish**. The existing Vercel preview and `prompted.fi` domain are unchanged. The public bundle generator lives in `tools/public_release_gate.py`. The tracked `PUBLIC_RELEASE_APPROVALS.example.json` remains an all-pending template. The active tracked `PUBLIC_RELEASE_APPROVALS.json` records an owner-attested **image_rights: approved** for five exact asset blobs. The other six gates, including `owner_release`, remain pending.
+This **does not publish**. The existing Vercel preview and `prompted.fi` domain are unchanged. The public bundle generator lives in `tools/public_release_gate.py`. The tracked `PUBLIC_RELEASE_APPROVALS.example.json` remains an all-pending template. The active tracked `PUBLIC_RELEASE_APPROVALS.json` now records **image_rights: approved** and **privacy_legal: approved with prelaunch operating conditions**, both for exact hashed files. The privacy release check remains **BLOCKED** until rights-request absence continuity and provider/transfer operating safeguards are verified. Five other gates, including `owner_release`, remain pending.
 
 ## How the gate works
 
@@ -9,7 +9,7 @@ This **does not publish**. The existing Vercel preview and `prompted.fi` domain 
 - The owner-release record additionally requires `approved_commit_sha`, **exactly matching the checked-out 40-character Git HEAD SHA**; a future change after sign-off invalidates approval. Save the owner sign-off in a separate evidence manifest; never add sensitive authorization tokens or private legal evidence to this public repository.
 - The preparer checks all seven approvals, refuses unresolved privacy placeholders in either language and verifies preview safeguards before assembling a **private output folder**. No code runs a Vercel deploy or modifies DNS. It requires the intended Git commit SHA explicitly.
 - A future approved release bundle can contain only 18 FI/EN static pages and the reviewed necessary assets. It removes preview noindex/draft banners **only in the isolated output**, creates `robots.txt` and `sitemap.xml`, and preserves security headers. It excludes unused `hero-material.webp`, unapproved `wordmark-light.svg`, Python source files, build logs, draft approval records and tests.
-- The FI/EN privacy wording now describes retention *criteria* instead of an unimplemented 12-month deletion promise. The actual email review/retention process still requires operational evidence and explicit `privacy_legal` approval. The release tool still rejects any future `suunniteltu säilytyskäytäntö` / `our proposed retention practice` placeholders and always checks all seven release approvals; no draft automatically becomes public.
+- The FI/EN privacy wording now describes retention *criteria* instead of an unimplemented 12-month deletion promise. The founder already approved a monthly manual marketing-enquiry review and the narrowly scoped privacy/LIA content on 26 October 2026. The **first post-launch enquiry review has not occurred**, and the privacy-release gate continues to require actual evidence for its remaining prelaunch safeguards. The release tool still rejects any future `suunniteltu säilytyskäytäntö` / `our proposed retention practice` placeholders and always checks all seven release approvals; no draft automatically becomes public.
 - The release output must be revalidated as an independent website on a **separate protected/staged production preview** before assigning `prompted.fi` and indexability. The builder is not a legal or rights attestation; its manifest records the responsible decisions.
 
 ## Last-mile tasks
@@ -21,7 +21,7 @@ This **does not publish**. The existing Vercel preview and `prompted.fi` domain 
 5. Save DNS apex/www/TTL rollback snapshot at Domainhotelli and explicit permission for public site cutover.
 6. Approve **exact revision** and stage the production bundle without assigning apex domain. Never touch `app.prompted.fi`.
 
-**Current decision (26 October 2026): NO GO.** Image rights approved on owner attestation for pinned files; other six sign-offs pending. The released customer application is excluded from this site release.
+**Current decision (26 October 2026): NO GO.** Image rights and scope-limited privacy legal content approved by owner, with operational safeguards still unverified. Five other sign-offs remain pending. The released customer application is excluded from this site release.
 
 ## Packaging regression QA
 
