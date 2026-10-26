@@ -1,6 +1,6 @@
 # Prompted Oy — marketing enquiries and data-subject rights SOP
 
-**Prepared 23 October 2026. Owner assigned and Gmail triage label created 26 October 2026. Operating review cadence and first retention review have NOT yet been evidenced.**
+**Prepared 23 October 2026. Owner named and Gmail rights-request triage label created 26 October 2026. Read-only pre-launch mailbox triage completed; first operating retention cycle remains unadopted and unperformed.**
 
 This practical, scope-limited procedure concerns the public `prompted.fi` marketing site and business email enquiries. It does **not** automatically cover the authenticated `app.prompted.fi` service, customer programme data, HR, legal or accounting records. Do not apply these website retention rules to customer or statutory records.
 
@@ -30,7 +30,7 @@ Reference: [European Data Protection Board guidance for SMEs](https://www.edpb.e
 3. **Case closure criteria:** once the question has been answered, the proposal has been declined or no further legitimate follow-up is expected, treat the marketing enquiry as closed unless a lawful additional purpose has been identified and recorded. Ongoing customers, invoices or litigation-related evidence are **outside** this generic marketing rule.
 4. **Review cycle — proposal, not yet adopted:** the founder can review *closed marketing enquiries once per calendar month*, deciding individually whether to delete, anonymise, archive under another documented purpose or retain while an identified valid business purpose continues. A **monthly review is not an automatic deletion deadline or evidence that cleanup is running**.
 5. **Minimum evidence:** in a private operational log note only review date, reviewer, aggregate count reviewed, broad actions and next review date. **Never publish message content, personal identifiers or contract evidence to this public GitHub repository.** Deletion in Gmail and other systems must be verified through the actual provider workflow; don't promise automatic removal from all backups.
-6. **First sample review required:** before marking this SOP fully operational, complete one real small-scope review of marketing enquiries and record the non-personal completion evidence privately. **Not performed by creating the label or this document.**
+6. **First relevant operating review:** a metadata-only inspection of existing mixed-purpose mailbox messages was completed on 26 October 2026 (see `MARKETING_MAILBOX_PRELAUNCH_TRIAGE_2026-10-26.md`). The **new marketing website is not public yet**, and old mixed-purpose mail must not be treated as new website enquiries. No genuine site-origin case was deleted or anonymised. The first **live monthly review and any deletion decision** occurs after relevant site-specific messages exist; this event is a **post-launch operating check**, not an impossible pre-launch condition.
 
 ## C. Simple self-check for a one-person company
 
@@ -49,7 +49,8 @@ Reference: [European Data Protection Board guidance for SMEs](https://www.edpb.e
 | Gmail privacy-case label | **Created: `Prompted/Tietosuojapyynnöt`** |
 | Actual regular monitoring/absence coverage | **Not independently evidenced; no backup person assigned** |
 | Marketing retention review cadence | **Monthly suggested, not formally adopted** |
-| First sample review and disposal evidence | **Not performed** |
+| Read-only pre-launch inbox triage | **Completed 26 Oct; no individual messages altered** |
+| First real post-launch marketing-case review/disposal evidence | **Not yet possible; site has not launched** |
 | Final FI/EN privacy/legal release sign-off | **Pending** |
 
 This procedure is an **implementable operational framework**, not a legal opinion or final adoption of automatic retention/deletion rules. No `privacy_legal` or `owner_release` gate is approved by this update.
