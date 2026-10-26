@@ -148,8 +148,8 @@ def product_first_hero(lang, page):
  capability = url(lang,'cap')
  headline = ('Osaaminen näkyy,<br><em>kun työ muuttuu.</em>' if fi else 'Capability is visible<br><em>when work changes.</em>') if cap else ('Tekoäly osaksi<br><em>oikeaa työtä.</em>' if fi else 'Make AI part<br><em>of real work.</em>')
  lead = ('Prompted Capability yhdistää todelliset työtehtävät, digitaalisen valmennuksen ja muutoksesta syntyvän näytön. Rajattu pilotti antaa organisaatiolle perustan seuraavaan päätökseen.' if fi else 'Prompted Capability connects real work, digital coaching and reviewable evidence of change. A focused pilot gives organisations a basis for their next decision.') if cap else ('Kehitämme yritysten tekoälylukutaitoa ja uusia toimintatapoja oikeissa työtehtävissä. Digitaalinen valmennus tukee oppimista, ja näyttö auttaa arvioimaan muutosta.' if fi else 'We develop AI literacy and new ways of working through real tasks. Digital coaching supports learning, while evidence helps organisations assess change.')
- maincta = ('Avaa Capability-demo' if fi else 'Open the Capability demo') if cap else ('Kokeile Capabilitya' if fi else 'Explore Capability')
- secondcta = ('Keskustellaan pilotista' if fi else 'Discuss the pilot') if cap else ('Tutustu Capabilityyn' if fi else 'Explore Capability')
+ maincta = ('Avaa Capability-demo' if fi else 'Open the Capability demo') if cap else ('Katso Capability-demo' if fi else 'See the Capability demo')
+ secondcta = ('Keskustellaan pilotista' if fi else 'Discuss the pilot') if cap else ('Tutustu pilottiin' if fi else 'Explore the pilot')
  first_href = url(lang,'experience')
  second_href = contact if cap else capability
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
