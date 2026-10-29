@@ -338,6 +338,18 @@ for lang in ('fi','en'):
   p.parent.mkdir(parents=True,exist_ok=True)
   desc=SERVICES[lang][page]['meta'] if page in ['literacy','transform'] else (C[lang]['cap_lead'] if page=='cap' else None)
   p.write_text(page_html(lang,page,main,desc),encoding='utf-8')
+# Precomputed bilingual sitemap for the eventual public release. Preview remains noindex/disallowed.
+sitemap_pages=['home','literacy','cap','transform','company','contact','privacy','terms','experience']
+sitemap_lines=['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+for page in sitemap_pages:
+ for lang in ('fi','en'):
+  other='en' if lang=='fi' else 'fi'
+  site_url='https://prompted.fi'+url(lang,page)
+  fi_url='https://prompted.fi'+url('fi',page)
+  en_url='https://prompted.fi'+url('en',page)
+  sitemap_lines.append(f'<url><loc>{site_url}</loc><xhtml:link rel="alternate" hreflang="fi" href="{fi_url}" /><xhtml:link rel="alternate" hreflang="en" href="{en_url}" /><xhtml:link rel="alternate" hreflang="x-default" href="{fi_url}" /></url>')
+sitemap_lines.append('</urlset>')
+(OUT/'sitemap.xml').write_text('\\n'.join(sitemap_lines)+'\\n',encoding='utf-8')
 (OUT/'index.html').write_text('<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url=/fi/"><title>Prompted</title></head><body><a href="/fi/">Prompted</a></body></html>',encoding='utf-8')
 (OUT/'robots.txt').write_text('User-agent: *\nDisallow: /\n',encoding='utf-8')
 # Only limited prelaunch headers; stronger production controls must be reviewed on the real Vercel deployment.
