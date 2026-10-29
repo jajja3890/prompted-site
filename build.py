@@ -166,7 +166,7 @@ def product_first_hero(lang, page):
       <div class="pf-microproof" aria-label="{helper('Pilottimallin lähtökohdat','Pilot starting assumptions') if cap else helper('Kolme Prompted-palvelua','Three Prompted services')}">{('<span><b>'+helper('Noin 90 päivää · Noin 20 osallistujaa · Oikeat työtehtävät','Around 90 days · Around 20 people · Real work')+'</b></span>') if cap else '<span>01 <b>Literacy</b></span><span>02 <b>Capability</b></span><span>03 <b>Transformation</b></span>'}</div>
     </div>
     <div class="pf-artwork">
-      <div class="pf-art-topline"><span>{helper('OSALLISTUJAN JA TILAAJAN KOKEMUS','LEARNER AND SPONSOR EXPERIENCE') if cap else helper('PROMPTED / TUOTTEEN TOIMINTAPERIAATE','PROMPTED / PRODUCT EXPERIENCE')}</span><span>{'CAPABILITY' if cap else '2026 / CONCEPT STUDY'}</span></div>
+      <div class="pf-art-topline"><span>{helper('OSALLISTUJAN JA TILAAJAN KOKEMUS','LEARNER AND SPONSOR EXPERIENCE') if cap else helper('PROMPTED / TUOTTEEN TOIMINTAPERIAATE','PROMPTED / PRODUCT EXPERIENCE')}</span><span>{'CAPABILITY' if cap else helper('HAVAINNEKUVA','ILLUSTRATION')}</span></div>
       <figure class="pf-composition" aria-label="{helper('Havainnekuva Promptedin digitaalisesta valmennuspalvelusta ja rajatusta Data-raportoinnista','Illustration of Prompted digital coaching and restricted Data reporting')}">
         <div class="pf-halo" aria-hidden="true"></div>
         <div class="pf-browser" aria-hidden="true">
@@ -288,7 +288,7 @@ def service_main(lang,key):
     <div><p class="ps-hero-label">{subtitle}</p><h1 id="ps-service-heading">{esc(d['h1'])}</h1><p class="ps-service-intro">{esc(d['intro'])}</p>
     <div class="ps-service-actions"><a class="pf-button-primary" href="{url(lang,'contact')}">{esc(d['cta'])} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="#toimitus">{'Näin etenemme' if fi else 'How it works'} <span aria-hidden="true">↓</span></a></div></div>
     <div class="ps-service-keyline"><span>{'01 / LITERACY' if key=='literacy' else '03 / TRANSFORMATION'}</span><span>{'PROMPTED / PEOPLE × TECHNOLOGY × WORK'}</span></div></div>
-  <div class="ps-service-visual"><div class="ps-art-meta"><span>{('KURSSIN ETENEMINEN' if fi else 'LEARNING JOURNEY') if key=='literacy' else ('TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE')}</span><span>CONCEPT STUDY</span></div>{side}
+  <div class="ps-service-visual"><div class="ps-art-meta"><span>{('KURSSIN ETENEMINEN' if fi else 'LEARNING JOURNEY') if key=='literacy' else ('TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE')}</span><span>{'HAVAINNEKUVA' if fi else 'ILLUSTRATION'}</span></div>{side}
    <p class="ps-concept-disclaimer"><span aria-hidden="true"></span>{note}</p></div>
  </div></section>
  <section class="detail-why"><div class="shell detail-why-grid"><span class="kicker">{'MIKSI TÄMÄ' if fi else 'WHY IT MATTERS'}</span><div><h2>{esc(d['why_title'])}</h2><p>{esc(d['why'])}</p></div></div></section>
