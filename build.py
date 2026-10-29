@@ -149,9 +149,9 @@ def product_first_hero(lang, page):
  headline = ('Osaaminen näkyy,<br><em>kun työ muuttuu.</em>' if fi else 'Capability is visible<br><em>when work changes.</em>') if cap else ('Tekoäly osaksi<br><em>oikeaa työtä.</em>' if fi else 'Make AI part<br><em>of real work.</em>')
  lead = ('Noin 90 päivän organisaatiopilotti auttaa ihmisiä kehittämään tekoälyavusteisia työtapoja omissa tehtävissään. Digitaalinen valmennus ja ihmisen tuki vievät harjoittelun arkeen. Tilaaja saa perustellun näkymän siihen, mitä työssä todella muuttuu.' if fi else 'An approximately 90-day organisational pilot helps people build AI-assisted practices in their own work. Digital coaching and human support turn learning into everyday action, with evidence the sponsor can review.') if cap else ('Kehitämme yritysten tekoälylukutaitoa ja uusia toimintatapoja oikeissa työtehtävissä. Digitaalinen valmennus tukee oppimista, ja näyttö auttaa arvioimaan muutosta.' if fi else 'We develop AI literacy and new ways of working through real tasks. Digital coaching supports learning, while evidence helps organisations assess change.')
  maincta = ('Keskustellaan pilotista' if fi else 'Discuss a pilot') if cap else ('Katso Capability-demo' if fi else 'See the Capability demo')
- secondcta = ('Tutustu palveluun' if fi else 'Explore the experience') if cap else ('Tutustu pilottiin' if fi else 'Explore the pilot')
+ secondcta = ('Tutustu palveluun' if fi else 'Explore the experience') if cap else ('Keskustellaan tilanteestanne' if fi else 'Let’s talk about your needs')
  first_href = contact if cap else url(lang,'experience')
- second_href = url(lang,'experience') if cap else capability
+ second_href = url(lang,'experience') if cap else contact
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
  return f'''<section class="pf-hero {'pf-capability' if cap else 'pf-home'}" id="alku" aria-labelledby="pf-heading">
   <div class="shell pf-hero-shell">
