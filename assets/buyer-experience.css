@@ -92,3 +92,6 @@
 .dx-delivery>.dx-label,.dx-evidence-head .dx-label{color:#3b5532}
 .dx-delivery-step>span{color:#3c5816}
 .dx-evidence-steps small{color:#435e20}
+
+/* Accessible fallback if the browser has JavaScript disabled. */
+.dx-noscript{margin:16px 0 26px;padding:18px 22px;background:#e7eedf;color:#172319;border-left:4px solid #657d28;font-size:16px;line-height:1.55}
