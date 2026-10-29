@@ -349,7 +349,7 @@ for page in sitemap_pages:
   en_url='https://prompted.fi'+url('en',page)
   sitemap_lines.append(f'<url><loc>{site_url}</loc><xhtml:link rel="alternate" hreflang="fi" href="{fi_url}" /><xhtml:link rel="alternate" hreflang="en" href="{en_url}" /><xhtml:link rel="alternate" hreflang="x-default" href="{fi_url}" /></url>')
 sitemap_lines.append('</urlset>')
-(OUT/'sitemap.xml').write_text('\\n'.join(sitemap_lines)+'\\n',encoding='utf-8')
+(OUT/'sitemap.xml').write_text('\n'.join(sitemap_lines)+'\n',encoding='utf-8')
 (OUT/'index.html').write_text('<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url=/fi/"><title>Prompted</title></head><body><a href="/fi/">Prompted</a></body></html>',encoding='utf-8')
 (OUT/'robots.txt').write_text('User-agent: *\nDisallow: /\n',encoding='utf-8')
 # Only limited prelaunch headers; stronger production controls must be reviewed on the real Vercel deployment.
