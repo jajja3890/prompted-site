@@ -318,7 +318,7 @@ def utility_main(lang,page):
   sections=''.join(f'<section class="legal-section" id="privacy-{i:02d}" aria-labelledby="privacy-title-{i:02d}"><h2 id="privacy-title-{i:02d}">{esc(h)}</h2><p>{legal_para(b)}</p></section>' for i,(h,b) in enumerate(c['privacy_sections'],1))
   links=''.join(f'<li><a href="#privacy-{i:02d}"><span aria-hidden="true">{i:02d}</span>{esc(h)}</a></li>' for i,(h,_) in enumerate(c['privacy_sections'],1))
   toc=f'<section class="legal-toc-wrap"><div class="shell"><details class="legal-toc"><summary>{"Sisällys" if fi else "Contents"} <span class="legal-toc-count">{len(c["privacy_sections"])} {"osiota" if fi else "sections"}</span></summary><ol>{links}</ol></details></div></section>'
-  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'TIETOSUOJA' if fi else 'PRIVACY'}</div><h1>{title_markup}</h1><p>{esc(c['privacy_intro'])}</p><div class="legal-draft">{'LUONNOS / EI JURIDISESTI HYVÄKSYTTY JULKAISUSISÄLTÖ' if fi else 'DRAFT / NOT YET LEGALLY APPROVED FOR PUBLICATION'}</div></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
+  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'TIETOSUOJA' if fi else 'PRIVACY'}</div><h1>{title_markup}</h1><p>{esc(c['privacy_intro'])}</p></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
  if page=='terms':
   def terms_para(s):
    value=esc(s).replace('jarkko@prompted.fi','<a href="mailto:jarkko@prompted.fi">jarkko@prompted.fi</a>')
