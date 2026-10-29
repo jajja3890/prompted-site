@@ -30,7 +30,7 @@ trans = {
 'EI PELKKÄÄ OSALLISTUMISEN MITTAAMISTA':'NOT JUST ATTENDANCE METRICS',
 'Yksi päämäärä.':'One ambition.',
 'Kolme tapaa aloittaa.':'Three ways to begin.',
-'Yhteinen perusta vastuulliseen tekoälyn käyttöön.':'A shared foundation for responsible AI use.',
+'Koko henkilöstön noin tunnin aloituskurssi tekoälyn turvalliseen käyttöön. Suomenkielinen pilotti valmisteilla.':'An approximately one-hour AI literacy starter course for all employees. Finnish pilot in preparation.',
 'Uudet työtavat ja niiden muutoksen todentaminen.':'New ways of working, with evidence of change.',
 'Kyvykkyyden muutos osaksi organisaation arkea.':'Embedding capability in how the organisation works.',
 'OMAA TEKNOLOGIAA, OIKEAA TYÖTÄ':'OUR TECHNOLOGY, REAL WORK',
@@ -147,11 +147,11 @@ def product_first_hero(lang, page):
  contact = url(lang,'contact')
  capability = url(lang,'cap')
  headline = ('Osaaminen näkyy,<br><em>kun työ muuttuu.</em>' if fi else 'Capability is visible<br><em>when work changes.</em>') if cap else ('Tekoäly osaksi<br><em>oikeaa työtä.</em>' if fi else 'Make AI part<br><em>of real work.</em>')
- lead = ('Prompted Capability yhdistää todelliset työtehtävät, digitaalisen valmennuksen ja muutoksesta syntyvän näytön. Rajattu pilotti antaa organisaatiolle perustan seuraavaan päätökseen.' if fi else 'Prompted Capability connects real work, digital coaching and reviewable evidence of change. A focused pilot gives organisations a basis for their next decision.') if cap else ('Kehitämme yritysten tekoälylukutaitoa ja uusia toimintatapoja oikeissa työtehtävissä. Digitaalinen valmennus tukee oppimista, ja näyttö auttaa arvioimaan muutosta.' if fi else 'We develop AI literacy and new ways of working through real tasks. Digital coaching supports learning, while evidence helps organisations assess change.')
- maincta = ('Avaa Capability-demo' if fi else 'Open the Capability demo') if cap else ('Katso Capability-demo' if fi else 'See the Capability demo')
- secondcta = ('Keskustellaan pilotista' if fi else 'Discuss the pilot') if cap else ('Tutustu pilottiin' if fi else 'Explore the pilot')
- first_href = url(lang,'experience')
- second_href = contact if cap else capability
+ lead = ('Noin 90 päivän organisaatiopilotti auttaa ihmisiä kehittämään tekoälyavusteisia työtapoja omissa tehtävissään. Digitaalinen valmennus ja ihmisen tuki vievät harjoittelun arkeen. Tilaaja saa perustellun näkymän siihen, mitä työssä todella muuttuu.' if fi else 'An approximately 90-day organisational pilot helps people build AI-assisted practices in their own work. Digital coaching and human support turn learning into everyday action, with evidence the sponsor can review.') if cap else ('Kehitämme yritysten tekoälylukutaitoa ja uusia toimintatapoja oikeissa työtehtävissä. Digitaalinen valmennus tukee oppimista, ja näyttö auttaa arvioimaan muutosta.' if fi else 'We develop AI literacy and new ways of working through real tasks. Digital coaching supports learning, while evidence helps organisations assess change.')
+ maincta = ('Keskustellaan pilotista' if fi else 'Discuss a pilot') if cap else ('Katso Capability-demo' if fi else 'See the Capability demo')
+ secondcta = ('Tutustu palveluun' if fi else 'Explore the experience') if cap else ('Keskustellaan tilanteestanne' if fi else 'Let’s talk about your needs')
+ first_href = contact if cap else url(lang,'experience')
+ second_href = url(lang,'experience') if cap else contact
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
  return f'''<section class="pf-hero {'pf-capability' if cap else 'pf-home'}" id="alku" aria-labelledby="pf-heading">
   <div class="shell pf-hero-shell">
@@ -163,10 +163,10 @@ def product_first_hero(lang, page):
         <p class="pf-intro">{lead}</p>
         <div class="pf-actions"><a class="pf-button-primary" href="{first_href}">{maincta} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="{second_href}">{secondcta} <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="pf-microproof" aria-label="{helper('Kolme Prompted-palvelua','Three Prompted services')}"><span>01 <b>Literacy</b></span><span>02 <b>Capability</b></span><span>03 <b>Transformation</b></span></div>
+      <div class="pf-microproof" aria-label="{helper('Pilottimallin lähtökohdat','Pilot starting assumptions') if cap else helper('Kolme Prompted-palvelua','Three Prompted services')}">{('<span><b>'+helper('Noin 90 päivää · Noin 20 osallistujaa · Oikeat työtehtävät','Around 90 days · Around 20 people · Real work')+'</b></span>') if cap else '<span>01 <b>Literacy</b></span><span>02 <b>Capability</b></span><span>03 <b>Transformation</b></span>'}</div>
     </div>
     <div class="pf-artwork">
-      <div class="pf-art-topline"><span>{helper('PROMPTED / TUOTTEEN TOIMINTAPERIAATE','PROMPTED / PRODUCT EXPERIENCE')}</span><span>2026 / CONCEPT STUDY</span></div>
+      <div class="pf-art-topline"><span>{helper('OSALLISTUJAN JA TILAAJAN KOKEMUS','LEARNER AND SPONSOR EXPERIENCE') if cap else helper('PROMPTED / TUOTTEEN TOIMINTAPERIAATE','PROMPTED / PRODUCT EXPERIENCE')}</span><span>{'CAPABILITY' if cap else helper('HAVAINNEKUVA','ILLUSTRATION')}</span></div>
       <figure class="pf-composition" aria-label="{helper('Havainnekuva Promptedin digitaalisesta valmennuspalvelusta ja rajatusta Data-raportoinnista','Illustration of Prompted digital coaching and restricted Data reporting')}">
         <div class="pf-halo" aria-hidden="true"></div>
         <div class="pf-browser" aria-hidden="true">
@@ -177,7 +177,7 @@ def product_first_hero(lang, page):
               <div class="pf-app-breadcrumb">CAPABILITY <span>/</span> {helper('OMA TYÖTILA','MY WORKSPACE')}</div>
               <div class="pf-app-heading"><div><small>{helper('TÄMÄN PÄIVÄN TYÖ','TODAY’S WORK')}</small><h3>{helper('Työ muuttuu tekemällä.','Change happens through doing.')}</h3></div><div class="pf-app-avatar" aria-hidden="true">P</div></div>
               <div class="pf-task-box"><div class="pf-task-head"><span>{helper('TYÖTEHTÄVÄ','WORK TASK')}</span><i>01 / 03</i></div><h4>{helper('Valitse yksi tehtävä, jonka haluat tehdä paremmin.','Choose one task you want to improve.')}</h4><div class="pf-task-rule"></div><p>{helper('Tunnista onnistumisen kriteeri. Kokeile uutta toimintatapaa aidossa työssä.','Define success. Try a new approach in real work.')}</p></div>
-              <div class="pf-coach-row"><span class="pf-coach-avatar" aria-hidden="true">✳</span><div><strong>{helper('Digitaalinen valmennus','Digital coaching')}</strong><span>{helper('Seuraava pieni kokeilu, oikeassa työssä.','The next small experiment, in real work.')}</span></div><span class="pf-coach-arrow" aria-hidden="true">↗</span></div>
+              <div class="pf-coach-row"><span class="pf-coach-avatar" aria-hidden="true">✳</span><div><strong>{helper('Digitaalinen valmennus','Digital coaching')}</strong><span>{helper('Seuraava pieni kokeilu, oikeassa työssä.','The next small experiment, in real work.')}</span></div>{'' if cap else '<span class="pf-coach-arrow" aria-hidden="true">↗</span>'}</div>
               <div class="pf-app-bottom"><span>{helper('TYÖ → KOKEILU → NÄYTTÖ','WORK → EXPERIMENT → EVIDENCE')}</span><span>{helper('OMA EDISTYMINEN','PERSONAL PROGRESS')}</span></div>
             </div>
           </div>
@@ -185,12 +185,16 @@ def product_first_hero(lang, page):
         <div class="pf-data-overlay" aria-hidden="true"><div class="pf-data-eyebrow"><span class="pf-data-dot"></span>PROMPTED DATA <small>{helper('TILAAJAN NÄKYMÄ','BUYER VIEW')}</small></div><div class="pf-data-title">{helper('Julkaistu ryhmätason näyttö','Published group-level evidence')}</div><div class="pf-data-table"><div><span>{helper('Ryhmäraportti','Group report')}</span><b>{helper('Erillinen julkaisu','Separate release')}</b></div><div><span>{helper('Tiedon rajaus','Data boundary')}</span><b>{helper('Käyttöoikeuksin','Access controlled')}</b></div><div><span>{helper('Arvioinnin perusta','Evidence basis')}</span><b>{helper('Toisto · Siirto · Itsenäisyys','Repeat · Transfer · Independence')}</b></div></div><div class="pf-data-foot">{helper('EI YKSITYISIÄ TYÖTEKSTEJÄ','NO PRIVATE WORK TEXTS')}</div></div>
         <div class="pf-phone" aria-hidden="true"><div class="pf-phone-top"><span class="pf-phone-notch"></span></div><div class="pf-phone-content"><small>PROMPTED<span>.</span></small><div class="pf-phone-label">{helper('OMA NÄYTTÖ','MY EVIDENCE')}</div><h4>{helper('Osaaminen näkyy työssä.','Evidence from real work.')}</h4><div class="pf-phone-track"><span><i></i>{helper('Ensimmäinen näyttö','First signal')}</span><span><i></i>{helper('Toisto','Repeat')}</span><span><i></i>{helper('Siirrettävyys','Transfer')}</span><span><i></i>{helper('Itsenäisyys','Independence')}</span></div><div class="pf-phone-note">{helper('Digitaalinen palvelu / mobiilinäkymän periaate','Digital service / responsive view concept')}</div></div></div>
       </figure>
-      <div class="pf-art-disclaimer"><span class="pf-disclaimer-square" aria-hidden="true"></span><span>{helper('Tuotteen todelliseen rakenteeseen perustuva havainnekuva. Ei ruutukaappaus tai asiakasdataa.','Product illustration based on the real service architecture. Not a screenshot or client data.')}</span></div>
+      <div class="pf-art-disclaimer"><span class="pf-disclaimer-square" aria-hidden="true"></span><span>{(helper('Havainnekuva palvelun rakenteesta, ei suora ruutukaappaus.','Illustration of the service structure, not a direct screenshot.') if cap else helper('Tuotteen todelliseen rakenteeseen perustuva havainnekuva. Ei ruutukaappaus tai asiakasdataa.','Product illustration based on the real service architecture. Not a screenshot or client data.'))}</span></div>
     </div>
   </div>
 </section>'''
 
 def site_main(lang,page):
+ # Capability is now one editorial story; legacy duplicated template sections are not rendered.
+ if page=='cap':
+  content=json.loads((OUT/'capability-story.json').read_text(encoding='utf-8'))
+  return product_first_hero(lang,page) + content[lang]
  fi=lang=='fi'; src='index' if page=='home' else 'capability'
  soup=BeautifulSoup((OUT/'templates'/f'{src}.html').read_text(),'html.parser')
  main=soup.select_one('main')
@@ -236,17 +240,18 @@ def service_visual(lang,key):
  t=lambda f,e: f if fi else e
  if key=='literacy':
   rows=[
-   (t('Työn konteksti','Work context'),t('Roolit · Työkalut · Tilanteet','Roles · Tools · Situations')),
-   (t('Harkinta','Human judgement'),t('Tarkistaminen · Riskit · Vastuu','Review · Risk · Responsibility')),
-   (t('Yhteinen perusta','Shared foundation'),t('Harjoittelu oikeassa työssä','Practice in real work')),
-   (t('Dokumentointi','Documentation'),t('Sovitut toimet · Jatkotarpeet','Agreed measures · Next priorities')),
+   (t('Ymmärrä, mitä käytät','Understand the tool'),t('Mahdollisuudet · Rajoitukset','Strengths · Limits')),
+   (t('Tunnista riskit','Recognise risks'),t('Tietosuoja · Turvalliset syötteet','Privacy · Safe inputs')),
+   (t('Tee vastuullinen päätös','Make responsible decisions'),t('Ihmisen vastuu · Milloin pysähtyä','Human oversight · When to pause')),
+   (t('Käytä ja arvioi','Use and check'),t('Selkeä tehtävä · Tarkista tulos','Clear task · Verify output')),
+   (t('Osoita, mitä ymmärsit','Check your understanding'),t('Loppuarviointi · Palaute','Final assessment · Feedback')),
   ]
   entries=''.join(f'<div class="ps-literacy-row"><span aria-hidden="true">0{i+1}</span><div><strong>{esc(title)}</strong><small>{esc(detail)}</small></div><i aria-hidden="true">↗</i></div>' for i,(title,detail) in enumerate(rows))
-  return f'''<div class="ps-product-panel ps-literacy-panel" aria-label="{t('Havainnekuva lukutaidon kehittämisen osa-alueista','Illustration of the AI literacy delivery areas')}">
-   <div class="ps-panel-top"><span>PROMPTED <b>LITERACY</b></span><span>{t('TOIMITUSMALLI','DELIVERY MODEL')}</span></div>
-   <div class="ps-literacy-top"><span class="ps-kicker">{t('TYÖLÄHTÖINEN TEKOÄLYLUKUTAITO','WORK-RELEVANT AI LITERACY')}</span><strong>{t('Yhteinen perusta.','A shared foundation.')}<br>{t('Oikea konteksti.','Real-world context.')}</strong><p>{t('Eri rooleihin sopiva oppiminen ja dokumentoitavat toimet.','Context-sensitive learning and documented actions.')}</p></div>
+  return f'''<div class="ps-product-panel ps-literacy-panel" aria-label="{t('Havainnekuva Literacy-aloituskurssin viidestä osasta','Illustration of the five parts of the Literacy starter course')}">
+   <div class="ps-panel-top"><span>PROMPTED <b>LITERACY</b></span><span>{t('KURSSIN RAKENNE','COURSE OUTLINE')}</span></div>
+   <div class="ps-literacy-top"><span class="ps-kicker">{t('KOKO HENKILÖSTÖN ALOITUSKURSSI','A STARTER COURSE FOR EVERY EMPLOYEE')}</span><strong>{t('Perusteet jokaiselle.','The basics for everyone.')}<br>{t('Turvallinen alku.','A safer start.')}</strong><p>{t('Noin 55 minuutin tavoitekesto. Neljä oppimisosiota ja loppuarviointi. Suomenkielinen kurssi viimeistelyssä.','Target duration around 55 minutes. Four learning modules and a final assessment. Finnish edition in preparation.')}</p></div>
    <div class="ps-literacy-rows">{entries}</div>
-   <div class="ps-panel-bottom"><span>{t('EI SERTIFIKAATTI- TAI LAINMUKAISUUSTAKUUTA','NO CERTIFICATE OR COMPLIANCE GUARANTEE')}</span><span aria-hidden="true">✳</span></div>
+   <div class="ps-panel-bottom"><span>{t('EI VIRALLINEN EU-SERTIFIKAATTI','NOT AN OFFICIAL EU CERTIFICATE')}</span><span aria-hidden="true">✳</span></div>
   </div>'''
  rows=[
   (t('Johto','Leadership'),t('Yhteinen tavoite','Shared objective')),
@@ -264,38 +269,46 @@ def service_visual(lang,key):
 
 
 def service_main(lang,key):
+ # Transformation: a dedicated editorial sales story, not the legacy staged concept/demo layout.
+ if key=='transform':
+  data=json.loads((OUT/'transformation-story.json').read_text(encoding='utf-8'))
+  return data[lang]['main']
  d=SERVICES[lang][key]; fi=lang=='fi'
  stages=''.join(f'<div class="detail-stage"><small>{esc(s[0])}</small><h3>{esc(s[1])}</h3></div>' for s in d['steps'])
  faq=''.join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q,a in d['faq'])
- subtitle= ('YHTEINEN PERUSTA' if fi else 'A SHARED FOUNDATION') if key=='literacy' else ('MUUTOS JOHTAA TYÖHÖN' if fi else 'CHANGE STARTS WITH WORK')
+ subtitle= ('NOIN TUNNIN ALOITUSKURSSI' if fi else 'AN APPROXIMATELY ONE-HOUR STARTER COURSE') if key=='literacy' else ('MUUTOS JOHTAA TYÖHÖN' if fi else 'CHANGE STARTS WITH WORK')
  side = service_visual(lang,key)
- note = 'Havainnekuva toimituksen toimintaperiaatteesta. Ei todellinen ohjelmistonäkymä tai asiakastulos.' if fi else 'Conceptual delivery illustration. Not a real software screen or customer result.'
- next_head = ('Kun yhteinen perusta on rakennettu, miten työtavat kehittyvät?' if fi else 'Once the foundation is in place, how do ways of working improve?') if key=='literacy' else ('Tarvitsetteko ensin rajatun, mitattavan kokeilun?' if fi else 'Would a focused, reviewable pilot be the right starting point?')
- next_body = ('Capability vie kehittämisen yksittäisistä oppimistoimista työhön, toistoon ja itsenäiseen soveltamiseen.' if fi else 'Capability takes development beyond learning activities and into real work, repeatability and independent application.') if key=='literacy' else ('Capability tarjoaa rajatumman lähtökohdan ennen laajemman organisaatiomuutoksen suunnittelua.' if fi else 'Capability provides a focused starting point before planning a wider organisational change.')
+ note = ('Kurssin rakenteen havainnekuva. Ei julkaistun oppimisympäristön ruutukaappaus.' if fi else 'Illustration of the course outline. Not a screenshot of a published learner product.') if key=='literacy' else ('Havainnekuva toimituksen toimintaperiaatteesta. Ei todellinen ohjelmistonäkymä tai asiakastulos.' if fi else 'Conceptual delivery illustration. Not a real software screen or customer result.')
+ next_head = ('Kun perusteet ovat hallussa, mitä seuraavaksi?' if fi else 'What comes after the basics?') if key=='literacy' else ('Tarvitsetteko ensin rajatun, mitattavan kokeilun?' if fi else 'Would a focused, reviewable pilot be the right starting point?')
+ next_body = ('Capability on erillinen, pidempi ohjelma: se auttaa muuttamaan oikeita työtapoja ja todentamaan muutosta. Literacy ei sisällä Capability-valmennusta.' if fi else 'Capability is a separate, longer programme for changing real work practices and evaluating those changes. Literacy does not include Capability coaching.') if key=='literacy' else ('Capability tarjoaa rajatumman lähtökohdan ennen laajemman organisaatiomuutoksen suunnittelua.' if fi else 'Capability provides a focused starting point before planning a wider organisational change.')
  next_cta = 'Tutustu Capabilityyn' if fi else 'Explore Capability'
  bridge=f'''<section class="ps-bridge"><div class="shell ps-bridge-grid"><span class="ps-kicker">{('SEURAAVA ASKEL' if fi else 'NEXT STEP')}</span><div><h2>{next_head}</h2><p>{next_body}</p><a href="{url(lang,'cap')}">{next_cta} <span aria-hidden="true">↗</span></a></div></div></section>'''
  return f'''<section class="ps-service-hero ps-service-{key}" aria-labelledby="ps-service-heading"><div class="shell ps-service-grid">
   <div class="ps-service-copy"><div class="ps-eyebrow"><span aria-hidden="true"></span>{esc(d['eyebrow'])}</div>
-    <div><p class="ps-hero-label">{subtitle}</p><h1 id="ps-service-heading">{esc(('Tekoälylukutaito alkaa oikeasta työstä.' if fi else 'AI literacy starts with real work.') if key=='literacy' else d['h1'])}</h1><p class="ps-service-intro">{esc(d['intro'])}</p>
+    <div><p class="ps-hero-label">{subtitle}</p><h1 id="ps-service-heading">{esc(d['h1'])}</h1><p class="ps-service-intro">{esc(d['intro'])}</p>
     <div class="ps-service-actions"><a class="pf-button-primary" href="{url(lang,'contact')}">{esc(d['cta'])} <span aria-hidden="true">↗</span></a><a class="pf-button-quiet" href="#toimitus">{'Näin etenemme' if fi else 'How it works'} <span aria-hidden="true">↓</span></a></div></div>
     <div class="ps-service-keyline"><span>{'01 / LITERACY' if key=='literacy' else '03 / TRANSFORMATION'}</span><span>{'PROMPTED / PEOPLE × TECHNOLOGY × WORK'}</span></div></div>
-  <div class="ps-service-visual"><div class="ps-art-meta"><span>{'TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE'}</span><span>CONCEPT STUDY</span></div>{side}
+  <div class="ps-service-visual"><div class="ps-art-meta"><span>{('KURSSIN ETENEMINEN' if fi else 'LEARNING JOURNEY') if key=='literacy' else ('TOIMITUKSEN PERIAATE' if fi else 'DELIVERY PRINCIPLE')}</span><span>{'HAVAINNEKUVA' if fi else 'ILLUSTRATION'}</span></div>{side}
    <p class="ps-concept-disclaimer"><span aria-hidden="true"></span>{note}</p></div>
  </div></section>
  <section class="detail-why"><div class="shell detail-why-grid"><span class="kicker">{'MIKSI TÄMÄ' if fi else 'WHY IT MATTERS'}</span><div><h2>{esc(d['why_title'])}</h2><p>{esc(d['why'])}</p></div></div></section>
- <section class="detail-process" id="toimitus"><div class="shell"><div class="kicker"><span class="dash"></span>{'MITEN ETENEMME' if fi else 'HOW WE WORK'}</div><h2>{'Selkeä lähtö. Todellinen työ. Tunnistettava seuraava askel.' if fi else 'A clear starting point. Real work. A meaningful next step.'}</h2><div class="detail-stages">{stages}</div></div></section>
+ <section class="detail-process" id="toimitus"><div class="shell"><div class="kicker"><span class="dash"></span>{('NÄIN KURSSI ETENEE' if fi else 'HOW THE COURSE WORKS') if key=='literacy' else ('MITEN ETENEMME' if fi else 'HOW WE WORK')}</div><h2>{('Lyhyet sisällöt. Omat valinnat. Selkeä loppuarviointi.' if fi else 'Short lessons. Your choices. A clear final assessment.') if key=='literacy' else ('Selkeä lähtö. Todellinen työ. Tunnistettava seuraava askel.' if fi else 'A clear starting point. Real work. A meaningful next step.')}</h2><div class="detail-stages">{stages}</div></div></section>
  <section class="detail-context"><div class="shell context-grid"><div><div class="kicker"><span class="dash"></span>{'KENELLE' if fi else 'FOR WHOM'}</div><h2>{esc(d['who_title'])}</h2><p>{esc(d['who'])}</p></div><div class="context-limit"><div class="kicker">{'RAJAUKSET' if fi else 'BOUNDARIES'}</div><h3>{esc(d['bound_title'])}</h3><p>{esc(d['bound'])}</p></div></div></section>
- {bridge}<section class="detail-faq"><div class="shell"><h2>{'Usein kysyttyä' if fi else 'Frequently asked questions'}</h2>{faq}</div></section>{close_section(lang,d['cta'])}'''
+ {bridge}<section class="detail-faq"><div class="shell"><h2>{'Usein kysyttyä' if fi else 'Frequently asked questions'}</h2>{faq}</div></section>{close_section(lang,d['cta'],key)}'''
 
-def close_section(lang,cta=None):
- fi=lang=='fi'; return f'<section class="closing"><div class="shell"><h2>{"Aloitetaan yhdestä oikeasta haasteesta." if fi else "Let’s start with one real challenge."}</h2><a href="{url(lang,"contact")}">{esc(cta or ("Ota yhteyttä" if fi else "Get in touch"))} <span>↗</span></a></div></section>'
+def close_section(lang,cta=None,key=None):
+ fi=lang=='fi'
+ heading=('Aloitetaan perusteista.' if fi else 'Start with the basics.') if key=='literacy' else ('Aloitetaan yhdestä oikeasta haasteesta.' if fi else 'Let’s start with one real challenge.')
+ return f'<section class="closing"><div class="shell"><h2>{heading}</h2><a href="{url(lang,"contact")}">{esc(cta or ("Ota yhteyttä" if fi else "Get in touch"))} <span>↗</span></a></div></section>'
 
 def utility_main(lang,page):
  fi=lang=='fi';c=C[lang]
  if page=='company':
   return f'''<section class="detail-hero company-hero"><div class="shell"><div class="cap-eyebrow">{esc(c['company_eyebrow'])}</div><div class="detail-hero-grid"><h1>{esc(c['company_title'])}</h1><div class="detail-aside"><p>{esc(c['company_lead'])}</p><p>{esc(c['company_body'])}</p></div></div></div></section><section class="detail-context"><div class="shell context-grid"><div><div class="kicker"><span class="dash"></span>{'PERUSTAJA' if fi else 'FOUNDER'}</div><h2>Jarkko Sjöman</h2><p>{'Promptedin perustaja. Taustalla yritysviestinnän, strategisen kehittämisen ja ihmisten valmentamisen työtä. Teknologia täydentää ihmisen tekemistä, ei korvaa sitä.' if fi else 'Founder of Prompted. Background in business communications, strategic development and working with people. Technology supports human capability rather than replacing it.'}</p><a class="profile-link" href="https://jarkkosjoman.com" rel="noopener noreferrer">jarkkosjoman.com ↗</a></div><div class="context-limit"><div class="kicker">{'YRITYS' if fi else 'COMPANY'}</div><h3>Prompted Oy</h3><p>Turku, Finland · Business ID 3550114-7</p><p>{'Yritys kehittää digitaalisen valmennuksen ja todennettavan työssä oppimisen palveluja.' if fi else 'The company develops services for digital coaching and evidence-based learning in real work.'}</p></div></div></section>{close_section(lang)}'''
  if page=='contact':
-  return f'''<section class="detail-hero contact-hero"><div class="shell"><div class="cap-eyebrow">{esc(c['contact_eyebrow'])}</div><div class="detail-hero-grid"><h1>{esc(c['contact_page_title'])}</h1><div class="detail-aside"><p>{esc(c['contact_page_body'])}</p><a class="action-primary" href="mailto:jarkko@prompted.fi">{'Kirjoita suoraan' if fi else 'Email us directly'} <b aria-hidden="true">↗</b></a><p class="address-link">jarkko@prompted.fi</p></div></div></div></section><section class="closing"><div class="shell"><h2>{'Aloitetaan keskustelusta.' if fi else 'Start with a conversation.'}</h2><a href="mailto:jarkko@prompted.fi">jarkko@prompted.fi <span>↗</span></a></div></section>'''
+  steps=''.join(f'<div class="detail-stage"><small>{esc(n)}</small><h3>{esc(title)}</h3></div>' for n,title in c['contact_steps'])
+  process=f'<section class="detail-process contact-process" aria-labelledby="contact-process-heading"><div class="shell"><div class="kicker">{"ENSIMMÄINEN KESKUSTELU" if fi else "THE FIRST CONVERSATION"}</div><h2 id="contact-process-heading">{"Näin yhteistyö lähtee liikkeelle." if fi else "A practical way to get started."}</h2><div class="detail-stages">{steps}</div></div></section>'
+  return f'''<section class="detail-hero contact-hero"><div class="shell"><div class="cap-eyebrow">{esc(c['contact_eyebrow'])}</div><div class="detail-hero-grid"><h1>{esc(c['contact_page_title'])}</h1><div class="detail-aside"><p>{esc(c['contact_page_body'])}</p><a class="action-primary" href="mailto:jarkko@prompted.fi">{'Kirjoita suoraan' if fi else 'Email us directly'} <b aria-hidden="true">↗</b></a><p class="address-link">jarkko@prompted.fi</p></div></div></div></section>{process}<section class="closing"><div class="shell"><h2>{'Aloitetaan keskustelusta.' if fi else 'Start with a conversation.'}</h2><a href="mailto:jarkko@prompted.fi">jarkko@prompted.fi <span>↗</span></a></div></section>'''
  if page=='privacy':
   def legal_para(s):
    value=esc(s)
@@ -305,7 +318,7 @@ def utility_main(lang,page):
   sections=''.join(f'<section class="legal-section" id="privacy-{i:02d}" aria-labelledby="privacy-title-{i:02d}"><h2 id="privacy-title-{i:02d}">{esc(h)}</h2><p>{legal_para(b)}</p></section>' for i,(h,b) in enumerate(c['privacy_sections'],1))
   links=''.join(f'<li><a href="#privacy-{i:02d}"><span aria-hidden="true">{i:02d}</span>{esc(h)}</a></li>' for i,(h,_) in enumerate(c['privacy_sections'],1))
   toc=f'<section class="legal-toc-wrap"><div class="shell"><details class="legal-toc"><summary>{"Sisällys" if fi else "Contents"} <span class="legal-toc-count">{len(c["privacy_sections"])} {"osiota" if fi else "sections"}</span></summary><ol>{links}</ol></details></div></section>'
-  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'TIETOSUOJA' if fi else 'PRIVACY'}</div><h1>{title_markup}</h1><p>{esc(c['privacy_intro'])}</p><div class="legal-draft">{'LUONNOS / EI JURIDISESTI HYVÄKSYTTY JULKAISUSISÄLTÖ' if fi else 'DRAFT / NOT YET LEGALLY APPROVED FOR PUBLICATION'}</div></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
+  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'TIETOSUOJA' if fi else 'PRIVACY'}</div><h1>{title_markup}</h1><p>{esc(c['privacy_intro'])}</p></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
  if page=='terms':
   def terms_para(s):
    value=esc(s).replace('jarkko@prompted.fi','<a href="mailto:jarkko@prompted.fi">jarkko@prompted.fi</a>')
@@ -325,6 +338,18 @@ for lang in ('fi','en'):
   p.parent.mkdir(parents=True,exist_ok=True)
   desc=SERVICES[lang][page]['meta'] if page in ['literacy','transform'] else (C[lang]['cap_lead'] if page=='cap' else None)
   p.write_text(page_html(lang,page,main,desc),encoding='utf-8')
+# Precomputed bilingual sitemap for the eventual public release. Preview remains noindex/disallowed.
+sitemap_pages=['home','literacy','cap','transform','company','contact','privacy','terms','experience']
+sitemap_lines=['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+for page in sitemap_pages:
+ for lang in ('fi','en'):
+  other='en' if lang=='fi' else 'fi'
+  site_url='https://prompted.fi'+url(lang,page)
+  fi_url='https://prompted.fi'+url('fi',page)
+  en_url='https://prompted.fi'+url('en',page)
+  sitemap_lines.append(f'<url><loc>{site_url}</loc><xhtml:link rel="alternate" hreflang="fi" href="{fi_url}" /><xhtml:link rel="alternate" hreflang="en" href="{en_url}" /><xhtml:link rel="alternate" hreflang="x-default" href="{fi_url}" /></url>')
+sitemap_lines.append('</urlset>')
+(OUT/'sitemap.xml').write_text('\n'.join(sitemap_lines)+'\n',encoding='utf-8')
 (OUT/'index.html').write_text('<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url=/fi/"><title>Prompted</title></head><body><a href="/fi/">Prompted</a></body></html>',encoding='utf-8')
 (OUT/'robots.txt').write_text('User-agent: *\nDisallow: /\n',encoding='utf-8')
 # Only limited prelaunch headers; stronger production controls must be reviewed on the real Vercel deployment.

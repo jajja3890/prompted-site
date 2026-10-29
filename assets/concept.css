@@ -90,3 +90,36 @@
 
 /* Ensure Capability delivery-boundary label meets 4.5:1 on #dfe7d9. */
 .additional-truth .kicker{color:#3e5313!important}
+
+
+/* Marketing section-label hierarchy (26 Oct 2026).
+ * Across FI/EN desktop pages, sectional eyebrows used to render at 10–11px
+ * beside ~50–70px headlines. Make the editorial labels readable without
+ * enlarging product UI mockups, captions, metadata, or mobile microcopy.
+ * Shared from concept.css so homepage, services and buyer experience agree.
+ */
+@media (min-width: 900px) {
+  :root { --section-label-desktop-size: clamp(13px, 0.82vw, 15px); }
+  .kicker,
+  .cap-eyebrow,
+  .ps-service-copy > .ps-eyebrow,
+  .ps-bridge .ps-kicker,
+  .pf-hero .pf-eyebrow,
+  .dx-hero .dx-eyebrow,
+  .dx-section-title .dx-eyebrow {
+    font-size: var(--section-label-desktop-size);
+    font-weight: 800;
+    letter-spacing: .10em;
+    line-height: 1.5;
+  }
+}
+
+/* Publication-ready people-first brand art. No unapproved photo assets. */
+.art-figure--type{display:flex;align-items:center;justify-content:center;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 75% 25%,#344329 0%,#19231a 54%,#0e160f 100%);border-left:1px solid #44523d}
+.art-type-panel{position:relative;display:flex;flex-direction:column;justify-content:space-between;box-sizing:border-box;width:100%;min-height:435px;padding:clamp(32px,4.5vw,78px);color:#f3f1e9}
+.art-type-panel:before{content:"";position:absolute;width:min(48vw,500px);aspect-ratio:1;border:1px solid #e1eeb42d;border-radius:50%;top:50%;left:52%;transform:translate(-50%,-50%);pointer-events:none}
+.art-type-eyebrow,.art-type-foot{position:relative;z-index:1;font-size:clamp(9px,.75vw,12px);letter-spacing:.16em;font-weight:700;color:#c0cbb9}
+.art-type-title{position:relative;z-index:1;display:flex;flex-direction:column;line-height:.88;letter-spacing:-.075em;font-size:clamp(56px,6.7vw,116px);font-weight:670}
+.art-type-title strong{font-weight:760;color:#d0e793}.art-type-title strong span{color:#f3f1e9}
+@media(max-width:1040px){.art-figure--type{border-left:0;border-top:1px solid #44523d}.art-type-panel{min-height:340px}.art-type-title{font-size:clamp(55px,10vw,92px)}}
+@media(max-width:520px){.art-type-panel{min-height:285px;padding:28px}.art-type-title{font-size:clamp(52px,14vw,78px)}.art-type-panel:before{width:80vw}}

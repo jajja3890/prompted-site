@@ -38,9 +38,9 @@
         [
           "01",
           "LITERACY",
-          "Yhteinen perusta",
-          "Tekoälylukutaito oman työn ja organisaation vastuiden näkökulmasta. EU AI Act -valmiutta tukevat, dokumentoitavat toimet.",
-          "Kysy toteutuksesta"
+          "Aloitus koko henkilöstölle",
+          "Noin tunnin itsenäinen verkkokurssi tekoälyn perusteista, turvallisesta käytöstä ja vastuullisista valinnoista. Suomenkielistä pilottia viimeistellään.",
+          "Kysy pilotista"
         ],
         [
           "02",
@@ -275,9 +275,9 @@
         [
           "01",
           "LITERACY",
-          "A shared foundation",
-          "AI literacy in the context of real work and organisational responsibility. Documentable measures that support EU AI Act readiness.",
-          "Ask about delivery"
+          "A foundation for every employee",
+          "A self-paced starter course covering AI basics, safe use and human judgement in about an hour. Finnish pilot edition in preparation.",
+          "Ask about pilots"
         ],
         [
           "02",
@@ -478,154 +478,170 @@
   "SERVICES": {
     "fi": {
       "literacy": {
-        "eyebrow": "PROMPTED / LITERACY · TEKOÄLYLUKUTAITO",
-        "h1": "Tekoälylukutaito organisaatioille, jotka haluavat edetä vastuullisesti.",
-        "intro": "Prompted Literacy auttaa yrityksiä luomaan yhteisen, työhön liittyvän perustan tekoälyn käyttöön ja dokumentoimaan osaamisen kehittämiseksi tehtyjä toimia.",
-        "meta": "Tekoälylukutaidon kehittäminen yrityksille: työhön liittyvät käyttötavat, vastuut ja dokumentoitava eteneminen. EU AI Act -lukutaitovalmiuden tueksi.",
-        "why_title": "Pelkkä yleiskurssi ei kerro, mitä ihmiset osaavat tehdä omassa työssään.",
-        "why": "Lähtötilanteet vaihtelevat. Eri roolit, työkalut, riskit ja työn todelliset tehtävät vaikuttavat siihen, mitä organisaatiossa on syytä oppia ja dokumentoida.",
+        "eyebrow": "PROMPTED / LITERACY · KOKO HENKILÖSTÖLLE",
+        "h1": "Tekoälylukutaito kuuluu kaikille.",
+        "intro": "Selkeä, itsenäisesti suoritettava noin tunnin verkkokoulutus koko henkilöstölle. Opit ymmärtämään tekoälyn mahdollisuuksia ja rajoja, toimimaan turvallisesti ja tarkistamaan tuloksia. Suomenkielistä kurssia viimeistellään ensimmäisiä pilottitoteutuksia varten.",
+        "meta": "Koko henkilöstön noin tunnin tekoälylukutaidon aloituskurssi: perusteet, tietosuoja, vastuu ja tulosten arviointi. Suomenkielistä pilottia valmistellaan.",
+        "why_title": "Jokainen tarvitsee perustaidot. Kaikkien ei tarvitse olla tekoälyasiantuntijoita.",
+        "why": "Ennen uuden työkalun käyttöä pitää ymmärtää, mihin se sopii, mitä tietoja siihen saa syöttää ja milloin sen vastaukset pitää tarkistaa. Kurssi tarjoaa aloittelijalle selkeän perustan, käytännön esimerkkejä ja lyhyitä päätösharjoituksia.",
         "steps": [
           [
-            "01 / TILANNE",
-            "Tunnistamme käytössä olevat tekoälytyökalut, roolit ja tärkeimmät oppimistarpeet."
+            "01 / OPI",
+            "Etene neljässä lyhyessä osiossa: tekoälyn mahdollisuudet ja rajat, riskit, vastuu sekä turvallinen käyttö."
           ],
           [
-            "02 / YHTEINEN PERUSTA",
-            "Harjoittelemme vastuullista käyttöä oman työn esimerkeissä, huomioiden arvioinnin ja harkinnan."
+            "02 / HARJOITTELE",
+            "Ratkaise kuvitteellisia työelämän tilanteita, tee valintoja ja saa perusteltua palautetta. Harjoitukset eivät arvioi muutosta omassa työssä."
           ],
           [
-            "03 / DOKUMENTOINTI",
-            "Kokoamme sovitut toimet ja jatkokehittämisen tarpeet organisaation omaa käyttöä varten."
+            "03 / TARKISTA OPPIMINEN",
+            "Tee lopuksi osaamista tarkistava arviointi. Hyväksyttyä suoritusta varten valmistellaan Promptedin omaa suoritusmerkintää, ei virallista sertifikaattia."
           ]
         ],
-        "bound_title": "Lukutaito ei ole sertifikaattilupaus.",
-        "bound": "EU:n tekoälysääntelyn lukutaitovelvoitteeseen ei liity yhtä yleistä virallista kurssia tai Promptedin myöntämää viranomaissertifikaattia. Organisaation pitää arvioida tarpeelliset toimet oman toimintansa ja riskien näkökulmasta. Toteutuksen laajuus sovitaan ennen aloitusta.",
-        "who_title": "Kenelle tämä sopii?",
-        "who": "HR- ja henkilöstöjohdolle, esihenkilöille sekä liiketoimintavastuullisille, jotka tarvitsevat selkeän aloituksen henkilöstön tekoälylukutaidon kehittämiseen.",
+        "bound_title": "Peruskurssi, ei vaatimustenmukaisuustakuu.",
+        "bound": "Koulutus voi tukea organisaation EU AI Actin 4 artiklaan liittyviä tekoälylukutaitotoimia, mutta se ei yksin takaa velvoitteiden täyttymistä tai oikeuta tiettyä tekoälyn käyttötapaa. Suomenkielinen kurssiversio on vielä toimituksellisessa ja teknisessä viimeistelyssä.",
+        "who_title": "Koko henkilöstölle. Myös aivan aloittelijalle.",
+        "who": "Kurssi sopii asiantuntijoille, asiakaspalveluun, myyntiin, hallintoon, esihenkilöille ja johdolle – kaikille, joiden työssä tekoälyä käytetään tai suunnitellaan käytettäväksi. Aiempaa kokemusta ei tarvita. Työntekijä etenee omaan tahtiinsa esimerkkien, tehtävien ja palautteen avulla. HR tai liiketoimintajohto voi hankkia koulutuksen henkilöstölleen.",
         "faq": [
           [
-            "Korvaako Prompted Literacy lainmukaisuuden arvioinnin?",
-            "Ei. Tuemme henkilöstön tekoälylukutaidon kehittämistä ja toimien dokumentointia, mutta emme anna oikeudellista vaatimustenmukaisuustakuuta."
+            "Tarvitaanko aiempaa tekoälyosaamista?",
+            "Ei. Kurssi alkaa perusteista ja etenee tuttujen työtilanteiden kautta. Se soveltuu myös työntekijöille, jotka ovat vasta kokeilemassa tekoälyä."
           ],
           [
-            "Onko tämä sama kuin Capability?",
-            "Ei. Literacy luo yhteistä lähtötasoa ja vastuullisen käytön perustaa. Capability vie kehittämisen pidemmälle oikeisiin työtehtäviin ja muutoksen arviointiin."
+            "Saako kurssista sertifikaatin?",
+            "Hyväksyttyä loppuarviointia varten valmistellaan Promptedin omaa koulutuksen suoritusmerkintää. Se ei ole EU:n tai viranomaisen myöntämä sertifikaatti eikä takaa organisaation vaatimustenmukaisuutta."
+          ],
+          [
+            "Voiko henkilöstö aloittaa heti?",
+            "Suomenkielistä ensimmäistä versiota viimeistellään pilotointiin. Kysy toteutuksen tilanteesta ja mahdollisuudesta osallistua ensimmäisiin organisaatiopilotteihin."
+          ],
+          [
+            "Miten Literacy eroaa Capabilitysta?",
+            "Literacy perehdyttää tekoälyn turvallisiin perusteisiin lyhyellä kurssilla. Capability kehittää uudenlaista tekemistä oikeissa työtehtävissä pidemmällä aikavälillä ja arvioi muutosta."
           ]
         ],
-        "cta": "Keskustellaan tekoälylukutaidon tarpeesta"
+        "cta": "Kysy Literacy-pilotista"
       },
       "transform": {
-        "eyebrow": "PROMPTED / TRANSFORMATION · ORGANISAATIOMUUTOS",
-        "h1": "Tekoälymuutos, joka näkyy organisaation tavassa tehdä työtä.",
-        "intro": "Prompted Transformation yhdistää johdon tavoitteet, työntekijöiden uudenlaisen tekemisen ja muutoksen arvioinnin. Kokonaisuus suunnitellaan organisaation tilanteen mukaan.",
-        "meta": "Organisaation tekoälymuutos: yhdistämme liiketoiminnan tavoitteet, henkilöstön kyvykkyyden kehittämisen ja todellisten työtapojen muutoksen arvioinnin.",
-        "why_title": "Työkaluista hyötyihin tarvitaan muutos työn arjessa.",
-        "why": "Käyttöönotto ei riitä, jos toimivat käytännöt eivät toistu, siirry tiimien välillä ja säily ilman jatkuvaa ulkoista tukea. Muutosta pitää johtaa työstä käsin.",
+        "eyebrow": "PROMPTED / TRANSFORMATION · JOHDOLLE JA MUUTOSVASTUULLISILLE",
+        "h1": "Johda muutosta, joka näkyy työssä.",
+        "intro": "Tekoäly ei muuta organisaatiota pelkällä käyttöönotolla. Prompted Transformation yhdistää johdon tavoitteet, henkilöstön uudenlaisen tekemisen ja muutoksen arvioinnin yhdeksi suunnaksi. Yhteistyö rakennetaan organisaation todellisen tilanteen ympärille.",
+        "meta": "Prompted Transformation auttaa johtamaan tekoälymuutosta yhdistämällä liiketoiminnan tavoitteet, työn uudistamisen, henkilöstön kyvykkyydet ja muutoksen arvioinnin.",
+        "why_title": "Työkalujen käyttöönotto on helppoa. Uuden toimintatavan juurtuminen on vaikeampaa.",
+        "why": "Johtamisen, työn, ihmisten kyvykkyyden ja näytön pitää edetä yhdessä. Silloin organisaatiolla on paremmat edellytykset arvioida, mitkä käytännöt toimivat ja mitä kannattaa jatkaa.",
         "steps": [
           [
-            "01 / TAVOITE",
-            "Määritämme yhdessä, mitä liiketoiminnassa ja arjen työssä halutaan muuttaa."
+            "01 / SUUNTA",
+            "Tunnistamme tärkeimmän liiketoiminnallisen muutostarpeen ja yhteisen tavoitteen."
           ],
           [
-            "02 / KYVYKKYYS",
-            "Yhdistämme sopivat oppimis- ja valmennustoimet todellisiin tehtäviin."
+            "02 / TYÖ JA IHMISET",
+            "Sovimme työssä tehtävistä kokeiluista, oppimisen tuesta ja vastuista."
           ],
           [
             "03 / NÄYTTÖ",
-            "Tarkastelemme toistoa, siirrettävyyttä ja itsenäistymistä sekä päätämme seuraavista toimista."
+            "Arvioimme muutosta ja päätämme yhdessä, mitä jatkaa, muuttaa tai laajentaa."
           ]
         ],
-        "bound_title": "Ei valmista muutospakettia jokaiselle yritykselle.",
-        "bound": "Transformation on tarvelähtöinen yhteistyömalli, ei etukäteen vakioitu ohjelma tai luvattu liiketoimintahyöty. Lopullinen laajuus, vastuut, mittarit ja ehdot määritellään asiakaskohtaisesti.",
-        "who_title": "Kenelle tämä sopii?",
-        "who": "Liiketoimintajohdolle, muutosvastuullisille sekä People- ja L&D-johdolle, kun tavoitteena on yksittäistä koulutusta laajempi toimintatapojen uudistuminen.",
+        "bound_title": "Asiakaskohtainen kumppanuus, ei vakiopaketti.",
+        "bound": "Laajuus, aikataulu, roolit, tietosuoja, arvioinnin menetelmät ja kaupalliset ehdot vahvistetaan asiakaskohtaisesti. Transformation ei sisällä automaattisesti Capabilitya, Literacya tai Tekoälymörköä eikä lupaa tiettyä taloudellista tulosta.",
+        "who_title": "Kun muutosta pitää johtaa yli tiimirajojen.",
+        "who": "Liiketoiminta- ja toimitusjohdolle sekä HR-, People-, L&D- ja muutosvastuullisille. Yhteistyö tukee johtamisen ja työssä oppimisen yhdistämistä.",
         "faq": [
           [
-            "Miten tämä eroaa yksittäisestä koulutuksesta?",
-            "Työ alkaa liiketoiminnan muutostarpeesta. Harjoittelu, tuki ja arviointi liittyvät työn todellisiin tehtäviin, eivät vain koulutukseen osallistumiseen."
+            "Miten Transformation eroaa Capabilitysta?",
+            "Capability on rajattu organisaatiopilotti, joka kehittää toimintaa oikeissa työtehtävissä. Transformation yhdistää johtamisen, työn uudistamisen ja kyvykkyyden kehittämisen laajemmaksi asiakaskohtaiseksi muutostyöksi."
           ],
           [
-            "Onko Transformationilla kiinteä kesto tai hinta?",
-            "Ei tässä vaiheessa. Tarve, rajaus ja toteutusmalli määritellään yhdessä ja vahvistetaan tarjouksessa."
+            "Onko Transformationilla kiinteä hinta tai kesto?",
+            "Ei. Toteutuksen laajuus, aikataulu ja kaupalliset ehdot sovitaan kirjallisessa tarjouksessa."
           ]
         ],
-        "cta": "Keskustellaan organisaation muutoksesta"
+        "cta": "Keskustellaan muutoksen johtamisesta"
       }
     },
     "en": {
       "literacy": {
-        "eyebrow": "PROMPTED / LITERACY · AI LITERACY",
-        "h1": "AI literacy for organisations that want to move forward responsibly.",
-        "intro": "Prompted Literacy helps companies establish a shared, work-relevant foundation for using AI and document their capability-building measures.",
-        "meta": "AI literacy for organisations: practical workplace use, responsible judgement and documented learning measures supporting EU AI Act readiness.",
-        "why_title": "A generic course does not show how people use AI in their own work.",
-        "why": "Different roles, tools, risks and everyday tasks call for different learning priorities. A credible programme starts from that context, not a one-size-fits-all certificate.",
+        "eyebrow": "PROMPTED / LITERACY · FOR THE WHOLE WORKFORCE",
+        "h1": "AI literacy is for everyone.",
+        "intro": "A clear, self-paced starter course of approximately one hour for employees across the organisation. Learn what AI can and cannot do, how to handle information safely and how to check its outputs. The first Finnish-language course is being prepared for pilots; an English learner course is not yet available.",
+        "meta": "An approximately one-hour AI literacy foundation course for employees: AI basics, safe information use, human responsibility and output checking. Finnish pilot edition in preparation.",
+        "why_title": "Everyone needs the basics. Not everyone needs to become an AI expert.",
+        "why": "Before using a new tool, people should understand where it helps, what information they may enter and when its outputs need independent checking. The course offers an accessible foundation through short explanations, workplace scenarios and choices.",
         "steps": [
           [
-            "01 / CONTEXT",
-            "Identify the AI tools, roles and learning needs relevant to the organisation."
+            "01 / LEARN",
+            "Work through four short modules: AI strengths and limits, risks, responsibility, and safe practical use."
           ],
           [
-            "02 / FOUNDATION",
-            "Practise responsible use through real workplace examples, including human judgement and evaluation."
+            "02 / PRACTISE",
+            "Make decisions in fictional workplace situations and get clear, reasoned feedback. This is not an assessment of changed real-world work."
           ],
           [
-            "03 / DOCUMENTATION",
-            "Document agreed measures and the areas that need further development."
+            "03 / CHECK UNDERSTANDING",
+            "Take a final knowledge assessment. A Prompted course-completion record is being prepared for successful learners, not an official certificate."
           ]
         ],
-        "bound_title": "AI literacy is not a compliance certificate.",
-        "bound": "The EU AI Act literacy obligation does not prescribe one universal official training programme or an authority-issued Prompted certificate. Organisations must assess suitable measures for their own context and risks. Scope is agreed before delivery.",
-        "who_title": "Who is this for?",
-        "who": "HR, People and L&D leaders, managers and business owners who need a practical starting point for strengthening workforce AI literacy.",
+        "bound_title": "Foundational learning, not a compliance guarantee.",
+        "bound": "This training may support measures under Article 4 of the EU AI Act, but does not by itself establish full compliance or authorise a specific AI use case. The Finnish learner edition remains in editorial and technical pre-launch review.",
+        "who_title": "For the whole workforce. Beginners welcome.",
+        "who": "Designed for specialists, customer support, sales, administration, managers and leaders – anyone using or preparing to use AI at work. No previous experience is needed. Employees learn at their own pace through short modules, scenarios and feedback. HR or business leaders can arrange the course for their teams.",
         "faq": [
           [
-            "Does Prompted Literacy guarantee legal compliance?",
-            "No. We support AI literacy measures and documentation, but do not provide a legal-compliance guarantee."
+            "Do employees need any prior AI experience?",
+            "No. The course starts with the fundamentals and uses recognisable workplace situations."
+          ],
+          [
+            "Is there a certificate?",
+            "A Prompted course-completion record is being prepared for learners who pass the final assessment. It is not an EU or authority-issued certificate or a guarantee of organisational compliance."
+          ],
+          [
+            "Can our employees start immediately?",
+            "The first Finnish-language course edition is being prepared for pilots. Contact us about pilot availability. An English-language learner course is not yet available."
           ],
           [
             "How does Literacy differ from Capability?",
-            "Literacy provides a common foundation for responsible AI use. Capability goes further by developing real work practices and evaluating the changes."
+            "Literacy introduces the essentials of safe AI use in a short course. Capability supports longer-term changes to real work practices and evaluates those changes."
           ]
         ],
-        "cta": "Discuss your AI literacy needs"
+        "cta": "Ask about Literacy pilots"
       },
       "transform": {
-        "eyebrow": "PROMPTED / TRANSFORMATION · ORGANISATIONAL CHANGE",
-        "h1": "AI transformation that changes how your organisation works.",
-        "intro": "Prompted Transformation connects leadership goals, practical capability development and evaluation of changing work. The engagement is designed around the organisation’s context.",
-        "meta": "Organisational AI transformation: connect business priorities, people development and evidence of lasting changes in real work.",
-        "why_title": "New tools only create value when work changes.",
-        "why": "Adoption alone is insufficient if good practices are not repeated, transferred between teams and sustained without constant external support. Change needs to be led from real work.",
+        "eyebrow": "PROMPTED / TRANSFORMATION · FOR BUSINESS AND CHANGE LEADERS",
+        "h1": "Lead change that shows up in real work.",
+        "intro": "AI adoption alone does not transform an organisation. Prompted Transformation connects leadership priorities, new ways of working and evidence of progress. We shape the engagement around your organisation's actual circumstances.",
+        "meta": "Prompted Transformation connects business goals, workplace redesign, capability development and evidence-led change in a tailored organisational engagement.",
+        "why_title": "Introducing a tool is relatively easy. Making new ways of working stick is harder.",
+        "why": "Leadership, work redesign, people's capabilities and evidence need to move together. That makes it easier to assess what works and decide what to develop next.",
         "steps": [
           [
-            "01 / PURPOSE",
-            "Agree what needs to change in business outcomes and day-to-day work."
+            "01 / DIRECTION",
+            "Find the most important business need and agree a shared ambition."
           ],
           [
-            "02 / CAPABILITY",
-            "Connect learning and coaching to meaningful real-world tasks."
+            "02 / WORK AND PEOPLE",
+            "Define work-based development, learning support and clear responsibilities."
           ],
           [
             "03 / EVIDENCE",
-            "Examine repeatability, transfer and independence, then decide on the next steps."
+            "Review observed change and decide what to continue, adjust or extend."
           ]
         ],
-        "bound_title": "Not a one-size-fits-all transformation package.",
-        "bound": "Transformation is a tailored collaboration model, not a standardised programme or guaranteed business result. Scope, ownership, measures and terms are agreed with each customer.",
-        "who_title": "Who is this for?",
-        "who": "Business, transformation, People and L&D leaders seeking broader changes in ways of working than a stand-alone training programme can deliver.",
+        "bound_title": "Tailored engagement, not a fixed package.",
+        "bound": "Scope, timing, responsibilities, privacy boundaries, evaluation and commercial terms are agreed with each customer. Transformation does not automatically include Capability, Literacy or other separately branded programmes, and no specific financial result is guaranteed.",
+        "who_title": "When change needs to cross team boundaries.",
+        "who": "For CEOs, business leaders and HR, People, L&D and transformation leaders seeking to connect leadership and work-based development.",
         "faq": [
           [
-            "How is this different from training?",
-            "The starting point is a business need. Development, support and evaluation take place in the context of actual workplace tasks."
+            "How does Transformation differ from Capability?",
+            "Capability is a focused organisational pilot to develop new practices in real work. Transformation connects leadership, work redesign and capability-building across a tailored organisational change agenda."
           ],
           [
-            "Does Transformation have a fixed timeline or price?",
-            "Not at present. Scope and delivery are planned together and confirmed in a written proposal."
+            "Is there a standard duration or price?",
+            "No. Scope, timing and commercial terms are agreed in a written proposal."
           ]
         ],
-        "cta": "Discuss organisational transformation"
+        "cta": "Discuss organisational change"
       }
     }
   },
