@@ -176,7 +176,7 @@
 }
 .art-section--human .art-human-rule{height:1px;background:#a9b4a0;flex:1;min-width:25px}
 .art-section--human .art-human-shape{
- position:absolute;z-index:1;right:-15%;bottom:-80%;width:62%;aspect-ratio:1;
+ position:absolute;z-index:1;right:-29%;bottom:-80%;width:55%;aspect-ratio:1;
  border-radius:50%;pointer-events:none;
  background:radial-gradient(ellipse at 58% 40%,#526e45 0%,#243c2d 44%,#10251e 73%,#0d201b 100%);
  opacity:.96;box-shadow:0 0 140px #e3eacc;
