@@ -271,3 +271,104 @@
  .ts-monster{padding:47px 0}
  .ts-finalcta{width:100%;min-width:0}
 }
+
+
+/* DESIGN REVIEW 2026-11-06 / A2 Human evidence: four dimensions of change.
+   Editorial information design only; no dashboards, invented metrics or UI changes. */
+.ts-visual{
+  position:relative;
+  background:linear-gradient(145deg,#203023 0%,#121c15 72%);
+  border:1px solid #445a40;
+  box-shadow:0 30px 65px #09160c24;
+}
+.ts-visual-overline{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#d3e38b;
+  letter-spacing:.11em;
+}
+.ts-visual-overline::before{
+  content:"";
+  display:block;
+  width:9px;
+  height:9px;
+  flex:0 0 9px;
+  background:#bdc923;
+}
+.ts-visual h2{
+  font-size:clamp(32px,3vw,51px);
+  margin:24px 0 30px;
+  max-width:650px;
+}
+.ts-visual-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  border:1px solid #495947;
+  background:#495947;
+}
+.ts-visual-item{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:13px;
+  min-width:0;
+  min-height:196px;
+  padding:clamp(17px,2vw,26px);
+  border:0;
+  background:#1a291d;
+}
+.ts-visual-item:nth-child(2){background:#203322}
+.ts-visual-item:nth-child(3){background:#213026}
+.ts-visual-item:nth-child(4){background:#e4e9d2;color:#121a12}
+.ts-visual-item>span{
+  width:30px;
+  height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#c4d32f;
+  color:#111811;
+  font-size:11px;
+  font-weight:800;
+}
+.ts-visual-item strong{
+  font-size:clamp(21px,1.65vw,28px);
+  letter-spacing:-.045em;
+  line-height:1.15;
+}
+.ts-visual-item p{
+  margin:0;
+  max-width:25ch;
+  font-size:clamp(13px,.96vw,16px);
+  line-height:1.48;
+  color:#c5d0c0;
+}
+.ts-visual-item:nth-child(4)>span{background:#1c2d1b;color:#f6f8ed}
+.ts-visual-item:nth-child(4) p{color:#3c4a37}
+.company-hero{
+  background:radial-gradient(circle at 94% 15%,#bdc92318 0%,transparent 44%),#0b0f0b;
+}
+.company-hero .detail-aside{
+  border-left:2px solid #bdc923;
+  padding-left:clamp(18px,2vw,32px);
+}
+@media(max-width:1040px){
+  .company-hero .detail-aside{
+    border-left:0;
+    border-top:2px solid #bdc923;
+    padding:20px 0 0;
+  }
+}
+@media(max-width:760px){
+  .ts-visual{padding:clamp(20px,5vw,32px)}
+  .ts-visual h2{font-size:clamp(31px,7vw,41px)}
+  .ts-visual-item{min-height:165px;padding:20px}
+}
+@media(max-width:480px){
+  .ts-visual-list{grid-template-columns:1fr}
+  .ts-visual-item{min-height:0;padding:20px 22px;gap:10px}
+  .ts-visual-item p{max-width:none}
+}
