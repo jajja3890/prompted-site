@@ -328,7 +328,7 @@ def utility_main(lang,page):
   sections=''.join(f'<section class="legal-section" id="terms-{i:02d}" aria-labelledby="terms-title-{i:02d}"><h2 id="terms-title-{i:02d}">{esc(h)}</h2><p>{terms_para(b)}</p></section>' for i,(h,b) in enumerate(c['terms_sections'],1))
   links=''.join(f'<li><a href="#terms-{i:02d}"><span aria-hidden="true">{i:02d}</span>{esc(h)}</a></li>' for i,(h,_) in enumerate(c['terms_sections'],1))
   toc=f'<section class="legal-toc-wrap"><div class="shell"><details class="legal-toc"><summary>{"Sisällys" if fi else "Contents"} <span class="legal-toc-count">{len(c["terms_sections"])} {"osiota" if fi else "sections"}</span></summary><ol>{links}</ol></details></div></section>'
-  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'EHDOT' if fi else 'TERMS'}</div><h1>{esc(c['terms_title'])}</h1><p>{esc(c['terms_body'])}</p><div class="legal-draft">{'LUONNOS / TARKISTETTAVA ENNEN JULKAISUA' if fi else 'DRAFT / TO BE REVIEWED BEFORE PUBLICATION'}</div></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
+  return f'''<section class="legal-hero"><div class="shell"><div class="cap-eyebrow">PROMPTED / {'EHDOT' if fi else 'TERMS'}</div><h1>{esc(c['terms_title'])}</h1><p>{esc(c['terms_body'])}</p></div></section>{toc}<section class="legal-body"><div class="shell">{sections}</div></section>'''
  raise ValueError(page)
 
 for lang in ('fi','en'):
