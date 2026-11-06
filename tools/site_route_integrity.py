@@ -147,6 +147,27 @@ for source,destination in legacy_redirects.items():
         if len(matching)!=1 or matching[0].get('destination')!=destination or matching[0].get('permanent') is not True:
             FAIL.append(f'Legacy URL redirect missing or invalid: {candidate} -> {destination}')
 
+# Prevent iPhone emoji arrows and displaced offer-card action icons.
+import re
+for route,soup in DOCS.items():
+    if route=='/':
+        continue
+    html_string=str(soup)
+    if re.search(r'↗(?!︎)',html_string):
+        FAIL.append(f'{route}: bare U+2197 emoji-capable arrow without text variation selector')
+for lang in ('fi','en'):
+    home=DOCS.get(f'/{lang}/')
+    if home:
+        tiles=home.select('.offer-strip a.offer-tile')
+        if len(tiles)!=3:
+            FAIL.append(f'/{lang}/: expected three linked offer cards, found {len(tiles)}')
+        for tile in tiles:
+            if tile.select_one('.tile-foot[aria-hidden="true"] svg path') is None:
+                FAIL.append(f'/{lang}/: offer card is missing semantic-safe SVG arrow')
+css=(ROOT/'assets'/'concept.css').read_text(encoding='utf-8')
+if 'position:absolute;right:var(--edge);margin-top:-50px' in css:
+    FAIL.append('mobile offer-card icons still use legacy absolute-position/negative-margin workaround')
+
 # Every internal local reference resolves; no server or remote route availability implied.
 result={'status':'PASS' if not FAIL else 'FAIL','counts':COUNTS,'failures':FAIL,
         'scope':'18 FI/EN static pages, internal links, anchors, static assets, reciprocal canonical/hreflang/OG URLs; offline only'}
