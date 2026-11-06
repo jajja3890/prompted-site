@@ -57,6 +57,22 @@ for lang in ('fi','en'):
     if doc.select('.art-section--human .art-type-panel'):
         FAIL.append(f'/{lang}/: legacy PEOPLE FIRST box still present')
 
+# The Finnish site should not regress to decorative English marketing labels.
+# Product names Literacy, Capability, Transformation and Prompted Data remain intentional.
+FI_FORBIDDEN_COPY=(
+ '03 / SOLUTIONS','01 / FOUNDATION','02 / REAL WORK','03 / AT SCALE',
+ 'PROMPTED / PEOPLE × TECHNOLOGY × WORK','HUMAN CAPABILITY / REAL WORK',
+ 'PEOPLE FIRST','WORK → SUPPORT → EVIDENCE',
+ 'Companies grow when people grow.','Business ID 3550114-7',
+ 'PROMPTED / CAPABILITY DEMO','CAPABILITY / WORK → EVIDENCE',
+ 'HR-, People- ja L&D-johdolle','COACH-TUKI'
+)
+for route,soup in DOCS.items():
+ if not route.startswith('/fi/'):continue
+ visible=soup.get_text(' ',strip=True)
+ for phrase in FI_FORBIDDEN_COPY:
+  if phrase in visible:FAIL.append(f'{route}: avoid English marketing label {phrase}')
+
 def resolve_asset(path):
     # A slash-final URL is a route, all other source paths are files.
     decoded=unquote(path)
