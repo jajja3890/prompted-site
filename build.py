@@ -153,7 +153,9 @@ def product_first_hero(lang, page):
  first_href = contact if cap else url(lang,'experience')
  second_href = url(lang,'experience') if cap else contact
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
+ editorial_markup = '' if cap else '<div class="pf-human-editorial" aria-hidden="true"><img alt="" decoding="async" height="552" src="/assets/prompted-editorial-one-person.webp" width="333"/></div>'
  return f'''<section class="pf-hero {'pf-capability' if cap else 'pf-home'}" id="alku" aria-labelledby="pf-heading">
+  {editorial_markup}
   <div class="shell pf-hero-shell">
     <div class="pf-copy">
       <div class="pf-eyebrow"><span class="pf-eyebrow-square" aria-hidden="true"></span>{'02 / PROMPTED CAPABILITY' if cap else 'PROMPTED / PEOPLE × TECHNOLOGY × WORK'}</div>
