@@ -47,6 +47,16 @@ for route,soup in DOCS.items():
     if 'Prompted Oy' not in footer_text or '3550114-7' not in footer_text or '© 2026 Prompted Oy' not in footer_text:
         FAIL.append(f'{route}: public company identity or copyright is incomplete')
 
+# Home design must contain one genuine image asset and no old PEOPLE FIRST tile.
+for lang in ('fi','en'):
+    doc=DOCS[f'/{lang}/']
+    if len(doc.select('.pf-home .pf-human-editorial img[src="/assets/prompted-editorial-one-person.webp"]')) != 1:
+        FAIL.append(f'/{lang}/: required single editorial hero photo missing')
+    if len(doc.select('.art-section--human .art-human-content h2')) != 1:
+        FAIL.append(f'/{lang}/: airy PEOPLE FIRST section missing')
+    if doc.select('.art-section--human .art-type-panel'):
+        FAIL.append(f'/{lang}/: legacy PEOPLE FIRST box still present')
+
 def resolve_asset(path):
     # A slash-final URL is a route, all other source paths are files.
     decoded=unquote(path)

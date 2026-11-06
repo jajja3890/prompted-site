@@ -62,6 +62,8 @@ trans = {
 'Tilaajalla on vain sallittu raportointinäkymä.':'Buyers see only their authorised reporting view.',
 'TIETOSUOJAA EI KORVATA MARKKINOINTIVÄITTEILLÄ':'PRIVACY CANNOT BE REPLACED BY MARKETING CLAIMS',
 'Tutustu Capability-toimitukseen':'Explore Capability delivery',
+'Ihmiset kehittyvät,':'People grow',
+'kun työ kehittyy.':'as work evolves.',
 'Prompted yhdistää ihmislähtöisen valmennuksen ja oman digitaalisen palvelun. Rakennamme muutosta, joka kantaa yksittäistä kokeilua pidemmälle.':'Prompted combines human coaching with a proprietary digital service. We help turn individual experiments into lasting changes in work.',
 'KUVALUONNOS H01 / EI HYVÄKSYTTY JULKAISUKUVA':'H01 ART STUDY / NOT APPROVED FOR PUBLICATION',
 'Aloitetaan yhdestä oikeasta työtehtävästä.':'Start with one real work challenge.',
@@ -153,7 +155,9 @@ def product_first_hero(lang, page):
  first_href = contact if cap else url(lang,'experience')
  second_href = url(lang,'experience') if cap else contact
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
+ editorial_markup = '' if cap else '<div class="pf-human-editorial" aria-hidden="true"><img src="/assets/prompted-editorial-one-person.webp" width="333" height="552" alt="" decoding="async"/></div>'
  return f'''<section class="pf-hero {'pf-capability' if cap else 'pf-home'}" id="alku" aria-labelledby="pf-heading">
+  {editorial_markup}
   <div class="shell pf-hero-shell">
     <div class="pf-copy">
       <div class="pf-eyebrow"><span class="pf-eyebrow-square" aria-hidden="true"></span>{'02 / PROMPTED CAPABILITY' if cap else 'PROMPTED / PEOPLE × TECHNOLOGY × WORK'}</div>

@@ -135,3 +135,71 @@
  .offer-strip .offer-tile h3{margin-top:12px}
  .offer-strip .offer-tile p{max-width:none;padding-right:6px}
 }
+
+
+/* 2026-11-06 airy PEOPLE FIRST section. Product illustrations and CTAs untouched. */
+.art-section.art-section--human{
+ display:block;position:relative;isolation:isolate;overflow:hidden;min-height:0;
+ background:radial-gradient(ellipse at 84% 104%,#b8c59a 0%,#e6e8d9 32%,transparent 65%),#f5f5f0;
+ color:#121711;
+}
+.art-section--human .art-human-shell{
+ position:relative;z-index:2;max-width:1480px;
+ min-height:clamp(430px,35vw,570px);
+ display:flex;flex-direction:column;justify-content:space-between;
+ padding-top:clamp(55px,5.4vw,95px);padding-bottom:clamp(52px,5vw,83px);
+}
+.art-section--human .art-human-kicker{
+ display:flex;align-items:center;gap:14px;
+ font-size:clamp(11px,.9vw,14px);font-weight:800;letter-spacing:.12em;color:#384b33;
+}
+.art-section--human .art-human-dot{display:block;width:11px;height:11px;flex:none;background:#bdc923}
+.art-section--human .art-human-content{
+ display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.76fr);
+ gap:clamp(36px,4.5vw,96px);align-items:center;max-width:1070px;
+ padding:clamp(25px,4vw,55px) 0;
+}
+.art-section--human .art-human-content h2{
+ margin:0;max-width:700px;
+ font-size:clamp(40px,4.6vw,77px);
+ line-height:1.055;letter-spacing:-.07em;font-weight:730;text-wrap:balance;
+}
+.art-section--human .art-human-content p{
+ margin:0;padding-left:clamp(24px,3vw,42px);
+ border-left:1px solid #a4ad99;max-width:430px;
+ font-size:clamp(16px,1.24vw,19px);line-height:1.7;color:#3e493b;
+}
+.art-section--human .art-human-foot{
+ display:flex;align-items:center;gap:26px;max-width:1020px;
+ font-size:clamp(9px,.75vw,12px);font-weight:800;letter-spacing:.14em;
+ color:#53604b;line-height:1.4;
+}
+.art-section--human .art-human-rule{height:1px;background:#a9b4a0;flex:1;min-width:25px}
+.art-section--human .art-human-shape{
+ position:absolute;z-index:1;right:-15%;bottom:-80%;width:62%;aspect-ratio:1;
+ border-radius:50%;pointer-events:none;
+ background:radial-gradient(ellipse at 58% 40%,#526e45 0%,#243c2d 44%,#10251e 73%,#0d201b 100%);
+ opacity:.96;box-shadow:0 0 140px #e3eacc;
+}
+.art-section--human .art-human-shape::before,
+.art-section--human .art-human-shape::after{
+ content:"";position:absolute;border:1px solid #e9f2d48c;border-radius:50%;
+ pointer-events:none;
+}
+.art-section--human .art-human-shape::before{width:140%;height:140%;left:-46%;top:-28%;transform:rotate(-28deg)}
+.art-section--human .art-human-shape::after{width:115%;height:115%;left:-78%;top:21%;transform:rotate(18deg)}
+@media(max-width:1020px){
+ .art-section--human .art-human-content{grid-template-columns:1fr;gap:26px}
+ .art-section--human .art-human-content p{max-width:620px}
+ .art-section--human .art-human-shape{right:-35%;bottom:-45%;width:80%;opacity:.5}
+ .art-section--human .art-human-foot{gap:13px}
+}
+@media(max-width:700px){
+ .art-section--human .art-human-shell{min-height:390px;padding-top:54px;padding-bottom:46px}
+ .art-section--human .art-human-content{padding:35px 0 40px;gap:25px}
+ .art-section--human .art-human-content h2{font-size:clamp(37px,9vw,57px)}
+ .art-section--human .art-human-content p{padding-left:20px;font-size:16px}
+ .art-section--human .art-human-shape{right:-62%;bottom:-55%;width:125%;opacity:.23}
+ .art-section--human .art-human-foot{font-size:9px;flex-wrap:wrap}
+ .art-section--human .art-human-rule{display:none}
+}
