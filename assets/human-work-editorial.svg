@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-label="Editorial illustration of two people working together around a desk">
+<defs>
+  <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17221c"/><stop offset=".65" stop-color="#2e3b2f"/><stop offset="1" stop-color="#121b16"/></linearGradient>
+  <linearGradient id="window" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f4e8cc"/><stop offset=".45" stop-color="#d0c7a8"/><stop offset="1" stop-color="#919b78"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0bc" stop-opacity=".55"/><stop offset="1" stop-color="#f0e2b4" stop-opacity="0"/></linearGradient>
+  <linearGradient id="coats" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4e5c49"/><stop offset=".48" stop-color="#27372c"/><stop offset="1" stop-color="#15231b"/></linearGradient>
+  <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c7b59b"/><stop offset=".65" stop-color="#988b78"/><stop offset="1" stop-color="#555b4e"/></linearGradient>
+  <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3e4937"/><stop offset="1" stop-color="#18231b"/></linearGradient>
+  <linearGradient id="skinA" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#be997c"/><stop offset=".55" stop-color="#8e715f"/><stop offset="1" stop-color="#544a41"/></linearGradient>
+  <linearGradient id="skinB" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2bc97"/><stop offset=".55" stop-color="#b0876b"/><stop offset="1" stop-color="#756252"/></linearGradient>
+  <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#090e0c" stop-opacity="0"/><stop offset="1" stop-color="#050907" stop-opacity=".68"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="46"/></filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".28" numOctaves="3" stitchTiles="stitch" result="n"/><feColorMatrix in="n" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer></filter>
+  <clipPath id="frame"><rect width="1200" height="840"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1200" height="840" fill="url(#wall)"/>
+<!-- Restrained architectural light gives the human interaction spatial context, not a sci-fi setting. -->
+<path d="M75 0H718V622H75Z" fill="url(#window)"/>
+<path d="M75 0H718V622H75Z" fill="url(#sun)"/>
+<path d="M350-25V648M75 404H718" stroke="#344532" stroke-width="12" opacity=".44"/>
+<path d="M0 0H95V620H0ZM704 0H760V650H704Z" fill="#101912"/>
+<path d="M340 0L590 0L0 720V490Z" fill="#f7ecd0" opacity=".21"/>
+<path d="M1095 95C1041 27 943 54 923 130C887 211 929 289 1038 308C1154 326 1240 217 1178 147Z" fill="#9a9f5d" opacity=".2" filter="url(#blur)"/>
+<path d="M0 570Q425 560 805 528T1200 502V840H0Z" fill="url(#desk)"/>
+<!-- Person on the left, attentively leaning into the task. -->
+<path d="M118 846L162 602Q181 516 269 480L347 449L442 501Q532 535 557 672L593 850Z" fill="url(#coats)"/>
+<path d="M257 488L281 422L347 443L375 504L335 564L284 546Z" fill="url(#skinA)"/>
+<path d="M277 245Q364 208 406 269Q440 309 427 369Q419 424 372 457Q323 482 281 429Q256 396 242 341Q230 271 277 245Z" fill="url(#skinA)"/>
+<path d="M254 324Q218 293 248 245Q276 196 347 207Q412 207 427 275Q435 321 416 339Q401 310 388 298Q351 280 315 304L279 329Z" fill="#222821"/>
+<path d="M255 328Q250 378 283 426L270 462Q236 446 222 415Q198 360 221 315Z" fill="#24291f"/>
+<path d="M298 358Q336 372 365 357" fill="none" stroke="#d7ad8d" stroke-width="3" opacity=".45"/>
+<path d="M367 358Q379 357 392 365" stroke="#2e2b25" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+<path d="M251 569Q371 591 482 671L668 733L685 761Q635 799 572 782L414 732L312 693Z" fill="url(#coats)"/>
+<path d="M620 738L690 741Q717 745 732 762L712 785Q681 789 651 778L621 769Z" fill="url(#skinA)"/>
+<!-- Person on the right, co-creating with the first person. -->
+<path d="M743 877L779 555Q796 489 856 453L968 438Q1075 463 1112 604L1193 841Z" fill="url(#shirt)"/>
+<path d="M853 468L870 397L948 398L958 458L907 507Z" fill="url(#skinB)"/>
+<path d="M836 251Q848 189 916 173Q995 162 1017 238Q1046 297 1010 366Q987 412 939 423Q873 429 846 357Q830 316 836 251Z" fill="url(#skinB)"/>
+<path d="M816 279Q821 215 860 179Q906 136 985 166Q1029 190 1034 241Q1028 261 1014 274Q990 240 945 241Q911 258 857 279Z" fill="#302d24"/>
+<path d="M818 259Q787 240 801 202Q820 142 896 150Q839 173 841 235Z" fill="#39362a"/>
+<path d="M962 315Q975 309 984 315" stroke="#3b332a" stroke-width="4" stroke-linecap="round" fill="none"/>
+<path d="M930 361Q959 374 981 355" stroke="#8b6556" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M836 567Q805 624 758 667L674 717Q652 734 662 761Q687 786 719 767L812 736Q906 701 930 631Z" fill="url(#shirt)"/>
+<path d="M670 717Q646 729 640 749Q648 774 673 772L721 758Q728 738 711 721Z" fill="url(#skinB)"/>
+<!-- Actual work materials, not fabricated software data. -->
+<path d="M406 674L831 640L1064 778L642 828Z" fill="#0a120c" opacity=".5"/>
+<path d="M438 672L807 637L1004 750L645 793Z" fill="#eee9d9"/>
+<path d="M477 684L786 656" stroke="#abb1a0" stroke-width="3"/>
+<path d="M503 706L842 683M532 727L882 702M561 748L914 725" stroke="#bec5b5" stroke-width="2"/>
+<path d="M612 686L654 681M678 677L725 674" stroke="#bdc923" stroke-width="8" stroke-linecap="square"/>
+<path d="M964 638L1084 625L1111 657L994 673Z" fill="#0f1c14" opacity=".75"/>
+<path d="M975 643L1064 631" stroke="#b7c368" stroke-width="3" opacity=".7"/>
+<ellipse cx="716" cy="756" rx="150" ry="18" fill="#0a120d" opacity=".28"/>
+<!-- Olive brand signal kept restrained. -->
+<path d="M1090 0H1200V10H1090Z" fill="#bdc923"/>
+<rect x="1134" y="688" width="14" height="14" fill="#c5d22b"/>
+<rect width="1200" height="840" fill="url(#shade)"/>
+<rect width="1200" height="840" filter="url(#grain)" opacity=".55"/>
+</g>
+</svg>
