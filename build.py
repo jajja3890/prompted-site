@@ -118,7 +118,7 @@ def header(lang,page):
 
 def footer(lang):
  fi=lang=='fi'
- return f'''<footer class="footer"><div class="shell"><div><strong>Prompted Oy</strong> · Turku, Finland · 3550114-7</div><div><a href="{url(lang,'company')}">{'Yritys' if fi else 'Company'}</a> · <a href="{url(lang,'privacy')}">{'Tietosuoja' if fi else 'Privacy'}</a> · <a href="{url(lang,'terms')}">{'Palveluehdot' if fi else 'Service terms'}</a> · <a href="https://app.prompted.fi" rel="noopener noreferrer">{'Kirjaudu' if fi else 'Sign in'} ↗</a></div><div>PREVIEW · NOT PUBLISHED · © 2026</div></div></footer>'''
+ return f'''<footer class="footer"><div class="shell"><div><strong>Prompted Oy</strong> · 3550114-7</div><div><a href="{url(lang,'company')}">{'Yritys' if fi else 'Company'}</a> · <a href="{url(lang,'privacy')}">{'Tietosuoja' if fi else 'Privacy'}</a> · <a href="{url(lang,'terms')}">{'Palveluehdot' if fi else 'Service terms'}</a> · <a href="https://app.prompted.fi" rel="noopener noreferrer">{'Kirjaudu' if fi else 'Sign in'} ↗</a></div><div>© 2026 Prompted Oy</div></div></footer>'''
 
 
 def page_html(lang,page,main,desc=None):

@@ -31,6 +31,22 @@ for fi,en in PAIRS:
         DOCS[path]=BeautifulSoup(target.read_text(encoding='utf-8'),'html.parser')
         COUNTS['pages']+=1
 DOCS['/']=BeautifulSoup((ROOT/'index.html').read_text(encoding='utf-8'),'html.parser')
+
+# Public footer must never revert to prelaunch or location copy.
+for route,soup in DOCS.items():
+    if route=='/':
+        continue
+    footer=soup.select_one('footer.footer')
+    if footer is None:
+        FAIL.append(f'{route}: public footer is missing')
+        continue
+    footer_text=footer.get_text(' ',strip=True)
+    for obsolete in ('Turku, Finland','PREVIEW','NOT PUBLISHED'):
+        if obsolete in footer_text:
+            FAIL.append(f'{route}: obsolete footer text {obsolete}')
+    if 'Prompted Oy' not in footer_text or '3550114-7' not in footer_text or '© 2026 Prompted Oy' not in footer_text:
+        FAIL.append(f'{route}: public company identity or copyright is incomplete')
+
 def resolve_asset(path):
     # A slash-final URL is a route, all other source paths are files.
     decoded=unquote(path)
