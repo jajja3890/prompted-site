@@ -88,12 +88,12 @@
 /* Capability flagship editorial: a single buyer-focused story.
    The interface composition belongs only to the hero. All other sections are
    honest semantic product descriptions rather than fake application screens. */
-.cap-story-intro,.cap-story-journey,.cap-story-perspectives,.cap-story-value,.cap-story-scope,.cap-story-closing{position:relative}
-.cap-story-intro .shell,.cap-story-journey .shell,.cap-story-perspectives .shell,.cap-story-value .shell,.cap-story-scope .shell,.cap-story-closing .shell{max-width:1500px}
+.cap-story-intro,.cap-story-journey,.cap-story-perspectives,.cap-story-value,.cap-story-scope,.cap-story-offer,.cap-story-closing{position:relative}
+.cap-story-intro .shell,.cap-story-journey .shell,.cap-story-perspectives .shell,.cap-story-value .shell,.cap-story-scope .shell,.cap-story-offer .shell,.cap-story-closing .shell{max-width:1500px}
 .cap-story-eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:clamp(12px,.82vw,15px);letter-spacing:.1em;text-transform:uppercase;font-weight:800;line-height:1.5;color:#465923;margin-bottom:27px}
 .cap-story-eyebrow:before{content:"";display:inline-block;width:9px;height:9px;background:#b5c823;flex:0 0 9px}
-.cap-story-intro h2,.cap-story-journey h2,.cap-story-perspectives h2,.cap-story-value h2,.cap-story-scope h2,.cap-story-closing h2{font-size:clamp(36px,4.7vw,76px);letter-spacing:-.065em;line-height:1.075;font-weight:680;margin:0;text-wrap:balance}
-.cap-story-intro p,.cap-story-journey p,.cap-story-perspectives p,.cap-story-value p,.cap-story-scope p,.cap-story-closing p{line-height:1.65}
+.cap-story-intro h2,.cap-story-journey h2,.cap-story-perspectives h2,.cap-story-value h2,.cap-story-scope h2,.cap-story-offer h2,.cap-story-closing h2{font-size:clamp(36px,4.7vw,76px);letter-spacing:-.065em;line-height:1.075;font-weight:680;margin:0;text-wrap:balance}
+.cap-story-intro p,.cap-story-journey p,.cap-story-perspectives p,.cap-story-value p,.cap-story-scope p,.cap-story-offer p,.cap-story-closing p{line-height:1.65}
 .cap-story-intro{background:#f5f5f2;color:#111710;padding:clamp(75px,9vw,145px) 0}
 .cap-story-intro-grid{display:grid;grid-template-columns:minmax(155px,.37fr) minmax(0,1fr);gap:clamp(28px,5vw,95px)}
 .cap-story-intro h2{max-width:1030px}
@@ -134,6 +134,22 @@
 .cap-story-scope h2{font-size:clamp(35px,3.7vw,62px)}
 .cap-story-scope p{font-size:clamp(16px,1.15vw,18px);color:#4a5a45;margin:16px 0 0}
 .cap-story-scope .cap-story-scope-lead{font-size:clamp(19px,1.5vw,24px);font-weight:630;color:#172518;margin:0}
+.cap-story-offer{background:#f5f5f2;color:#141a13;padding:clamp(72px,8vw,125px) 0}
+.cap-story-offer-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(360px,.75fr);gap:clamp(35px,6vw,92px);align-items:center}
+.cap-story-offer h2{max-width:760px}
+.cap-story-offer-copy .cap-story-offer-lead{font-size:clamp(18px,1.35vw,21px);color:#4b5649;max-width:700px;margin:26px 0}
+.cap-story-offer-facts{display:grid;gap:10px;padding:0;margin:0 0 30px;list-style:none;color:#364332;font-size:16px}
+.cap-story-offer-facts li{padding-left:22px;position:relative}
+.cap-story-offer-facts li:before{content:"";width:8px;height:8px;position:absolute;left:0;top:.55em;background:#8b9f26}
+.cap-story-price-card{background:#fff;border:1px solid #cbd2c4;padding:clamp(25px,3vw,40px);box-shadow:0 18px 48px rgba(27,39,24,.07)}
+.cap-story-price-eyebrow{font-size:12px;letter-spacing:.1em;font-weight:800;color:#536c20;margin-bottom:12px}
+.cap-story-price-card h3{font-size:clamp(25px,2vw,33px);letter-spacing:-.04em;margin:0 0 20px}
+.cap-story-price-card table{width:100%;border-collapse:collapse;text-align:left}
+.cap-story-price-card caption{text-align:left;color:#596451;font-size:13px;margin-bottom:10px}
+.cap-story-price-card th,.cap-story-price-card td{padding:14px 8px;border-top:1px solid #d9ded5}
+.cap-story-price-card tbody th{font-weight:700}
+.cap-story-price-card tbody td{font-size:18px;font-weight:780;white-space:nowrap}
+.cap-story-price-card>p{font-size:14px;color:#596451;margin:20px 0 0}
 .cap-story-closing{background:#0d140f;color:#f3f7ed;padding:clamp(86px,10vw,158px) 0}
 .cap-story-closing h2{max-width:1050px}
 .cap-story-closing p{font-size:clamp(18px,1.45vw,22px);color:#becbb9;max-width:750px;margin:30px 0 35px}
@@ -141,14 +157,14 @@
 .cap-story-cta:hover{background:#d4e843}
 .cap-story-closing .cap-story-eyebrow{color:#d5e58f}
 @media(max-width:1050px){
- .cap-story-intro-grid,.cap-story-head,.cap-story-scope-grid{grid-template-columns:1fr;gap:24px}
+ .cap-story-intro-grid,.cap-story-head,.cap-story-scope-grid,.cap-story-offer-layout{grid-template-columns:1fr;gap:24px}
  .cap-story-intro-grid .cap-story-eyebrow{margin-bottom:4px}
  .cap-story-head{margin-bottom:42px}
  .cap-story-step{min-height:0}
 }
 @media(max-width:760px){
- .cap-story-intro,.cap-story-journey,.cap-story-perspectives,.cap-story-value,.cap-story-scope,.cap-story-closing{padding:65px 0}
- .cap-story-intro h2,.cap-story-journey h2,.cap-story-perspectives h2,.cap-story-value h2,.cap-story-scope h2,.cap-story-closing h2{font-size:clamp(35px,9.2vw,54px)}
+ .cap-story-intro,.cap-story-journey,.cap-story-perspectives,.cap-story-value,.cap-story-scope,.cap-story-offer,.cap-story-closing{padding:65px 0}
+ .cap-story-intro h2,.cap-story-journey h2,.cap-story-perspectives h2,.cap-story-value h2,.cap-story-scope h2,.cap-story-offer h2,.cap-story-closing h2{font-size:clamp(35px,9.2vw,54px)}
  .cap-story-intro p{margin-top:24px}
  .cap-story-steps,.cap-story-perspective-grid,.cap-story-values{grid-template-columns:1fr}
  .cap-story-step{min-height:0;padding:28px}
@@ -158,6 +174,8 @@
  .cap-story-perspective-grid h3{font-size:34px;margin:29px 0 14px}
  .cap-story-values{gap:28px}
  .cap-story-values h3{margin:19px 0 10px}
+ .cap-story-price-card{padding:25px 19px}
+ .cap-story-price-card tbody td{font-size:16px}
  .cap-story-textlink{font-size:15px}
  .cap-story-cta{width:100%;gap:20px}
 }
