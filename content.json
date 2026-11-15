@@ -39,8 +39,8 @@
           "01",
           "LITERACY",
           "Aloitus koko henkilöstölle",
-          "Noin tunnin itsenäinen verkkokurssi tekoälyn perusteista, turvallisesta käytöstä ja vastuullisista valinnoista. Suomenkielistä pilottia viimeistellään.",
-          "Kysy pilotista"
+          "Noin tunnin itsenäinen verkkokurssi tekoälyn perusteista, turvallisesta käytöstä ja vastuullisista valinnoista. Suomenkielinen kurssiversio on julkaistu; ensimmäisen organisaatiototeutuksen aikataulu sovitaan tarjouksessa.",
+          "Pyydä tarjous"
         ],
         [
           "02",
@@ -276,8 +276,8 @@
           "01",
           "LITERACY",
           "A foundation for every employee",
-          "A self-paced starter course covering AI basics, safe use and human judgement in about an hour. Finnish pilot edition in preparation.",
-          "Ask about pilots"
+          "A self-paced starter course covering AI basics, safe use and human judgement in about an hour. The Finnish course is published; the first organisational delivery is agreed by proposal. The English learner course is not yet available.",
+          "Request a proposal"
         ],
         [
           "02",
@@ -480,8 +480,8 @@
       "literacy": {
         "eyebrow": "PROMPTED / LITERACY · KOKO HENKILÖSTÖLLE",
         "h1": "Tekoälylukutaito kuuluu kaikille.",
-        "intro": "Selkeä, itsenäisesti suoritettava noin tunnin verkkokoulutus koko henkilöstölle. Opit ymmärtämään tekoälyn mahdollisuuksia ja rajoja, toimimaan turvallisesti ja tarkistamaan tuloksia. Suomenkielistä kurssia viimeistellään ensimmäisiä pilottitoteutuksia varten.",
-        "meta": "Koko henkilöstön noin tunnin tekoälylukutaidon aloituskurssi: perusteet, tietosuoja, vastuu ja tulosten arviointi. Suomenkielistä pilottia valmistellaan.",
+        "intro": "Selkeä, itsenäisesti suoritettava noin tunnin verkkokoulutus koko henkilöstölle. Opit ymmärtämään tekoälyn mahdollisuuksia ja rajoja, toimimaan turvallisesti ja tarkistamaan tuloksia. Suomenkielinen kurssiversio on julkaistu; ensimmäisen organisaatiototeutuksen osallistujat ja aikataulu sovitaan tarjouksessa.",
+        "meta": "Koko henkilöstön noin tunnin tekoälylukutaidon aloituskurssi: perusteet, tietosuoja, vastuu ja tulosten arviointi. Suomenkielinen kurssiversio on julkaistu.",
         "why_title": "Jokainen tarvitsee perustaidot. Kaikkien ei tarvitse olla tekoälyasiantuntijoita.",
         "why": "Ennen uuden työkalun käyttöä pitää ymmärtää, mihin se sopii, mitä tietoja siihen saa syöttää ja milloin sen vastaukset pitää tarkistaa. Kurssi tarjoaa aloittelijalle selkeän perustan, käytännön esimerkkejä ja lyhyitä päätösharjoituksia.",
         "steps": [
@@ -495,11 +495,11 @@
           ],
           [
             "03 / TARKISTA OPPIMINEN",
-            "Tee lopuksi osaamista tarkistava arviointi. Hyväksyttyä suoritusta varten valmistellaan Promptedin omaa suoritusmerkintää, ei virallista sertifikaattia."
+            "Tee lopuksi osaamista tarkistava arviointi. Hyväksytystä suorituksesta syntyy Promptedin oma koulutuksen suoritusmerkintä. Se ei ole virallinen sertifikaatti."
           ]
         ],
         "bound_title": "Peruskurssi, ei vaatimustenmukaisuustakuu.",
-        "bound": "Koulutus voi tukea organisaation EU AI Actin 4 artiklaan liittyviä tekoälylukutaitotoimia, mutta se ei yksin takaa velvoitteiden täyttymistä tai oikeuta tiettyä tekoälyn käyttötapaa. Suomenkielinen kurssiversio on vielä toimituksellisessa ja teknisessä viimeistelyssä.",
+        "bound": "Koulutus voi tukea organisaation EU AI Actin 4 artiklaan liittyviä tekoälylukutaitotoimia, mutta se ei yksin takaa velvoitteiden täyttymistä tai oikeuta tiettyä tekoälyn käyttötapaa. Ensimmäisen organisaatiotoimituksen osallistujat, kutsut, tietosuoja, mahdollinen tilaajan ryhmäyhteenveto ja suoritusmerkintöjen toimitustapa sovitaan ennen aloitusta.",
         "who_title": "Koko henkilöstölle. Myös aivan aloittelijalle.",
         "who": "Kurssi sopii asiantuntijoille, asiakaspalveluun, myyntiin, hallintoon, esihenkilöille ja johdolle – kaikille, joiden työssä tekoälyä käytetään tai suunnitellaan käytettäväksi. Aiempaa kokemusta ei tarvita. Työntekijä etenee omaan tahtiinsa esimerkkien, tehtävien ja palautteen avulla. HR tai liiketoimintajohto voi hankkia koulutuksen henkilöstölleen.",
         "faq": [
@@ -509,18 +509,18 @@
           ],
           [
             "Saako kurssista sertifikaatin?",
-            "Hyväksyttyä loppuarviointia varten valmistellaan Promptedin omaa koulutuksen suoritusmerkintää. Se ei ole EU:n tai viranomaisen myöntämä sertifikaatti eikä takaa organisaation vaatimustenmukaisuutta."
+            "Hyväksytystä loppuarvioinnista syntyy Promptedin oma koulutuksen suoritusmerkintä. Se ei ole EU:n tai viranomaisen myöntämä sertifikaatti eikä takaa organisaation vaatimustenmukaisuutta."
           ],
           [
             "Voiko henkilöstö aloittaa heti?",
-            "Suomenkielistä ensimmäistä versiota viimeistellään pilotointiin. Kysy toteutuksen tilanteesta ja mahdollisuudesta osallistua ensimmäisiin organisaatiopilotteihin."
+            "Suomenkielinen kurssiversio on julkaistu. Ensimmäisen ryhmän aloitus sovitaan tarjouksessa; osallistujat, kutsut, tietosuoja, mahdollinen ryhmäyhteenveto ja suoritusmerkintöjen toimitustapa vahvistetaan ennen avaamista."
           ],
           [
             "Miten Literacy eroaa Capabilitysta?",
             "Literacy perehdyttää tekoälyn turvallisiin perusteisiin lyhyellä kurssilla. Capability kehittää uudenlaista tekemistä oikeissa työtehtävissä pidemmällä aikavälillä ja arvioi muutosta."
           ]
         ],
-        "cta": "Kysy Literacy-pilotista"
+        "cta": "Pyydä tarjous Literacy-toimituksesta"
       },
       "transform": {
         "eyebrow": "PROMPTED / TRANSFORMATION · JOHDOLLE JA MUUTOSVASTUULLISILLE",
@@ -564,8 +564,8 @@
       "literacy": {
         "eyebrow": "PROMPTED / LITERACY · FOR THE WHOLE WORKFORCE",
         "h1": "AI literacy is for everyone.",
-        "intro": "A clear, self-paced starter course of approximately one hour for employees across the organisation. Learn what AI can and cannot do, how to handle information safely and how to check its outputs. The first Finnish-language course is being prepared for pilots; an English learner course is not yet available.",
-        "meta": "An approximately one-hour AI literacy foundation course for employees: AI basics, safe information use, human responsibility and output checking. Finnish pilot edition in preparation.",
+        "intro": "A clear, self-paced starter course of approximately one hour for employees across the organisation. Learn what AI can and cannot do, how to handle information safely and how to check its outputs. The Finnish course version is published; the first organisational delivery is agreed by proposal. The English learner course is not yet available.",
+        "meta": "An approximately one-hour AI literacy foundation course for employees: AI basics, safe information use, human responsibility and output checking. The Finnish course version is published.",
         "why_title": "Everyone needs the basics. Not everyone needs to become an AI expert.",
         "why": "Before using a new tool, people should understand where it helps, what information they may enter and when its outputs need independent checking. The course offers an accessible foundation through short explanations, workplace scenarios and choices.",
         "steps": [
@@ -579,11 +579,11 @@
           ],
           [
             "03 / CHECK UNDERSTANDING",
-            "Take a final knowledge assessment. A Prompted course-completion record is being prepared for successful learners, not an official certificate."
+            "Take a final knowledge assessment. Learners who pass receive a Prompted course-completion record, not an official certificate."
           ]
         ],
         "bound_title": "Foundational learning, not a compliance guarantee.",
-        "bound": "This training may support measures under Article 4 of the EU AI Act, but does not by itself establish full compliance or authorise a specific AI use case. The Finnish learner edition remains in editorial and technical pre-launch review.",
+        "bound": "This training may support measures under Article 4 of the EU AI Act, but does not by itself establish full compliance or authorise a specific AI use case. For the first organisational delivery, participants, invitations, privacy, any sponsor group summary and the completion-record delivery method are agreed before launch.",
         "who_title": "For the whole workforce. Beginners welcome.",
         "who": "Designed for specialists, customer support, sales, administration, managers and leaders – anyone using or preparing to use AI at work. No previous experience is needed. Employees learn at their own pace through short modules, scenarios and feedback. HR or business leaders can arrange the course for their teams.",
         "faq": [
@@ -593,18 +593,18 @@
           ],
           [
             "Is there a certificate?",
-            "A Prompted course-completion record is being prepared for learners who pass the final assessment. It is not an EU or authority-issued certificate or a guarantee of organisational compliance."
+            "Learners who pass the final assessment receive a Prompted course-completion record. It is not an EU or authority-issued certificate or a guarantee of organisational compliance."
           ],
           [
             "Can our employees start immediately?",
-            "The first Finnish-language course edition is being prepared for pilots. Contact us about pilot availability. An English-language learner course is not yet available."
+            "The Finnish course version is published. The first group start is agreed by proposal; participants, invitations, privacy, any group summary and completion-record delivery are confirmed before launch. An English-language learner course is not yet available."
           ],
           [
             "How does Literacy differ from Capability?",
             "Literacy introduces the essentials of safe AI use in a short course. Capability supports longer-term changes to real work practices and evaluates those changes."
           ]
         ],
-        "cta": "Ask about Literacy pilots"
+        "cta": "Request a Literacy proposal"
       },
       "transform": {
         "eyebrow": "PROMPTED / TRANSFORMATION · FOR BUSINESS AND CHANGE LEADERS",
