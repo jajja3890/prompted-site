@@ -167,9 +167,9 @@ def product_first_hero(lang, page):
  second_href = url(lang,'experience') if cap else contact
  helper = (lambda fi_s,en_s: fi_s if fi else en_s)
  editorial_markup = '' if cap else '<div class="pf-human-editorial" aria-hidden="true"><img src="/assets/prompted-editorial-one-person.webp" width="333" height="552" alt="" decoding="async"/></div>'
+ editorial_block = f'  {editorial_markup}\n' if editorial_markup else ''
  return f'''<section class="pf-hero {'pf-capability' if cap else 'pf-home'}" id="alku" aria-labelledby="pf-heading">
-  {editorial_markup}
-  <div class="shell pf-hero-shell">
+{editorial_block}  <div class="shell pf-hero-shell">
     <div class="pf-copy">
       <div class="pf-eyebrow"><span class="pf-eyebrow-square" aria-hidden="true"></span>{'02 / PROMPTED CAPABILITY' if cap else ('PROMPTED / TEKOÄLY JA TYÖ' if fi else 'PROMPTED / PEOPLE × TECHNOLOGY × WORK')}</div>
       <div class="pf-copy-main">
@@ -264,7 +264,7 @@ def service_visual(lang,key):
   entries=''.join(f'<div class="ps-literacy-row"><span aria-hidden="true">0{i+1}</span><div><strong>{esc(title)}</strong><small>{esc(detail)}</small></div><i aria-hidden="true">↗︎</i></div>' for i,(title,detail) in enumerate(rows))
   return f'''<div class="ps-product-panel ps-literacy-panel" aria-label="{t('Havainnekuva Literacy-aloituskurssin viidestä osasta','Illustration of the five parts of the Literacy starter course')}">
    <div class="ps-panel-top"><span>PROMPTED <b>LITERACY</b></span><span>{t('KURSSIN RAKENNE','COURSE OUTLINE')}</span></div>
-   <div class="ps-literacy-top"><span class="ps-kicker">{t('KOKO HENKILÖSTÖN ALOITUSKURSSI','A STARTER COURSE FOR EVERY EMPLOYEE')}</span><strong>{t('Perusteet jokaiselle.','The basics for everyone.')}<br>{t('Turvallinen alku.','A safer start.')}</strong><p>{t('Noin 55 minuutin tavoitekesto. Neljä oppimisosiota ja loppuarviointi. Suomenkielinen kurssi viimeistelyssä.','Target duration around 55 minutes. Four learning modules and a final assessment. Finnish edition in preparation.')}</p></div>
+   <div class="ps-literacy-top"><span class="ps-kicker">{t('KOKO HENKILÖSTÖN ALOITUSKURSSI','A STARTER COURSE FOR EVERY EMPLOYEE')}</span><strong>{t('Perusteet jokaiselle.','The basics for everyone.')}<br>{t('Turvallinen alku.','A safer start.')}</strong><p>{t('Noin 55 minuutin tavoitekesto. Neljä oppimisosiota ja loppuarviointi. Suomenkielinen kurssiversio on julkaistu.','Target duration around 55 minutes. Four learning modules and a final assessment. The Finnish course version is published.')}</p></div>
    <div class="ps-literacy-rows">{entries}</div>
    <div class="ps-panel-bottom"><span>{t('EI VIRALLINEN EU-SERTIFIKAATTI','NOT AN OFFICIAL EU CERTIFICATE')}</span><span aria-hidden="true">✳</span></div>
   </div>'''
@@ -293,7 +293,7 @@ def service_main(lang,key):
  faq=''.join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q,a in d['faq'])
  subtitle= ('NOIN TUNNIN ALOITUSKURSSI' if fi else 'AN APPROXIMATELY ONE-HOUR STARTER COURSE') if key=='literacy' else ('MUUTOS JOHTAA TYÖHÖN' if fi else 'CHANGE STARTS WITH WORK')
  side = service_visual(lang,key)
- note = ('Kurssin rakenteen havainnekuva. Ei julkaistun oppimisympäristön ruutukaappaus.' if fi else 'Illustration of the course outline. Not a screenshot of a published learner product.') if key=='literacy' else ('Havainnekuva toimituksen toimintaperiaatteesta. Ei todellinen ohjelmistonäkymä tai asiakastulos.' if fi else 'Conceptual delivery illustration. Not a real software screen or customer result.')
+ note = ('Kurssin rakenteen havainnekuva. Ei ruutukaappaus oppimisympäristöstä.' if fi else 'Illustration of the course outline. Not a screenshot of the learning environment.') if key=='literacy' else ('Havainnekuva toimituksen toimintaperiaatteesta. Ei todellinen ohjelmistonäkymä tai asiakastulos.' if fi else 'Conceptual delivery illustration. Not a real software screen or customer result.')
  next_head = ('Kun perusteet ovat hallussa, mitä seuraavaksi?' if fi else 'What comes after the basics?') if key=='literacy' else ('Tarvitsetteko ensin rajatun, mitattavan kokeilun?' if fi else 'Would a focused, reviewable pilot be the right starting point?')
  next_body = ('Capability on erillinen, pidempi ohjelma: se auttaa muuttamaan oikeita työtapoja ja todentamaan muutosta. Literacy ei sisällä Capability-valmennusta.' if fi else 'Capability is a separate, longer programme for changing real work practices and evaluating those changes. Literacy does not include Capability coaching.') if key=='literacy' else ('Capability tarjoaa rajatumman lähtökohdan ennen laajemman organisaatiomuutoksen suunnittelua.' if fi else 'Capability provides a focused starting point before planning a wider organisational change.')
  next_cta = 'Tutustu Capabilityyn' if fi else 'Explore Capability'
